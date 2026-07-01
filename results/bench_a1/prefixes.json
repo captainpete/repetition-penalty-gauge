@@ -1,0 +1,1012 @@
+{
+  "protocol": "200 32-token prefixes sampled from the WikiText-103 test set, seed 0. Prefixes are the first 32 GPT-2 BPE tokens of each sampled prose segment, decoded back to TEXT so all models share the same prefixes. Filter: drop empty lines and headings; require >= 40 GPT-2 tokens before truncation.",
+  "dataset": "Salesforce/wikitext / wikitext-103-raw-v1 / test",
+  "n_prefixes": 200,
+  "prefix_tokens": 32,
+  "min_tokens_before_truncation": 40,
+  "seed": 0,
+  "tokenizer": "gpt2",
+  "n_eligible": 1757,
+  "prefixes": [
+    {
+      "index": 0,
+      "source_row_id": 4286,
+      "prefix_text": " His place in Roman history is therefore summarized as a necessary , if tumultuous stop @-@ gap before the Trajanic @-@ Antonine dynasties"
+    },
+    {
+      "index": 1,
+      "source_row_id": 1933,
+      "prefix_text": " On January 11 , 2011 , Lesnar was announced as a coach of The Ultimate Fighter Season 13 , opposite Junior dos Santos , with the two expected to fight on"
+    },
+    {
+      "index": 2,
+      "source_row_id": 3853,
+      "prefix_text": " The game was developed by HAL Laboratory with Gunpei Yokoi 's Nintendo R & D1 , and published by Nintendo . At one point in development ,"
+    },
+    {
+      "index": 3,
+      "source_row_id": 2262,
+      "prefix_text": " The War Office examined the design and put the prototype through a series of trials during May and June 1938 ; the model was tested as a possible \" light cruiser \""
+    },
+    {
+      "index": 4,
+      "source_row_id": 231,
+      "prefix_text": " A 70 @-@ metre @-@ long ( 229 ft 8 in ) flight deck was built above the stern and stretched forward to the rebuilt aft superstructure"
+    },
+    {
+      "index": 5,
+      "source_row_id": 1287,
+      "prefix_text": " The March 1913 issue of Poetry contained A Few Don 'ts by an Imagiste and the essay entitled Imagisme both written by Pound , with the latter"
+    },
+    {
+      "index": 6,
+      "source_row_id": 2656,
+      "prefix_text": " The shooting script features a scene in Angela 's car in which Ricky and Jane talk about death and beauty ; the scene differed from earlier versions , which set it"
+    },
+    {
+      "index": 7,
+      "source_row_id": 2536,
+      "prefix_text": " Stevens prefers to recruit strong team players instead of going after \" top recruits . \" \" The guys we [ have ] recruited , most of them weren 't very"
+    },
+    {
+      "index": 8,
+      "source_row_id": 2179,
+      "prefix_text": " The Doctor picks up Clara and takes her back to Latimer 's mansion , placing her under medical care of Strax . He collects the ice fragments from the"
+    },
+    {
+      "index": 9,
+      "source_row_id": 3979,
+      "prefix_text": " Northern Europe Area , headed by a director and responsible for Austria , Belgium , Czech Republic , Denmark , Estonia , Germany , Hungary , Latvia , Lithuania , Luxembourg ,"
+    },
+    {
+      "index": 10,
+      "source_row_id": 4238,
+      "prefix_text": " His great @-@ grandfather was Consul in 36 BC ( in replacement , and abdicated ) , and Governor of Asia in the same year . His"
+    },
+    {
+      "index": 11,
+      "source_row_id": 1526,
+      "prefix_text": " Kujira developed from a broad area of disturbed weather as a tropical depression on April 9 well removed from any landmasses . Shortly after development , Kuj"
+    },
+    {
+      "index": 12,
+      "source_row_id": 2494,
+      "prefix_text": " Two days later , Stevens ' Bulldogs met second @-@ seeded Kansas State in the regional finals . Perhaps feeling the effects of their double overtime 101 – 96 win"
+    },
+    {
+      "index": 13,
+      "source_row_id": 1815,
+      "prefix_text": " 3rd Division under command of Jean @-@ Baptiste Dumonceau ( Batavian Division , formerly 3rd Division of the II . Corps ) ."
+    },
+    {
+      "index": 14,
+      "source_row_id": 2919,
+      "prefix_text": " After Nero 's suicide in 68 , there was a widespread belief , especially in the eastern provinces , that he was not dead and somehow would return . This belief"
+    },
+    {
+      "index": 15,
+      "source_row_id": 1104,
+      "prefix_text": " During spring training in a game against the Boston Red Sox , Kershaw gained much attention for throwing a curveball to Sean Casey that started behind Casey but at the"
+    },
+    {
+      "index": 16,
+      "source_row_id": 2630,
+      "prefix_text": " Pennington argues that American Beauty defines its characters through their sexuality . Lester 's attempts to relive his youth are a direct result of his lust for Angela ,"
+    },
+    {
+      "index": 17,
+      "source_row_id": 671,
+      "prefix_text": " The United Kingdom possessed the largest navy in the world for the whole of the ironclad period . The Royal Navy was the second to adopt ironclad warships , and"
+    },
+    {
+      "index": 18,
+      "source_row_id": 1390,
+      "prefix_text": " During the regular season , games were played on a Friday night and a doubleheader on Saturday ; in each doubleheader one of the two games was shortened to seven"
+    },
+    {
+      "index": 19,
+      "source_row_id": 672,
+      "prefix_text": " British ships did not participate in any major wars in the ironclad period . The Royal Navy 's ironclads only saw action as part of colonial battles or"
+    },
+    {
+      "index": 20,
+      "source_row_id": 3838,
+      "prefix_text": " The China National Meteorological Centre issued a \" yellow alert \" , the second @-@ lowest of the four level warning system , for Hainan due to"
+    },
+    {
+      "index": 21,
+      "source_row_id": 443,
+      "prefix_text": " By this time , the US 2nd Infantry Division suffered 1 @,@ 120 killed , 2 @,@ 563 wounded , 67 captured and 69 missing during"
+    },
+    {
+      "index": 22,
+      "source_row_id": 3054,
+      "prefix_text": " Since Manila is prone to earthquakes , the Spanish colonial architects invented the style called Earthquake Baroque which the churches and government buildings during the Spanish colonial period adopted ."
+    },
+    {
+      "index": 23,
+      "source_row_id": 4066,
+      "prefix_text": " The three Type UB I boats of the Constantinople Flotilla seem to have patrolled primarily in the Black Sea . UB @-@ 8 was transferred"
+    },
+    {
+      "index": 24,
+      "source_row_id": 1251,
+      "prefix_text": " Sylvester detects the influence of late works by Titian in other aspects , especially in the deep and rich colouring , Velázquez 's portray"
+    },
+    {
+      "index": 25,
+      "source_row_id": 2746,
+      "prefix_text": " Gore 's financial speculations in the late 1780s significantly multiplied his wealth . In 1788 he and Andrew Craigie , a Boston businessman who had retained"
+    },
+    {
+      "index": 26,
+      "source_row_id": 3534,
+      "prefix_text": " The first Bintulu palm oil refinery , Bintulu Edible Oil Sdn Bhd , was established in June 1991 . Bintulu currently has four"
+    },
+    {
+      "index": 27,
+      "source_row_id": 4152,
+      "prefix_text": " The Rock came through the war relatively unscathed but , given its strategic importance , Germany made plans to capture Gibraltar . Codenamed \" Felix \" , the plan"
+    },
+    {
+      "index": 28,
+      "source_row_id": 3002,
+      "prefix_text": " The earliest evidence of human life in and around the area of Manila is the nearby Angono Petroglyphs dated to around 3000 BC . Furthermore , neg"
+    },
+    {
+      "index": 29,
+      "source_row_id": 712,
+      "prefix_text": " After months of not working on the poem , Eliot began to feel compelled to finish it ; it was not until August 1942 , however , that he started working on"
+    },
+    {
+      "index": 30,
+      "source_row_id": 1561,
+      "prefix_text": " Morakot spawned from an area of disturbed weather in the Philippine Sea on July 31 . Tracking northwest , favorable conditions allowed for the intensification of the system to"
+    },
+    {
+      "index": 31,
+      "source_row_id": 464,
+      "prefix_text": " Hed PE released their third studio album , Blackout , on March 18 , 2003 . It peaked at No. 33 on the Billboard 200 , while its title track"
+    },
+    {
+      "index": 32,
+      "source_row_id": 3677,
+      "prefix_text": " Temple Beth Israel 's services and religious functions were lay @-@ led for decades . Its first rabbi was Marcus Simmons . Originally from England , he was a"
+    },
+    {
+      "index": 33,
+      "source_row_id": 370,
+      "prefix_text": " Two roads ran through the regimental sector from the Naktong River to Changnyong . The main road bent south along the east bank of the river to"
+    },
+    {
+      "index": 34,
+      "source_row_id": 4316,
+      "prefix_text": " Eddie returns to challenge Fats again , putting up his entire $ 3 @,@ 000 stake on a single game . He wins game after game , beating F"
+    },
+    {
+      "index": 35,
+      "source_row_id": 3401,
+      "prefix_text": " Chad sent a delegation of two athletes to compete at the 2008 Summer Olympics in Beijing , China : Moumi Sébergué , who competed in the men"
+    },
+    {
+      "index": 36,
+      "source_row_id": 1677,
+      "prefix_text": " With highly electron withdrawing perfluoroalkyl substituents , oxaziridines exhibit reactivity more similar to that of dioxiranes than typical"
+    },
+    {
+      "index": 37,
+      "source_row_id": 2478,
+      "prefix_text": " Butler lost four starters after the 2007 – 08 season , and was picked to finish fifth in the Horizon league during the 2008 – 09 season . The team got off"
+    },
+    {
+      "index": 38,
+      "source_row_id": 2845,
+      "prefix_text": " In the beginning of 66 , he married Statilia Messalina . She was already married when she became Nero 's mistress in 65 AD , with Statilia"
+    },
+    {
+      "index": 39,
+      "source_row_id": 474,
+      "prefix_text": " On May 13 , 2014 , On the band 's official Facebook page , they released the official announcement of when the band 's new album Evolution will hit stores"
+    },
+    {
+      "index": 40,
+      "source_row_id": 1796,
+      "prefix_text": " The loss of Schmitt was a significant blow to the Austrian military organization . Called out of retirement for this specific task , he was one of their most experienced general"
+    },
+    {
+      "index": 41,
+      "source_row_id": 2328,
+      "prefix_text": " Teamed with his nephews Huey , Dewey , and Louie , and using the partial map from the library , Donald begins his search in Duckburg ,"
+    },
+    {
+      "index": 42,
+      "source_row_id": 1591,
+      "prefix_text": " In the middle of September , the monsoon trough spawned a rapidly organizing disturbance east @-@ northeast of Luzon , with weak wind shear and favorable conditions"
+    },
+    {
+      "index": 43,
+      "source_row_id": 3021,
+      "prefix_text": " In 1992 , Alfredo Lim was elected mayor , the first Chinese @-@ Filipino to hold the office . He was known for his anti @-@ crime"
+    },
+    {
+      "index": 44,
+      "source_row_id": 3151,
+      "prefix_text": " Among the local government units , Manila has the highest budget allocation to health . It was also one of the cities with the highest tax and internal revenue . Tax revenue"
+    },
+    {
+      "index": 45,
+      "source_row_id": 982,
+      "prefix_text": " The Cooperative Institute for Meteorological Satellite Studies ( CIMSS ) at the University of Wisconsin – Madison has developed the Objective Dvorak Technique ( ODT )"
+    },
+    {
+      "index": 46,
+      "source_row_id": 2824,
+      "prefix_text": " According to Suetonius ; Nero became Emperor at the age of 17 when the news of Claudius ' death was made known , making him the youngest emperor at"
+    },
+    {
+      "index": 47,
+      "source_row_id": 2367,
+      "prefix_text": " The production of each colossal head must have been carefully planned , given the effort required to ensure the necessary resources were available ; it seems likely that only the more powerful"
+    },
+    {
+      "index": 48,
+      "source_row_id": 2700,
+      "prefix_text": " American Beauty had its European premiere at the London Film Festival on November 18 , 1999 ; in January 2000 , it began to screen in various territories outside North America ."
+    },
+    {
+      "index": 49,
+      "source_row_id": 1296,
+      "prefix_text": " Determined to promote the work of the Imagists , and particularly of Aldington and H.D. , Pound decided to publish an anthology under the title Des"
+    },
+    {
+      "index": 50,
+      "source_row_id": 325,
+      "prefix_text": " After the First Battle of Naktong Bulge , the US Army 's 2nd Infantry Division was moved to defend the Naktong River line . The"
+    },
+    {
+      "index": 51,
+      "source_row_id": 4131,
+      "prefix_text": " World War II dramatically changed the lives of Gibraltarians . The decision to enforce mass evacuation in order to increase the strength of the Rock with more military and naval"
+    },
+    {
+      "index": 52,
+      "source_row_id": 2804,
+      "prefix_text": " Nero 's father was described by Suetonius as a murderer and a cheat who was charged by Emperor Tiberius with treason , adultery and incest . T"
+    },
+    {
+      "index": 53,
+      "source_row_id": 83,
+      "prefix_text": " A second favourite epithet of Chinese critics is that of \" poet sage \" ( 詩聖 shī shèng ) , a counterpart to the"
+    },
+    {
+      "index": 54,
+      "source_row_id": 434,
+      "prefix_text": " North Korean and US troops remained locked in combat along the Naktong River for several more days . The North Koreans ' offensive capability was largely destroyed , and the"
+    },
+    {
+      "index": 55,
+      "source_row_id": 3627,
+      "prefix_text": " On 18 May 1991 , the Zrinski Battalion was established as a special forces unit of the ZNG . The core of the unit consisted of 27 volunteers drawn"
+    },
+    {
+      "index": 56,
+      "source_row_id": 4274,
+      "prefix_text": " In October 97 these tensions came to a head when the Praetorian Guard , led by Casperius Aelianus , laid siege to the Imperial Palace"
+    },
+    {
+      "index": 57,
+      "source_row_id": 2147,
+      "prefix_text": " The presented plots of image impedance , attenuation and phase change correspond to a low @-@ pass prototype filter section . The prototype has a cut @-@"
+    },
+    {
+      "index": 58,
+      "source_row_id": 3562,
+      "prefix_text": " There is a wharf terminal at Bintulu that serves the rural areas of Bintulu Division . Among the destinations that can be reached by express boat from"
+    },
+    {
+      "index": 59,
+      "source_row_id": 4208,
+      "prefix_text": " The coffins of General Sikorski and his Chief @-@ of @-@ Staff , General Kilimecki , were draped in the Polish National Flag"
+    },
+    {
+      "index": 60,
+      "source_row_id": 3983,
+      "prefix_text": " Australia , managed by the Office of Australian War Graves in the Australian Department of Veterans Affairs on behalf of the CWGC , is responsible for Australia , Norfolk Island ,"
+    },
+    {
+      "index": 61,
+      "source_row_id": 3311,
+      "prefix_text": " That afternoon over 1 @,@ 500 Bogside residents built barricades , armed themselves with steel bars , wooden clubs and hurleys , and told the police that"
+    },
+    {
+      "index": 62,
+      "source_row_id": 3086,
+      "prefix_text": " Manila is a major publishing center in the Philippines . Manila Bulletin , the Philippines ' largest broadsheet newspaper by circulation , is headquartered inside Intramuros . Other"
+    },
+    {
+      "index": 63,
+      "source_row_id": 11,
+      "prefix_text": " In 2000 Boulter had a guest @-@ starring role on the television series The Bill ; he portrayed \" Scott Parry \" in the episode , \""
+    },
+    {
+      "index": 64,
+      "source_row_id": 3023,
+      "prefix_text": " Lim was sued by councilor Dennis Alcoreza on 2008 over human rights , charged with graft over the rehabilitation of public schools , and was heavily criticized for his"
+    },
+    {
+      "index": 65,
+      "source_row_id": 2582,
+      "prefix_text": " Radar studies preceding and following the Lunar Prospector mission demonstrate that the inner walls of Shackleton are similar in reflective characteristics to those of some sunlit craters ."
+    },
+    {
+      "index": 66,
+      "source_row_id": 4228,
+      "prefix_text": " Nerva 's brief reign was marred by financial difficulties and his inability to assert his authority over the Roman army . A revolt by the Praetorian Guard"
+    },
+    {
+      "index": 67,
+      "source_row_id": 1701,
+      "prefix_text": " Epoxidation of alkenes is a common reaction because epoxides can be derivatized in a number of useful ways . Classically , laboratory ep"
+    },
+    {
+      "index": 68,
+      "source_row_id": 1231,
+      "prefix_text": " Bacon 's output is characterised by sequences of images . He told Sylvester that his imagination was stimulated by sequences and that \" images breed other images in"
+    },
+    {
+      "index": 69,
+      "source_row_id": 3678,
+      "prefix_text": " Following a hiatus of two years , Louis Neimand was hired as rabbi in 1963 . Born in New York City in 1912 to immigrant parents , he was a"
+    },
+    {
+      "index": 70,
+      "source_row_id": 1637,
+      "prefix_text": " During the season 21 named tropical cyclones developed in the Western Pacific and were named by the Japan Meteorological Agency , when it was determined that they had become tropical"
+    },
+    {
+      "index": 71,
+      "source_row_id": 3528,
+      "prefix_text": " Malaysia LNG is a Liquefied Natural Gas ( LNG ) manufacturing complex located in Bintulu that currently contains eight LNG trains with a ninth one"
+    },
+    {
+      "index": 72,
+      "source_row_id": 326,
+      "prefix_text": " The urgency of the threat to Pusan Perimeter prompted the US Marine Corps 1st Provisional Marine Brigade to be brought in to reinforce the US Army troops"
+    },
+    {
+      "index": 73,
+      "source_row_id": 919,
+      "prefix_text": " Temnospondyls like Sclerocephalus are known from both large adult specimens and small larvae , showing an extreme change in body shape . In"
+    },
+    {
+      "index": 74,
+      "source_row_id": 2869,
+      "prefix_text": " According to Tacitus , upon hearing news of the fire , Nero returned to Rome to organize a relief effort , which he paid for from his own funds . Nero"
+    },
+    {
+      "index": 75,
+      "source_row_id": 1117,
+      "prefix_text": " Kershaw rebounded his next start by pitching an 8 inning two @-@ hitter and out @-@ dueling the then undefeated Ubaldo Jiméne"
+    },
+    {
+      "index": 76,
+      "source_row_id": 1207,
+      "prefix_text": " When Josepha Petrick began painting for Mbantua Gallery in central Australia , she indicated that her name was Josepha rather than Josie , and that this"
+    },
+    {
+      "index": 77,
+      "source_row_id": 4125,
+      "prefix_text": " In addition to its commanding position , Gibraltar provided a strongly defended harbour from which ships could operate in both the Atlantic and the Mediterranean . Force H , under the command"
+    },
+    {
+      "index": 78,
+      "source_row_id": 677,
+      "prefix_text": " Ironclads were also used from the inception of the Imperial Japanese Navy . The Kōtetsu ( Japanese : 甲鉄 , literally \""
+    },
+    {
+      "index": 79,
+      "source_row_id": 4124,
+      "prefix_text": " The military history of Gibraltar during World War II exemplifies Gibraltar 's position as a British fortress since the early 18th century and as a vital factor in British"
+    },
+    {
+      "index": 80,
+      "source_row_id": 2780,
+      "prefix_text": " In the spring of 1813 , he was appointed by Governor Caleb Strong to fill the U.S. Senate seat vacated by the resignation of Senator James Lloyd ."
+    },
+    {
+      "index": 81,
+      "source_row_id": 2384,
+      "prefix_text": " San Lorenzo Colossal Head 5 is also known as San Lorenzo Monument 5 . The monument stands 1 @.@ 86 metres ( 6 @.@ 1 ft )"
+    },
+    {
+      "index": 82,
+      "source_row_id": 426,
+      "prefix_text": " A decision was reached that the marines would attack west at 08 : 00 on September 3 astride the Yongsan @-@ Naktong River road ;"
+    },
+    {
+      "index": 83,
+      "source_row_id": 392,
+      "prefix_text": " The situation on the front was chaotic during the day September 1 . The North Koreans at one place had crossed at the Kihang ferry , captured Agok ,"
+    },
+    {
+      "index": 84,
+      "source_row_id": 1611,
+      "prefix_text": " In the Philippines , Melor dropped about 150 mm ( 6 in ) of rainfall , which flooded the Cagayan River and killed four people . In Taiwan ,"
+    },
+    {
+      "index": 85,
+      "source_row_id": 2646,
+      "prefix_text": " Ball did not expect to sell the script , believing it would act as more of a calling card , but American Beauty drew interest from several production bodies . Cannava"
+    },
+    {
+      "index": 86,
+      "source_row_id": 2571,
+      "prefix_text": " The rotational axis of the Moon lies within Shackleton , only a few kilometers from its center . The crater is 21 km in diameter and 4 @.@"
+    },
+    {
+      "index": 87,
+      "source_row_id": 559,
+      "prefix_text": " By the end of the 1850s it was clear that France was unable to match British building of steam warships , and to regain the strategic initiative a dramatic change was"
+    },
+    {
+      "index": 88,
+      "source_row_id": 1513,
+      "prefix_text": " Activity was somewhat below average in September , with only one tropical cyclone making landfall , Maemi . However , Maemi was the strongest tropical cyclone of the"
+    },
+    {
+      "index": 89,
+      "source_row_id": 2815,
+      "prefix_text": " Nero was proclaimed an adult in 51 at the age of 14 . He was appointed proconsul , entered and first addressed the Senate , made joint public appearances with"
+    },
+    {
+      "index": 90,
+      "source_row_id": 1450,
+      "prefix_text": " The album includes \" Fuiste Tú \" , a duet with Guatemalan singer Gaby Moreno . Its instrumentation consists of piano , violin , guitars ,"
+    },
+    {
+      "index": 91,
+      "source_row_id": 3540,
+      "prefix_text": " The Bintulu Port Authority was established in 1981 . It started port operation in 1983 at Tanjung Kidurong . Following a privatisation exercise , B"
+    },
+    {
+      "index": 92,
+      "source_row_id": 607,
+      "prefix_text": " The nature of the projectiles also changed during the ironclad period . Initially , the best armor @-@ piercing projectile was a solid cast @-@ iron shot"
+    },
+    {
+      "index": 93,
+      "source_row_id": 2802,
+      "prefix_text": " Nero 's father , Gnaeus , was the son of Lucius Domitius Ahenobarbus ( consul 16 BC ) and Antonia Major ."
+    },
+    {
+      "index": 94,
+      "source_row_id": 1697,
+      "prefix_text": " α @-@ Hydroxylation with oxaziridines has been widely implemented in total synthesis . It is a key step in both the Holton"
+    },
+    {
+      "index": 95,
+      "source_row_id": 4167,
+      "prefix_text": " Gibraltar was a very tempting target for the Italians , who saw it as a refuge for British warships and allied merchant shipping . The Italian frogmen originally used a Spanish"
+    },
+    {
+      "index": 96,
+      "source_row_id": 2768,
+      "prefix_text": " In 1806 Gore won election to the State Senate . That year the Republicans were in the majority , and the election for governor was close enough to require a recount"
+    },
+    {
+      "index": 97,
+      "source_row_id": 980,
+      "prefix_text": " BOTH TAFB AND SAB CAME IN WITH A DVORAK SATELLITE INTENSITY ESTIMATE OF T2.5 /"
+    },
+    {
+      "index": 98,
+      "source_row_id": 3005,
+      "prefix_text": " During the reign of Sultan Bolkiah from 1485 to 1521 , the Bruneian Empire invaded , wanting to take advantage of Tondo 's China trade"
+    },
+    {
+      "index": 99,
+      "source_row_id": 2801,
+      "prefix_text": " Lucius Domitius Ahenobarbus , Nero , was born on 15 December 37 in Antium ( modern Anzio and Nettuno ) , near"
+    },
+    {
+      "index": 100,
+      "source_row_id": 2937,
+      "prefix_text": " Indeed the truth about this has not come out even yet ; for so far as the rest of his subjects were concerned , there was nothing to prevent his continuing to"
+    },
+    {
+      "index": 101,
+      "source_row_id": 1434,
+      "prefix_text": " Independiente became Arjona 's fourth number @-@ one album on the Billboard Top Latin Albums where it debuted for the week ending 22"
+    },
+    {
+      "index": 102,
+      "source_row_id": 2375,
+      "prefix_text": " Seventeen confirmed examples are known . An additional monument , at Takalik Abaj in Guatemala , is a throne that may have been carved from a colossal head"
+    },
+    {
+      "index": 103,
+      "source_row_id": 427,
+      "prefix_text": " The American counteroffensive of September 3 – 5 west of Yongsan , according to prisoner statements , resulted in one of the bloodiest debacles of the war for"
+    },
+    {
+      "index": 104,
+      "source_row_id": 2979,
+      "prefix_text": " Bishop Eusebius of Caesarea ( c . 275 – 339 ) was the first to write explicitly that Paul was beheaded in Rome during the reign"
+    },
+    {
+      "index": 105,
+      "source_row_id": 4057,
+      "prefix_text": " Over the Type UB Is ' first year of service , UB @-@ 4 and UB @-@ 13 were both lost , and UB"
+    },
+    {
+      "index": 106,
+      "source_row_id": 1596,
+      "prefix_text": " Towards the end of September , the monsoon trough spawned a tropical disturbance east @-@ northeast of Yap , which became a tropical depression on September 24 ."
+    },
+    {
+      "index": 107,
+      "source_row_id": 2900,
+      "prefix_text": " In March 68 , Gaius Julius Vindex , the governor of Gallia Lugdunensis , rebelled against Nero 's tax policies . Lucius Ver"
+    },
+    {
+      "index": 108,
+      "source_row_id": 1220,
+      "prefix_text": " Petrick 's work is held in a variety of public and private collections , including Artbank , the Charles Sturt University Collection , the Holmes a Court Collection"
+    },
+    {
+      "index": 109,
+      "source_row_id": 1445,
+      "prefix_text": " The album was composed over a one @-@ year period . Most of its production was handled by three producers familiar with Arjona 's work : Dan"
+    },
+    {
+      "index": 110,
+      "source_row_id": 889,
+      "prefix_text": " Yates and Warren also named Dvinosauria , a clade of small aquatic temnospondyls from the Carboniferous , Permian"
+    },
+    {
+      "index": 111,
+      "source_row_id": 912,
+      "prefix_text": " One temnospondyl , the dvinosaur Trimerorhachis , may have brooded young in an area between the gills called"
+    },
+    {
+      "index": 112,
+      "source_row_id": 4193,
+      "prefix_text": " In July 1942 , Lieutenant General Dwight D. Eisenhower was appointed Allied Commander @-@ in @-@ Chief of Operation Torch . Churchill placed Gibraltar under the command"
+    },
+    {
+      "index": 113,
+      "source_row_id": 898,
+      "prefix_text": " The dissorophoid family Amphibamidae is thought to be most closely related to Lissamphibia . In 2008 , an amphibamid called"
+    },
+    {
+      "index": 114,
+      "source_row_id": 192,
+      "prefix_text": " The ships had a length of 208 @.@ 18 metres ( 683 ft 0 in ) overall , a beam of 28 @.@ 65 metres ( 94"
+    },
+    {
+      "index": 115,
+      "source_row_id": 3024,
+      "prefix_text": " Despite his achievements and unprecedented feat as the Mayor of Manila , however , Estrada was re @-@ elected as Manila mayor in the 2016 election against Lim"
+    },
+    {
+      "index": 116,
+      "source_row_id": 3237,
+      "prefix_text": " The genus Attalea was first described Carl Sigismund Kunth in 1816 based on specimens collected by Alexander von Humboldt and Aimé Bon"
+    },
+    {
+      "index": 117,
+      "source_row_id": 1292,
+      "prefix_text": " The 1916 preface to Some Imagist Poets comments \" Imagism does not merely mean the presentation of pictures . Imagism refers to the manner of presentation ,"
+    },
+    {
+      "index": 118,
+      "source_row_id": 2493,
+      "prefix_text": " On March 25 , 2010 , Butler faced top @-@ seeded Syracuse . The Bulldogs got off to a good start , jumping out to a 12 – 1 lead"
+    },
+    {
+      "index": 119,
+      "source_row_id": 357,
+      "prefix_text": " Meanwhile , 5 miles ( 8 @.@ 0 km ) north of Agok and A Company 's position , B Company , 9th Infantry , held a"
+    },
+    {
+      "index": 120,
+      "source_row_id": 423,
+      "prefix_text": " A Company , 2nd Engineer Combat Battalion , moved to the south side of the Yongsan @-@ Naktong River road ; D Company of the 2"
+    },
+    {
+      "index": 121,
+      "source_row_id": 3358,
+      "prefix_text": " Following the release of the album , Stone Sour went on to promote it for over a year ; releasing five singles and touring in several regions , including the United States"
+    },
+    {
+      "index": 122,
+      "source_row_id": 3849,
+      "prefix_text": " With stone , needle , flame , and spark power @-@ ups , Kirby can transform to interact with blocks differently . For instance , the spark power @-"
+    },
+    {
+      "index": 123,
+      "source_row_id": 636,
+      "prefix_text": " Using iron construction for warships offered advantages for the engineering of the hull . However , unarmored iron had many military disadvantages , and offered technical problems which kept wooden"
+    },
+    {
+      "index": 124,
+      "source_row_id": 724,
+      "prefix_text": " Like the other poems making up the Four Quartets , Little Gidding deals with the past , present , and future , and humanity 's place within them as"
+    },
+    {
+      "index": 125,
+      "source_row_id": 219,
+      "prefix_text": " Ise was briefly fitted with an aircraft flying @-@ off platform for a Mitsubishi 1MF3 fighter on Turret No. 2 in 1927 ."
+    },
+    {
+      "index": 126,
+      "source_row_id": 4282,
+      "prefix_text": " Due to the lack of written sources on this period , much of Nerva 's life has remained obscure . The most substantial surviving account of the reign of N"
+    },
+    {
+      "index": 127,
+      "source_row_id": 3491,
+      "prefix_text": " Bintulu is represented by Bintulu parliamentary seat ( P. 217 ) in the Parliament of Malaysia . The town is also represented by three state assembly seats"
+    },
+    {
+      "index": 128,
+      "source_row_id": 4237,
+      "prefix_text": " Like Vespasian , the founder of the Flavian dynasty , Nerva was a member of the Italian nobility rather than one of the elite of Rome ."
+    },
+    {
+      "index": 129,
+      "source_row_id": 2769,
+      "prefix_text": " Gore ran unsuccessfully for Governor of Massachusetts in 1807 and 1808 against a rising tide of Republicanism in the state , losing both times to moderate Republican James Sullivan"
+    },
+    {
+      "index": 130,
+      "source_row_id": 3382,
+      "prefix_text": " Come What ( ever ) May sold over 80 @,@ 000 copies in its first week and debuted at the fourth spot on the Billboard 200 in the United States"
+    },
+    {
+      "index": 131,
+      "source_row_id": 1959,
+      "prefix_text": " In 2003 , WWE Home Video released a DVD chronicling Lesnar 's career entitled Brock Lesnar : Here Comes the Pain . It was re @-@"
+    },
+    {
+      "index": 132,
+      "source_row_id": 4266,
+      "prefix_text": " Because he reigned only briefly , Nerva 's public works were few , instead completing projects which had been initiated under Flavian rule . This included extensive repairs"
+    },
+    {
+      "index": 133,
+      "source_row_id": 2713,
+      "prefix_text": " Maslin felt that Mendes directed with \" terrific visual flair \" , saying his minimalist style balanced \" the mordant and bright \" and that he evoked"
+    },
+    {
+      "index": 134,
+      "source_row_id": 1361,
+      "prefix_text": " No threats came upon the embassy during the day , although truckloads of armed Somalis frequently drove by the embassy along Afghoy Road . Only one incident seemed to"
+    },
+    {
+      "index": 135,
+      "source_row_id": 2701,
+      "prefix_text": " As of February 18 , the most successful territories were the United Kingdom ( $ 15 @.@ 2 million ) , Italy ( $ 10 @.@ 8 million"
+    },
+    {
+      "index": 136,
+      "source_row_id": 4155,
+      "prefix_text": " As part of a combined @-@ force operation , the German Air Force ( Luftwaffe ) would contribute Ju 88As , Stukas , Mess"
+    },
+    {
+      "index": 137,
+      "source_row_id": 1183,
+      "prefix_text": " On December 4 , 2010 , Kershaw married his girlfriend of seven years , Ellen Melson . On January 23 , 2015 , Ellen gave birth to the couple '"
+    },
+    {
+      "index": 138,
+      "source_row_id": 4314,
+      "prefix_text": " Eddie humiliates a local pool shark , exposing himself as a hustler , and the other players punish him by breaking his thumbs . As he heals , Sarah cares"
+    },
+    {
+      "index": 139,
+      "source_row_id": 1088,
+      "prefix_text": " Kershaw was drafted seventh overall in the 2006 MLB draft . He worked his way through the Dodgers ' farm system in just one full season , and reached the majors"
+    },
+    {
+      "index": 140,
+      "source_row_id": 3362,
+      "prefix_text": " In September 2005 , lead singer Corey Taylor announced that Stone Sour would return with a second album . He said that they had written over 30 songs , some during the"
+    },
+    {
+      "index": 141,
+      "source_row_id": 2946,
+      "prefix_text": " Philostratus II \" the Athenian \" ( c . 172 – 250 ) spoke of Nero in the Life of Apollonius Tyana ( Books"
+    },
+    {
+      "index": 142,
+      "source_row_id": 4212,
+      "prefix_text": " In 1943 a British Court of Inquiry investigated the crash of Sikorski 's Liberator II AL523 , but was unable to determine the probable cause , finding"
+    },
+    {
+      "index": 143,
+      "source_row_id": 2253,
+      "prefix_text": " The division used approximately 20 Tetrarchs during the British airborne landings in Normandy in June 1944 . The tanks were successfully landed by glider , but they did"
+    },
+    {
+      "index": 144,
+      "source_row_id": 2909,
+      "prefix_text": " With his death , the Julio @-@ Claudian dynasty ended . The Senate , when news of his death reached Rome , posthumously declared Nero a public"
+    },
+    {
+      "index": 145,
+      "source_row_id": 1357,
+      "prefix_text": " After an hour on the ground , the helicopters left with the first 61 evacuees , including all American civilians and four heads of mission . Evacuees"
+    },
+    {
+      "index": 146,
+      "source_row_id": 2389,
+      "prefix_text": " San Lorenzo Colossal Head 10 ( also known as San Lorenzo Monument 89 ) has been moved to the Museo Comunitario de San Lorenzo Tenochtit"
+    },
+    {
+      "index": 147,
+      "source_row_id": 2580,
+      "prefix_text": " A neutron spectrometer on board the Lunar Prospector spacecraft detected enhanced concentrations of hydrogen close to the northern and southern lunar poles , including the crater Shackleton ."
+    },
+    {
+      "index": 148,
+      "source_row_id": 3257,
+      "prefix_text": " Disturbance has been implicated in the formation of vegetation dominated by large Attalea species . In seasonally dry Amazonian forests the density of large adult A"
+    },
+    {
+      "index": 149,
+      "source_row_id": 3156,
+      "prefix_text": " Manila is politically divided into 896 barangays , the smallest unit of local government in the Philippines . Each barangay has its own chairperson and council"
+    },
+    {
+      "index": 150,
+      "source_row_id": 3499,
+      "prefix_text": " Bintulu is located 610 kilometres ( 380 mi ) northeast of Kuching 216 kilometres ( 134 mi ) northeast of Sibu , and 200 kilometres ( 120"
+    },
+    {
+      "index": 151,
+      "source_row_id": 4034,
+      "prefix_text": " Boats of the Type UB I design were built by two manufacturers , Germaniawerft of Kiel and AG Weser of Bremen , which"
+    },
+    {
+      "index": 152,
+      "source_row_id": 1813,
+      "prefix_text": " 1st Division under command of Pierre Dupont de l 'Étang ( formerly 1st Division of VI . Corps ) , six battalions , three squad"
+    },
+    {
+      "index": 153,
+      "source_row_id": 399,
+      "prefix_text": " During the night Schmitt established radio communication with the 1st Battalion , 9th infantry . When daylight came Schmitt and his group saw that they were surrounded by"
+    },
+    {
+      "index": 154,
+      "source_row_id": 1629,
+      "prefix_text": " In mid @-@ November , the JMA briefly tracked a weak tropical depression near Wake Island . The agency also briefly tracked a tropical depression off the coast of"
+    },
+    {
+      "index": 155,
+      "source_row_id": 578,
+      "prefix_text": " The Italian fleet consisted of 12 ironclads and a similar number of wooden warships , escorting transports which carried troops intending to land on the Adriatic island"
+    },
+    {
+      "index": 156,
+      "source_row_id": 2537,
+      "prefix_text": " Stevens has often been referred to as a coaching prodigy , but is not interested in self @-@ promotion . He instead prefers to deflect the praise he receives"
+    },
+    {
+      "index": 157,
+      "source_row_id": 2936,
+      "prefix_text": " Dio Chrysostom ( c . 40 – 120 ) , a Greek philosopher and historian , wrote the Roman people were very happy with Nero and would have allowed"
+    },
+    {
+      "index": 158,
+      "source_row_id": 3102,
+      "prefix_text": " Robinsons Place Manila is the largest shopping mall in the city . The mall was the second and by @-@ far , the largest Robinson Mall ever built"
+    },
+    {
+      "index": 159,
+      "source_row_id": 1718,
+      "prefix_text": " The transfer of acylated amines is more difficult than that of unsubstituted amines , although , unlike amine transfer by oxazirid"
+    },
+    {
+      "index": 160,
+      "source_row_id": 4287,
+      "prefix_text": " Two modern statues which commemorate Nerva can be found in towns associated with him . There is an equestrian statue in Gloucester , England , a town which"
+    },
+    {
+      "index": 161,
+      "source_row_id": 917,
+      "prefix_text": " While most types of temnospondyls are distinguished on the basis of features in mature specimens , several are known from juvenile and larval specimens . Met"
+    },
+    {
+      "index": 162,
+      "source_row_id": 1226,
+      "prefix_text": " Head VI was the first of Bacon 's paintings to reference Velázquez , whose portrait of Pope Innocent X haunted him throughout his career and inspired his series"
+    },
+    {
+      "index": 163,
+      "source_row_id": 92,
+      "prefix_text": " About two thirds of Du Fu 's 1500 extant works are in this form , and he is generally considered to be its leading exponent . His best lǜ"
+    },
+    {
+      "index": 164,
+      "source_row_id": 3684,
+      "prefix_text": " Kinberg 's wife Alice was a strong feminist , and during the 1980s he and his wife supported a number of changes to the liturgy and ritual ."
+    },
+    {
+      "index": 165,
+      "source_row_id": 1340,
+      "prefix_text": " The initial plan was to evacuate via Mogadishu International Airport . Soon after the evacuation request , the United States Air Force deployed C @-@ 130 transport planes"
+    },
+    {
+      "index": 166,
+      "source_row_id": 581,
+      "prefix_text": " The battles of the American Civil War and at Lissa were very influential on the designs and tactics of the ironclad fleets that followed . In particular , it taught"
+    },
+    {
+      "index": 167,
+      "source_row_id": 1114,
+      "prefix_text": " On April 15 , 2009 , Kershaw pitched seven innings , striking out 13 batters while allowing only one hit ( a solo home run ) against the rival San Francisco"
+    },
+    {
+      "index": 168,
+      "source_row_id": 1879,
+      "prefix_text": " On July 15 , 2006 , New Japan Pro Wrestling announced Lesnar would not return to defend the IWGP Heavyweight Championship due to \" visa issues \" and"
+    },
+    {
+      "index": 169,
+      "source_row_id": 4040,
+      "prefix_text": " UB @-@ 1 and UB @-@ 2 were laid down on 1 November 1914 at the Germaniawerft yard at Kiel . U"
+    },
+    {
+      "index": 170,
+      "source_row_id": 802,
+      "prefix_text": " Temnospondyls ' vertebrae are divided into several segments . In living tetrapods , the main body of the vertebra is a single"
+    },
+    {
+      "index": 171,
+      "source_row_id": 2289,
+      "prefix_text": " The Tetrarchs remained in Britain , and would probably have been used as training vehicles before being retired from service , but on 22 June 1941 the German invasion of"
+    },
+    {
+      "index": 172,
+      "source_row_id": 4172,
+      "prefix_text": " Sabotage operations were ordered from Berlin in the late autumn of 1940 , but actual work did not start until early 1941 . The first operations were unsuccessful . A"
+    },
+    {
+      "index": 173,
+      "source_row_id": 3966,
+      "prefix_text": " The absence of any form of paving between the headstone rows contributes to the simplicity of the cemetery designs . Lawn paths add to the garden ambiance , and are"
+    },
+    {
+      "index": 174,
+      "source_row_id": 711,
+      "prefix_text": " Following the completion of the third Four Quartets poem , The Dry Salvages , Eliot 's health declined and he stayed in Shamley Green , Surrey while he"
+    },
+    {
+      "index": 175,
+      "source_row_id": 4339,
+      "prefix_text": " The film was well received by critics , although with the occasional caveat . Variety praised the performances of the entire main cast but felt that the \" sordid aspects"
+    },
+    {
+      "index": 176,
+      "source_row_id": 3481,
+      "prefix_text": " In the 1950s , major economic activities in Bintulu were the timber extraction industry , fishing , and Sago processing . In the 1960s , Bint"
+    },
+    {
+      "index": 177,
+      "source_row_id": 1105,
+      "prefix_text": " Kershaw pitched 18 innings during his second trip to Jacksonville ( two starts and one seven inning relief appearance ) , winning two games . During this stretch , he allowed"
+    },
+    {
+      "index": 178,
+      "source_row_id": 256,
+      "prefix_text": " Shortages of aircraft and serviceability problems greatly retarded pilot training and the ships only had a total of 17 D4Ys and 18 E16As on hand"
+    },
+    {
+      "index": 179,
+      "source_row_id": 4178,
+      "prefix_text": " Operation Tracer was a top @-@ secret British stay @-@ behind spying mission that was only to be implemented if Gibraltar was captured by the Axis Powers"
+    },
+    {
+      "index": 180,
+      "source_row_id": 2892,
+      "prefix_text": " In 60 , a major rebellion broke out in the province of Britannia . While the governor Gaius Suetonius Paulinus and his troops were busy capturing"
+    },
+    {
+      "index": 181,
+      "source_row_id": 3128,
+      "prefix_text": " As the cultural center of the Philippines , Manila is the home to a number of museums . The National Museum of the Philippines Complex , which include the National Museum of"
+    },
+    {
+      "index": 182,
+      "source_row_id": 2750,
+      "prefix_text": " The Bank of the United States was established by Alexander Hamilton to provide stable banking services on a national scale , and sought to open a branch in Boston . Hamilton recruited"
+    },
+    {
+      "index": 183,
+      "source_row_id": 3003,
+      "prefix_text": " The Kingdom of Tondo flourished during the latter half of the Ming Dynasty as a result of direct trade relations with China . Tondo district was maintained as the traditional"
+    },
+    {
+      "index": 184,
+      "source_row_id": 3367,
+      "prefix_text": " It was announced in March 2006 that Stone Sour 's second album , which was tentatively titled \" Come What May , \" would be released on July 18 ,"
+    },
+    {
+      "index": 185,
+      "source_row_id": 136,
+      "prefix_text": " The song became One Direction 's fourth top @-@ forty hit on the Canadian Hot 100 , peaking at number 30 . The single bowed at number 13"
+    },
+    {
+      "index": 186,
+      "source_row_id": 606,
+      "prefix_text": " The development of smokeless powder , based on nitroglycerine or nitrocellulose , by the French inventor Paul Vielle in 1884 was"
+    },
+    {
+      "index": 187,
+      "source_row_id": 3130,
+      "prefix_text": " Other museums in the city are the Museum of Manila , the city @-@ owned museum that exhibits the city 's culture and history , Museo Pamb"
+    },
+    {
+      "index": 188,
+      "source_row_id": 911,
+      "prefix_text": " Temnospondyls , like all amphibians , reproduced in aquatic environments . Most temnospondyls probably reproduced through external fertilization . Like"
+    },
+    {
+      "index": 189,
+      "source_row_id": 3011,
+      "prefix_text": " After the Battle of Manila ( 1898 ) , Spain ceded the surrendered city of Manila to the United States . The First Philippine Republic based at nearby Bulacan fought"
+    },
+    {
+      "index": 190,
+      "source_row_id": 4242,
+      "prefix_text": " Not much of Nerva 's early life or career is recorded , but it appears he did not pursue the usual administrative or military career . He was praet"
+    },
+    {
+      "index": 191,
+      "source_row_id": 2901,
+      "prefix_text": " At the Battle of Vesontio in May 68 , Verginius ' forces easily defeated those of Vindex and the latter committed suicide . However , after putting"
+    },
+    {
+      "index": 192,
+      "source_row_id": 597,
+      "prefix_text": " HMS Warrior carried a mixture of 110 @-@ pounder 7 inch ( 180 mm ) breech @-@ loading rifles and more traditional 68 @-@"
+    },
+    {
+      "index": 193,
+      "source_row_id": 1873,
+      "prefix_text": " In February , Lesnar faced Eddie Guerrero for the WWE title at No Way Out . Late in the match , Goldberg delivered a spear to Lesnar while the ref"
+    },
+    {
+      "index": 194,
+      "source_row_id": 4255,
+      "prefix_text": " According to Cassius Dio , the conspirators approached Nerva as a potential successor prior to the assassination , which indicates that he was at least aware of the"
+    },
+    {
+      "index": 195,
+      "source_row_id": 579,
+      "prefix_text": " The Austrians believed their ships to have less effective guns than their enemy , so decided to engage the Italians at close range and ram them . The Austrian fleet formed"
+    },
+    {
+      "index": 196,
+      "source_row_id": 205,
+      "prefix_text": " In 1931 – 33 the AA guns were replaced with eight 40 @-@ caliber 12 @.@ 7 cm ( 5 @.@ 0 in ) Type 89"
+    },
+    {
+      "index": 197,
+      "source_row_id": 3010,
+      "prefix_text": " The growing wealth and education attracted indigenous , Chinese , Indians , Latinos , and Europeans from the provinces to Manila , all of whom elected a nascent Filipino citizenship regardless of"
+    },
+    {
+      "index": 198,
+      "source_row_id": 112,
+      "prefix_text": " Other translators have placed much greater weight on trying to convey a sense of the poetic forms used by Du Fu . Vikram Seth in Three Chinese Poets uses"
+    },
+    {
+      "index": 199,
+      "source_row_id": 936,
+      "prefix_text": " Osbert was first mentioned in the historical record between 1121 and 1128 when he appears in a charter , which although likely a forgery , probably contains an"
+    }
+  ]
+}

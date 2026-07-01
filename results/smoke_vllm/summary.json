@@ -1,0 +1,52 @@
+{
+  "generated": "2026-07-02",
+  "machine": "local RTX 3090 (24GB), driver 575.57.08, CUDA<=12.8",
+  "versions": {
+    "vllm": "0.8.5.post1",
+    "torch": "2.6.0+cu124",
+    "transformers": "4.51.3",
+    "xformers": "0.0.29.post2",
+    "python": "3.11.14"
+  },
+  "penalty_operator": {
+    "installed_0_8_5": "vllm/model_executor/layers/utils.py:apply_penalties (lines 60-61): scaling = torch.where(logits > 0, 1.0/penalties, penalties); logits *= scaling",
+    "upstream_main": "vllm/_custom_ops.py:apply_repetition_penalties_torch: scaling = torch.where(logits > 0, 1.0/penalties, penalties); logits *= scaling",
+    "sign_branch_on_raw_logits": true,
+    "operator_unchanged_since_0_8_5": true,
+    "seen_set": "prompt_mask | output_mask  (penalizes prompt AND output tokens)",
+    "both_engines_route_through_same_op": "V0 sampler and V1 (v1/sample/ops/penalties.apply_all_penalties) both call utils.apply_penalties"
+  },
+  "A1_gauge_probe": {
+    "design": "greedy, add constant c to every logit BEFORE repetition penalty; compare c=+5 vs c=-5 token-by-token over 16 prompts x 200 tokens = 3200 aligned positions",
+    "shift_route": "V0 engine (VLLM_USE_V1=0) + per-request SamplingParams.logits_processors, which run in LogitsProcessor.forward BEFORE the Sampler applies penalties",
+    "gpt2-large": {
+      "model": "openai-community/gpt2-large",
+      "revision": "32b71b12589c2f8d625668d2335a01cac3249519",
+      "dtype": "float16",
+      "validity_gate_theta1.0": {"flip_rate": 0.0, "flips": 0, "positions": 3200, "passed": true},
+      "flip_rate": {"1.0": 0.0, "1.15": 0.9266, "1.3": 0.9387},
+      "hf_reference_theta1.3": 0.941,
+      "status": "CLEAN — gate passed, matches HF"
+    },
+    "Qwen2.5-7B": {
+      "model": "Qwen/Qwen2.5-7B",
+      "revision": "d149729398750b98c0af14eb82c78cfe92750796",
+      "dtype": "bfloat16",
+      "validity_gate_theta1.0": {"flip_rate": 0.3269, "flips": 1046, "positions": 3200, "passed": false},
+      "flip_rate_raw": {"1.0": 0.3269, "1.15": 0.9347, "1.3": 0.8806},
+      "hf_reference_theta1.3": 0.87,
+      "status": "GATE FAILED — theta>1 numbers NOT reportable; root cause = bf16",
+      "root_cause": "vLLM V0 logits_processor receives logits in the model compute dtype (bf16, 7 mantissa bits). Adding +5 vs -5 is NOT order-preserving under bf16 rounding, so rare per-step argmax flips occur even at theta=1.0; they cascade autoregressively over the 200-token continuation into a large token-divergence rate. HF's run_a1.py avoids this by casting logits to fp32 before the shift. gpt2-large in fp16 shows exactly 0 flips at theta=1.0."
+    }
+  },
+  "A2_json_validity": {
+    "model": "Qwen/Qwen2.5-Coder-7B",
+    "revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+    "dtype": "bfloat16",
+    "engine": "V1 (default) — native SamplingParams.repetition_penalty, stock knob",
+    "design": "6 schemas x 8 prompt variants = 48 prompts; greedy; max_tokens=160; stop=['\\n\\n','```']; first_json + json_valid VERBATIM from run_a2_downstream.py",
+    "json_valid_rate": {"1.0": 1.0, "1.1": 1.0, "1.3": 0.1667},
+    "hf_reference": {"1.0": 1.0, "1.1": 1.0, "1.3": 0.0},
+    "status": "REPRODUCED — catastrophic collapse at theta=1.3 (100% -> 16.7%); vLLM leaves 8/48 valid vs HF's exact 0"
+  }
+}

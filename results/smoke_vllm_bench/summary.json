@@ -1,0 +1,68 @@
+{
+  "stack": "vLLM 0.8.5.post1 (A1: V0 + pre-penalty logits_processor shift; A2: stock repetition_penalty on V1)",
+  "manifests": {
+    "a1": "results/bench_a1/prefixes.json",
+    "a2": "results/bench_a2/schemas.json"
+  },
+  "a1": {
+    "model": "openai-community/gpt2-large dtype=torch.float32, 200 prefixes x 200 tokens, ignore_eos",
+    "validity_gate_theta1.0_flip": 0.0,
+    "validity_gate_pass": true,
+    "flip_rate_by_theta": {
+      "1.0": {
+        "flips": 0,
+        "positions": 40000,
+        "flip_rate": 0.0
+      },
+      "1.3": {
+        "flips": 38555,
+        "positions": 40000,
+        "flip_rate": 0.963875
+      }
+    }
+  },
+  "a2": {
+    "model": "Qwen/Qwen2.5-Coder-7B dtype=['torch.bfloat16'], 200 schemas, max_new=512",
+    "valid_rate_by_theta": {
+      "raw_theta1.0": {
+        "valid_rate": 0.97,
+        "n": 200,
+        "n_valid": 194
+      },
+      "raw_theta1.1": {
+        "valid_rate": 0.95,
+        "n": 200,
+        "n_valid": 190
+      },
+      "raw_theta1.3": {
+        "valid_rate": 0.24,
+        "n": 200,
+        "n_valid": 48
+      }
+    }
+  },
+  "hf_benchmark_reference": {
+    "a1_gpt2_large_flip": {
+      "1.0": 0.0,
+      "1.3": 0.9639
+    },
+    "a2_json_valid_raw": {
+      "1.0": 0.97,
+      "1.1": 0.955,
+      "1.3": 0.225
+    },
+    "a2_json_valid_fix": {
+      "1.0": 0.97,
+      "1.1": 0.975,
+      "1.3": 0.97
+    }
+  },
+  "previous_smoke_round": {
+    "a1_flip_1.3": 0.9387,
+    "a2_valid": {
+      "1.0": 1.0,
+      "1.1": 1.0,
+      "1.3": 0.167
+    }
+  }
+}

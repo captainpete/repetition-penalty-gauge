@@ -1,0 +1,1409 @@
+{
+ "theta": 1.0,
+ "dtype": "torch.bfloat16",
+ "n": 200,
+ "n_valid": 194,
+ "valid_rate": 0.97,
+ "records": [
+  {
+   "id": "o90308",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"transparency\": 30\n}",
+   "output": "{\n  \"transparency\": 30\n}"
+  },
+  {
+   "id": "o33695",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"@context\": \"http://adnotare.crim.ca/schema/custom-meta-schema#\",\n  \"@type\": \"CustomMetaSchema\",\n  \"schemaType\": \"CustomMetaSchema\"\n}",
+   "output": "{\n  \"@context\": \"http://adnotare.crim.ca/schema/custom-meta-schema#\",\n  \"@type\": \"CustomMetaSchema\",\n  \"schemaType\": \"CustomMetaSchema\"\n}"
+  },
+  {
+   "id": "o24544",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"id\": 12345,\n  \"name\": \"AVRELIANVS\"\n}",
+   "output": "{\n  \"id\": 12345,\n  \"name\": \"AVRELIANVS\"\n}"
+  },
+  {
+   "id": "o79712",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"option\": \"ignorieren\",\n  \"wiederholungen\": \"1\"\n}",
+   "output": "{\n  \"option\": \"ignorieren\",\n  \"wiederholungen\": \"1\"\n}"
+  },
+  {
+   "id": "o31168",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"channelnumber\": 123,\n  \"destip\": \"192.168.1.1\",\n  \"destport\": 443,\n  \"domain\": \"example.com\",\n  \"nodeid\": 456,\n  \"peid\": 789,\n  \"srcip\": \"10.0.0.1\",\n  \"srcport\": 80,\n  \"username\": \"user123\"\n}",
+   "output": "{\n  \"channelnumber\": 123,\n  \"destip\": \"192.168.1.1\",\n  \"destport\": 443,\n  \"domain\": \"example.com\",\n  \"nodeid\": 456,\n  \"peid\": 789,\n  \"srcip\": \"10.0.0.1\",\n  \"srcport\": 80,\n  \"username\": \"user123\"\n}"
+  },
+  {
+   "id": "o71320",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"fabric_uuid\": \"123456789\",\n  \"device_count\": 1\n}",
+   "output": "{\n  \"fabric_uuid\": \"123456789\",\n  \"device_count\": 1\n}"
+  },
+  {
+   "id": "o3620",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"key\": \"value\"\n}",
+   "output": "{\n  \"key\": \"value\"\n}"
+  },
+  {
+   "id": "o41033",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"DestinationCidrBlock\": \"0.0.0.0/0\",\n  \"NatGatewayId\": \"nat-1234567890abcdef\",\n  \"RouteTableId\": \"rtb-1234567890abcdef\"\n}",
+   "output": "{\n  \"DestinationCidrBlock\": \"0.0.0.0/0\",\n  \"NatGatewayId\": \"nat-1234567890abcdef\",\n  \"RouteTableId\": \"rtb-1234567890abcdef\"\n}"
+  },
+  {
+   "id": "o10012",
+   "valid": false,
+   "reason": "'example_id' is too short",
+   "extracted": "{\n  \"id\": \"example_id\",\n  \"secret\": \"example_secret\"\n}",
+   "output": "{\n  \"id\": \"example_id\",\n  \"secret\": \"example_secret\"\n}"
+  },
+  {
+   "id": "o8450",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"container_name\": \"example_container\",\n  \"fabric_fq_name\": [\"example_fabric\", \"example_domain\", \"example_project\"]\n}",
+   "output": "{\n  \"container_name\": \"example_container\",\n  \"fabric_fq_name\": [\"example_fabric\", \"example_domain\", \"example_project\"]\n}"
+  },
+  {
+   "id": "o3206",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"messagePacket\": {\n    \"data\": \"string\",\n    \"text\": \"string\",\n    \"type\": \"string\"\n  }\n}",
+   "output": "{\n  \"messagePacket\": {\n    \"data\": \"string\",\n    \"text\": \"string\",\n    \"type\": \"string\"\n  }\n}"
+  },
+  {
+   "id": "o46527",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"My Theme\",\n  \"author\": \"John Doe\",\n  \"description\": \"A custom theme for my website\",\n  \"body\": [\n    {\n      \"selector\": \"body\",\n      \"styles\": {\n        \"background-color\": \"#f0f0f0\",\n        \"font-family\": \"Arial, sans-serif\"\n      }\n    }\n  ],\n  \"main\": [\n    {\n      \"selector\": \"h1\",\n      \"styles\": {\n        \"color\": \"#333\",\n        \"font-size\": \"24px\"\n      }\n    }\n  ],\n  \"diffHeader\": [\n    {\n      \"selector\": \"h2\",\n      \"styles\": {\n        \"color\": \"#666\",\n        \"font-size\": \"18px\"\n      }\n    }\n  ],\n  \"diffBody\": [\n    {\n      \"selector\": \"p\",\n      \"styles\": {\n        \"color\": \"#999\",\n        \"font-size\": \"14px\"\n      }\n    }\n  ]\n}",
+   "output": "{\n  \"name\": \"My Theme\",\n  \"author\": \"John Doe\",\n  \"description\": \"A custom theme for my website\",\n  \"body\": [\n    {\n      \"selector\": \"body\",\n      \"styles\": {\n        \"background-color\": \"#f0f0f0\",\n        \"font-family\": \"Arial, sans-serif\"\n      }\n    }\n  ],\n  \"main\": [\n    {\n      \"selector\": \"h1\",\n      \"styles\": {\n        \"color\": \"#333\",\n        \"font-size\": \"24px\"\n      }\n    }\n  ],\n  \"diffHeader\": [\n    {\n      \"selector\": \"h2\",\n      \"styles\": {\n        \"color\": \"#666\",\n        \"font-size\": \"18px\"\n      }\n    }\n  ],\n  \"diffBody\": [\n    {\n      \"selector\": \"p\",\n      \"styles\": {\n        \"color\": \"#999\",\n        \"font-size\": \"14px\"\n      }\n    }\n  ]\n}"
+  },
+  {
+   "id": "o6167",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"John Doe\",\n  \"status\": \"active\"\n}",
+   "output": "{\n  \"name\": \"John Doe\",\n  \"status\": \"active\"\n}"
+  },
+  {
+   "id": "o39754",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"extensions\": [\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.Storage\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.Storage.StorageExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.Storage, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.Storage.dll\"\n    },\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs.EventHubsExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.EventHubs, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.EventHubs.dll\"\n    }\n  ]\n}",
+   "output": "{\n  \"extensions\": [\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.Storage\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.Storage.StorageExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.Storage, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.Storage.dll\"\n    },\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs.EventHubsExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.EventHubs, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.EventHubs.dll\"\n    }\n  ]\n}"
+  },
+  {
+   "id": "o6262",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"type\": \"timer\",\n  \"outputIds\": [\n    [\n      \"output1\",\n      \"output2\"\n    ]\n  ],\n  \"meta\": {},\n  \"config\": {\n    \"cron\": \"0 0 * * *\"\n  }\n}",
+   "output": "{\n  \"type\": \"timer\",\n  \"outputIds\": [\n    [\n      \"output1\",\n      \"output2\"\n    ]\n  ],\n  \"meta\": {},\n  \"config\": {\n    \"cron\": \"0 0 * * *\"\n  }\n}"
+  },
+  {
+   "id": "o71408",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"route\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"view\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"optimization_problem_id\": \"YOUR_OPTIMIZATION_PROBLEM_ID\"\n}",
+   "output": "{\n  \"route\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"view\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"optimization_problem_id\": \"YOUR_OPTIMIZATION_PROBLEM_ID\"\n}"
+  },
+  {
+   "id": "o42304",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"root\": {\n    \"string\": [\"value1\", \"value2\"],\n    \"root\": [\n      {\n        \"string\": [\"nestedValue1\", \"nestedValue2\"],\n        \"root\": [],\n        \"theName\": \"nestedName\"\n      }\n    ],\n    \"theName\": \"rootName\"\n  }\n}",
+   "output": "{\n  \"root\": {\n    \"string\": [\"value1\", \"value2\"],\n    \"root\": [\n      {\n        \"string\": [\"nestedValue1\", \"nestedValue2\"],\n        \"root\": [],\n        \"theName\": \"nestedName\"\n      }\n    ],\n    \"theName\": \"rootName\"\n  }\n}"
+  },
+  {
+   "id": "o68826",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"message\": \"This is a log message\"\n}",
+   "output": "{\n  \"message\": \"This is a log message\"\n}"
+  },
+  {
+   "id": "o67501",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"outDir\": \"dist\",\n  \"tsConfig\": \"tsconfig.json\"\n}",
+   "output": "{\n  \"outDir\": \"dist\",\n  \"tsConfig\": \"tsconfig.json\"\n}"
+  },
+  {
+   "id": "o14743",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"channels\": [],\n  \"streen\": {\n    \"url\": \"https://example.com/streen\",\n    \"secretKey\": \"mysecretkey\"\n  }\n}",
+   "output": "{\n  \"channels\": [],\n  \"streen\": {\n    \"url\": \"https://example.com/streen\",\n    \"secretKey\": \"mysecretkey\"\n  }\n}"
+  },
+  {
+   "id": "o13985",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"attributes\": {\n    \"integer\": 42,\n    \"string\": [\"Hello\", \"World\"]\n  }\n}",
+   "output": "{\n  \"attributes\": {\n    \"integer\": 42,\n    \"string\": [\"Hello\", \"World\"]\n  }\n}"
+  },
+  {
+   "id": "o76874",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"objectIdFieldName\": \"OBJECTID\",\n  \"objectIds\": [1, 2, 3, 4, 5]\n}",
+   "output": "{\n  \"objectIdFieldName\": \"OBJECTID\",\n  \"objectIds\": [1, 2, 3, 4, 5]\n}"
+  },
+  {
+   "id": "o9885",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"version\": \"1.0.0\",\n  \"slug\": \"example-slug\"\n}",
+   "output": "{\n  \"version\": \"1.0.0\",\n  \"slug\": \"example-slug\"\n}"
+  },
+  {
+   "id": "o46416",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"amount\": 1000.45\n}",
+   "output": "{\n  \"amount\": 1000.45\n}"
+  },
+  {
+   "id": "o8412",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"actions_py\": \"string\",\n  \"key\": \"string\",\n  \"name\": \"string\",\n  \"parent\": \"string\",\n  \"producers\": [\n    \"string\"\n  ],\n  \"role\": \"string\",\n  \"state\": \"string\"\n}",
+   "output": "{\n  \"actions_py\": \"string\",\n  \"key\": \"string\",\n  \"name\": \"string\",\n  \"parent\": \"string\",\n  \"producers\": [\n    \"string\"\n  ],\n  \"role\": \"string\",\n  \"state\": \"string\"\n}"
+  },
+  {
+   "id": "o47061",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"split\": \"timestamp\",\n  \"avg\": 1000,\n  \"max\": 2000,\n  \"min\": 500\n}",
+   "output": "{\n  \"split\": \"timestamp\",\n  \"avg\": 1000,\n  \"max\": 2000,\n  \"min\": 500\n}"
+  },
+  {
+   "id": "o48010",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"key\": \"string\",\n  \"file_id\": \"string\",\n  \"bucket\": \"string\",\n  \"checksum\": \"string\",\n  \"size\": 0,\n  \"version_id\": \"string\"\n}",
+   "output": "{\n  \"key\": \"string\",\n  \"file_id\": \"string\",\n  \"bucket\": \"string\",\n  \"checksum\": \"string\",\n  \"size\": 0,\n  \"version_id\": \"string\"\n}"
+  },
+  {
+   "id": "o53898",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"id\": 12345,\n  \"configId\": \"config123\"\n}",
+   "output": "{\n  \"id\": 12345,\n  \"configId\": \"config123\"\n}"
+  },
+  {
+   "id": "o16365",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"vaults\": [\n    \"vault1\",\n    \"vault2\",\n    \"vault3\"\n  ]\n}",
+   "output": "{\n  \"vaults\": [\n    \"vault1\",\n    \"vault2\",\n    \"vault3\"\n  ]\n}"
+  },
+  {
+   "id": "o79711",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"vorgaenger\": [\"vorgaenger1\", \"vorgaenger2\"],\n  \"warteart\": \"beginn\",\n  \"rechner\": \"rechner1\",\n  \"wartezeit\": \"00:00:00\"\n}",
+   "output": "{\n  \"vorgaenger\": [\"vorgaenger1\", \"vorgaenger2\"],\n  \"warteart\": \"beginn\",\n  \"rechner\": \"rechner1\",\n  \"wartezeit\": \"00:00:00\"\n}"
+  },
+  {
+   "id": "o57232",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"_uid\": 1,\n  \"_metadata\": {\n    \"field_1\": \"value_1\",\n    \"field_2\": \"value_2\"\n  }\n}",
+   "output": "{\n  \"_uid\": 1,\n  \"_metadata\": {\n    \"field_1\": \"value_1\",\n    \"field_2\": \"value_2\"\n  }\n}"
+  },
+  {
+   "id": "o83269",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"hypervisor_hostname\": \"example-hostname\",\n  \"id\": 12345,\n  \"memory_mb\": 8192,\n  \"vcpus\": 4,\n  \"date\": \"2022-01-01\"\n}",
+   "output": "{\n  \"hypervisor_hostname\": \"example-hostname\",\n  \"id\": 12345,\n  \"memory_mb\": 8192,\n  \"vcpus\": 4,\n  \"date\": \"2022-01-01\"\n}"
+  },
+  {
+   "id": "o65447",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"Example Company\",\n  \"jurisdiction\": \"US\",\n  \"company_number\": \"123456789\",\n  \"identifier\": \"sec/12345\"\n}",
+   "output": "{\n  \"name\": \"Example Company\",\n  \"jurisdiction\": \"US\",\n  \"company_number\": \"123456789\",\n  \"identifier\": \"sec/12345\"\n}"
+  },
+  {
+   "id": "o68286",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"emiter\": \"example_emiter\",\n  \"masterId\": \"example_master_id\",\n  \"slaveId\": \"adocean_example_slave_id\"\n}",
+   "output": "{\n  \"emiter\": \"example_emiter\",\n  \"masterId\": \"example_master_id\",\n  \"slaveId\": \"adocean_example_slave_id\"\n}"
+  },
+  {
+   "id": "o7389",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"ConnectionString\": \"mongodb://localhost:27017\"\n}",
+   "output": "{\n  \"ConnectionString\": \"mongodb://localhost:27017\"\n}"
+  },
+  {
+   "id": "o68405",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"title\": \"The Importance of Reading\",\n  \"text\": \"Reading is a fundamental skill that can greatly enhance one's knowledge and understanding of the world. It allows individuals to explore new ideas, cultures, and perspectives, and can even improve their cognitive abilities. By reading regularly, individuals can develop a deeper appreciation for literature, history, and other forms of written expression.\"\n}",
+   "output": "{\n  \"title\": \"The Importance of Reading\",\n  \"text\": \"Reading is a fundamental skill that can greatly enhance one's knowledge and understanding of the world. It allows individuals to explore new ideas, cultures, and perspectives, and can even improve their cognitive abilities. By reading regularly, individuals can develop a deeper appreciation for literature, history, and other forms of written expression.\"\n}"
+  },
+  {
+   "id": "o88674",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"type\": \"push\",\n  \"push_event\": \"shampoo\",\n  \"push_data\": {\n    \"message\": \"Shampoo is ready for use\"\n  }\n}",
+   "output": "{\n  \"type\": \"push\",\n  \"push_event\": \"shampoo\",\n  \"push_data\": {\n    \"message\": \"Shampoo is ready for use\"\n  }\n}"
+  },
+  {
+   "id": "o79476",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"email\": \"example@example.com\",\n  \"password\": \"password123\",\n  \"givenName\": \"John\",\n  \"familyName\": \"Doe\",\n  \"image\": \"https://example.com/image.jpg\"\n}",
+   "output": "{\n  \"email\": \"example@example.com\",\n  \"password\": \"password123\",\n  \"givenName\": \"John\",\n  \"familyName\": \"Doe\",\n  \"image\": \"https://example.com/image.jpg\"\n}"
+  },
+  {
+   "id": "o9765",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"John Doe\",\n  \"description\": \"This is a sample description.\",\n  \"status\": \"active\"\n}",
+   "output": "{\n  \"name\": \"John Doe\",\n  \"description\": \"This is a sample description.\",\n  \"status\": \"active\"\n}"
+  },
+  {
+   "id": "o61120",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"dependencies\": {\n    \"package1\": \"1.0.0\",\n    \"package2\": \"2.0.0\"\n  }\n}",
+   "output": "{\n  \"dependencies\": {\n    \"package1\": \"1.0.0\",\n    \"package2\": \"2.0.0\"\n  }\n}"
+  },
+  {
+   "id": "o77704",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"The Beatles\",\n  \"popularity\": 95,\n  \"type\": \"artist\",\n  \"uri\": \"spotify:artist:06HL4z0CvFAxyc27GXpf02\"\n}",
+   "output": "{\n  \"name\": \"The Beatles\",\n  \"popularity\": 95,\n  \"type\": \"artist\",\n  \"uri\": \"spotify:artist:06HL4z0CvFAxyc27GXpf02\"\n}"
+  },
+  {
+   "id": "o17460",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"amount\": 100.00\n}",
+   "output": "{\n  \"amount\": 100.00\n}"
+  },
+  {
+   "id": "o6205",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"email\": \"user@example.com\",\n  \"token\": \"1234567890\"\n}",
+   "output": "{\n  \"email\": \"user@example.com\",\n  \"token\": \"1234567890\"\n}"
+  },
+  {
+   "id": "o25169",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"bar\": 0,\n  \"baz\": 0\n}",
+   "output": "{\n  \"bar\": 0,\n  \"baz\": 0\n}"
+  },
+  {
+   "id": "o74932",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"id\": \"123456789\",\n  \"carrier_tracking_no\": \"ABC123\",\n  \"tracking_url\": \"https://example.com/track/ABC123\",\n  \"label_url\": \"https://example.com/label/123456789\",\n  \"price\": 10.99\n}",
+   "output": "{\n  \"id\": \"123456789\",\n  \"carrier_tracking_no\": \"ABC123\",\n  \"tracking_url\": \"https://example.com/track/ABC123\",\n  \"label_url\": \"https://example.com/label/123456789\",\n  \"price\": 10.99\n}"
+  },
+  {
+   "id": "o22050",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"buildTarget\": \"my-app:my-target\",\n  \"preview\": true\n}",
+   "output": "{\n  \"buildTarget\": \"my-app:my-target\",\n  \"preview\": true\n}"
+  },
+  {
+   "id": "o68311",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"zone\": \"12345678\"\n}",
+   "output": "{\n  \"zone\": \"12345678\"\n}"
+  },
+  {
+   "id": "o22866",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"application_id\": \"string\",\n  \"environment\": \"string\",\n  \"subscriptions\": [\n    {\n      \"user_id\": \"string\"\n    }\n  ]\n}",
+   "output": "{\n  \"application_id\": \"string\",\n  \"environment\": \"string\",\n  \"subscriptions\": [\n    {\n      \"user_id\": \"string\"\n    }\n  ]\n}"
+  },
+  {
+   "id": "o54549",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"stream\": [\n    {\n      \"label\": \"Series 1\",\n      \"data\": [10, 20, 30, 40, 50]\n    },\n    {\n      \"label\": \"Series 2\",\n      \"data\": [15, 25, 35, 45, 55]\n    }\n  ]\n}",
+   "output": "{\n  \"stream\": [\n    {\n      \"label\": \"Series 1\",\n      \"data\": [10, 20, 30, 40, 50]\n    },\n    {\n      \"label\": \"Series 2\",\n      \"data\": [15, 25, 35, 45, 55]\n    }\n  ]\n}"
+  },
+  {
+   "id": "o91014",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"browser_options\": {},\n  \"cubes\": [],\n  \"description\": \"\",\n  \"dimensions\": [],\n  \"info\": {},\n  \"joins\": [],\n  \"label\": \"\",\n  \"mappings\": {},\n  \"name\": \"\",\n  \"provider\": \"\",\n  \"schema\": \"\",\n  \"store\": \"\"\n}",
+   "output": "{\n  \"browser_options\": {},\n  \"cubes\": [],\n  \"description\": \"\",\n  \"dimensions\": [],\n  \"info\": {},\n  \"joins\": [],\n  \"label\": \"\",\n  \"mappings\": {},\n  \"name\": \"\",\n  \"provider\": \"\",\n  \"schema\": \"\",\n  \"store\": \"\"\n}"
+  },
+  {
+   "id": "o12489",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"title\": \"Sample Audio Title\",\n  \"author\": \"John Doe\",\n  \"xmpDM:duration\": \"00:03:20\",\n  \"xmpDM:audioSampleRate\": \"44100 Hz\",\n  \"xmpDM:audioSampleType\": \"16-bit\",\n  \"xmpDM:audioChannelType\": \"Stereo\",\n  \"xmpDM:audioCompressor\": \"LAME\",\n  \"version\": \"1.0\"\n}",
+   "output": "{\n  \"title\": \"Sample Audio Title\",\n  \"author\": \"John Doe\",\n  \"xmpDM:duration\": \"00:03:20\",\n  \"xmpDM:audioSampleRate\": \"44100 Hz\",\n  \"xmpDM:audioSampleType\": \"16-bit\",\n  \"xmpDM:audioChannelType\": \"Stereo\",\n  \"xmpDM:audioCompressor\": \"LAME\",\n  \"version\": \"1.0\"\n}"
+  },
+  {
+   "id": "o41693",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"pets\": {\n    \"dog\": [\n      \"Bulldog\",\n      \"Poodle\",\n      \"Labrador\",\n      \"German Shepherd\"\n    ]\n  }\n}",
+   "output": "{\n  \"pets\": {\n    \"dog\": [\n      \"Bulldog\",\n      \"Poodle\",\n      \"Labrador\",\n      \"German Shepherd\"\n    ]\n  }\n}"
+  },
+  {
+   "id": "o44268",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"x\": 20,\n  \"y\": -50,\n  \"z\": 5\n}",
+   "output": "{\n  \"x\": 20,\n  \"y\": -50,\n  \"z\": 5\n}"
+  },
+  {
+   "id": "o83725",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"answer\": 10\n}",
+   "output": "{\n  \"answer\": 10\n}"
+  },
+  {
+   "id": "o62380",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"scores\": [1, 2, 3, 4, 5]\n}",
+   "output": "{\n  \"scores\": [1, 2, 3, 4, 5]\n}"
+  },
+  {
+   "id": "o54554",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"title\": \"My Page\",\n  \"maxChartsRow\": 3,\n  \"maxChartsCol\": 4\n}",
+   "output": "{\n  \"title\": \"My Page\",\n  \"maxChartsRow\": 3,\n  \"maxChartsCol\": 4\n}"
+  },
+  {
+   "id": "o87817",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"post-office-box\": \"123 Main St\",\n  \"extended-address\": \"Apt 4B\",\n  \"street-address\": \"123 Main St\",\n  \"locality\": \"Anytown\",\n  \"region\": \"CA\",\n  \"postal-code\": \"12345\",\n  \"country-name\": \"USA\"\n}",
+   "output": "{\n  \"post-office-box\": \"123 Main St\",\n  \"extended-address\": \"Apt 4B\",\n  \"street-address\": \"123 Main St\",\n  \"locality\": \"Anytown\",\n  \"region\": \"CA\",\n  \"postal-code\": \"12345\",\n  \"country-name\": \"USA\"\n}"
+  },
+  {
+   "id": "o63977",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"string\": \"Hello, World!\",\n  \"array\": [\"apple\", \"banana\", \"cherry\"]\n}",
+   "output": "{\n  \"string\": \"Hello, World!\",\n  \"array\": [\"apple\", \"banana\", \"cherry\"]\n}"
+  },
+  {
+   "id": "o66170",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"dependency_type\": \"jsonpath_ready\",\n  \"expressions\": []\n}",
+   "output": "{\n  \"dependency_type\": \"jsonpath_ready\",\n  \"expressions\": []\n}"
+  },
+  {
+   "id": "o48513",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"DatasetsUUID\": [\"uuid1\", \"uuid2\"],\n  \"NewDatasetID\": 123,\n  \"version\": \"0.01\"\n}",
+   "output": "{\n  \"DatasetsUUID\": [\"uuid1\", \"uuid2\"],\n  \"NewDatasetID\": 123,\n  \"version\": \"0.01\"\n}"
+  },
+  {
+   "id": "o29003",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"resource_id\": \"12345\",\n  \"resource\": {\n    \"priority\": 50\n  }\n}",
+   "output": "{\n  \"resource_id\": \"12345\",\n  \"resource\": {\n    \"priority\": 50\n  }\n}"
+  },
+  {
+   "id": "o47860",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"well_type\": \"WELL\"\n}",
+   "output": "{\n  \"well_type\": \"WELL\"\n}"
+  },
+  {
+   "id": "o83939",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"displayGroupOnSameAxis\": true,\n  \"graphType\": \"SCATTER\",\n  \"groupName\": \"My Clinical Concept Group\",\n  \"parentGroupName\": \"Parent Group Name\"\n}",
+   "output": "{\n  \"displayGroupOnSameAxis\": true,\n  \"graphType\": \"SCATTER\",\n  \"groupName\": \"My Clinical Concept Group\",\n  \"parentGroupName\": \"Parent Group Name\"\n}"
+  },
+  {
+   "id": "o54575",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"schema\": \"https://example.com/product/create\",\n  \"id\": \"12345\",\n  \"brand\": \"Nike\",\n  \"name\": \"Air Max 90\",\n  \"description\": \"The Nike Air Max 90 is a classic running shoe with a comfortable and supportive design.\",\n  \"category\": \"Running Shoes\",\n  \"price\": \"$120.00\"\n}",
+   "output": "{\n  \"schema\": \"https://example.com/product/create\",\n  \"id\": \"12345\",\n  \"brand\": \"Nike\",\n  \"name\": \"Air Max 90\",\n  \"description\": \"The Nike Air Max 90 is a classic running shoe with a comfortable and supportive design.\",\n  \"category\": \"Running Shoes\",\n  \"price\": \"$120.00\"\n}"
+  },
+  {
+   "id": "o79427",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"prop1\": 57,\n  \"prop2\": {\n    \"sub1\": \"ta-da\"\n  }\n}",
+   "output": "{\n  \"prop1\": 57,\n  \"prop2\": {\n    \"sub1\": \"ta-da\"\n  }\n}"
+  },
+  {
+   "id": "o12070",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"httpMethod\": \"GET\",\n  \"path\": \"/products\",\n  \"queryStringParameters\": {\n    \"category\": \"electronics\"\n  }\n}",
+   "output": "{\n  \"httpMethod\": \"GET\",\n  \"path\": \"/products\",\n  \"queryStringParameters\": {\n    \"category\": \"electronics\"\n  }\n}"
+  },
+  {
+   "id": "o6176",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"orgId\": \"5f9f8e4b8e4b8e4b8e4b8e4b\",\n  \"name\": \"My Organization\",\n  \"description\": \"This is my organization\"\n}",
+   "output": "{\n  \"orgId\": \"5f9f8e4b8e4b8e4b8e4b8e4b\",\n  \"name\": \"My Organization\",\n  \"description\": \"This is my organization\"\n}"
+  },
+  {
+   "id": "o39141",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"created\": \"2022-01-01T00:00:00Z\",\n  \"modified\": \"2022-01-01T00:00:00Z\",\n  \"id\": \"1234567890\",\n  \"category\": \"example\",\n  \"priority\": \"high\",\n  \"content\": {\n    \"title\": \"Example Title\",\n    \"description\": \"Example Description\"\n  }\n}",
+   "output": "{\n  \"created\": \"2022-01-01T00:00:00Z\",\n  \"modified\": \"2022-01-01T00:00:00Z\",\n  \"id\": \"1234567890\",\n  \"category\": \"example\",\n  \"priority\": \"high\",\n  \"content\": {\n    \"title\": \"Example Title\",\n    \"description\": \"Example Description\"\n  }\n}"
+  },
+  {
+   "id": "o10337",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"top\": {\n    \"basic\": \"value\",\n    \"nested\": {\n      \"append\": \"value\"\n    }\n  }\n}",
+   "output": "{\n  \"top\": {\n    \"basic\": \"value\",\n    \"nested\": {\n      \"append\": \"value\"\n    }\n  }\n}"
+  },
+  {
+   "id": "o58273",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"attestationCert\": \"attestationCertValue\",\n  \"publicKey\": \"publicKeyValue\"\n}",
+   "output": "{\n  \"attestationCert\": \"attestationCertValue\",\n  \"publicKey\": \"publicKeyValue\"\n}"
+  },
+  {
+   "id": "o46432",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"nonResidentLandlord\": true,\n  \"rarJointLet\": true\n}",
+   "output": "{\n  \"nonResidentLandlord\": true,\n  \"rarJointLet\": true\n}"
+  },
+  {
+   "id": "o37724",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"doc_type\": \"Image\",\n  \"title\": \"Sample Image\",\n  \"mimeType\": \"image/jpeg\",\n  \"data\": \"iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==\"\n}",
+   "output": "{\n  \"doc_type\": \"Image\",\n  \"title\": \"Sample Image\",\n  \"mimeType\": \"image/jpeg\",\n  \"data\": \"iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==\"\n}"
+  },
+  {
+   "id": "o80790",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"publisher_type\": \"frompar-pub\",\n  \"outputmap\": {}\n}",
+   "output": "{\n  \"publisher_type\": \"frompar-pub\",\n  \"outputmap\": {}\n}"
+  },
+  {
+   "id": "o73033",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"situacao\": {\n    \"id\": \"123\",\n    \"descricao\": \"Aprovado\"\n  },\n  \"novaDataFimVigencia\": \"2022-12-31\"\n}",
+   "output": "{\n  \"situacao\": {\n    \"id\": \"123\",\n    \"descricao\": \"Aprovado\"\n  },\n  \"novaDataFimVigencia\": \"2022-12-31\"\n}"
+  },
+  {
+   "id": "o61536",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"uuid\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"owner\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"title\": \"Festival Event\"\n}",
+   "output": "{\n  \"uuid\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"owner\": \"123e4567-e89b-12d3-a456-426614174000\",\n  \"title\": \"Festival Event\"\n}"
+  },
+  {
+   "id": "o90919",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"commands\": [\n    {\n      \"name\": \"command1\",\n      \"params\": {\n        \"param1\": \"value1\",\n        \"param2\": \"value2\"\n      }\n    },\n    {\n      \"name\": \"command2\",\n      \"params\": {\n        \"param3\": \"value3\",\n        \"param4\": \"value4\"\n      }\n    }\n  ]\n}",
+   "output": "{\n  \"commands\": [\n    {\n      \"name\": \"command1\",\n      \"params\": {\n        \"param1\": \"value1\",\n        \"param2\": \"value2\"\n      }\n    },\n    {\n      \"name\": \"command2\",\n      \"params\": {\n        \"param3\": \"value3\",\n        \"param4\": \"value4\"\n      }\n    }\n  ]\n}"
+  },
+  {
+   "id": "o32502",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"id\": \"1234567890\",\n  \"slug\": \"chapter-slug\",\n  \"title\": \"Chapter Title\",\n  \"text\": \"Chapter Text\",\n  \"parentSlug\": \"parent-chapter-slug\",\n  \"previousSlug\": \"previous-sibling-slug\",\n  \"nextSlug\": \"next-sibling-slug\"\n}",
+   "output": "{\n  \"id\": \"1234567890\",\n  \"slug\": \"chapter-slug\",\n  \"title\": \"Chapter Title\",\n  \"text\": \"Chapter Text\",\n  \"parentSlug\": \"parent-chapter-slug\",\n  \"previousSlug\": \"previous-sibling-slug\",\n  \"nextSlug\": \"next-sibling-slug\"\n}"
+  },
+  {
+   "id": "o91036",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"id\": \"string\",\n  \"signing-key\": {\n    \"data\": \"string\",\n    \"type\": \"string\"\n  },\n  \"verifying-key\": {\n    \"data\": \"string\",\n    \"type\": \"string\"\n  }\n}",
+   "output": "{\n  \"id\": \"string\",\n  \"signing-key\": {\n    \"data\": \"string\",\n    \"type\": \"string\"\n  },\n  \"verifying-key\": {\n    \"data\": \"string\",\n    \"type\": \"string\"\n  }\n}"
+  },
+  {
+   "id": "o79561",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"operation\": \"insert\"\n}",
+   "output": "{\n  \"operation\": \"insert\"\n}"
+  },
+  {
+   "id": "o84353",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\",\n  \"username\": \"user123\"\n}",
+   "output": "{\n  \"email\": \"user@example.com\",\n  \"password\": \"password123\",\n  \"username\": \"user123\"\n}"
+  },
+  {
+   "id": "o73946",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"WebJobs\": [\n    {\n      \"filePath\": \"path/to/webjob1\"\n    },\n    {\n      \"filePath\": \"path/to/webjob2\"\n    }\n  ]\n}",
+   "output": "{\n  \"WebJobs\": [\n    {\n      \"filePath\": \"path/to/webjob1\"\n    },\n    {\n      \"filePath\": \"path/to/webjob2\"\n    }\n  ]\n}"
+  },
+  {
+   "id": "o32481",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"id\": \"12345\",\n  \"name\": \"Example Organization\",\n  \"code\": \"ORG123\",\n  \"email\": \"org@example.com\"\n}",
+   "output": "{\n  \"id\": \"12345\",\n  \"name\": \"Example Organization\",\n  \"code\": \"ORG123\",\n  \"email\": \"org@example.com\"\n}"
+  },
+  {
+   "id": "o90351",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"minNodes\": 1,\n  \"maxNodes\": 2,\n  \"enabled\": true\n}",
+   "output": "{\n  \"minNodes\": 1,\n  \"maxNodes\": 2,\n  \"enabled\": true\n}"
+  },
+  {
+   "id": "o80622",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"v\": 42\n}",
+   "output": "{\n  \"v\": 42\n}"
+  },
+  {
+   "id": "o73969",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"gis\": {\n    \"center\": \"string\",\n    \"area\": \"string\",\n    \"route\": \"string\"\n  }\n}",
+   "output": "{\n  \"gis\": {\n    \"center\": \"string\",\n    \"area\": \"string\",\n    \"route\": \"string\"\n  }\n}"
+  },
+  {
+   "id": "o12617",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"created\": \"2022-01-01T00:00:00.000000\",\n  \"description\": \"Sample description\",\n  \"id\": 123,\n  \"modified\": \"2022-01-01T00:00:00.000000\",\n  \"name\": \"Sample name\",\n  \"resource_uri\": \"https://example.com/resource/123\"\n}",
+   "output": "{\n  \"created\": \"2022-01-01T00:00:00.000000\",\n  \"description\": \"Sample description\",\n  \"id\": 123,\n  \"modified\": \"2022-01-01T00:00:00.000000\",\n  \"name\": \"Sample name\",\n  \"resource_uri\": \"https://example.com/resource/123\"\n}"
+  },
+  {
+   "id": "o63147",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"annotation_value\": {\n    \"type\": \"string\",\n    \"identifier\": \"example_identifier\",\n    \"name\": \"Example Name\",\n    \"match_text\": \"example_match_text\"\n  }\n}",
+   "output": "{\n  \"annotation_value\": {\n    \"type\": \"string\",\n    \"identifier\": \"example_identifier\",\n    \"name\": \"Example Name\",\n    \"match_text\": \"example_match_text\"\n  }\n}"
+  },
+  {
+   "id": "o42986",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"asset_type\": \"sound\",\n  \"sound_file\": \"path/to/sound/file.ogg\",\n  \"file_type\": \"OGG\"\n}",
+   "output": "{\n  \"asset_type\": \"sound\",\n  \"sound_file\": \"path/to/sound/file.ogg\",\n  \"file_type\": \"OGG\"\n}"
+  },
+  {
+   "id": "o65305",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"_id\": \"account_config.paypal\",\n  \"description\": \"Schema for paypal account_config\",\n  \"properties\": {\n    \"currency\": {\n      \"default\": \"USD\",\n      \"description\": \"currency you acept payments in\",\n      \"type\": \"string\"\n    },\n    \"enabled\": {\n      \"default\": false,\n      \"description\": \"PayPal IPN processing enabled\",\n      \"type\": \"boolean\"\n    },\n    \"environment\": {\n      \"default\": \"production\",\n      \"description\": \"paypal env. type - sandbox or production\",\n      \"type\": \"string\"\n    },\n    \"hosted_button_id\": {\n      \"default\": \"hosted_button_id\",\n      \"description\": \"hosted_button_id of configured button\",\n      \"type\": \"string\"\n    },\n    \"receiver_id\": {\n      \"default\": \"receiver_id\",\n      \"description\": \"id of your paypal account\",\n      \"type\": \"string\"\n    }\n  },\n  \"type\": \"object\"\n}",
+   "output": "{\n  \"_id\": \"account_config.paypal\",\n  \"description\": \"Schema for paypal account_config\",\n  \"properties\": {\n    \"currency\": {\n      \"default\": \"USD\",\n      \"description\": \"currency you acept payments in\",\n      \"type\": \"string\"\n    },\n    \"enabled\": {\n      \"default\": false,\n      \"description\": \"PayPal IPN processing enabled\",\n      \"type\": \"boolean\"\n    },\n    \"environment\": {\n      \"default\": \"production\",\n      \"description\": \"paypal env. type - sandbox or production\",\n      \"type\": \"string\"\n    },\n    \"hosted_button_id\": {\n      \"default\": \"hosted_button_id\",\n      \"description\": \"hosted_button_id of configured button\",\n      \"type\": \"string\"\n    },\n    \"receiver_id\": {\n      \"default\": \"receiver_id\",\n      \"description\": \"id of your paypal account\",\n      \"type\": \"string\"\n    }\n  },\n  \"type\": \"object\"\n}"
+  },
+  {
+   "id": "o50163",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"John Doe\",\n  \"avatar\": \"https://example.com/avatar.jpg\",\n  \"role\": \"user\",\n  \"isConnected\": true\n}",
+   "output": "{\n  \"name\": \"John Doe\",\n  \"avatar\": \"https://example.com/avatar.jpg\",\n  \"role\": \"user\",\n  \"isConnected\": true\n}"
+  },
+  {
+   "id": "o48244",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"Id\": \"12345\",\n  \"Warnings\": [\"Warning 1\", \"Warning 2\"]\n}",
+   "output": "{\n  \"Id\": \"12345\",\n  \"Warnings\": [\"Warning 1\", \"Warning 2\"]\n}"
+  },
+  {
+   "id": "o11187",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"status\": \"success\",\n  \"prize\": \"1000000\"\n}",
+   "output": "{\n  \"status\": \"success\",\n  \"prize\": \"1000000\"\n}"
+  },
+  {
+   "id": "o63950",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"foo\": \"foo\",\n  \"bar\": \"bar\"\n}",
+   "output": "{\n  \"foo\": \"foo\",\n  \"bar\": \"bar\"\n}"
+  },
+  {
+   "id": "o28210",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"objectType\": \"svlanIdAssignment\",\n  \"sellerEnniId\": \"ENNI123\",\n  \"sellerUniId\": \"UNI456\",\n  \"svlanId\": 1001\n}",
+   "output": "{\n  \"objectType\": \"svlanIdAssignment\",\n  \"sellerEnniId\": \"ENNI123\",\n  \"sellerUniId\": \"UNI456\",\n  \"svlanId\": 1001\n}"
+  },
+  {
+   "id": "o90886",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"billing_address\": {\n    \"street_address\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\"\n  },\n  \"shipping_address\": {\n    \"street_address\": \"456 Elm St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\"\n  }\n}",
+   "output": "{\n  \"billing_address\": {\n    \"street_address\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\"\n  },\n  \"shipping_address\": {\n    \"street_address\": \"456 Elm St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\"\n  }\n}"
+  },
+  {
+   "id": "o76479",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"links\": {\n    \"self\": {\n      \"href\": \"http://example.com\"\n    }\n  }\n}",
+   "output": "{\n  \"links\": {\n    \"self\": {\n      \"href\": \"http://example.com\"\n    }\n  }\n}"
+  },
+  {
+   "id": "o85467",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"external_distribution\": true,\n  \"search\": false\n}",
+   "output": "{\n  \"external_distribution\": true,\n  \"search\": false\n}"
+  },
+  {
+   "id": "o44363",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"CO2\",\n  \"unit\": \"g/km\",\n  \"created\": \"2022-01-01T00:00:00Z\",\n  \"modified\": \"2022-01-01T00:00:00Z\"\n}",
+   "output": "{\n  \"name\": \"CO2\",\n  \"unit\": \"g/km\",\n  \"created\": \"2022-01-01T00:00:00Z\",\n  \"modified\": \"2022-01-01T00:00:00Z\"\n}"
+  },
+  {
+   "id": "o39871",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"spec\": {\n    \"replicas\": 1\n  }\n}",
+   "output": "{\n  \"spec\": {\n    \"replicas\": 1\n  }\n}"
+  },
+  {
+   "id": "o58618",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"binaryFormat\": \"SGVsbG8gd29ybGQ=\",\n  \"byteFormat\": \"SGVsbG8gd29ybGQ=\"\n}",
+   "output": "{\n  \"binaryFormat\": \"SGVsbG8gd29ybGQ=\",\n  \"byteFormat\": \"SGVsbG8gd29ybGQ=\"\n}"
+  },
+  {
+   "id": "o12078",
+   "valid": false,
+   "reason": "'abc123' does not match '^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)$'",
+   "extracted": "{\n  \"body\": \"This is a sample message\",\n  \"headers\": {\n    \"X-Twilio-Signature\": \"abc123\"\n  },\n  \"httpMethod\": \"POST\",\n  \"path\": \"/sms\"\n}",
+   "output": "{\n  \"body\": \"This is a sample message\",\n  \"headers\": {\n    \"X-Twilio-Signature\": \"abc123\"\n  },\n  \"httpMethod\": \"POST\",\n  \"path\": \"/sms\"\n}"
+  },
+  {
+   "id": "o43977",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"vendorId\": \"exampleVendorId\",\n  \"messageId\": \"exampleMessageId\",\n  \"data\": \"exampleData\"\n}",
+   "output": "{\n  \"vendorId\": \"exampleVendorId\",\n  \"messageId\": \"exampleMessageId\",\n  \"data\": \"exampleData\"\n}"
+  },
+  {
+   "id": "o10467",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"Project Name\",\n  \"description\": \"Project Description\",\n  \"owner\": \"Project Owner\",\n  \"members\": [\"Member 1\", \"Member 2\"]\n}",
+   "output": "{\n  \"name\": \"Project Name\",\n  \"description\": \"Project Description\",\n  \"owner\": \"Project Owner\",\n  \"members\": [\"Member 1\", \"Member 2\"]\n}"
+  },
+  {
+   "id": "o36270",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"role\": \"subject\",\n  \"activated\": true\n}",
+   "output": "{\n  \"role\": \"subject\",\n  \"activated\": true\n}"
+  },
+  {
+   "id": "o53019",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"slot\": 1,\n  \"type\": {\n    \"name\": \"grass\",\n    \"url\": \"https://pokeapi.co/api/v2/type/12/\"\n  }\n}",
+   "output": "{\n  \"slot\": 1,\n  \"type\": {\n    \"name\": \"grass\",\n    \"url\": \"https://pokeapi.co/api/v2/type/12/\"\n  }\n}"
+  },
+  {
+   "id": "o33193",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"city\": \"New York\",\n  \"closetime\": \"22:00\",\n  \"days\": \"Monday to Friday\",\n  \"latitude\": 40.7128,\n  \"longitude\": -74.0060,\n  \"name\": \"Central Park\",\n  \"opentime\": \"08:00\",\n  \"sitecoordinator\": 12345,\n  \"sitestatus\": \"Open\",\n  \"slug\": \"central-park\",\n  \"state\": \"NY\",\n  \"street\": \"5th Avenue\",\n  \"zip\": \"10022\"\n}",
+   "output": "{\n  \"city\": \"New York\",\n  \"closetime\": \"22:00\",\n  \"days\": \"Monday to Friday\",\n  \"latitude\": 40.7128,\n  \"longitude\": -74.0060,\n  \"name\": \"Central Park\",\n  \"opentime\": \"08:00\",\n  \"sitecoordinator\": 12345,\n  \"sitestatus\": \"Open\",\n  \"slug\": \"central-park\",\n  \"state\": \"NY\",\n  \"street\": \"5th Avenue\",\n  \"zip\": \"10022\"\n}"
+  },
+  {
+   "id": "o34374",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"author\": {\n    \"id\": 1,\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\"\n  }\n}",
+   "output": "{\n  \"author\": {\n    \"id\": 1,\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\"\n  }\n}"
+  },
+  {
+   "id": "o39082",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"$tool\": \"json2ts\",\n  \"dist\": \"output.ts\",\n  \"src\": [\n    \"input.json\"\n  ]\n}",
+   "output": "{\n  \"$schema\": \"http://json-schema.org/draft-07/schema#\",\n  \"$tool\": \"json2ts\",\n  \"dist\": \"output.ts\",\n  \"src\": [\n    \"input.json\"\n  ]\n}"
+  },
+  {
+   "id": "o14490",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"target\": \"string\",\n  \"type\": \"string\",\n  \"properties\": {\n    \"*\": {\n      \"type\": \"object\"\n    }\n  }\n}",
+   "output": "{\n  \"target\": \"string\",\n  \"type\": \"string\",\n  \"properties\": {\n    \"*\": {\n      \"type\": \"object\"\n    }\n  }\n}"
+  },
+  {
+   "id": "o50970",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"foo\": \"bar\"\n}",
+   "output": "{\n  \"foo\": \"bar\"\n}"
+  },
+  {
+   "id": "o56866",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"@type\": \"OfferItemCondition\",\n  \"name\": \"New\",\n  \"description\": \"The item is new and unused.\"\n}",
+   "output": "{\n  \"@type\": \"OfferItemCondition\",\n  \"name\": \"New\",\n  \"description\": \"The item is new and unused.\"\n}"
+  },
+  {
+   "id": "o26992",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"h\": 100,\n  \"w\": 200,\n  \"id\": \"12345\",\n  \"p\": \"image.jpg\",\n  \"u\": \"https://example.com/image.jpg\"\n}",
+   "output": "{\n  \"h\": 100,\n  \"w\": 200,\n  \"id\": \"12345\",\n  \"p\": \"image.jpg\",\n  \"u\": \"https://example.com/image.jpg\"\n}"
+  },
+  {
+   "id": "o71448",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"host\": \"localhost\",\n  \"port\": 8080\n}",
+   "output": "{\n  \"host\": \"localhost\",\n  \"port\": 8080\n}"
+  },
+  {
+   "id": "o58915",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"notification\": {\n    \"person_id\": 123,\n    \"door_id\": 456\n  }\n}",
+   "output": "{\n  \"notification\": {\n    \"person_id\": 123,\n    \"door_id\": 456\n  }\n}"
+  },
+  {
+   "id": "o14451",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"sensorId\": \"sensor1\",\n  \"temperature\": {\n    \"old\": 25.5,\n    \"new\": 26.0\n  }\n}",
+   "output": "{\n  \"sensorId\": \"sensor1\",\n  \"temperature\": {\n    \"old\": 25.5,\n    \"new\": 26.0\n  }\n}"
+  },
+  {
+   "id": "o32487",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"translationKey\": \"string\"\n}",
+   "output": "{\n  \"id\": \"string\",\n  \"name\": \"string\",\n  \"translationKey\": \"string\"\n}"
+  },
+  {
+   "id": "o20458",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"id\": \"1234567890\",\n  \"email\": \"user@example.com\"\n}",
+   "output": "{\n  \"id\": \"1234567890\",\n  \"email\": \"user@example.com\"\n}"
+  },
+  {
+   "id": "o25701",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"locale\": \"en_US\",\n  \"system_type\": \"local\"\n}",
+   "output": "{\n  \"locale\": \"en_US\",\n  \"system_type\": \"local\"\n}"
+  },
+  {
+   "id": "o41717",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"srvcId\": \"exampleService\",\n  \"instId\": \"exampleInstance\",\n  \"healthMessage\": \"Service is running\",\n  \"healthStatus\": true\n}",
+   "output": "{\n  \"srvcId\": \"exampleService\",\n  \"instId\": \"exampleInstance\",\n  \"healthMessage\": \"Service is running\",\n  \"healthStatus\": true\n}"
+  },
+  {
+   "id": "o45404",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"entryFile\": \"public_api\",\n  \"name\": \"my-library\",\n  \"prefix\": \"lib\",\n  \"skipPackageJson\": false,\n  \"skipTsConfig\": false\n}",
+   "output": "{\n  \"entryFile\": \"public_api\",\n  \"name\": \"my-library\",\n  \"prefix\": \"lib\",\n  \"skipPackageJson\": false,\n  \"skipTsConfig\": false\n}"
+  },
+  {
+   "id": "o21393",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"bulk_publishing\": true,\n  \"links\": {},\n  \"previous_version\": \"1.0.0\"\n}",
+   "output": "{\n  \"bulk_publishing\": true,\n  \"links\": {},\n  \"previous_version\": \"1.0.0\"\n}"
+  },
+  {
+   "id": "o89900",
+   "valid": false,
+   "reason": "'hippopotamus' does not match any of the regexes: '^[a-zA-Z0-9]{1,10}$'",
+   "extracted": "{\n  \"dictionary\": {\n    \"apple\": \"fruit\",\n    \"banana\": \"fruit\",\n    \"carrot\": \"vegetable\",\n    \"dog\": \"animal\",\n    \"elephant\": \"animal\",\n    \"fish\": \"aquatic\",\n    \"giraffe\": \"animal\",\n    \"hippopotamus\": \"animal\",\n    \"iguana\": \"reptile\",\n    \"jaguar\": \"animal\"\n  }\n}",
+   "output": "{\n  \"dictionary\": {\n    \"apple\": \"fruit\",\n    \"banana\": \"fruit\",\n    \"carrot\": \"vegetable\",\n    \"dog\": \"animal\",\n    \"elephant\": \"animal\",\n    \"fish\": \"aquatic\",\n    \"giraffe\": \"animal\",\n    \"hippopotamus\": \"animal\",\n    \"iguana\": \"reptile\",\n    \"jaguar\": \"animal\"\n  }\n}"
+  },
+  {
+   "id": "o8462",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"hardware_inventory\": {\n    \"name\": \"Laptop\",\n    \"model\": \"MacBook Pro\",\n    \"serial_number\": \"ABC123\",\n    \"manufacturer\": \"Apple\",\n    \"purchase_date\": \"2021-01-01\",\n    \"warranty_expiration_date\": \"2023-01-01\",\n    \"status\": \"Active\",\n    \"location\": \"Office\",\n    \"notes\": \"This laptop is used for work purposes.\"\n  }\n}",
+   "output": "{\n  \"hardware_inventory\": {\n    \"name\": \"Laptop\",\n    \"model\": \"MacBook Pro\",\n    \"serial_number\": \"ABC123\",\n    \"manufacturer\": \"Apple\",\n    \"purchase_date\": \"2021-01-01\",\n    \"warranty_expiration_date\": \"2023-01-01\",\n    \"status\": \"Active\",\n    \"location\": \"Office\",\n    \"notes\": \"This laptop is used for work purposes.\"\n  }\n}"
+  },
+  {
+   "id": "o69579",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"context\": \"string\",\n  \"provides\": {}\n}",
+   "output": "{\n  \"context\": \"string\",\n  \"provides\": {}\n}"
+  },
+  {
+   "id": "o64737",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"kill_chain_name\": \"example_kill_chain\",\n  \"phase_name\": \"example_phase\"\n}",
+   "output": "{\n  \"kill_chain_name\": \"example_kill_chain\",\n  \"phase_name\": \"example_phase\"\n}"
+  },
+  {
+   "id": "o25953",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"subA\": {\n    \"propA\": 1,\n    \"propB\": 2\n  },\n  \"subB\": {\n    \"propA\": 3,\n    \"propB\": 4\n  }\n}",
+   "output": "{\n  \"subA\": {\n    \"propA\": 1,\n    \"propB\": 2\n  },\n  \"subB\": {\n    \"propA\": 3,\n    \"propB\": 4\n  }\n}"
+  },
+  {
+   "id": "o57603",
+   "valid": false,
+   "reason": "'XMin' is a required property",
+   "extracted": "{\n  \"Xmin\": 0,\n  \"Xmax\": 0,\n  \"Ymin\": 0,\n  \"Ymax\": 0,\n  \"Zmin\": 0,\n  \"Zmax\": 0\n}",
+   "output": "{\n  \"Xmin\": 0,\n  \"Xmax\": 0,\n  \"Ymin\": 0,\n  \"Ymax\": 0,\n  \"Zmin\": 0,\n  \"Zmax\": 0\n}"
+  },
+  {
+   "id": "o44299",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"tile\": 512,\n  \"url\": \"multi/preview/{face}.jpg\"\n}",
+   "output": "{\n  \"tile\": 512,\n  \"url\": \"multi/preview/{face}.jpg\"\n}"
+  },
+  {
+   "id": "o90306",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"label\": \"Example Label\",\n  \"size\": 100,\n  \"value\": 50\n}",
+   "output": "{\n  \"label\": \"Example Label\",\n  \"size\": 100,\n  \"value\": 50\n}"
+  },
+  {
+   "id": "o17641",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"map1\": {\n    \"key1\": {\n      \"property1\": \"value1\",\n      \"property2\": 123\n    },\n    \"key2\": {\n      \"property1\": \"value2\",\n      \"property2\": 456\n    }\n  },\n  \"map2\": {\n    \"key1\": \"value1\",\n    \"key2\": 123\n  },\n  \"map3\": {\n    \"key1\": \"value1\",\n    \"key2\": 123\n  }\n}",
+   "output": "{\n  \"map1\": {\n    \"key1\": {\n      \"property1\": \"value1\",\n      \"property2\": 123\n    },\n    \"key2\": {\n      \"property1\": \"value2\",\n      \"property2\": 456\n    }\n  },\n  \"map2\": {\n    \"key1\": \"value1\",\n    \"key2\": 123\n  },\n  \"map3\": {\n    \"key1\": \"value1\",\n    \"key2\": 123\n  }\n}"
+  },
+  {
+   "id": "o44187",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"Z1K1\": \"Z16\",\n  \"Z16K1\": \"javascript\",\n  \"Z16K2\": \"example\"\n}",
+   "output": "{\n  \"Z1K1\": \"Z16\",\n  \"Z16K1\": \"javascript\",\n  \"Z16K2\": \"example\"\n}"
+  },
+  {
+   "id": "o70022",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"floors\": [\n    {\n      \"name\": \"Floor 1\",\n      \"rooms\": [\n        {\n          \"name\": \"Room 1\",\n          \"items\": [\n            {\n              \"name\": \"Item 1\",\n              \"description\": \"A small item\"\n            },\n            {\n              \"name\": \"Item 2\",\n              \"description\": \"A large item\"\n            }\n          ]\n        },\n        {\n          \"name\": \"Room 2\",\n          \"items\": [\n            {\n              \"name\": \"Item 3\",\n              \"description\": \"A medium item\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"Floor 2\",\n      \"rooms\": [\n        {\n          \"name\": \"Room 3\",\n          \"items\": [\n            {\n              \"name\": \"Item 4\",\n              \"description\": \"A small item\"\n            },\n            {\n              \"name\": \"Item 5\",\n              \"description\": \"A large item\"\n            }\n          ]\n        },\n        {\n          \"name\": \"Room 4\",\n          \"items\": [\n            {\n              \"name\": \"Item 6\",\n              \"description\": \"A medium item\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+   "output": "{\n  \"floors\": [\n    {\n      \"name\": \"Floor 1\",\n      \"rooms\": [\n        {\n          \"name\": \"Room 1\",\n          \"items\": [\n            {\n              \"name\": \"Item 1\",\n              \"description\": \"A small item\"\n            },\n            {\n              \"name\": \"Item 2\",\n              \"description\": \"A large item\"\n            }\n          ]\n        },\n        {\n          \"name\": \"Room 2\",\n          \"items\": [\n            {\n              \"name\": \"Item 3\",\n              \"description\": \"A medium item\"\n            }\n          ]\n        }\n      ]\n    },\n    {\n      \"name\": \"Floor 2\",\n      \"rooms\": [\n        {\n          \"name\": \"Room 3\",\n          \"items\": [\n            {\n              \"name\": \"Item 4\",\n              \"description\": \"A small item\"\n            },\n            {\n              \"name\": \"Item 5\",\n              \"description\": \"A large item\"\n            }\n          ]\n        },\n        {\n          \"name\": \"Room 4\",\n          \"items\": [\n            {\n              \"name\": \"Item 6\",\n              \"description\": \"A medium item\"\n            }\n          ]\n        }\n      ]\n    }\n  ]\n}"
+  },
+  {
+   "id": "o14471",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"error\": [\n    \"Invalid input\"\n  ]\n}",
+   "output": "{\n  \"error\": [\n    \"Invalid input\"\n  ]\n}"
+  },
+  {
+   "id": "o8465",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\",\n    \"zip\": \"12345\"\n  },\n  \"phone\": \"555-555-5555\",\n  \"email\": \"johndoe@example.com\"\n}",
+   "output": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\",\n    \"zip\": \"12345\"\n  },\n  \"phone\": \"555-555-5555\",\n  \"email\": \"johndoe@example.com\"\n}"
+  },
+  {
+   "id": "o49986",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"post-office-box\": \"123\",\n  \"extended-address\": \"456\",\n  \"street-address\": \"789\",\n  \"locality\": \"New York\",\n  \"region\": \"NY\",\n  \"postal-code\": \"10001\",\n  \"country-name\": \"USA\"\n}",
+   "output": "{\n  \"post-office-box\": \"123\",\n  \"extended-address\": \"456\",\n  \"street-address\": \"789\",\n  \"locality\": \"New York\",\n  \"region\": \"NY\",\n  \"postal-code\": \"10001\",\n  \"country-name\": \"USA\"\n}"
+  },
+  {
+   "id": "o34462",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"nome\": \"John Doe\",\n  \"email\": \"johndoe@example.com\",\n  \"senha\": \"password123\",\n  \"telefones\": [\n    {\n      \"numero\": \"1234567890\",\n      \"tipo\": \"celular\"\n    },\n    {\n      \"numero\": \"9876543210\",\n      \"tipo\": \"residencial\"\n    }\n  ]\n}",
+   "output": "{\n  \"nome\": \"John Doe\",\n  \"email\": \"johndoe@example.com\",\n  \"senha\": \"password123\",\n  \"telefones\": [\n    {\n      \"numero\": \"1234567890\",\n      \"tipo\": \"celular\"\n    },\n    {\n      \"numero\": \"9876543210\",\n      \"tipo\": \"residencial\"\n    }\n  ]\n}"
+  },
+  {
+   "id": "o69533",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://example.com/api/resource\"\n    },\n    \"related\": {\n      \"href\": \"https://example.com/api/related\"\n    }\n  }\n}",
+   "output": "{\n  \"_links\": {\n    \"self\": {\n      \"href\": \"https://example.com/api/resource\"\n    },\n    \"related\": {\n      \"href\": \"https://example.com/api/related\"\n    }\n  }\n}"
+  },
+  {
+   "id": "o36461",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"value\": 50\n}",
+   "output": "{\n  \"value\": 50\n}"
+  },
+  {
+   "id": "o66141",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"CLs_exp\": [0.05, 0.1, 0.2],\n  \"CLs_obs\": 0.03\n}",
+   "output": "{\n  \"CLs_exp\": [0.05, 0.1, 0.2],\n  \"CLs_obs\": 0.03\n}"
+  },
+  {
+   "id": "o43222",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"RewardSet\": \"string\",\n  \"RewardSourceType\": 0,\n  \"SpartanRankSource\": null,\n  \"CommendationLevelId\": null,\n  \"CommendationSource\": null\n}",
+   "output": "{\n  \"RewardSet\": \"string\",\n  \"RewardSourceType\": 0,\n  \"SpartanRankSource\": null,\n  \"CommendationLevelId\": null,\n  \"CommendationSource\": null\n}"
+  },
+  {
+   "id": "o8438",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"ID\": \"1234\",\n  \"age\": 20,\n  \"grades\": [85, 90, 92, 88],\n  \"item\": \"apple\"\n}",
+   "output": "{\n  \"ID\": \"1234\",\n  \"age\": 20,\n  \"grades\": [85, 90, 92, 88],\n  \"item\": \"apple\"\n}"
+  },
+  {
+   "id": "o7291",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"dead_features\": {\n    \"feature1\": [1, 3, 5],\n    \"feature2\": [2, 4, 6]\n  },\n  \"false_optionals\": {\n    \"feature3\": [1, 3, 5],\n    \"feature4\": [2, 4, 6]\n  }\n}",
+   "output": "{\n  \"dead_features\": {\n    \"feature1\": [1, 3, 5],\n    \"feature2\": [2, 4, 6]\n  },\n  \"false_optionals\": {\n    \"feature3\": [1, 3, 5],\n    \"feature4\": [2, 4, 6]\n  }\n}"
+  },
+  {
+   "id": "o21487",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"api_method\": \"API.get\",\n  \"api_method_arguments\": {\n    \"idGoal\": \"1\"\n  },\n  \"frequency\": \"daily\",\n  \"period\": \"day\",\n  \"site_id\": \"12345\"\n}",
+   "output": "{\n  \"api_method\": \"API.get\",\n  \"api_method_arguments\": {\n    \"idGoal\": \"1\"\n  },\n  \"frequency\": \"daily\",\n  \"period\": \"day\",\n  \"site_id\": \"12345\"\n}"
+  },
+  {
+   "id": "o48814",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"health\": 2,\n  \"help\": \"Node is healthy\",\n  \"host_ip\": \"192.168.1.100\",\n  \"role\": \"agent\"\n}",
+   "output": "{\n  \"health\": 2,\n  \"help\": \"Node is healthy\",\n  \"host_ip\": \"192.168.1.100\",\n  \"role\": \"agent\"\n}"
+  },
+  {
+   "id": "o37088",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{\n  \"type\": \"exact\",\n  \"value\": 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "id": "o58216",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"format\": \"text\",\n  \"content\": \"This is a sample text.\"\n}",
+   "output": "{\n  \"format\": \"text\",\n  \"content\": \"This is a sample text.\"\n}"
+  },
+  {
+   "id": "o71317",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"interface_type\": \"physical\",\n  \"interface_names\": [\n    \"ge-0/0/1\",\n    \"xe-0/0/0\"\n  ]\n}",
+   "output": "{\n  \"interface_type\": \"physical\",\n  \"interface_names\": [\n    \"ge-0/0/1\",\n    \"xe-0/0/0\"\n  ]\n}"
+  },
+  {
+   "id": "o25199",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"anInteger\": 42,\n  \"aNumber\": 3.14,\n  \"aBoolean\": true,\n  \"anObject\": {\n    \"key1\": \"value1\",\n    \"key2\": \"value2\"\n  },\n  \"aString\": \"Hello, World!\",\n  \"anArray\": [1, 2, 3]\n}",
+   "output": "{\n  \"anInteger\": 42,\n  \"aNumber\": 3.14,\n  \"aBoolean\": true,\n  \"anObject\": {\n    \"key1\": \"value1\",\n    \"key2\": \"value2\"\n  },\n  \"aString\": \"Hello, World!\",\n  \"anArray\": [1, 2, 3]\n}"
+  },
+  {
+   "id": "o7375",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"selectedInstance\": \"instance1\",\n  \"instances\": [\"instance2\", \"instance3\"]\n}",
+   "output": "{\n  \"selectedInstance\": \"instance1\",\n  \"instances\": [\"instance2\", \"instance3\"]\n}"
+  },
+  {
+   "id": "o49808",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"$license\": [\n    \"http://www.apache.org/licenses/LICENSE-2.0\"\n  ],\n  \"description\": \"Detailed information about the relationship between the authenticated user and another user.\",\n  \"javaInterfaces\": [\n    \"java.io.Serializable\"\n  ],\n  \"javaType\": \"org.apache.streams.twitter.pojo.Friendship\",\n  \"properties\": {\n    \"connections\": {\n      \"items\": {\n        \"enum\": [\n          \"following\",\n          \"following_requested\",\n          \"followed_by\",\n          \"none\",\n          \"blocking\",\n          \"muting\"\n        ],\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"id\": {\n      \"type\": \"integer\"\n    },\n    \"id_str\": {\n      \"type\": \"string\"\n    },\n    \"name\": {\n      \"type\": \"string\"\n    },\n    \"screen_name\": {\n      \"type\": \"string\"\n    }\n  },\n  \"type\": \"object\"\n}",
+   "output": "{\n  \"$license\": [\n    \"http://www.apache.org/licenses/LICENSE-2.0\"\n  ],\n  \"description\": \"Detailed information about the relationship between the authenticated user and another user.\",\n  \"javaInterfaces\": [\n    \"java.io.Serializable\"\n  ],\n  \"javaType\": \"org.apache.streams.twitter.pojo.Friendship\",\n  \"properties\": {\n    \"connections\": {\n      \"items\": {\n        \"enum\": [\n          \"following\",\n          \"following_requested\",\n          \"followed_by\",\n          \"none\",\n          \"blocking\",\n          \"muting\"\n        ],\n        \"type\": \"string\"\n      },\n      \"type\": \"array\"\n    },\n    \"id\": {\n      \"type\": \"integer\"\n    },\n    \"id_str\": {\n      \"type\": \"string\"\n    },\n    \"name\": {\n      \"type\": \"string\"\n    },\n    \"screen_name\": {\n      \"type\": \"string\"\n    }\n  },\n  \"type\": \"object\"\n}"
+  },
+  {
+   "id": "o21500",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"consulate\": \"Consulate A\",\n  \"percent\": 75,\n  \"period\": \"day\"\n}",
+   "output": "{\n  \"consulate\": \"Consulate A\",\n  \"percent\": 75,\n  \"period\": \"day\"\n}"
+  },
+  {
+   "id": "o90253",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"field\": \"relationships/0/FieldName\",\n  \"order\": \"asc\"\n}",
+   "output": "{\n  \"field\": \"relationships/0/FieldName\",\n  \"order\": \"asc\"\n}"
+  },
+  {
+   "id": "o81662",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"resource_id\": \"12345\",\n  \"resource\": {\n    \"priority\": 50\n  }\n}",
+   "output": "{\n  \"resource_id\": \"12345\",\n  \"resource\": {\n    \"priority\": 50\n  }\n}"
+  },
+  {
+   "id": "o89523",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"getQuote\": {\n    \"request\": {\n      \"symbol\": \"AAPL\"\n    }\n  }\n}",
+   "output": "{\n  \"getQuote\": {\n    \"request\": {\n      \"symbol\": \"AAPL\"\n    }\n  }\n}"
+  },
+  {
+   "id": "o84354",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"message\": \"Email address confirmed successfully\",\n  \"previous_code\": \"pending_registration\"\n}",
+   "output": "{\n  \"message\": \"Email address confirmed successfully\",\n  \"previous_code\": \"pending_registration\"\n}"
+  },
+  {
+   "id": "o81495",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"availableEquipment\": [\n    {\n      \"name\": \"Fire Truck\",\n      \"quantity\": 2\n    },\n    {\n      \"name\": \"Fire Axe\",\n      \"quantity\": 10\n    }\n  ],\n  \"availableUnits\": 15\n}",
+   "output": "{\n  \"availableEquipment\": [\n    {\n      \"name\": \"Fire Truck\",\n      \"quantity\": 2\n    },\n    {\n      \"name\": \"Fire Axe\",\n      \"quantity\": 10\n    }\n  ],\n  \"availableUnits\": 15\n}"
+  },
+  {
+   "id": "o48517",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"grayscale8\": \"value\",\n  \"keyvalue\": \"value\",\n  \"labelmap\": \"value\",\n  \"labels64\": \"value\",\n  \"multichan16\": \"value\",\n  \"quadtree\": \"value\",\n  \"rgba8\": \"value\",\n  \"version\": \"0.01\"\n}",
+   "output": "{\n  \"grayscale8\": \"value\",\n  \"keyvalue\": \"value\",\n  \"labelmap\": \"value\",\n  \"labels64\": \"value\",\n  \"multichan16\": \"value\",\n  \"quadtree\": \"value\",\n  \"rgba8\": \"value\",\n  \"version\": \"0.01\"\n}"
+  },
+  {
+   "id": "o9976",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"my-component\",\n  \"path\": \"/path/to/component\",\n  \"project\": \"my-project\",\n  \"proxy\": true\n}",
+   "output": "{\n  \"name\": \"my-component\",\n  \"path\": \"/path/to/component\",\n  \"project\": \"my-project\",\n  \"proxy\": true\n}"
+  },
+  {
+   "id": "o31276",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"protocol\": \"choria:secure:reply:1\",\n  \"message\": \"YAML encoded choria:reply:1\",\n  \"hash\": \"SHA256 hash of the message\"\n}",
+   "output": "{\n  \"protocol\": \"choria:secure:reply:1\",\n  \"message\": \"YAML encoded choria:reply:1\",\n  \"hash\": \"SHA256 hash of the message\"\n}"
+  },
+  {
+   "id": "o66187",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"interpreter\": \"sh\",\n  \"process_type\": \"interpolated-script-cmd\",\n  \"script\": \"echo 'Hello, world!'\"\n}",
+   "output": "{\n  \"interpreter\": \"sh\",\n  \"process_type\": \"interpolated-script-cmd\",\n  \"script\": \"echo 'Hello, world!'\"\n}"
+  },
+  {
+   "id": "o71309",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\",\n    \"zip\": \"12345\"\n  },\n  \"phone\": \"555-555-5555\",\n  \"email\": \"johndoe@example.com\"\n}",
+   "output": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"address\": {\n    \"street\": \"123 Main St\",\n    \"city\": \"Anytown\",\n    \"state\": \"CA\",\n    \"zip\": \"12345\"\n  },\n  \"phone\": \"555-555-5555\",\n  \"email\": \"johndoe@example.com\"\n}"
+  },
+  {
+   "id": "o39447",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"Group1\",\n  \"permissions\": [\"read\", \"write\"],\n  \"members\": [\n    {\n      \"name\": \"Alice\"\n    },\n    {\n      \"name\": \"Bob\"\n    }\n  ]\n}",
+   "output": "{\n  \"name\": \"Group1\",\n  \"permissions\": [\"read\", \"write\"],\n  \"members\": [\n    {\n      \"name\": \"Alice\"\n    },\n    {\n      \"name\": \"Bob\"\n    }\n  ]\n}"
+  },
+  {
+   "id": "o37615",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"Tournament Name\",\n  \"comments\": [\"Comment 1\", \"Comment 2\"]\n}",
+   "output": "{\n  \"name\": \"Tournament Name\",\n  \"comments\": [\"Comment 1\", \"Comment 2\"]\n}"
+  },
+  {
+   "id": "o9857",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"email\": \"example@example.com\",\n  \"token\": \"1234567890\"\n}",
+   "output": "{\n  \"email\": \"example@example.com\",\n  \"token\": \"1234567890\"\n}"
+  },
+  {
+   "id": "o21082",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"acknowledged\": true,\n  \"acknowledged_at\": \"2022-01-01T00:00:00Z\",\n  \"acknowledged_by\": \"user123\",\n  \"created_at\": \"2022-01-01T00:00:00Z\",\n  \"data\": {\n    \"key1\": \"value1\",\n    \"key2\": \"value2\"\n  },\n  \"id\": 123,\n  \"object_id\": \"object123\",\n  \"object_type\": \"objectType\",\n  \"type\": \"auditEventType\",\n  \"user\": \"user123\"\n}",
+   "output": "{\n  \"acknowledged\": true,\n  \"acknowledged_at\": \"2022-01-01T00:00:00Z\",\n  \"acknowledged_by\": \"user123\",\n  \"created_at\": \"2022-01-01T00:00:00Z\",\n  \"data\": {\n    \"key1\": \"value1\",\n    \"key2\": \"value2\"\n  },\n  \"id\": 123,\n  \"object_id\": \"object123\",\n  \"object_type\": \"objectType\",\n  \"type\": \"auditEventType\",\n  \"user\": \"user123\"\n}"
+  },
+  {
+   "id": "o5138",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"image\": \"string\",\n  \"value\": \"string\"\n}",
+   "output": "{\n  \"image\": \"string\",\n  \"value\": \"string\"\n}"
+  },
+  {
+   "id": "o89607",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"log\": {\n    \"stream\": \"log\",\n    \"bufferSize\": 5000\n  }\n}",
+   "output": "{\n  \"log\": {\n    \"stream\": \"log\",\n    \"bufferSize\": 5000\n  }\n}"
+  },
+  {
+   "id": "o64705",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"My Presentation\",\n  \"project\": \"My Project\"\n}",
+   "output": "{\n  \"name\": \"My Presentation\",\n  \"project\": \"My Project\"\n}"
+  },
+  {
+   "id": "o79434",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"capabilities\": [\n    {\n      \"name\": \"capability1\"\n    },\n    {\n      \"name\": \"capability2\"\n    }\n  ]\n}",
+   "output": "{\n  \"capabilities\": [\n    {\n      \"name\": \"capability1\"\n    },\n    {\n      \"name\": \"capability2\"\n    }\n  ]\n}"
+  },
+  {
+   "id": "o69520",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"person\": {\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\"\n  }\n}",
+   "output": "{\n  \"person\": {\n    \"first_name\": \"John\",\n    \"last_name\": \"Doe\"\n  }\n}"
+  },
+  {
+   "id": "o26974",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"k\": 10,\n  \"x\": \"10 * time\",\n  \"ix\": \"1\"\n}",
+   "output": "{\n  \"k\": 10,\n  \"x\": \"10 * time\",\n  \"ix\": \"1\"\n}"
+  },
+  {
+   "id": "o66299",
+   "valid": false,
+   "reason": "'field' is a required property",
+   "extracted": "{\n  \"copyright\": [\n    \"Copyright 2013 Red Hat, Inc. and/or its affiliates.\",\n    \"This file is part of lightblue.\",\n    \"This program is free software: you can redistribute it and/or modify\",\n    \"it under the terms of the GNU General Public License as published by\",\n    \"the Free Software Foundation, either version 3 of the License, or\",\n    \"(at your option) any later version.\",\n    \"This program is distributed in the hope that it will be useful,\",\n    \"but WITHOUT ANY WARRANTY; without even the implied warranty of\",\n    \"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\",\n    \"GNU General Public License for more details.\",\n    \"You should have received a copy of the GNU General Public License\",\n    \"along with this program.  If not, see <http://www.gnu.org/licenses/>.\"\n  ],\n  \"id\": \"#field\",\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"field\": {\n      \"type\": \"string\"\n    },\n    \"include\": {\n      \"type\": \"boolean\"\n    },\n    \"recursive\": {\n      \"type\": \"boolean\",\n      \"default\": false\n    }\n  },\n  \"required\": [\n    \"field\"\n  ],\n  \"additionalProperties\": false\n}",
+   "output": "{\n  \"copyright\": [\n    \"Copyright 2013 Red Hat, Inc. and/or its affiliates.\",\n    \"This file is part of lightblue.\",\n    \"This program is free software: you can redistribute it and/or modify\",\n    \"it under the terms of the GNU General Public License as published by\",\n    \"the Free Software Foundation, either version 3 of the License, or\",\n    \"(at your option) any later version.\",\n    \"This program is distributed in the hope that it will be useful,\",\n    \"but WITHOUT ANY WARRANTY; without even the implied warranty of\",\n    \"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\",\n    \"GNU General Public License for more details.\",\n    \"You should have received a copy of the GNU General Public License\",\n    \"along with this program.  If not, see <http://www.gnu.org/licenses/>.\"\n  ],\n  \"id\": \"#field\",\n  \"$schema\": \"http://json-schema.org/draft-04/schema#\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"field\": {\n      \"type\": \"string\"\n    },\n    \"include\": {\n      \"type\": \"boolean\"\n    },\n    \"recursive\": {\n      \"type\": \"boolean\",\n      \"default\": false\n    }\n  },\n  \"required\": [\n    \"field\"\n  ],\n  \"additionalProperties\": false\n}"
+  },
+  {
+   "id": "o89671",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"env\": {},\n  \"environment_type\": \"docker-encapsulated\",\n  \"envscript\": \"\",\n  \"image\": \"\",\n  \"imagetag\": \"latest\",\n  \"resources\": []\n}",
+   "output": "{\n  \"env\": {},\n  \"environment_type\": \"docker-encapsulated\",\n  \"envscript\": \"\",\n  \"image\": \"\",\n  \"imagetag\": \"latest\",\n  \"resources\": []\n}"
+  },
+  {
+   "id": "o88675",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"type\": \"request\",\n  \"method\": \"shampoo\",\n  \"request_data\": {\n    \"brand\": \"Head & Shoulders\",\n    \"size\": \"12 oz\"\n  },\n  \"request_id\": 12345\n}",
+   "output": "{\n  \"type\": \"request\",\n  \"method\": \"shampoo\",\n  \"request_data\": {\n    \"brand\": \"Head & Shoulders\",\n    \"size\": \"12 oz\"\n  },\n  \"request_id\": 12345\n}"
+  },
+  {
+   "id": "o52964",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"search\": {\n    \"resource\": \"topic\"\n  },\n  \"i18n\": {\n    \"locale\": \"default\"\n  }\n}",
+   "output": "{\n  \"search\": {\n    \"resource\": \"topic\"\n  },\n  \"i18n\": {\n    \"locale\": \"default\"\n  }\n}"
+  },
+  {
+   "id": "o46362",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"calculationId\": \"041f7e4d-87d9-4d4a-a296-3cfbdf92f7e2\"\n}",
+   "output": "{\n  \"calculationId\": \"041f7e4d-87d9-4d4a-a296-3cfbdf92f7e2\"\n}"
+  },
+  {
+   "id": "o62755",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"content\": \"This is the content of the subelement.\",\n  \"children\": \"This is the children of the subelement.\"\n}",
+   "output": "{\n  \"content\": \"This is the content of the subelement.\",\n  \"children\": \"This is the children of the subelement.\"\n}"
+  },
+  {
+   "id": "o90225",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"expression\": \"return $feature[\\\"state_name\\\"] + \\\" (arcade)\\\";\"\n}",
+   "output": "{\n  \"expression\": \"return $feature[\\\"state_name\\\"] + \\\" (arcade)\\\";\"\n}"
+  },
+  {
+   "id": "o43292",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"path\": \"example.txt\",\n  \"ref\": {\n    \"name\": \"main\"\n  }\n}",
+   "output": "{\n  \"path\": \"example.txt\",\n  \"ref\": {\n    \"name\": \"main\"\n  }\n}"
+  },
+  {
+   "id": "o22453",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"server\": {\n    \"host\": \"localhost\",\n    \"port\": 8080\n  },\n  \"database\": {\n    \"url\": \"mongodb://localhost:27017/mydatabase\"\n  }\n}",
+   "output": "{\n  \"server\": {\n    \"host\": \"localhost\",\n    \"port\": 8080\n  },\n  \"database\": {\n    \"url\": \"mongodb://localhost:27017/mydatabase\"\n  }\n}"
+  },
+  {
+   "id": "o33707",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"schemaType\": \"document\",\n  \"_documentID\": \"1234567890\",\n  \"_corpusID\": \"0987654321\"\n}",
+   "output": "{\n  \"schemaType\": \"document\",\n  \"_documentID\": \"1234567890\",\n  \"_corpusID\": \"0987654321\"\n}"
+  },
+  {
+   "id": "o7308",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"analysis_group\": \"IHEC\",\n  \"alignment_software\": \"BWA\",\n  \"alignment_software_version\": \"0.7.17\",\n  \"analysis_software\": \"MACS2\",\n  \"analysis_software_version\": \"2.1.1\"\n}",
+   "output": "{\n  \"analysis_group\": \"IHEC\",\n  \"alignment_software\": \"BWA\",\n  \"alignment_software_version\": \"0.7.17\",\n  \"analysis_software\": \"MACS2\",\n  \"analysis_software_version\": \"2.1.1\"\n}"
+  },
+  {
+   "id": "o12629",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"Hello\": \"Bonjour\",\n  \"Goodbye\": \"Au revoir\"\n}",
+   "output": "{\n  \"Hello\": \"Bonjour\",\n  \"Goodbye\": \"Au revoir\"\n}"
+  },
+  {
+   "id": "o41733",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"id\": \"example_id\",\n  \"from\": \"original_module_id\",\n  \"action\": \"enable\",\n  \"message\": \"Module enabled successfully\"\n}",
+   "output": "{\n  \"id\": \"example_id\",\n  \"from\": \"original_module_id\",\n  \"action\": \"enable\",\n  \"message\": \"Module enabled successfully\"\n}"
+  },
+  {
+   "id": "o90885",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"homeCity\": \"New York\",\n  \"id\": \"NYC\",\n  \"name\": \"New York Yankees\",\n  \"stadium\": \"Yankee Stadium\"\n}",
+   "output": "{\n  \"homeCity\": \"New York\",\n  \"id\": \"NYC\",\n  \"name\": \"New York Yankees\",\n  \"stadium\": \"Yankee Stadium\"\n}"
+  },
+  {
+   "id": "o90368",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"myBastion\",\n  \"kind\": \"bastion\",\n  \"listenPort\": 22\n}",
+   "output": "{\n  \"name\": \"myBastion\",\n  \"kind\": \"bastion\",\n  \"listenPort\": 22\n}"
+  },
+  {
+   "id": "o9583",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"kind\": \"req\",\n  \"id\": \"0\",\n  \"type\": \"API_REQUEST_TYPE\",\n  \"body\": {}\n}",
+   "output": "{\n  \"kind\": \"req\",\n  \"id\": \"0\",\n  \"type\": \"API_REQUEST_TYPE\",\n  \"body\": {}\n}"
+  },
+  {
+   "id": "o31092",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"activepolicy\": 0,\n  \"boundto\": \"\",\n  \"gotopriorityexpression\": \"\",\n  \"name\": \"\",\n  \"priority\": 0\n}",
+   "output": "{\n  \"activepolicy\": 0,\n  \"boundto\": \"\",\n  \"gotopriorityexpression\": \"\",\n  \"name\": \"\",\n  \"priority\": 0\n}"
+  },
+  {
+   "id": "o9850",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"updated\": 1234567890,\n  \"failed\": 0,\n  \"skipped\": 0,\n  \"logLink\": \"https://example.com/log\"\n}",
+   "output": "{\n  \"updated\": 1234567890,\n  \"failed\": 0,\n  \"skipped\": 0,\n  \"logLink\": \"https://example.com/log\"\n}"
+  },
+  {
+   "id": "o13111",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"backend_name\": \"ibmq_qasm_simulator\",\n  \"backend_version\": \"1.0.0\",\n  \"operational\": true,\n  \"pending_jobs\": 0,\n  \"status_msg\": \"Backend is operational and accepting jobs\"\n}",
+   "output": "{\n  \"backend_name\": \"ibmq_qasm_simulator\",\n  \"backend_version\": \"1.0.0\",\n  \"operational\": true,\n  \"pending_jobs\": 0,\n  \"status_msg\": \"Backend is operational and accepting jobs\"\n}"
+  },
+  {
+   "id": "o6173",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"deviceIds\": [\"5f9f8e7b8c9d0e1f2a3b4c5d\", \"5f9f8e7b8c9d0e1f2a3b4c5e\"],\n  \"deviceTags\": [\n    {\n      \"key\": \"tag1\",\n      \"value\": \"value1\"\n    },\n    {\n      \"key\": \"tag2\",\n      \"value\": \"value2\"\n    }\n  ]\n}",
+   "output": "{\n  \"deviceIds\": [\"5f9f8e7b8c9d0e1f2a3b4c5d\", \"5f9f8e7b8c9d0e1f2a3b4c5e\"],\n  \"deviceTags\": [\n    {\n      \"key\": \"tag1\",\n      \"value\": \"value1\"\n    },\n    {\n      \"key\": \"tag2\",\n      \"value\": \"value2\"\n    }\n  ]\n}"
+  },
+  {
+   "id": "o3545",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"SOURCE_NAME\": {\n    \"a\": \"value_a\",\n    \"b\": \"value_b\"\n  },\n  \"TARGET_NAME\": {\n    \"a\": \"value_a\",\n    \"b\": \"value_b\"\n  }\n}",
+   "output": "{\n  \"SOURCE_NAME\": {\n    \"a\": \"value_a\",\n    \"b\": \"value_b\"\n  },\n  \"TARGET_NAME\": {\n    \"a\": \"value_a\",\n    \"b\": \"value_b\"\n  }\n}"
+  },
+  {
+   "id": "o78482",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"webpack\": {\n    \"configFile\": \"path/to/webpack.config.js\",\n    \"context\": \"path/to/webpack/context\",\n    \"silent\": true\n  }\n}",
+   "output": "{\n  \"webpack\": {\n    \"configFile\": \"path/to/webpack.config.js\",\n    \"context\": \"path/to/webpack/context\",\n    \"silent\": true\n  }\n}"
+  },
+  {
+   "id": "o46428",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"nonResidentLandlord\": true,\n  \"rarJointLet\": true\n}",
+   "output": "{\n  \"nonResidentLandlord\": true,\n  \"rarJointLet\": true\n}"
+  },
+  {
+   "id": "o66192",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"cmd\": \"echo 'Hello, World!'\",\n  \"process_type\": \"string-interpolated-cmd\"\n}",
+   "output": "{\n  \"cmd\": \"echo 'Hello, World!'\",\n  \"process_type\": \"string-interpolated-cmd\"\n}"
+  },
+  {
+   "id": "o43997",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"location\": \"https://example.com/firmware.bin\",\n  \"retries\": 3,\n  \"retrieveDate\": \"2022-01-01T12:00:00Z\",\n  \"retryInterval\": 60\n}",
+   "output": "{\n  \"location\": \"https://example.com/firmware.bin\",\n  \"retries\": 3,\n  \"retrieveDate\": \"2022-01-01T12:00:00Z\",\n  \"retryInterval\": 60\n}"
+  },
+  {
+   "id": "o48257",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"name\": \"My JSON Object\",\n  \"entities\": {\n    \"group\": \"My Group\",\n    \"items\": [\n      {\n        \"name\": \"Item 1\"\n      },\n      {\n        \"name\": \"Item 2\"\n      }\n    ]\n  }\n}",
+   "output": "{\n  \"name\": \"My JSON Object\",\n  \"entities\": {\n    \"group\": \"My Group\",\n    \"items\": [\n      {\n        \"name\": \"Item 1\"\n      },\n      {\n        \"name\": \"Item 2\"\n      }\n    ]\n  }\n}"
+  },
+  {
+   "id": "o65462",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"company_name\": \"Example Company\",\n  \"con_date\": \"2022-01-01\",\n  \"start_date\": \"2021-01-01\"\n}",
+   "output": "{\n  \"company_name\": \"Example Company\",\n  \"con_date\": \"2022-01-01\",\n  \"start_date\": \"2021-01-01\"\n}"
+  },
+  {
+   "id": "o31043",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"backupfilename\": \"backupfile\",\n  \"createdby\": \"John Doe\",\n  \"creationtime\": \"2022-01-01T12:00:00Z\",\n  \"filename\": \"restorefile\",\n  \"ipaddress\": \"192.168.0.1\",\n  \"techsuprtname\": \"Tech Support\",\n  \"version\": \"1.0\"\n}",
+   "output": "{\n  \"backupfilename\": \"backupfile\",\n  \"createdby\": \"John Doe\",\n  \"creationtime\": \"2022-01-01T12:00:00Z\",\n  \"filename\": \"restorefile\",\n  \"ipaddress\": \"192.168.0.1\",\n  \"techsuprtname\": \"Tech Support\",\n  \"version\": \"1.0\"\n}"
+  },
+  {
+   "id": "o7294",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\n  \"result\": \"valid\",\n  \"contexts\": []\n}",
+   "output": "{\n  \"result\": \"valid\",\n  \"contexts\": []\n}"
+  }
+ ]
+}

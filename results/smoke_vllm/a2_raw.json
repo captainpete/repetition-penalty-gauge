@@ -1,0 +1,754 @@
+{
+  "model": "Qwen/Qwen2.5-Coder-7B",
+  "dtype": "torch.bfloat16",
+  "thetas": [
+    1.0,
+    1.1,
+    1.3
+  ],
+  "n_json": 48,
+  "max_tokens": 160,
+  "seen_set": "vLLM repetition_penalty penalizes prompt+output tokens",
+  "metrics": {
+    "theta1.0": {
+      "json_valid_rate": 1.0,
+      "n": 48
+    },
+    "theta1.1": {
+      "json_valid_rate": 1.0,
+      "n": 48
+    },
+    "theta1.3": {
+      "json_valid_rate": 0.16666666666666666,
+      "n": 48
+    }
+  },
+  "raw": {
+    "theta1.0": [
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}",
+        "valid": true
+      }
+    ],
+    "theta1.1": [
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-05-30T14:00:00Z\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-05-30T14:00:00Z\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-05-30T14:00:00Z\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-05-30T14:00:00Z\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-05-30T14:00:00Z\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-05-30T14:00:00Z\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-05-30T14:00:00Z\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-05-30T14:00:00Z\",\n  \"attendees\": 100,\n  \"virtual\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}",
+        "valid": true
+      }
+    ],
+    "theta1.3": [
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"age\": ,\n  \"email\": \"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"age\": ,\n  \"email\": \"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"age\": ,\n  \"email\": \"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"age\": ,\n  \"email\": \"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"age\": ,\n  \"email\": \"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"age\": ,\n  \"email\": \"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"age\": ,\n  \"email\": \"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a user with fields name (string), age (integer), email (string). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"age\": ,\n  \"email\": \"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"price\": ,\n  \"inStock\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"price\": ,\n  \"inStock\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"price\": ,\n  \"inStock\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"price\": ,\n  \"inStock\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"price\": ,\n  \"inStock\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"price\": ,\n  \"inStock\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"price\": ,\n  \"inStock\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a product with fields title (string), price (number), in_stock (boolean). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"price\": ,\n  \"inStock\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"author\": \"\", \n  <|fim_middle|>",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"author\": \"\", \n  <|fim_middle|>",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"author\": \"\", \n  <|fim_middle|>",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"author\": \"\", \n  <|fim_middle|>",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"author\": \"\", \n  <|fim_middle|>",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"author\": \"\", \n  <|fim_middle|>",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"author\": \"\", \n  <|fim_middle|>",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a book with fields title (string), author (string), year (integer), tags (array of strings). JSON:\n",
+        "text": "{\n  \"title\": \"\",\n  \"author\": \"\", \n  <|fim_middle|>",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8390426,\n  \"country\": \"United States of America\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8390426,\n  \"country\": \"United States of America\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8390426,\n  \"country\": \"United States of America\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8390426,\n  \"country\": \"United States of America\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8390426,\n  \"country\": \"United States of America\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8390426,\n  \"country\": \"United States of America\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8390426,\n  \"country\": \"United States of America\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a city with fields name (string), population (integer), country (string), capital (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"New York\",\n  \"population\": 8390426,\n  \"country\": \"United States of America\",\n  \"capital\": false\n}",
+        "valid": true
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"date\": \"\", \n  \t\"attendees\":\"\",  \n    \"virtual\":\"\"   \n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"date\": \"\", \n  \t\"attendees\":\"\",  \n    \"virtual\":\"\"   \n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"date\": \"\", \n  \t\"attendees\":\"\",  \n    \"virtual\":\"\"   \n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"date\": \"\", \n  \t\"attendees\":\"\",  \n    \"virtual\":\"\"   \n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"date\": \"\", \n  \t\"attendees\":\"\",  \n    \"virtual\":\"\"   \n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"date\": \"\", \n  \t\"attendees\":\"\",  \n    \"virtual\":\"\"   \n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"date\": \"\", \n  \t\"attendees\":\"\",  \n    \"virtual\":\"\"   \n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing an event with fields name (string), date (string), attendees (integer), virtual (boolean). JSON:\n",
+        "text": "{\n  \"name\": \"\",\n  \"date\": \"\", \n  \t\"attendees\":\"\",  \n    \"virtual\":\"\"   \n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"\",\n  \"model\": \"\", \n  \"year\" : ,\n   \"electric\":\"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"\",\n  \"model\": \"\", \n  \"year\" : ,\n   \"electric\":\"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"\",\n  \"model\": \"\", \n  \"year\" : ,\n   \"electric\":\"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"\",\n  \"model\": \"\", \n  \"year\" : ,\n   \"electric\":\"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"\",\n  \"model\": \"\", \n  \"year\" : ,\n   \"electric\":\"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"\",\n  \"model\": \"\", \n  \"year\" : ,\n   \"electric\":\"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"\",\n  \"model\": \"\", \n  \"year\" : ,\n   \"electric\":\"\"\n}",
+        "valid": false
+      },
+      {
+        "prompt": "Output ONLY a single JSON object describing a car with fields make (string), model (string), year (integer), electric (boolean). JSON:\n",
+        "text": "{\n  \"make\": \"\",\n  \"model\": \"\", \n  \"year\" : ,\n   \"electric\":\"\"\n}",
+        "valid": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,495 @@
+{
+ "model": "Qwen/Qwen2.5-Coder-7B",
+ "thetas": [
+  1.0,
+  1.3
+ ],
+ "ops": [
+  "raw",
+  "fix"
+ ],
+ "n_schemas": 16,
+ "max_new": 512,
+ "bs": 8,
+ "prompt_template": "conforms-to-schema",
+ "summary": {
+  "raw_theta1.0": {
+   "valid_rate": 0.9375,
+   "n": 16,
+   "n_valid": 15
+  },
+  "fix_theta1.0": {
+   "valid_rate": 0.9375,
+   "n": 16,
+   "n_valid": 15
+  },
+  "raw_theta1.3": {
+   "valid_rate": 0.1875,
+   "n": 16,
+   "n_valid": 3
+  },
+  "fix_theta1.3": {
+   "valid_rate": 0.9375,
+   "n": 16,
+   "n_valid": 15
+  }
+ },
+ "runs": {
+  "raw_theta1.0": [
+   {
+    "id": "o90308",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"transparency\": 30\n}",
+    "output": "{\n  \"transparency\": 30\n}"
+   },
+   {
+    "id": "o33695",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"@context\": \"http://adnotare.crim.ca/schema/custom-meta-schema#\",\n  \"@type\": \"CustomMetaSchema\",\n  \"schemaType\": \"CustomMetaSchema\"\n}",
+    "output": "{\n  \"@context\": \"http://adnotare.crim.ca/schema/custom-meta-schema#\",\n  \"@type\": \"CustomMetaSchema\",\n  \"schemaType\": \"CustomMetaSchema\"\n}"
+   },
+   {
+    "id": "o24544",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"id\": 12345,\n  \"name\": \"AVRELIANVS\"\n}",
+    "output": "{\n  \"id\": 12345,\n  \"name\": \"AVRELIANVS\"\n}"
+   },
+   {
+    "id": "o79712",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"option\": \"ignorieren\",\n  \"wiederholungen\": \"1\"\n}",
+    "output": "{\n  \"option\": \"ignorieren\",\n  \"wiederholungen\": \"1\"\n}"
+   },
+   {
+    "id": "o31168",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"channelnumber\": 123,\n  \"destip\": \"192.168.1.1\",\n  \"destport\": 443,\n  \"domain\": \"example.com\",\n  \"nodeid\": 456,\n  \"peid\": 789,\n  \"srcip\": \"10.0.0.1\",\n  \"srcport\": 80,\n  \"username\": \"user123\"\n}",
+    "output": "{\n  \"channelnumber\": 123,\n  \"destip\": \"192.168.1.1\",\n  \"destport\": 443,\n  \"domain\": \"example.com\",\n  \"nodeid\": 456,\n  \"peid\": 789,\n  \"srcip\": \"10.0.0.1\",\n  \"srcport\": 80,\n  \"username\": \"user123\"\n}"
+   },
+   {
+    "id": "o71320",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"fabric_uuid\": \"123456789\",\n  \"device_count\": 1\n}",
+    "output": "{\n  \"fabric_uuid\": \"123456789\",\n  \"device_count\": 1\n}"
+   },
+   {
+    "id": "o3620",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"key\": \"value\"\n}",
+    "output": "{\n  \"key\": \"value\"\n}"
+   },
+   {
+    "id": "o41033",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"DestinationCidrBlock\": \"0.0.0.0/0\",\n  \"NatGatewayId\": \"nat-1234567890abcdef\",\n  \"RouteTableId\": \"rtb-1234567890abcdef\"\n}",
+    "output": "{\n  \"DestinationCidrBlock\": \"0.0.0.0/0\",\n  \"NatGatewayId\": \"nat-1234567890abcdef\",\n  \"RouteTableId\": \"rtb-1234567890abcdef\"\n}"
+   },
+   {
+    "id": "o10012",
+    "valid": false,
+    "reason": "'example_id' is too short",
+    "extracted": "{\n  \"id\": \"example_id\",\n  \"secret\": \"example_secret\"\n}",
+    "output": "{\n  \"id\": \"example_id\",\n  \"secret\": \"example_secret\"\n}"
+   },
+   {
+    "id": "o8450",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"container_name\": \"example_container\",\n  \"fabric_fq_name\": [\"example_fabric\", \"example_domain\", \"example_project\"]\n}",
+    "output": "{\n  \"container_name\": \"example_container\",\n  \"fabric_fq_name\": [\"example_fabric\", \"example_domain\", \"example_project\"]\n}"
+   },
+   {
+    "id": "o3206",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"messagePacket\": {\n    \"data\": \"string\",\n    \"text\": \"string\",\n    \"type\": \"string\"\n  }\n}",
+    "output": "{\n  \"messagePacket\": {\n    \"data\": \"string\",\n    \"text\": \"string\",\n    \"type\": \"string\"\n  }\n}"
+   },
+   {
+    "id": "o46527",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"name\": \"My Theme\",\n  \"author\": \"John Doe\",\n  \"description\": \"A custom theme for my website\",\n  \"body\": [\n    {\n      \"selector\": \"body\",\n      \"styles\": {\n        \"background-color\": \"#f0f0f0\",\n        \"font-family\": \"Arial, sans-serif\"\n      }\n    }\n  ],\n  \"main\": [\n    {\n      \"selector\": \"h1\",\n      \"styles\": {\n        \"color\": \"#333\",\n        \"font-size\": \"24px\"\n      }\n    }\n  ],\n  \"diffHeader\": [\n    {\n      \"selector\": \"h2\",\n      \"styles\": {\n        \"color\": \"#666\",\n        \"font-size\": \"18px\"\n      }\n    }\n  ],\n  \"diffBody\": [\n    {\n      \"selector\": \"p\",\n      \"styles\": {\n        \"color\": \"#999\",\n        \"font-size\": \"14px\"\n      }\n    }\n  ]\n}",
+    "output": "{\n  \"name\": \"My Theme\",\n  \"author\": \"John Doe\",\n  \"description\": \"A custom theme for my website\",\n  \"body\": [\n    {\n      \"selector\": \"body\",\n      \"styles\": {\n        \"background-color\": \"#f0f0f0\",\n        \"font-family\": \"Arial, sans-serif\"\n      }\n    }\n  ],\n  \"main\": [\n    {\n      \"selector\": \"h1\",\n      \"styles\": {\n        \"color\": \"#333\",\n        \"font-size\": \"24px\"\n      }\n    }\n  ],\n  \"diffHeader\": [\n    {\n      \"selector\": \"h2\",\n      \"styles\": {\n        \"color\": \"#666\",\n        \"font-size\": \"18px\"\n      }\n    }\n  ],\n  \"diffBody\": [\n    {\n      \"selector\": \"p\",\n      \"styles\": {\n        \"color\": \"#999\",\n        \"font-size\": \"14px\"\n      }\n    }\n  ]\n}"
+   },
+   {
+    "id": "o6167",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"name\": \"John Doe\",\n  \"status\": \"active\"\n}",
+    "output": "{\n  \"name\": \"John Doe\",\n  \"status\": \"active\"\n}"
+   },
+   {
+    "id": "o39754",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"extensions\": [\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.Storage\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.Storage.StorageExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.Storage, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.Storage.dll\"\n    },\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs.EventHubsExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.EventHubs, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.EventHubs.dll\"\n    }\n  ]\n}",
+    "output": "{\n  \"extensions\": [\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.Storage\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.Storage.StorageExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.Storage, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.Storage.dll\"\n    },\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs.EventHubsExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.EventHubs, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.EventHubs.dll\"\n    }\n  ]\n}"
+   },
+   {
+    "id": "o6262",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"type\": \"timer\",\n  \"outputIds\": [\n    [\n      \"output1\",\n      \"output2\"\n    ]\n  ],\n  \"meta\": {},\n  \"config\": {\n    \"cron\": \"0 0 * * *\"\n  }\n}",
+    "output": "{\n  \"type\": \"timer\",\n  \"outputIds\": [\n    [\n      \"output1\",\n      \"output2\"\n    ]\n  ],\n  \"meta\": {},\n  \"config\": {\n    \"cron\": \"0 0 * * *\"\n  }\n}"
+   },
+   {
+    "id": "o71408",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"route\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"view\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"optimization_problem_id\": \"YOUR_OPTIMIZATION_PROBLEM_ID\"\n}",
+    "output": "{\n  \"route\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"view\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"optimization_problem_id\": \"YOUR_OPTIMIZATION_PROBLEM_ID\"\n}"
+   }
+  ],
+  "fix_theta1.0": [
+   {
+    "id": "o90308",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"transparency\": 30\n}",
+    "output": "{\n  \"transparency\": 30\n}"
+   },
+   {
+    "id": "o33695",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"@context\": \"http://adnotare.crim.ca/schema/custom-meta-schema#\",\n  \"@type\": \"CustomMetaSchema\",\n  \"schemaType\": \"CustomMetaSchema\"\n}",
+    "output": "{\n  \"@context\": \"http://adnotare.crim.ca/schema/custom-meta-schema#\",\n  \"@type\": \"CustomMetaSchema\",\n  \"schemaType\": \"CustomMetaSchema\"\n}"
+   },
+   {
+    "id": "o24544",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"id\": 12345,\n  \"name\": \"AVRELIANVS\"\n}",
+    "output": "{\n  \"id\": 12345,\n  \"name\": \"AVRELIANVS\"\n}"
+   },
+   {
+    "id": "o79712",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"option\": \"ignorieren\",\n  \"wiederholungen\": \"1\"\n}",
+    "output": "{\n  \"option\": \"ignorieren\",\n  \"wiederholungen\": \"1\"\n}"
+   },
+   {
+    "id": "o31168",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"channelnumber\": 123,\n  \"destip\": \"192.168.1.1\",\n  \"destport\": 443,\n  \"domain\": \"example.com\",\n  \"nodeid\": 456,\n  \"peid\": 789,\n  \"srcip\": \"10.0.0.1\",\n  \"srcport\": 80,\n  \"username\": \"user123\"\n}",
+    "output": "{\n  \"channelnumber\": 123,\n  \"destip\": \"192.168.1.1\",\n  \"destport\": 443,\n  \"domain\": \"example.com\",\n  \"nodeid\": 456,\n  \"peid\": 789,\n  \"srcip\": \"10.0.0.1\",\n  \"srcport\": 80,\n  \"username\": \"user123\"\n}"
+   },
+   {
+    "id": "o71320",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"fabric_uuid\": \"123456789\",\n  \"device_count\": 1\n}",
+    "output": "{\n  \"fabric_uuid\": \"123456789\",\n  \"device_count\": 1\n}"
+   },
+   {
+    "id": "o3620",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"key\": \"value\"\n}",
+    "output": "{\n  \"key\": \"value\"\n}"
+   },
+   {
+    "id": "o41033",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"DestinationCidrBlock\": \"0.0.0.0/0\",\n  \"NatGatewayId\": \"nat-1234567890abcdef\",\n  \"RouteTableId\": \"rtb-1234567890abcdef\"\n}",
+    "output": "{\n  \"DestinationCidrBlock\": \"0.0.0.0/0\",\n  \"NatGatewayId\": \"nat-1234567890abcdef\",\n  \"RouteTableId\": \"rtb-1234567890abcdef\"\n}"
+   },
+   {
+    "id": "o10012",
+    "valid": false,
+    "reason": "'example_id' is too short",
+    "extracted": "{\n  \"id\": \"example_id\",\n  \"secret\": \"example_secret\"\n}",
+    "output": "{\n  \"id\": \"example_id\",\n  \"secret\": \"example_secret\"\n}"
+   },
+   {
+    "id": "o8450",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"container_name\": \"example_container\",\n  \"fabric_fq_name\": [\"example_fabric\", \"example_domain\", \"example_project\"]\n}",
+    "output": "{\n  \"container_name\": \"example_container\",\n  \"fabric_fq_name\": [\"example_fabric\", \"example_domain\", \"example_project\"]\n}"
+   },
+   {
+    "id": "o3206",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"messagePacket\": {\n    \"data\": \"string\",\n    \"text\": \"string\",\n    \"type\": \"string\"\n  }\n}",
+    "output": "{\n  \"messagePacket\": {\n    \"data\": \"string\",\n    \"text\": \"string\",\n    \"type\": \"string\"\n  }\n}"
+   },
+   {
+    "id": "o46527",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"name\": \"My Theme\",\n  \"author\": \"John Doe\",\n  \"description\": \"A custom theme for my website\",\n  \"body\": [\n    {\n      \"selector\": \"body\",\n      \"styles\": {\n        \"background-color\": \"#f0f0f0\",\n        \"font-family\": \"Arial, sans-serif\"\n      }\n    }\n  ],\n  \"main\": [\n    {\n      \"selector\": \"h1\",\n      \"styles\": {\n        \"color\": \"#333\",\n        \"font-size\": \"24px\"\n      }\n    }\n  ],\n  \"diffHeader\": [\n    {\n      \"selector\": \"h2\",\n      \"styles\": {\n        \"color\": \"#666\",\n        \"font-size\": \"18px\"\n      }\n    }\n  ],\n  \"diffBody\": [\n    {\n      \"selector\": \"p\",\n      \"styles\": {\n        \"color\": \"#999\",\n        \"font-size\": \"14px\"\n      }\n    }\n  ]\n}",
+    "output": "{\n  \"name\": \"My Theme\",\n  \"author\": \"John Doe\",\n  \"description\": \"A custom theme for my website\",\n  \"body\": [\n    {\n      \"selector\": \"body\",\n      \"styles\": {\n        \"background-color\": \"#f0f0f0\",\n        \"font-family\": \"Arial, sans-serif\"\n      }\n    }\n  ],\n  \"main\": [\n    {\n      \"selector\": \"h1\",\n      \"styles\": {\n        \"color\": \"#333\",\n        \"font-size\": \"24px\"\n      }\n    }\n  ],\n  \"diffHeader\": [\n    {\n      \"selector\": \"h2\",\n      \"styles\": {\n        \"color\": \"#666\",\n        \"font-size\": \"18px\"\n      }\n    }\n  ],\n  \"diffBody\": [\n    {\n      \"selector\": \"p\",\n      \"styles\": {\n        \"color\": \"#999\",\n        \"font-size\": \"14px\"\n      }\n    }\n  ]\n}"
+   },
+   {
+    "id": "o6167",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"name\": \"John Doe\",\n  \"status\": \"active\"\n}",
+    "output": "{\n  \"name\": \"John Doe\",\n  \"status\": \"active\"\n}"
+   },
+   {
+    "id": "o39754",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"extensions\": [\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.Storage\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.Storage.StorageExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.Storage, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.Storage.dll\"\n    },\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs.EventHubsExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.EventHubs, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.EventHubs.dll\"\n    }\n  ]\n}",
+    "output": "{\n  \"extensions\": [\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.Storage\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.Storage.StorageExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.Storage, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.Storage.dll\"\n    },\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs.EventHubsExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.EventHubs, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\AppData\\\\Local\\\\AzureFunctionsTools\\\\Releases\\\\3.0.1\\\\cli\\\\Microsoft.Azure.WebJobs.Extensions.EventHubs.dll\"\n    }\n  ]\n}"
+   },
+   {
+    "id": "o6262",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"type\": \"timer\",\n  \"outputIds\": [\n    [\n      \"output1\",\n      \"output2\"\n    ]\n  ],\n  \"meta\": {},\n  \"config\": {\n    \"cron\": \"0 0 * * *\"\n  }\n}",
+    "output": "{\n  \"type\": \"timer\",\n  \"outputIds\": [\n    [\n      \"output1\",\n      \"output2\"\n    ]\n  ],\n  \"meta\": {},\n  \"config\": {\n    \"cron\": \"0 0 * * *\"\n  }\n}"
+   },
+   {
+    "id": "o71408",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"route\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"view\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"optimization_problem_id\": \"YOUR_OPTIMIZATION_PROBLEM_ID\"\n}",
+    "output": "{\n  \"route\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"view\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"optimization_problem_id\": \"YOUR_OPTIMIZATION_PROBLEM_ID\"\n}"
+   }
+  ],
+  "raw_theta1.3": [
+   {
+    "id": "o90308",
+    "valid": false,
+    "reason": "None is not of type 'integer'",
+    "extracted": "{\"transparency\" : null}",
+    "output": "{\"transparency\" : null} {\"transparency\":null}\n\n"
+   },
+   {
+    "id": "o33695",
+    "valid": false,
+    "reason": "'schemaType' is a required property",
+    "extracted": "{ \n\"@context\":\"https:\\/\\/www.w3.org\\/2018\\/credentials\",\"@type\":[\"VerifiableCredential\"],\"credentialSubject\":{\"name\":\"John Doe\"},\"issuanceDate\":\"2022-05-06T17:09Z\"}",
+    "output": "{ \n\"@context\":\"https:\\/\\/www.w3.org\\/2018\\/credentials\",\"@type\":[\"VerifiableCredential\"],\"credentialSubject\":{\"name\":\"John Doe\"},\"issuanceDate\":\"2022-05-06T17:09Z\"} \n\n"
+   },
+   {
+    "id": "o24544",
+    "valid": false,
+    "reason": "None is not of type 'integer'",
+    "extracted": "{\"id\" : null, \n\"name\":\"null\"}",
+    "output": "{\"id\" : null, \n\"name\":\"null\"} \n\n"
+   },
+   {
+    "id": "o79712",
+    "valid": false,
+    "reason": "'ignore' is not one of ['beenden', 'abbruch', 'ignorieren']",
+    "extracted": "{\"option\":\"ignore\",\"repetitions\":\"\"}",
+    "output": "{\"option\":\"ignore\",\"repetitions\":\"\"} \n\n"
+   },
+   {
+    "id": "o31168",
+    "valid": false,
+    "reason": "no_json",
+    "extracted": "{ \n   'channelNumber': None,  \n   'destinationIP' :None ,   \n   'destinationPort ':1234567890 ,\n     'DomainName':'example.com',\n       'NodeID':-1\n        ,'PeerEntityId': -1,'sourceIPAddress ':'',    \n         'Source Port Number: ''}",
+    "output": "{ \n   'channelNumber': None,  \n   'destinationIP' :None ,   \n   'destinationPort ':1234567890 ,\n     'DomainName':'example.com',\n       'NodeID':-1\n        ,'PeerEntityId': -1,'sourceIPAddress ':'',    \n         'Source Port Number: ''}"
+   },
+   {
+    "id": "o71320",
+    "valid": false,
+    "reason": "no_json",
+    "extracted": "{ \n   'input': {  \n     'fabric_uuid':'',\n       device_count: int( )\n} }",
+    "output": "{ \n   'input': {  \n     'fabric_uuid':'',\n       device_count: int( )\n} } \n\n"
+   },
+   {
+    "id": "o3620",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\"key\":\"value\"}",
+    "output": "{\"key\":\"value\"} {\"key\" : \"\"} \n\n"
+   },
+   {
+    "id": "o41033",
+    "valid": false,
+    "reason": "no_json",
+    "extracted": "{\"DestinationCidrBlock\":\"87.65.43.2/2\", \"NAT Gateway ID\":\"nat-gw-id-example\",\"route table id\" : natgw-routetable-exampl }",
+    "output": "{\"DestinationCidrBlock\":\"87.65.43.2/2\", \"NAT Gateway ID\":\"nat-gw-id-example\",\"route table id\" : natgw-routetable-exampl }"
+   },
+   {
+    "id": "o10012",
+    "valid": false,
+    "reason": "'example_id' is too short",
+    "extracted": "{\"id\":\"example_id\",\"secret\":\"example_secret\"}",
+    "output": "{\"id\":\"example_id\",\"secret\":\"example_secret\"}"
+   },
+   {
+    "id": "o8450",
+    "valid": false,
+    "reason": "no_json",
+    "extracted": "{ \n   'container_name': '',  \n   'fabric_fq_name' : ['default-global-system-config', 'test-fabric']   \n}",
+    "output": "{ \n   'container_name': '',  \n   'fabric_fq_name' : ['default-global-system-config', 'test-fabric']   \n} \n\n"
+   },
+   {
+    "id": "o3206",
+    "valid": false,
+    "reason": "no_json",
+    "extracted": "{ \n   'message_packet': {  \n     data: '', text:'Hello World', type:''} }",
+    "output": "{ \n   'message_packet': {  \n     data: '', text:'Hello World', type:''} } \n\n"
+   },
+   {
+    "id": "o46527",
+    "valid": false,
+    "reason": "no_json",
+    "extracted": "{ \n\"name\":\"My Theme\",  \n\"author\":\"John Doe\",   \n\"description\":\"A custom color scheme for my code editor.\",    \n\"body\":[\n   {      \n     \"background-color\":\"black\",       \n       \"color\":\"white\"},     \n        {\"selector\":{\"class\":[\"comment\"]},        \n         \"style\":{\n           \"font-style\":\"italic\"} }],         \n          main:[{\"selector\":\n            \".line-number\",\"style\":\n              {\"display\":\"\"}}] ,          \n             diffheader:[] ,\n               difffooter:[],\n                 body:{},\n                   footer:{}}",
+    "output": "{ \n\"name\":\"My Theme\",  \n\"author\":\"John Doe\",   \n\"description\":\"A custom color scheme for my code editor.\",    \n\"body\":[\n   {      \n     \"background-color\":\"black\",       \n       \"color\":\"white\"},     \n        {\"selector\":{\"class\":[\"comment\"]},        \n         \"style\":{\n           \"font-style\":\"italic\"} }],         \n          main:[{\"selector\":\n            \".line-number\",\"style\":\n              {\"display\":\"\"}}] ,          \n             diffheader:[] ,\n               difffooter:[],\n                 body:{},\n                   footer:{}}\n\n"
+   },
+   {
+    "id": "o6167",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\"name\":\"John Doe\",\"status\":\"active\"}",
+    "output": "{\"name\":\"John Doe\",\"status\":\"active\"} {\"name\" : \"Jane Smith\", \n   \"age\" : 36,  \n} \n\n"
+   },
+   {
+    "id": "o39754",
+    "valid": false,
+    "reason": "no_json",
+    "extracted": "{ \n   'extensions': [\n     {  \n       'name':'Microsoft.Azure.WebJobs.Extensions.Storage',\n         typeName:'Storage, Version=12.9.3.5678'\n           ,hintpath:'/home/site/wwwroot/bin/Debug/netcoreapp3.1/Microsoft.Azure.WebJobs.Extensions.Storage.dll'   \n}]}",
+    "output": "{ \n   'extensions': [\n     {  \n       'name':'Microsoft.Azure.WebJobs.Extensions.Storage',\n         typeName:'Storage, Version=12.9.3.5678'\n           ,hintpath:'/home/site/wwwroot/bin/Debug/netcoreapp3.1/Microsoft.Azure.WebJobs.Extensions.Storage.dll'   \n}]} \n\n"
+   },
+   {
+    "id": "o6262",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\"type\":\"timer\",\"outputIds\":[],\"meta\":{\"name\":\"\",\"description\":\"\"},\"config\":{\"cron\":\"* * *\"}}",
+    "output": "{\"type\":\"timer\",\"outputIds\":[],\"meta\":{\"name\":\"\",\"description\":\"\"},\"config\":{\"cron\":\"* * *\"}} \n\n"
+   },
+   {
+    "id": "o71408",
+    "valid": false,
+    "reason": "no_json",
+    "extracted": "{ \n   'route': '/api/v5/get-route.php?routeID=123',  \n   'view' : '',   \n}",
+    "output": "{ \n   'route': '/api/v5/get-route.php?routeID=123',  \n   'view' : '',   \n}"
+   }
+  ],
+  "fix_theta1.3": [
+   {
+    "id": "o90308",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"transparency\": 30\n}",
+    "output": "{\n  \"transparency\": 30\n}"
+   },
+   {
+    "id": "o33695",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"@context\": \"http://adnotare.crim.ca/schema/custom-meta-schema#\",\n  \"@type\": \"CustomMetaSchema\",\n  \"schemaType\": \"CustomMetaSchema\"\n}",
+    "output": "{\n  \"@context\": \"http://adnotare.crim.ca/schema/custom-meta-schema#\",\n  \"@type\": \"CustomMetaSchema\",\n  \"schemaType\": \"CustomMetaSchema\"\n}"
+   },
+   {
+    "id": "o24544",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"id\": 12345,\n  \"name\": \"AVRELIANVS\"\n}",
+    "output": "{\n  \"id\": 12345,\n  \"name\": \"AVRELIANVS\"\n}"
+   },
+   {
+    "id": "o79712",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"option\": \"ignorieren\",\n  \"wiederholungen\": \"\"\n}",
+    "output": "{\n  \"option\": \"ignorieren\",\n  \"wiederholungen\": \"\"\n}"
+   },
+   {
+    "id": "o31168",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"channelnumber\": 123,\n  \"destip\": \"192.168.1.100\",\n  \"destport\": 443,\n  \"domain\": \"example.com\",\n  \"nodeid\": 456,\n  \"peid\": 789,\n  \"srcip\": \"192.168.1.1\",\n  \"srcport\": 80,\n  \"username\": \"user123\"\n}",
+    "output": "{\n  \"channelnumber\": 123,\n  \"destip\": \"192.168.1.100\",\n  \"destport\": 443,\n  \"domain\": \"example.com\",\n  \"nodeid\": 456,\n  \"peid\": 789,\n  \"srcip\": \"192.168.1.1\",\n  \"srcport\": 80,\n  \"username\": \"user123\"\n}"
+   },
+   {
+    "id": "o71320",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"fabric_uuid\": \"123456789\",\n  \"device_count\": 1\n}",
+    "output": "{\n  \"fabric_uuid\": \"123456789\",\n  \"device_count\": 1\n}"
+   },
+   {
+    "id": "o3620",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"key\": \"value\"\n}",
+    "output": "{\n  \"key\": \"value\"\n}"
+   },
+   {
+    "id": "o41033",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"DestinationCidrBlock\": \"0.0.0.0/0\",\n  \"NatGatewayId\": \"nat-1234567890abcdef\",\n  \"RouteTableId\": \"rtb-1234567890abcdef\"\n}",
+    "output": "{\n  \"DestinationCidrBlock\": \"0.0.0.0/0\",\n  \"NatGatewayId\": \"nat-1234567890abcdef\",\n  \"RouteTableId\": \"rtb-1234567890abcdef\"\n}"
+   },
+   {
+    "id": "o10012",
+    "valid": false,
+    "reason": "'example_id' is too short",
+    "extracted": "{\n  \"id\": \"example_id\",\n  \"secret\": \"example_secret\"\n}",
+    "output": "{\n  \"id\": \"example_id\",\n  \"secret\": \"example_secret\"\n}"
+   },
+   {
+    "id": "o8450",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"container_name\": \"example_container\",\n  \"fabric_fq_name\": [\"example_fabric\", \"example_domain\"]\n}",
+    "output": "{\n  \"container_name\": \"example_container\",\n  \"fabric_fq_name\": [\"example_fabric\", \"example_domain\"]\n}"
+   },
+   {
+    "id": "o3206",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"messagePacket\": {\n    \"data\": \"Hello, world!\",\n    \"text\": \"This is a test message.\",\n    \"type\": \"info\"\n  }\n}",
+    "output": "{\n  \"messagePacket\": {\n    \"data\": \"Hello, world!\",\n    \"text\": \"This is a test message.\",\n    \"type\": \"info\"\n  }\n}"
+   },
+   {
+    "id": "o46527",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"name\": \"My Theme\",\n  \"author\": \"John Doe\",\n  \"description\": \"A custom theme for my website\",\n  \"body\": [\n    {\n      \"selector\": \"body\",\n      \"styles\": {\n        \"background-color\": \"#f0f0f0\",\n        \"font-family\": \"Arial, sans-serif\"\n      }\n    }\n  ],\n  \"main\": [\n    {\n      \"selector\": \"h1\",\n      \"styles\": {\n        \"color\": \"#333\",\n        \"font-size\": \"24px\"\n      }\n    }\n  ],\n  \"diffHeader\": [\n    {\n      \"selector\": \"h2\",\n      \"styles\": {\n        \"color\": \"#666\",\n        \"font-size\": \"18px\"\n      }\n    }\n  ],\n  \"diffBody\": [\n    {\n      \"selector\": \"p\",\n      \"styles\": {\n        \"color\": \"#999\",\n        \"font-size\": \"14px\"\n      }\n    }\n  ]\n}",
+    "output": "{\n  \"name\": \"My Theme\",\n  \"author\": \"John Doe\",\n  \"description\": \"A custom theme for my website\",\n  \"body\": [\n    {\n      \"selector\": \"body\",\n      \"styles\": {\n        \"background-color\": \"#f0f0f0\",\n        \"font-family\": \"Arial, sans-serif\"\n      }\n    }\n  ],\n  \"main\": [\n    {\n      \"selector\": \"h1\",\n      \"styles\": {\n        \"color\": \"#333\",\n        \"font-size\": \"24px\"\n      }\n    }\n  ],\n  \"diffHeader\": [\n    {\n      \"selector\": \"h2\",\n      \"styles\": {\n        \"color\": \"#666\",\n        \"font-size\": \"18px\"\n      }\n    }\n  ],\n  \"diffBody\": [\n    {\n      \"selector\": \"p\",\n      \"styles\": {\n        \"color\": \"#999\",\n        \"font-size\": \"14px\"\n      }\n    }\n  ]\n}"
+   },
+   {
+    "id": "o6167",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"name\": \"John Doe\",\n  \"status\": \"active\"\n}",
+    "output": "{\n  \"name\": \"John Doe\",\n  \"status\": \"active\"\n}"
+   },
+   {
+    "id": "o39754",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"extensions\": [\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.Storage\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.Storage.StorageExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.Storage, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\.nuget\\\\packages\\\\microsoft.azure.webjobs.extensions.storage\\\\3.0.0\\\\lib\\\\netstandard2.0\\\\Microsoft.Azure.WebJobs.Extensions.Storage.dll\"\n    },\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs.EventHubsExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.EventHubs, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\.nuget\\\\packages\\\\microsoft.azure.webjobs.extensions.eventhubs\\\\3.0.0\\\\lib\\\\netstandard2.0\\\\Microsoft.Azure.WebJobs.Extensions.EventHubs.dll\"\n    }\n  ]\n}",
+    "output": "{\n  \"extensions\": [\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.Storage\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.Storage.StorageExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.Storage, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\.nuget\\\\packages\\\\microsoft.azure.webjobs.extensions.storage\\\\3.0.0\\\\lib\\\\netstandard2.0\\\\Microsoft.Azure.WebJobs.Extensions.Storage.dll\"\n    },\n    {\n      \"name\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs\",\n      \"typeName\": \"Microsoft.Azure.WebJobs.Extensions.EventHubs.EventHubsExtensionConfigProvider, Microsoft.Azure.WebJobs.Extensions.EventHubs, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35\",\n      \"hintPath\": \"C:\\\\Users\\\\username\\\\.nuget\\\\packages\\\\microsoft.azure.webjobs.extensions.eventhubs\\\\3.0.0\\\\lib\\\\netstandard2.0\\\\Microsoft.Azure.WebJobs.Extensions.EventHubs.dll\"\n    }\n  ]\n}"
+   },
+   {
+    "id": "o6262",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"type\": \"timer\",\n  \"outputIds\": [\n    [\n      \"output1\",\n      \"output2\"\n    ]\n  ],\n  \"meta\": {},\n  \"config\": {\n    \"cron\": \"0 0 * * *\"\n  }\n}",
+    "output": "{\n  \"type\": \"timer\",\n  \"outputIds\": [\n    [\n      \"output1\",\n      \"output2\"\n    ]\n  ],\n  \"meta\": {},\n  \"config\": {\n    \"cron\": \"0 0 * * *\"\n  }\n}"
+   },
+   {
+    "id": "o71408",
+    "valid": true,
+    "reason": null,
+    "extracted": "{\n  \"route\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"view\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"optimization_problem_id\": \"YOUR_OPTIMIZATION_PROBLEM_ID\"\n}",
+    "output": "{\n  \"route\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"view\": \"https://api.route4me.com/api.v4/optimization_problem.php?route_id=YOUR_ROUTE_ID\",\n  \"optimization_problem_id\": \"YOUR_OPTIMIZATION_PROBLEM_ID\"\n}"
+   }
+  ]
+ }
+}

@@ -1,0 +1,59 @@
+{
+  "all_confirmed": false,
+  "models": {
+    "openai-community/gpt2-large": {
+      "noop_gate": true,
+      "flip_test_theta": 0.9409375,
+      "flip_ci": [
+        0.91625,
+        0.9593749999999999
+      ],
+      "monotone": true,
+      "confirmed": true,
+      "flip_by_theta": {
+        "1.0": 0.0,
+        "1.02": 0.775625,
+        "1.05": 0.8734375,
+        "1.1": 0.8865625,
+        "1.15": 0.925,
+        "1.3": 0.9409375
+      }
+    },
+    "gpt2": {
+      "noop_gate": true,
+      "flip_test_theta": 0.4965625,
+      "flip_ci": [
+        0.333125,
+        0.655
+      ],
+      "monotone": false,
+      "confirmed": false,
+      "flip_by_theta": {
+        "1.0": 0.0,
+        "1.02": 0.648125,
+        "1.05": 0.7,
+        "1.1": 0.6278125,
+        "1.15": 0.47625,
+        "1.3": 0.4965625
+      }
+    },
+    "EleutherAI/pythia-2.8b": {
+      "noop_gate": true,
+      "flip_test_theta": 0.905,
+      "flip_ci": [
+        0.8756249999999999,
+        0.9334375
+      ],
+      "monotone": false,
+      "confirmed": false,
+      "flip_by_theta": {
+        "1.0": 0.0,
+        "1.02": 0.6090625,
+        "1.05": 0.8528125,
+        "1.1": 0.9203125,
+        "1.15": 0.923125,
+        "1.3": 0.905
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "subtractive_alpha": 1.0,
+  "subtractive_flip": {
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "flips": 0,
+      "positions": 40000,
+      "rate": 0.0
+    },
+    "Qwen/Qwen2.5-7B": {
+      "flips": 0,
+      "positions": 40000,
+      "rate": 0.0
+    },
+    "openai-community/gpt2-large": {
+      "flips": 0,
+      "positions": 40000,
+      "rate": 0.0
+    },
+    "gpt2": {
+      "flips": 0,
+      "positions": 40000,
+      "rate": 0.0
+    },
+    "EleutherAI/pythia-2.8b": {
+      "flips": 0,
+      "positions": 40000,
+      "rate": 0.0
+    }
+  },
+  "first_divergence_ctrl_theta1.3": {
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "n_diverging": 200,
+      "n_prompts": 200,
+      "median_first_div": 9.0,
+      "iqr": [
+        3,
+        18
+      ],
+      "post_divergence_flip": 0.9867
+    },
+    "Qwen/Qwen2.5-7B": {
+      "n_diverging": 200,
+      "n_prompts": 200,
+      "median_first_div": 10.0,
+      "iqr": [
+        4,
+        19
+      ],
+      "post_divergence_flip": 0.9912
+    },
+    "openai-community/gpt2-large": {
+      "n_diverging": 200,
+      "n_prompts": 200,
+      "median_first_div": 4.0,
+      "iqr": [
+        1,
+        8
+      ],
+      "post_divergence_flip": 0.9884
+    },
+    "gpt2": {
+      "n_diverging": 180,
+      "n_prompts": 200,
+      "median_first_div": 62.0,
+      "iqr": [
+        29,
+        103
+      ],
+      "post_divergence_flip": 0.9692
+    },
+    "EleutherAI/pythia-2.8b": {
+      "n_diverging": 200,
+      "n_prompts": 200,
+      "median_first_div": 8.0,
+      "iqr": [
+        3,
+        16
+      ],
+      "post_divergence_flip": 0.9904
+    }
+  }
+}

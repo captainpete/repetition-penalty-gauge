@@ -1,0 +1,10 @@
+# Everything in this smoke-replication workspace is build output / large artifacts.
+llama.cpp/
+models/
+venv/
+.venv/
+*.gguf
+__pycache__/
+build/
+a1_driver
+a2_driver

@@ -1,0 +1,45 @@
+{
+  "disposition": "MATTERS",
+  "verdicts": [
+    {
+      "metric": "HumanEval pass@1",
+      "raw_hurts": true,
+      "fix_recovers": true,
+      "raw_drop": 0.07926829268292683,
+      "fix_drop": 0.0
+    },
+    {
+      "metric": "JSON valid-rate",
+      "raw_hurts": true,
+      "fix_recovers": true,
+      "raw_drop": 1.0,
+      "fix_drop": 0.0
+    }
+  ],
+  "metrics": {
+    "raw_theta1.0": {
+      "humaneval_pass1": 0.07926829268292683,
+      "json_valid_rate": 1.0
+    },
+    "fix_theta1.0": {
+      "humaneval_pass1": 0.07926829268292683,
+      "json_valid_rate": 1.0
+    },
+    "raw_theta1.1": {
+      "humaneval_pass1": 0.042682926829268296,
+      "json_valid_rate": 1.0
+    },
+    "fix_theta1.1": {
+      "humaneval_pass1": 0.08536585365853659,
+      "json_valid_rate": 1.0
+    },
+    "raw_theta1.3": {
+      "humaneval_pass1": 0.0,
+      "json_valid_rate": 0.0
+    },
+    "fix_theta1.3": {
+      "humaneval_pass1": 0.07926829268292683,
+      "json_valid_rate": 1.0
+    }
+  }
+}

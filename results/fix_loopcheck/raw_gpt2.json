@@ -1,0 +1,73 @@
+{
+  "model": "gpt2",
+  "thetas": [
+    1.0,
+    1.05,
+    1.1,
+    1.2,
+    1.3,
+    1.5
+  ],
+  "metrics": {
+    "raw_theta1.0": {
+      "rep_rate": 0.82568359375,
+      "distinct2": 0.2588582677165354,
+      "longest_run": 1.6875
+    },
+    "raw_theta1.05": {
+      "rep_rate": 0.1123046875,
+      "distinct2": 0.9945866141732284,
+      "longest_run": 1.25
+    },
+    "raw_theta1.1": {
+      "rep_rate": 0.05078125,
+      "distinct2": 0.9985236220472441,
+      "longest_run": 1.125
+    },
+    "raw_theta1.2": {
+      "rep_rate": 0.0283203125,
+      "distinct2": 0.9990157480314961,
+      "longest_run": 1.125
+    },
+    "raw_theta1.3": {
+      "rep_rate": 0.0224609375,
+      "distinct2": 0.999507874015748,
+      "longest_run": 1.0625
+    },
+    "raw_theta1.5": {
+      "rep_rate": 0.01416015625,
+      "distinct2": 1.0,
+      "longest_run": 1.0625
+    },
+    "fix_theta1.0": {
+      "rep_rate": 0.82568359375,
+      "distinct2": 0.2588582677165354,
+      "longest_run": 1.6875
+    },
+    "fix_theta1.05": {
+      "rep_rate": 0.7744140625,
+      "distinct2": 0.3366141732283464,
+      "longest_run": 1.6875
+    },
+    "fix_theta1.1": {
+      "rep_rate": 0.77294921875,
+      "distinct2": 0.3385826771653543,
+      "longest_run": 1.6875
+    },
+    "fix_theta1.2": {
+      "rep_rate": 0.76123046875,
+      "distinct2": 0.357775590551181,
+      "longest_run": 1.75
+    },
+    "fix_theta1.3": {
+      "rep_rate": 0.7275390625,
+      "distinct2": 0.39517716535433073,
+      "longest_run": 1.8125
+    },
+    "fix_theta1.5": {
+      "rep_rate": 0.63037109375,
+      "distinct2": 0.548228346456693,
+      "longest_run": 1.8125
+    }
+  }
+}

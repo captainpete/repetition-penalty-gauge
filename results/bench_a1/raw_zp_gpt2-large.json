@@ -1,0 +1,21 @@
+{
+  "model": "openai-community/gpt2-large",
+  "revision": "32b71b12589c2f8d625668d2335a01cac3249519",
+  "dtype": "float32",
+  "thetas": [
+    1.3
+  ],
+  "c_natural": -13.337297439575195,
+  "n_prompts": 200,
+  "max_new": 200,
+  "batch_size": 50,
+  "zero_point": {
+    "frac_seen_logit_positive": 0.5226729591483592,
+    "mean_top1_logit": 13.523457547843456,
+    "median_top1_logit": 13.337297439575195
+  },
+  "flip_rate": {
+    "theta1.3_natural(-median)": 0.956925,
+    "theta1.3_synth_5": 0.9115
+  }
+}

@@ -1,0 +1,16 @@
+=== chunk 0-25 -> results/smoke_llamacpp_bench/a2_chunks/a2_raw_000.json ===
+=== chunk 25-50 -> results/smoke_llamacpp_bench/a2_chunks/a2_raw_025.json ===
+=== chunk 50-75 -> results/smoke_llamacpp_bench/a2_chunks/a2_raw_050.json ===
+=== chunk 75-100 -> results/smoke_llamacpp_bench/a2_chunks/a2_raw_075.json ===
+=== chunk 100-125 -> results/smoke_llamacpp_bench/a2_chunks/a2_raw_100.json ===
+=== chunk 125-150 -> results/smoke_llamacpp_bench/a2_chunks/a2_raw_125.json ===
+=== chunk 150-175 -> results/smoke_llamacpp_bench/a2_chunks/a2_raw_150.json ===
+chunk 0-25 already complete, skipping
+chunk 25-50 already complete, skipping
+chunk 50-75 already complete, skipping
+chunk 75-100 already complete, skipping
+chunk 100-125 already complete, skipping
+chunk 125-150 already complete, skipping
+=== chunk 150-175 -> results/smoke_llamacpp_bench/a2_chunks/a2_raw_150.json ===
+=== chunk 175-200 -> results/smoke_llamacpp_bench/a2_chunks/a2_raw_175.json ===
+A2 bench (llama.cpp) all chunks done

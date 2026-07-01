@@ -1,0 +1,36 @@
+=== sub_gpt2 2026-07-02T23:46:37+00:00 ===
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/148 [00:00<?, ?it/s]Loading weights: 100%|██████████| 148/148 [00:00<00:00, 11033.52it/s]
+  alpha=1.0 c=5.0 done (200 prefixes)
+  alpha=1.0 c=-5.0 done (200 prefixes)
+wrote 400 records -> results/bench_a1/raw_flip_gpt2_subtractive.json
+=== sub_gpt2 exit 0 2026-07-02T23:46:51+00:00 ===
+=== sub_g2l 2026-07-02T23:46:51+00:00 ===
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/436 [00:00<?, ?it/s]Loading weights: 100%|██████████| 436/436 [00:00<00:00, 9652.00it/s]
+  alpha=1.0 c=5.0 done (200 prefixes)
+  alpha=1.0 c=-5.0 done (200 prefixes)
+wrote 400 records -> results/bench_a1/raw_flip_gpt2-large_subtractive.json
+=== sub_g2l exit 0 2026-07-02T23:47:43+00:00 ===
+=== sub_pyth 2026-07-02T23:47:43+00:00 ===
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/388 [00:00<?, ?it/s]Loading weights:  28%|██▊       | 108/388 [00:00<00:00, 1058.44it/s]Loading weights:  56%|█████▌    | 218/388 [00:00<00:00, 1081.03it/s]Loading weights:  84%|████████▍ | 327/388 [00:00<00:00, 915.60it/s] Loading weights: 100%|██████████| 388/388 [00:00<00:00, 756.89it/s]
+  alpha=1.0 c=5.0 done (200 prefixes)
+  alpha=1.0 c=-5.0 done (200 prefixes)
+wrote 400 records -> results/bench_a1/raw_flip_pythia-2.8b_subtractive.json
+=== sub_pyth exit 0 2026-07-02T23:49:38+00:00 ===
+=== sub_qwen 2026-07-02T23:49:38+00:00 ===
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights: 100%|██████████| 339/339 [00:00<00:00, 9643.84it/s]
+  alpha=1.0 c=5.0 done (200 prefixes)
+  alpha=1.0 c=-5.0 done (200 prefixes)
+wrote 400 records -> results/bench_a1/raw_flip_Qwen2.5-7B_subtractive.json
+=== sub_qwen exit 0 2026-07-02T23:52:21+00:00 ===
+=== sub_qwenI 2026-07-02T23:52:21+00:00 ===
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights:  36%|███▌      | 122/339 [00:00<00:00, 975.94it/s]Loading weights:  65%|██████▍   | 220/339 [00:00<00:00, 686.80it/s]Loading weights: 100%|██████████| 339/339 [00:00<00:00, 1004.42it/s]
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]Loading weights: 100%|██████████| 339/339 [00:00<00:00, 14530.22it/s]
+  alpha=1.0 c=5.0 done (200 prefixes)
+  alpha=1.0 c=-5.0 done (200 prefixes)
+wrote 400 records -> results/bench_a1/raw_flip_Qwen2.5-7B-Instruct_subtractive.json

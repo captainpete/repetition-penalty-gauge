@@ -1,0 +1,50 @@
+{
+  "model": "models/qwen2.5-coder-7b-bf16.gguf",
+  "max_new": 160,
+  "json_reps": 8,
+  "condition_label": {
+    "1024": "whole_context",
+    "64": "default_64"
+  },
+  "valid_rate": {
+    "1024": {
+      "1": {
+        "valid_rate": 1.0,
+        "valid": 48,
+        "total": 48
+      },
+      "1.1": {
+        "valid_rate": 1.0,
+        "valid": 48,
+        "total": 48
+      },
+      "1.3": {
+        "valid_rate": 0.16666666666666666,
+        "valid": 8,
+        "total": 48
+      }
+    },
+    "64": {
+      "1": {
+        "valid_rate": 1.0,
+        "valid": 48,
+        "total": 48
+      },
+      "1.1": {
+        "valid_rate": 1.0,
+        "valid": 48,
+        "total": 48
+      },
+      "1.3": {
+        "valid_rate": 0.16666666666666666,
+        "valid": 8,
+        "total": 48
+      }
+    }
+  },
+  "hf_reference_valid_by_theta": {
+    "1.0": 1.0,
+    "1.1": 1.0,
+    "1.3": 0.0
+  }
+}

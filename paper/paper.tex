@@ -1,0 +1,908 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true,expansion=false]{microtype}
+\usepackage[htt]{hyphenat}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[margin=1in]{geometry}
+
+\newcommand{\ztop}{z_{\mathrm{top}}}
+\newcommand{\thp}{\theta}
+\newcommand{\softmax}{\operatorname{softmax}}
+\newcommand{\code}[1]{\texttt{#1}}
+\newcommand{\passk}[1]{pass@#1}
+
+\lstset{
+  basicstyle=\ttfamily\small,
+  breaklines=true,
+  columns=fullflexible,
+  keepspaces=true,
+  frame=single,
+  framesep=4pt,
+  xleftmargin=4pt,
+  showstringspaces=false,
+}
+
+\title{\bf Repetition penalties are not a well-defined intervention:\\
+gauge non-invariance and a closed-form corruption threshold\\
+in logit-space repetition penalties}
+
+\author{Peter Hollows}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The repetition penalty is a standard decoding knob: one scalar $\thp$, set to around $1.1$--$1.3$
+to suppress repetition and assumed to mean the same thing from one model to the next. As
+implemented in HuggingFace Transformers (the CTRL divide-if-positive / multiply-if-negative rule
+on \emph{raw} logits, inherited in identical form by vLLM and llama.cpp), it is not the clean,
+portable knob it is taken to be, for one structural reason. The sign-branch is the community's
+own fix for an old bug, in which the naive divide raised the probability of negative-logit
+tokens; but the softmax is shift-invariant, so a model's logit zero-point is left unconstrained
+by the training objective, and branching on the sign reads exactly that unconstrained
+coordinate. The accepted
+fix is thus itself ill-posed, with two consequences. Within a single model, the same $\thp$ is
+not a single intervention: a behaviorally invisible shift that changes nothing at $\thp=1$ flips
+$50$--$94\%$ of greedy tokens at $\thp=1.3$ (five models up to 7B, base and RLHF), and across
+models a fixed $\thp$ does not transfer, since real checkpoints sit on different sides of the
+sign boundary. Where the penalty acts, it deterministically swaps the model's top token for the
+runner-up at a closed-form threshold, $g < \ztop(1-1/\thp)$, which at a routine $\thp=1.3$ drops
+schema-valid JSON output to $0\%$. Both effects replicate inside vLLM and llama.cpp through
+each stack's own sampler. Both vanish if the penalty is applied to
+normalized log-probabilities, an operator HuggingFace already ships but leaves off by default
+and applies after the penalty. The fix requires no new machinery; the contribution is the
+diagnosis.
+\end{abstract}
+
+\section{Introduction}
+\label{sec:intro}
+
+Open-ended neural text generation is prone to degeneration: greedy and low-temperature
+decoding fall into repetitive loops in which the model re-emits the same token or phrase
+indefinitely \citep{holtzman2020curious,welleck2020unlikelihood}. A standard, cheap
+countermeasure is the \emph{repetition penalty}: before sampling, the logits of tokens
+that have already appeared in the context are pushed down, so that recurrence is
+discouraged. Introduced in CTRL \citep{keskar2019ctrl}, the \emph{multiplicative} (sign-branched
+divide/multiply) form of the penalty is shipped as \code{repetition\_penalty} in HuggingFace
+Transformers \citep{wolf2020transformers} and is carried, in the same form, into vLLM and
+llama.cpp's \code{repeat\_penalty}; a separate \emph{subtractive} family
+(presence/frequency penalties, exposed by the major hosted APIs and also by vLLM) behaves
+differently and, as we note in Section~\ref{sec:related} (Table~\ref{tab:stacks}), is immune
+to the first effect we identify. Our results concern the multiplicative CTRL form. Throughout,
+our main experiments use the HuggingFace implementation; both effects are additionally
+replicated inside vLLM and llama.cpp through each stack's own sampler
+(Section~\ref{sec:implications}). Practitioners reach for it reflexively,
+set it to a small value
+(commonly $1.1$--$1.3$), and reason about it as a clean monotone dial: larger
+$\thp$ means ``more anti-repetition,'' the setting is assumed comparable across
+models, and the intervention is assumed harmless to everything that is not a degenerate
+loop.
+
+This paper shows that, for the penalty as it is actually implemented, all three of those
+assumptions fail in measurable ways. A \code{repetition\_penalty} value
+tuned on one model is not the same operation on another, so it does not transfer in any
+principled sense; and at a routine $\thp=1.3$ the operator can deterministically corrupt
+structured output, dropping a model's rate of valid, schema-conformant JSON to zero. Both
+effects, and the fix for both, trace to a single structural decision, itself introduced as a
+fix. CTRL's original penalty divided every seen logit by $\thp$, but dividing a
+\emph{negative} logit by $\thp>1$ moves it toward zero and \emph{raises} the token's
+probability, so the penalty backfires on exactly the tokens it should suppress; this was
+reported to HuggingFace in 2019 \citep{hf2302}. The remedy, now standard, is to branch on the
+\emph{sign} of each raw logit (multiply negatives, divide positives), so a seen token's
+probability always falls. That remedy works at the level it was aimed at. Our observation is
+one level up:
+branching on a raw logit's sign reads a quantity the model is free to choose arbitrarily,
+because the softmax is invariant to a global additive shift of the logits. The accepted
+fix for the naive penalty is itself ill-posed. We make this precise and draw out two
+consequences.
+
+\paragraph{A1: the penalty is not gauge-invariant (Section~\ref{sec:a1}).} The simplest
+form of the result lives \emph{inside a single model}. Adding a constant $c$ to
+every logit is a provable no-op at $\thp=1$ (we confirm it is token-for-token invisible under
+both greedy and seeded sampling); yet with the penalty on, two such provably-equivalent gauges
+of the \emph{same} model disagree on $50$--$94\%$ of greedy tokens at $\thp=1.3$. The two gauges
+differ only by an additive constant that has no effect on the output distribution. The cross-model reading
+follows as a corollary: because a model's logit zero-point is never trained or constrained, real
+checkpoints sit at different points on the sign boundary, so a fixed $\thp$ is a different
+operation on each. (Multiplicative penalties on un-normalized logits would fail to transfer
+across models for mundane reasons too, since logit scales and calibration differ; the
+within-model result is the one that isolates the gauge, rather than scale, as the cause.)
+
+\paragraph{A2: where it acts, it is a closed-form corruption threshold
+(Section~\ref{sec:a2}).} Structured output (JSON, source code, quoted strings, list
+markers) contains \emph{grammar-obligatory} repetition: the same delimiters
+($\code{\}}$, $\code{]}$, $\code{,}$, $\code{"}$, indentation) must recur, and the penalty
+cannot tell ``the grammar requires this token'' from ``the model is stuck in a loop.'' We
+derive the exact condition under which the penalty flips a confident, correct token to the
+runner-up---$g < \ztop(1-1/\thp)$---and show it predicts the realized flip with
+balanced accuracy $\ge 0.999$ on two independently trained 7B code models, with every flip
+landing on the pre-penalty second choice.
+
+We deliberately separate what is verified from what is not. The original framing of A2
+predicted that corruption would strike the model's \emph{most confident} tokens first and
+would be sharply \emph{code-specific}; both are refuted by our data
+(Section~\ref{sec:a2-refuted}). Reporting these negative sub-results is part of the
+contribution: the surviving statement (a gap-driven threshold that corrupts all token types
+similarly but lands disproportionately on the delimiters that structured output cannot avoid) is
+more precise and better supported than the original.
+
+Both results concern the same operator, and both are removed by the same one-line change:
+apply the penalty to normalized log-probabilities rather than raw logits
+(Section~\ref{sec:fix}). Normalization is itself shift-invariant, so it erases the gauge
+$c$; and it makes every value non-positive, so the sign-branch stops being a branch at
+all. We confirm this directly: under the normalized operator the A1 flip rate collapses to
+$0.000$ at every $\thp$ on all three models, and the A2 structural corruption rate drops by
+roughly $27\times$. HuggingFace already ships this normalization operator but leaves it
+disabled by default and, even when enabled, runs it \emph{after} the penalty, too late to
+help. The remediation is a reorder of existing machinery; the observation is that it is not the
+default.
+
+\section{The operator under test}
+\label{sec:operator}
+
+We study the operator exactly as implemented in HuggingFace Transformers
+(\code{Repetition\-Penalty\-Logits\-Processor}), which is the de facto reference and matches the
+CTRL formulation \citep{keskar2019ctrl}. Let $z \in \mathbb{R}^{V}$ be the logits the model
+emits for the next token over a vocabulary of size $V$, and let $S \subseteq \{1,\dots,V\}$
+be the set of token ids that have already appeared in the context (prompt plus generated
+text). The penalty with strength $\thp \ge 1$ transforms only the seen tokens, by
+branching on the sign of each logit:
+\begin{equation}
+\label{eq:operator}
+z'_i =
+\begin{cases}
+z_i / \thp & i \in S \text{ and } z_i \ge 0,\\[2pt]
+z_i \cdot \thp & i \in S \text{ and } z_i < 0,\\[2pt]
+z_i & i \notin S.
+\end{cases}
+\end{equation}
+The next token is then drawn from $\softmax(z')$ (or chosen as $\arg\max z'$ under greedy
+decoding). The verbatim implementation is:
+\begin{lstlisting}[language=Python]
+score = torch.gather(scores, 1, input_ids)
+# if score < 0 multiply by penalty (more negative); else divide (smaller positive)
+score = torch.where(score < 0, score * self.penalty, score / self.penalty)
+scores_processed = scores.scatter(1, input_ids, score)
+\end{lstlisting}
+
+Two implementation facts matter for everything that follows. First, the operator acts on
+\emph{raw} logits: there is no normalization before it. Second, HuggingFace does ship a
+normalization processor,
+\begin{lstlisting}[language=Python]
+class LogitNormalization(LogitsProcessor):
+    def __call__(self, input_ids, scores):
+        return scores.log_softmax(dim=-1)
+\end{lstlisting}
+but \code{GenerationConfig.renormalize\_logits} defaults to off, and when it is enabled the
+processor is appended to the \emph{end} of the processor list, after the repetition
+penalty. So in the default configuration, and even in the non-default ``renormalize''
+configuration, the penalty sees un-normalized logits. This is precisely the degree of
+freedom we exploit in Section~\ref{sec:a1} and remove in Section~\ref{sec:fix}.
+
+The sign-branch is not incidental: it is the community's fix for the naive divide (which raised
+the probability of negative-logit tokens; Section~\ref{sec:intro}, \citealp{hf2302}). What
+matters here is that the two branches meet at $z_i=0$ with \emph{different slopes}, so the
+operator's behavior turns on which side of $z_i=0$ each seen logit lands, and $z_i=0$ is a point
+the softmax lets the model place anywhere (Section~\ref{sec:a1}).
+
+\section{A1: gauge non-invariance}
+\label{sec:a1}
+
+\subsection{Theory}
+\label{sec:a1-theory}
+
+\paragraph{The gauge.} For any constant $c \in \mathbb{R}$ and the all-ones vector
+$\mathbf{1}$,
+\begin{equation}
+\label{eq:shiftinv}
+\softmax(z + c\,\mathbf{1})_i
+= \frac{e^{z_i + c}}{\sum_j e^{z_j + c}}
+= \frac{e^{c} e^{z_i}}{e^{c}\sum_j e^{z_j}}
+= \softmax(z)_i .
+\end{equation}
+The output distribution is invariant to a global additive shift of the logits. Adding $c$
+to every logit is identical to adding $c$ to every component of the final linear layer's
+bias ($\code{lm\_head.bias} \mathrel{+}= c$); the greedy choice is therefore unchanged
+exactly, and sampled output is unchanged token-for-token under a fixed random
+seed. The shift $c$ is a pure \emph{gauge}: $c$ parameterizes an orbit of logit
+vectors that the softmax collapses to one and the same distribution, so any well-defined
+function of the model's \emph{behavior} must be invariant to it. We use ``gauge'' in exactly
+this sense (an unobservable redundancy a well-posed decoding operator ought to ignore), and
+nothing in the argument relies on the term beyond it. At $\thp=1$ the penalty is the identity
+and this invisibility is exact.
+
+\paragraph{The sign-branch breaks it.} The penalty in Eq.~\eqref{eq:operator} is not a
+function of the distribution; it is a function of the raw logits, and specifically of
+their signs. Apply the gauge first. A previously-seen token with logit $x$ now has logit
+$x + c$, and the penalty subtracts from it
+\begin{equation}
+\label{eq:drop}
+\Delta(x;c) =
+\begin{cases}
+(x+c)\left(1 - \tfrac{1}{\thp}\right) & x + c \ge 0 \quad(\text{divide branch}),\\[4pt]
+|x+c|\,(\thp - 1) & x + c < 0 \quad(\text{multiply branch}).
+\end{cases}
+\end{equation}
+Every \emph{competing} (unseen) token also shifts by $c$, so the constant $c$ cancels in
+all the comparisons that decide the next token, \emph{except} through the nonlinear,
+sign-dependent transform applied to the penalized tokens. The drop $\Delta$ is not
+shift-invariant: it depends on where $x+c$ sits relative to the kink at zero, which the
+gauge $c$ controls.
+
+Concretely, consider a high-probability repeated token. With $c = +5$ it sits deep in the
+positive/divide regime, where $\Delta$ grows with $x+c$, and it is heavily penalized. With
+$c = -5$ the same token can be pushed just below zero into the multiply branch, where
+$|x+c|$ is small and $\Delta \approx 0$: the penalty nearly vanishes on the
+token it was meant to suppress. Same model, same $\thp$, same prompt; two gauges that
+are provably indistinguishable at $\thp=1$ now implement two different interventions.
+
+\subsection{Design}
+\label{sec:a1-design}
+
+We implement the gauge as a logits transform $z \mathrel{+}= c$ applied immediately before
+the penalty in a hand-written decode loop. This is mathematically identical to shifting
+the \code{lm\_head} bias, but makes the ordering explicit and sidesteps GPT-2's tied,
+bias-free output head. The penalty uses the exact HuggingFace semantics of
+Eq.~\eqref{eq:operator} over all previously-seen ids (prompt and generation). We run three
+independently trained models (\code{gpt2}, \code{gpt2-large} \citep{radford2019gpt2}, and
+\code{pythia-2.8b} \citep{biderman2023pythia}) in fp32, over a grid of
+$\thp \in \{1.0, 1.02, 1.05, 1.1, 1.15, 1.3\}$ and $c \in \{-5,-3,-1,0,1,3,5\}$, with
+16 fixed prompts and 200 generated tokens each.
+
+\paragraph{No-op control.} The validity gate is that the gauge must be invisible when the
+penalty is off. At $\thp=1$ we require the generated sequence to be token-for-token
+identical across all $c$, for every prompt, under both greedy and seeded sampling. Greedy
+invariance is trivial; the seeded-sampling leg (a shared RNG stream across gauges) is the
+stronger check, since it probes the full sampled distribution rather than only its argmax.
+We do not enforce bitwise equality in the harness; we \emph{verify} softmax shift-invariance
+empirically, and it holds: this control passed exactly, $32/32$ (prompt, mode) pairs
+identical, with $0$ of $3200$ greedy tokens differing between $c=+5$ and $c=-5$ at
+$\thp=1$. Because the gauge is added inside the same decode loop that runs every $\thp>1$
+condition, dtype, RNG, and code path are differenced out within each comparison; any
+divergence at $\thp>1$ is therefore caused by the gauge $\times$ sign-branch interaction, not by
+numerics or a bug.
+
+\paragraph{Endpoint.} The quantity that directly operationalizes the claim ``a provable
+no-op changes generation'' is the per-step argmax \emph{flip rate}: the fraction of greedy
+decoding steps at which the $c=+5$ and $c=-5$ runs (both provable no-ops at $\thp=1$)
+choose different tokens. Unlike a repetition ratio, the flip rate cannot saturate: it is
+$0$ exactly when behavior is unchanged and rises as the gauge bites. We report it as a
+function of $\thp$, with a per-prompt bootstrap 95\% confidence interval ($10^4$
+resamples) at $\thp=1.3$.
+
+\subsection{Results}
+\label{sec:a1-results}
+
+The flip rates are in Table~\ref{tab:a1}. At $\thp=1$ every model flips exactly
+$0\%$ of tokens: the no-op control passes exactly. At $\thp=1.3$ the \emph{same model}, run under two
+provably-equivalent gauges ($c=+5$ and $c=-5$), differs on $50\%$ (gpt2), $91\%$
+(pythia-2.8b), and $94\%$ (gpt2-large) of greedy tokens, bootstrap intervals far above zero
+throughout; the model itself is unchanged. The effect is not confined to small base models: it replicates at 7B and is
+undiminished by post-training, with the no-op gate exactly $0$ and flip rates of $0.871$ on
+Qwen2.5-7B and $0.897$ on its instruction-tuned/RLHF variant Qwen2.5-7B-Instruct
+(Table~\ref{tab:a1}), if anything stronger than on the small models. The synthetic shift
+$c=\pm5$ used here is a controlled sweep (it maps the response surface and pins the no-op
+gate), and the constant $5$ is arbitrary. Below we use a gauge that involves no
+arbitrary constant: each model's \emph{own median} logit, a re-centring it could equally
+have shipped, which flips more tokens (Table~\ref{tab:zeropoint}). The flip rate
+rises from zero as soon as the penalty engages ($0.61$--$0.78$ at $\thp=1.02$); its
+magnitude is non-monotone in $\thp$ for the small loop-prone gpt2, and the effect manifests as
+changed content rather than changed repetition rate (audit in App.~\ref{app:audit}).
+
+\begin{table}[t]
+\centering
+\caption{A1: argmax flip rate between the $c=+5$ and $c=-5$ gauges (both provable no-ops at
+$\thp=1$). The gate column confirms the no-op is exact; the $\thp=1.3$ column shows
+the same provably-equivalent shift selects different greedy output once the penalty is on.
+The effect replicates at 7B and is undiminished by RLHF (last two rows).}
+\label{tab:a1}
+\begin{tabular}{lccc}
+\toprule
+Model & flip rate ($\thp{=}1$) & flip rate ($\thp{=}1.3$) & 95\% CI \\
+\midrule
+gpt2-large            & $0.000$ & $0.941$ & $[0.916,\,0.959]$ \\
+pythia-2.8b           & $0.000$ & $0.905$ & $[0.876,\,0.933]$ \\
+gpt2                  & $0.000$ & $0.497$ & $[0.333,\,0.655]$ \\
+\midrule
+Qwen2.5-7B (base)     & $0.000$ & $0.871$ & $[0.832,\,0.906]$ \\
+Qwen2.5-7B-Instruct   & $0.000$ & $0.897$ & $[0.864,\,0.927]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\paragraph{Real checkpoints differ in zero-point.} Nothing about the gauge $c$
+requires a synthetic shift. A model's logit zero-point is never an optimization target and is
+not constrained by any loss term; it is determined incidentally by initialization, the (often
+absent or untied) output bias, weight decay, and training dynamics, and so it differs across
+checkpoints and architectures. To quantify this, we
+measured where each of our five real checkpoints sits relative to the sign boundary
+the penalty branches on, at decode time (Table~\ref{tab:zeropoint}). The spread is wide:
+the fraction of already-seen tokens whose logit is positive (i.e.\ which the penalty
+\emph{divides} rather than \emph{multiplies}) ranges from $0.09$ on gpt2 to $0.99$ on
+Qwen2.5-Coder-7B. At one and the same \code{repetition\_penalty=1.3}, then, the operator
+divides the logits of $\sim$$9\%$ of seen tokens on gpt2 (so it mostly \emph{multiplies}) and
+$\sim$$99\%$ on Qwen2.5-Coder (so it almost always \emph{divides}): on these two checkpoints
+the sign-branch sends the penalty down opposite paths, with no synthetic shift
+applied to either. gpt2 is the extreme case (a small model with a tied, bias-free head and a
+median top-1 logit of $-97.5$, far below the others), but the effect is not an artifact of that
+one outlier: even setting gpt2 aside, the divide-fraction still spans $0.75$ to $0.99$ across
+the four remaining models, a wide enough range that a fixed $\thp$ applies a materially
+different penalty to each.
+
+\begin{table}[t]
+\centering
+\caption{Where five real checkpoints sit relative to the penalty's sign boundary, measured at
+decode time ($c=0$, $\thp=1$). The fraction of seen-token logits that are positive (the
+divide branch) spans $0.09$--$0.99$ ($0.75$--$0.99$ excluding the small gpt2 outlier), so a
+fixed $\thp$ is a materially different operation on each. The last column is the per-model A1
+flip rate between the model's raw gauge and its own median-centred gauge (a gauge it could
+equally have shipped) at the \emph{natural} offset magnitude.}
+\label{tab:zeropoint}
+\begin{tabular}{lccc}
+\toprule
+Model & frac.\ seen logit $>0$ (divide) & median top-1 logit & flip @ natural $\thp{=}1.3$ \\
+\midrule
+gpt2              & $0.091$ & $-97.5$ & $0.569$ \\
+gpt2-large        & $0.746$ & $11.9$  & $0.781$ \\
+starcoder2-7b     & $0.828$ & $15.5$  & $0.858$ \\
+pythia-2.8b       & $0.938$ & $17.6$  & $0.815$ \\
+Qwen2.5-Coder-7b  & $0.986$ & $24.2$  & $0.796$ \\
+\midrule
+\multicolumn{3}{l}{\emph{pooled across the five checkpoints}} & $0.764$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The natural offsets are large. Re-centring each model's
+logits by its own median (a behaviorally invisible gauge it could equally have been trained
+into) and comparing the resulting greedy trajectory to the raw one (both provable no-ops at
+$\thp=1$) flips $57$--$86\%$ of tokens per model at $\thp=1.3$ ($76.4\%$ pooled across the
+five), \emph{more} than a synthetic $c=5$ shift ($31.6\%$ pooled). The gauge non-invariance is therefore not an artifact
+of an adversarially large injected shift; it is at least as strong at the offset magnitudes
+real checkpoints already exhibit. Consequently \code{repetition\_penalty=1.3}
+already denotes different interventions on different real models, and a setting tuned on
+one does not transfer to another in any principled sense, because the two models do not
+share the coordinate system the penalty operates in.
+
+\section{A2: the corruption threshold}
+\label{sec:a2}
+
+\subsection{The closed form}
+\label{sec:a2-theory}
+
+Structured output contains repetition that the grammar \emph{requires}: a JSON object must
+close every \code{\{} with a \code{\}}, separate items with \code{,}, and quote keys with
+\code{"}; Python must re-emit indentation and colons. These delimiters have, by
+construction, appeared before, so they are in the penalized set $S$, and they are typically
+the model's confident top choice at the position where the grammar demands them. The
+penalty does not distinguish grammar-obligatory recurrence from degenerate looping, so it
+penalizes them.
+
+Consider such a position. Let the correct token be the pre-penalty top choice with logit
+$\ztop > 0$ (so it is in the divide branch), and let the runner-up be a gap $g = \ztop -
+z_2 \ge 0$ below it. Assume the runner-up is unpenalized (it is not a delimiter that just
+occurred). The penalty maps $\ztop \mapsto \ztop/\thp$ but leaves the runner-up at
+$z_2 = \ztop - g$. The emitted (greedy) token flips from the correct top choice to the
+runner-up exactly when
+\begin{equation}
+\label{eq:threshold}
+\frac{\ztop}{\thp} < \ztop - g
+\quad\Longleftrightarrow\quad
+g < \ztop\!\left(1 - \frac{1}{\thp}\right).
+\end{equation}
+The right-hand side is the \emph{vulnerable gap}: any correct token whose lead over the
+runner-up is smaller than $\ztop(1-1/\thp)$ is deterministically corrupted. The
+threshold is exact (not probabilistic) under greedy decoding, and it is a hard threshold in
+$\thp$: the flip occurs discontinuously, not gradually.
+
+\subsection{Design}
+\label{sec:a2-design}
+
+We test Eq.~\eqref{eq:threshold} on \code{bigcode/starcoder2-7b}
+\citep{lozhkov2024starcoder2}, a model whose domain makes grammar-obligatory delimiters
+abundant. Decoding is greedy with $\thp \in \{1.0,1.1,1.2,1.3,1.4,1.5\}$ over 18 fixed
+prompts (6 JSON, 6 Python, and 6 prose as a control with no grammar-obligatory repetition),
+256 generated tokens each. The model runs in bf16, but at every step we upcast the final
+logits to fp32 before the penalty, the argmax, and the threshold evaluation, so that the
+formula test is not blurred by bf16 rounding. At each position we record the pre-penalty
+top-1 id and $\ztop$, the runner-up id and $z_2$, the gap $g$, indicator flags
+(\,\code{top1\_seen}, \code{top1\_positive}, \code{top2\_seen}, \code{top1\_structural}\,),
+and the post-penalty emitted id, from which we derive \code{flip} and
+\code{emitted\_is\_runnerup}. A token is tagged \emph{structural} if its decoded form is
+made entirely of delimiter characters $\{\}[]()",:;=$ or whitespace/indentation.
+
+\paragraph{Validity gate and a numerical subtlety.} At $\thp=1.0$ the penalty is the
+identity, so the flip rate must be exactly $0$ at every position; this passes. Reaching it
+required one fix worth flagging for replicators: a naive bf16 \code{topk}-versus-\code{argmax}
+comparison reports spurious ``flips'' at ties, because the two can break an exact tie
+differently. The harness therefore defines the pre-penalty top-1 by the same \code{argmax}
+used post-penalty; with that, the $\thp=1.0$ gate is clean.
+
+\subsection{What is verified}
+\label{sec:a2-verified}
+
+We evaluate Eq.~\eqref{eq:threshold} on the \emph{clean} positions where it is exact: the
+top-1 token is seen and positive (divide branch) and the runner-up is unseen (unpenalized).
+Pooling over $\thp \in \{1.1,\dots,1.5\}$ on the code prompts gives $n=3973$ clean
+positions ($25.9\%$ of all penalized code positions; the remaining $74.1\%$ are the
+two-sided case where the runner-up is itself penalized, treated below), of which $2225$
+actually flip.
+
+On this slice the threshold is, by derivation, an algebraic identity for greedy argmax: the
+penalty maps $\ztop\to\ztop/\thp$ and leaves the runner-up untouched, so $g<\ztop(1-1/\thp)$
+\emph{is} the flip condition. We therefore do not read the predicate accuracy
+(balanced accuracy $0.999$; TPR $1.000$, TNR $0.999$; the only departures from $1.000$ are
+bf16 rounding) as the empirical content. The empirical content is threefold and is \emph{not}
+guaranteed by the algebra:
+\begin{itemize}
+\item $100\%$ of the $2225$ flips emit the pre-penalty runner-up. When the penalty
+corrupts a token, it does not scatter probability diffusely; it deterministically promotes
+the specific second-place token. A diffuse-corruption alternative would not produce this.
+\item The $\thp=1$ gate holds (0 flips), so every flip is penalty-induced, not an
+artifact.
+\item The threshold is crossed at scale: a penalty of
+$\thp\in[1.1,1.5]$ flips $\sim$$31\%$ of all greedy code tokens (not only clean ones), so
+real structured decoding lands in this regime routinely.
+\end{itemize}
+Where the penalty acts, it
+either leaves the choice alone or deterministically replaces the model's top token with its
+runner-up, at a point computable in closed form from the pre-penalty logits. The two-sided
+positions ($74.1\%$) obey a more general two-sided inequality (both top-1 and runner-up
+penalized) that we state in Section~\ref{sec:limitations} but do not separately tabulate; the
+exact closed form above is the one-sided regime.
+
+\paragraph{Replication on a second code model.} To check that the threshold is a property of
+the operator rather than of one checkpoint's logit geometry, we re-ran the identical harness
+on \code{Qwen2.5-Coder-7B} \citep{hui2024qwen25coder}, an independently trained code model.
+The result is, if anything, sharper: on $n=3584$ clean penalized positions ($2484$ flips)
+the closed form achieves balanced accuracy $1.000$ (TPR $1.000$, TNR $1.000$),
+$100\%$ of flips emit the pre-penalty runner-up, and the $\thp=1.0$ validity gate
+passes. The same gap-driven signature recurs (Section~\ref{sec:a2-refuted}): flipped tokens
+have lower mean $\ztop$ ($23.9$) than non-flipped ($28.8$). The corruption threshold is thus
+demonstrated on two independent 7B code models.
+
+\paragraph{What is refuted.}\label{sec:a2-refuted} We pre-registered two stronger claims about the threshold, and our
+own data refute both. It does \emph{not} corrupt the most confident tokens first: corruption is
+\emph{gap-driven}, so flipped tokens have \emph{lower} mean $\ztop$ than non-flipped ones (e.g.
+$17.5$ vs $22.1$ on StarCoder2, and the same ordering on Qwen2.5-Coder). And it is not sharply
+code-specific: the code-vs-prose structural-flip ratio is real but model-dependent ($2.3\times$
+on StarCoder2, $5.6\times$ on Qwen2.5-Coder), and prose is corrupted at a comparable overall
+per-token rate. The penalty corrupts all token types at a similar rate and lands disproportionately on
+delimiters only because structured output exposes more of them. The full audit, with CIs, is in
+Appendix~\ref{app:audit}. What survives is the narrower statement: the penalty
+deterministically flips the greedy token to the runner-up exactly when $g < \ztop(1-1/\thp)$: a
+gap-driven threshold that corrupts all token types similarly and so lands disproportionately on
+the grammar-obligatory delimiters structured output cannot avoid.
+
+\section{The fix: normalize before penalizing}
+\label{sec:fix}
+
+Both effects trace to one decision (branching on the sign of an un-normalized logit), and
+both are removed by one change: apply the penalty to normalized log-probabilities,
+$\ell = \log\softmax(z)$, instead of to raw logits $z$. This is less ``remove a degree of
+freedom'' than ``use the right coordinate.'' Among all the gauges $z+c\mathbf{1}$ that the
+softmax identifies, $\ell$ is the canonical representative, the one in which the model's own
+distribution is actually written ($\sum_i e^{\ell_i}=1$); the operator should read there rather
+than at a zero-point the training objective leaves unconstrained. Two properties of $\ell$ do the work.
+
+\paragraph{(a) Normalization erases the gauge.} $\log\softmax$ is itself shift-invariant:
+$\log\softmax(z + c\mathbf{1}) = \log\softmax(z)$, since the additive $c$ cancels between
+the logit and the log-partition. Penalizing $\ell$ therefore cannot depend on $c$, and the
+A1 divergence is eliminated by construction: the operator becomes invariant to the
+coordinate choice it currently reads.
+
+\paragraph{(b) The penalty becomes tempering, with a positive identity.} Every log-probability
+satisfies $\ell_i \le 0$, so under Eq.~\eqref{eq:operator} every penalized token takes the
+\emph{multiply} branch, $\ell_i \mapsto \thp\,\ell_i$, moving each log-probability uniformly
+further from zero. There is no kink whose location depends on an arbitrary zero-point, and no
+token can sit on the ``cheap'' side of a sign boundary the way the A1 mechanism exploits. And
+the operation now has a name: $\thp\,\ell_i = \thp\log p_i = \log p_i^{\thp}$, so in probability
+space it is $p_i \mapsto p_i^{\thp}$ (before renormalization): the fixed operator
+tempers each seen token's probability toward zero by a common power. This is a
+monotone, well-defined
+suppression measured in log-probability units, a coordinate-free quantity, and hence at least
+\emph{dimensionally} comparable across models (we do not claim a fixed $\thp$ is numerically
+optimal across models, only that it denotes the same kind of operation). The normalized penalty does act on
+log-probabilities ($O(1)$ in magnitude) rather than raw logits ($O(10)$), so the same $\thp$ is
+a gentler push, which is exactly why A2 corruption collapses below.
+
+\paragraph{Remediation.} The remediation is a design principle, not a patch to one library:
+a decoding-time penalty should act on a shift-invariant quantity (normalized
+log-probabilities, or any transform from which the gauge has been removed), and the
+normalization must run before the penalty, not after. For the operator at hand, that means
+penalizing $\log\softmax(z)$ rather than $z$. It applies unchanged to every stack carrying the
+multiplicative CTRL form (HuggingFace, vLLM, llama.cpp; Table~\ref{tab:stacks}), since they
+share the operator, and it is nearly free: no new machinery, only a reorder. HuggingFace makes
+the point concrete: it already ships exactly this normalization as \code{LogitNormalization}
+(\code{scores.log\_softmax(dim=-1)}), but off by default (\code{renormalize\_logits=None}) and,
+when enabled, appended \emph{after} the penalty, so it normalizes scores the penalty has already
+modified.\footnote{The related idea of normalizing \emph{after} the logits processors is known in a
+different setting: because processors can leave beam scores un-normalized, HuggingFace
+re-normalizes them (via \code{log\_softmax}) so beam-search comparison is fair \citep{hf10638}.
+Applying normalization \emph{before} the penalty, and to the repetition penalty specifically, is
+the point here.} The
+fix is thus reachable in stock machinery yet absent from the default path, which is the finding.
+Its one cost is that, being gentler per unit $\thp$, the normalized penalty does not inherit
+existing tuned values: $\thp$ must be re-set; in exchange, the same $\thp$ denotes the same
+operation on every model.
+
+\paragraph{Why fix it rather than abandon it?} One could instead switch to a shift-invariant
+subtractive penalty (Table~\ref{tab:stacks}) or a purpose-built alternative such as the LZ
+penalty \citep{ginart2025lz}; those are complementary. We focus on the in-place, one-line
+correction because the multiplicative CTRL form is the shipped default and existing tuned
+presets are written against it.
+
+\paragraph{Demonstration.} We re-ran both experiments with a single change, inserting
+$z \leftarrow \log\softmax(z)$ immediately before the penalty (exposed as a \code{--fix}
+flag) and holding everything else identical, and the prediction holds (Table~\ref{tab:fix}). For A1,
+the gauge-induced flip rate, which the un-normalized operator drives to $0.50$--$0.94$ at
+$\thp=1.3$, collapses to $0.000$ at every $\thp$ on all three models: the gauge $c$
+becomes invisible everywhere, not just at $\thp=1$, exactly as shift-invariance requires.
+For A2, the code structural-flip rate falls from $0.138$ to $0.005$ ($\sim$$27\times$
+lower), and the closed-form threshold of Eq.~\eqref{eq:threshold} stops being predictive
+(balanced accuracy $0.999 \to 0.794$), the intended outcome: there is no longer a sign-branch
+threshold for it to predict.\footnote{The residual $0.794$ is asymmetric (TPR $1.000$, TNR
+$0.587$): under the normalized operator the multiply branch sends nearly every penalized
+log-probability across the predicate's right-hand side, so $g<\ztop(1-1/\thp)$ (still evaluated
+on the raw-logit $\ztop$ and $g$, and no longer the condition governing the flip) fires almost
+everywhere while actual flips have collapsed. The formula stops \emph{discriminating} flips
+because there are almost none left to discriminate; it is not a competing threshold.}
+
+\begin{table}[t]
+\centering
+\caption{The fix (apply the penalty to $\log\softmax(z)$). A1 gauge divergence is eliminated
+on all three models; A2 delimiter corruption is reduced $\sim$$27\times$ and the threshold
+formula ceases to fire.}
+\label{tab:fix}
+\begin{tabular}{llcc}
+\toprule
+& metric & raw logits (default) & normalized (fix) \\
+\midrule
+\multirow{3}{*}{A1: flip rate at $\thp{=}1.3$}
+ & gpt2-large  & $0.941$ & $0.000$ \\
+ & pythia-2.8b & $0.905$ & $0.000$ \\
+ & gpt2        & $0.497$ & $0.000$ \\
+\midrule
+\multirow{2}{*}{A2: StarCoder2-7B}
+ & code structural-flip rate & $0.138$ & $0.005$ \\
+ & threshold balanced accuracy & $0.999$ & $0.794$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The reason corruption nearly vanishes (rather than the penalty being switched
+off outright) is instructive. After normalization a confident correct delimiter has
+log-probability close to $0$, so the multiply branch ($\ell_i \mapsto \ell_i\cdot\thp$)
+barely moves it; the penalty's effect is now proportional to how \emph{improbable} a token
+already is, so it pushes down overused tokens while leaving confident,
+grammar-required ones essentially untouched. This is the intended behavior of a repetition
+penalty; the un-normalized sign-branch does not provide it.
+
+\paragraph{The corruption matters end-to-end, and the fix recovers it.} The results so far are
+mechanistic (per-token flips, threshold accuracy). To confirm the per-token corruption changes
+something a user observes, we measured two end-to-end quality metrics on \emph{complete}
+generations from a single code model (Qwen2.5-Coder-7B), at the common settings
+$\thp\in\{1.0,1.1,1.3\}$, under the raw operator versus the fix (Table~\ref{tab:downstream}).
+On the JSON metric: prompting for a complete JSON object against one
+of six fixed schemas ($n=48$ prompts) and validating with \code{json.loads} plus a type check,
+the raw penalty's valid-rate falls from $1.00$ at $\thp=1$ to $0.00$ at
+$\thp=1.3$: at a routine \code{repetition\_penalty=1.3} the operator yields no
+parseable, schema-valid JSON, while under the fix it stays at $1.00$ across all $\thp$. A
+HumanEval \passk{1} run shows the same shape (raw $0.079\to0.000$; fix flat at ${\sim}0.079$);
+we report only the \emph{relative} trend there, because our lightweight completion-extraction
+harness depresses the absolute baseline far below the model's true HumanEval, so the absolute
+numbers are a harness artifact and not a model fact. This is one model and a small probe, but
+it connects the per-token threshold (A2) to a user-facing failure. The exact
+$\thp$ at which a given model's structured output collapses will itself vary with the model's
+zero-point (Table~\ref{tab:zeropoint}); the mechanism is what generalizes, and the fix removes
+it.
+
+\begin{table}[t]
+\centering
+\caption{End-to-end quality under the raw vs.\ normalized penalty (single model,
+Qwen2.5-Coder-7B, greedy, complete generations; JSON $n=48$ over six schemas). At a routine
+$\thp=1.3$ the raw operator yields no valid JSON; the fix preserves validity. For HumanEval
+only the relative $\thp$-trend is meaningful (the absolute baseline is depressed by our
+extraction harness; see text), so we report it as corroborating, with JSON conformance as the
+clean headline. This is an existence demonstration of end-to-end impact, not a universal rate.}
+\label{tab:downstream}
+\begin{tabular}{llccc}
+\toprule
+Metric & operator & $\thp{=}1.0$ & $\thp{=}1.1$ & $\thp{=}1.3$ \\
+\midrule
+\multirow{2}{*}{JSON schema valid-rate}
+ & raw & $1.00$ & $1.00$ & $0.00$ \\
+ & fix & $1.00$ & $1.00$ & $1.00$ \\
+\midrule
+\multirow{2}{*}{HumanEval \passk{1} (trend only)}
+ & raw & $0.079$ & $0.043$ & $0.000$ \\
+ & fix & $0.079$ & $0.085$ & $0.079$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{The fix is a usable penalty, not a disabled one.} A natural worry is that
+normalize-before-penalize removes the corruption only by weakening the penalty into a no-op.
+It does not: on the loop-prone gpt2 and pythia-2.8b, the normalized penalty still breaks
+degenerate loops, with the repetition rate falling monotonically in $\thp$ (gpt2
+$0.83\to0.63$, pythia-2.8b $0.80\to0.60$ over $\thp\in[1.0,1.5]$). It is, as expected,
+\emph{gentler per unit $\thp$} than the raw operator, which reaches a repetition rate of
+${\sim}0.01$--$0.1$ by $\thp=1.3$: because the normalized penalty acts on bounded
+log-probabilities rather than gauge-dependent raw logits, the same $\thp$ is a smaller push,
+so the operative range shifts upward. This both confirms the fix retains anti-degeneration
+efficacy and quantifies the re-tuning caveat above.
+
+\section{Implications}
+\label{sec:implications}
+
+\paragraph{Both effects replicate inside vLLM and llama.cpp.} The results above are measured on
+the HuggingFace implementation; the same operator ships in vLLM and llama.cpp
+(Table~\ref{tab:stacks}), and we re-ran A1 and A2 inside each, through each stack's own sampler
+and its own knob: vLLM 0.8.5.post1 (the operator in \code{vllm/main} at commit \code{e196268} is
+mathematically identical) and llama.cpp at master commit \code{4fc4ec55}. The A1 gauge probe
+passes its validity gate in both stacks (exactly $0$ of $3{,}200$ greedy tokens flip at
+$\thp=1$) and reproduces the divergence at $\thp=1.3$ on gpt2-large: flip rate $0.939$ in vLLM
+and $0.941$ in llama.cpp, against $0.941$ on HuggingFace (Table~\ref{tab:a1}). The A2 JSON task
+(Qwen2.5-Coder-7B, same schemas and validator as Table~\ref{tab:downstream}) goes from $100\%$
+valid at $\thp\in\{1.0,1.1\}$ to $16.7\%$ at $\thp=1.3$ in both stacks (HF: $0\%$; the residual
+valid outputs trace to bf16 numerics). llama.cpp's default 64-token penalty window does not
+change the outcome: greedy JSON completes inside the window, and its output is byte-identical
+to whole-context penalization on all 144 paired generations.\footnote{Measuring inside
+llama.cpp also surfaced an unrelated defect: \code{--repeat-last-n -1} is documented as
+``context size'' but the sampler clamps the value to $0$, silently disabling the penalty
+(\code{src/llama-sampler.cpp}, \code{std::max(penalty\_last\_n, 0)}).} Scripts and raw outputs
+are in \code{code/smoke\_*} and \code{results/smoke\_*} alongside the main harness.
+
+\paragraph{Penalty settings are not portable.} Because the operator reads an unconstrained
+gauge (A1), a \code{repetition\_penalty} value carries no fixed meaning across models or
+checkpoints. Default cookbooks, leaderboard configurations, and tuned presets that pin a
+single value implicitly assume a comparability the operator does not provide. Under the
+normalized operator of Section~\ref{sec:fix}, the penalty's magnitude is expressed in
+log-probability units and is at least dimensionally comparable across models, a
+precondition for any value to transfer.
+
+\paragraph{Structured-output corruption is predictable.} Practitioner
+folklore that repetition penalties ``break JSON'' or ``mangle code'' (reported anecdotally
+around vLLM and guided-decoding tooling, and a motivation for grammar-constrained decoding
+\citep{willard2023outlines}) has, in A2, an exact account: the penalty flips a confident,
+correct delimiter to its runner-up whenever $g < \ztop(1-1/\thp)$, and this reaches
+end-to-end output: at a routine \code{repetition\_penalty=1.3} it takes schema-valid JSON
+output to $0\%$ (Table~\ref{tab:downstream}). Practitioners who must keep a repetition penalty
+on for structured generation can either exempt grammar-obligatory tokens from the penalized
+set, or adopt the normalized operator, under which the sign-branch corruption
+disappears and JSON validity is restored to $100\%$. Related reports are current: 2026 issues against
+Gemma~4, in both the reference stack \citep{gemma622} and vLLM \citep{vllm40080}, document JSON
+generation collapsing into repetition that grammar-constrained decoding does not prevent (the
+repeated words are valid string content) and that \code{repeat\_penalty} at $1.0$, $1.15$, and
+$1.5$ does not fix. That failure mode is distinct from ours (there the penalty
+fails to help; here it causes the failure); we note the fielded mitigation is to detect and
+truncate the loop
+\citep{vllm40099}. Either way, the
+multiplicative penalty is not a reliable instrument for structured generation.
+
+\paragraph{Operational footprint.} The two effects have different
+operational footprints, and the difference favors A1. A2's deterministic corruption applies
+wherever an unconstrained, low-temperature multiplicative penalty meets structured output:
+grammar-constrained decoding \citep{willard2023outlines} neutralizes it (the masked,
+grammar-invalid runner-up cannot be emitted), and raising temperature dilutes the deterministic
+flip into a merely probabilistic one. A1, by contrast, is \emph{not} rescued by either:
+the gauge shifts the entire logit vector \emph{before} temperature scaling and independently of
+any token mask, so it perturbs the whole distribution at any temperature and under any
+constraint set. The non-portability of penalty values (A1) therefore reaches every deployment
+of the multiplicative penalty, while the structured-output corruption (A2) is concentrated in the
+common but bounded regime of unconstrained greedy/low-temperature structured generation.
+
+\paragraph{The general form.} Any decoding-time operator that branches on, or thresholds
+against, an absolute (non-shift-invariant) function of the raw logit inherits a dependence on a
+coordinate the training objective leaves unconstrained. The CTRL sign-branch is the most widely
+deployed instance;
+the dividing line is absolute-zero-point dependence, not ``reading magnitude'' per se. Operators
+that read only shift-invariant quantities are immune by construction: top-$k$, top-$p$/nucleus,
+min-$p$ \citep{nguyen2024minp}, typical sampling \citep{meister2023typical}, and contrastive
+search \citep{su2023contrastive} all act on the softmax distribution or on logit
+\emph{differences}, where the gauge cancels.
+
+\section{Related work}
+\label{sec:related}
+
+\paragraph{Anti-degeneration decoding.} Repetition penalties sit alongside truncated sampling
+\citep{fan2018hierarchical,holtzman2020curious}, unlikelihood training
+\citep{welleck2020unlikelihood}, contrastive decoding \citep{su2022contrastive}, and penalty
+redesigns such as the information-theoretic LZ penalty \citep{ginart2025lz} as tools against
+degeneration. That literature asks \emph{how much} to penalize, or proposes a better penalty; we
+ask, prior to that, whether the standard operator is well-defined, and show a fixed $\thp$ is
+not a fixed intervention.
+
+\paragraph{Multiplicative vs.\ subtractive penalties (scope of A1).} Two penalty families are
+deployed in practice, and the gauge dependence distinguishes them (Table~\ref{tab:stacks}).
+The \emph{multiplicative} CTRL form (Eq.~\eqref{eq:operator}) sign-branches on the raw logit and
+is the form shipped by HuggingFace and by llama.cpp's \code{repeat\_penalty} \citep{llamacpp};
+it is the one we study, and it is subject to A1. The \emph{subtractive} presence/frequency
+penalties exposed by the major hosted APIs \citep{openai_api_penalties} (and also by vLLM
+\citep{kwon2023vllm}) instead subtract a constant (and, for the frequency variant, a
+count-scaled term) from the logit of seen tokens: $z_i \mapsto z_i - \alpha$. A
+constant subtraction commutes with the gauge ($\,(z+c\mathbf{1})_i - \alpha = (z_i-\alpha)+c$,
+and the $c$ again cancels in softmax), so the subtractive family is \emph{shift-invariant and
+immune to A1}; the count-scaled frequency term is likewise gauge-invariant since the counts do
+not depend on $c$. A2 has no analogue for the subtractive form at all, because there is no
+sign-branch. This is why we scope the title's claim to the multiplicative operator: the
+ubiquity is real, but it is the ubiquity of \emph{that} operator, not of every penalty knob.
+
+\begin{table}[t]
+\centering
+\caption{Penalty form by stack, and exposure to the two effects. The multiplicative CTRL
+form (sign-branch on raw logits) is subject to A1 gauge non-invariance and the A2 threshold;
+the subtractive presence/frequency form subtracts a constant and is shift-invariant, hence
+immune to both. All three multiplicative stacks are measured directly (HuggingFace in the main
+experiments; vLLM and llama.cpp in the cross-stack replication, Section~\ref{sec:implications}).}
+\label{tab:stacks}
+\begin{tabular}{llccc}
+\toprule
+Stack / knob & Penalty form & Normalizes first? & A1? & A2? \\
+\midrule
+HF \code{repetition\_penalty}        & multiplicative (CTRL) & no (default) & yes & yes \\
+llama.cpp \code{repeat\_penalty}     & multiplicative (CTRL) & no & yes & yes \\
+vLLM \code{repetition\_penalty}      & multiplicative (CTRL) & no & yes & yes \\
+Hosted-API \code{presence\_penalty}  & subtractive (constant) & n/a & no & no \\
+\code{frequency\_penalty} (API/vLLM) & subtractive (count-scaled) & n/a & no & no \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Logit geometry.} Work on glitch and under-trained tokens \citep{land2024magikarp}
+exploits a model's embedding geometry through specific anomalous tokens; our gauge dependence is
+instead a \emph{global} additive freedom in the output logits, independent of any particular
+token.
+
+\paragraph{Constrained decoding.} Grammar-constrained decoding \citep{willard2023outlines} routes
+around structured-output corruption by masking invalid tokens at the sampling layer; we instead
+characterize it in closed form and fix the operator itself. The two specific contributions (the
+gauge non-invariance of the sign-branched penalty and the closed-form delimiter threshold) are,
+to our knowledge, new.
+
+\section{Limitations}
+\label{sec:limitations}
+
+We study the specific HuggingFace/CTRL multiplicative operator of Eq.~\eqref{eq:operator}; the
+subtractive presence/frequency penalties (Section~\ref{sec:related}, Table~\ref{tab:stacks})
+are shift-invariant and escape A1, and stacks that already normalize before penalizing are
+likewise exempt. The A1 flip-rate sweep spans five models up to 7B (three small base models
+plus Qwen2.5-7B and its instruction-tuned/RLHF variant, on which the effect is undiminished;
+Table~\ref{tab:a1}), and the zero-point realism measurement (Table~\ref{tab:zeropoint})
+covers all five checkpoints; we have not pushed beyond 7B or to the largest frontier models. The
+cross-stack replication (Section~\ref{sec:implications}) uses vLLM 0.8.5.post1 (with the
+operator verified unchanged in \code{vllm/main} at \code{e196268}) and a single pinned
+llama.cpp master commit; its A1 leg covers gpt2-large only. A2
+is demonstrated on two independently trained 7B code models (StarCoder2-7B and
+Qwen2.5-Coder-7B), which share the closed-form threshold and the gap-driven signature but
+differ in the magnitude of code-vs-prose concentration ($2.3\times$ versus $5.6\times$), so
+that secondary quantity should be read as model-dependent. Our A2 analysis isolates the
+``clean'' positions where Eq.~\eqref{eq:threshold} is exact (top-1 seen and positive,
+runner-up unseen); positions where both the top choice and the runner-up are penalized obey a
+two-sided version of the inequality that we do not separately tabulate here. Finally, our
+core endpoints are mechanistic (per-token flips, threshold accuracy); we connect them to
+end-to-end quality on two tasks (Table~\ref{tab:downstream}), but a broader downstream
+evaluation (more models, more schemas, a canonical HumanEval harness for clean absolute
+\passk{1}, and prose-quality metrics) is left to future work.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+The repetition penalty is treated as a clean, portable dial that leaves everything but repetition
+alone. As actually implemented (a sign-branched divide/multiply on raw logits), it is none of these. It is not
+gauge-invariant: a provably invisible shift of the logit zero-point, which already differs across
+real models, turns the same nominal $\thp$ into a different intervention,
+flipping half to nearly all greedy tokens at $\thp=1.3$. And where it acts it is a
+closed-form corruption threshold, $g < \ztop(1-1/\thp)$, that deterministically replaces a
+confident correct token with its runner-up, verified at balanced accuracy $0.999$, with
+every flip landing on the runner-up. Both effects share one root cause and one remedy:
+normalize before penalizing. The operator that does this already ships in the library; it is
+off by default and runs after the penalty. The penalty is not the well-defined knob it is
+assumed to be, and making it one requires only a reorder of existing machinery.
+
+\section*{Reproducibility}
+All experiments are inference-only and run on a single 24--48\,GB GPU. The small A1 models run
+in fp32; the 7B models use bf16 (\code{run\_a1.py --dtype bfloat16}) to fit the card, but the
+gauge shift and argmax decision are computed in fp32, so the no-op gate is exact regardless of
+model dtype. The pinned environment
+(\code{torch 2.6.0+cu124}, \code{transformers 5.11.0}), the public model revisions, and the
+exact scripts that produce every number and table are included with this paper:
+\code{run\_a1.py}/\code{analyze\_a1b.py} (A1, with \code{diag\_divergence.py} for the
+divergence diagnostic) and \code{run\_a2.py}/\code{analyze\_a2.py} (A2, with
+\code{explore\_delim.py} for the brackets-only re-slice). The fix demonstration
+(Table~\ref{tab:fix}) is reproduced by \code{run\_a1.py --fix} / \code{run\_a2.py --fix}
+($\to$ \code{results/a1b\_fix/}, \code{results/a2\_fix/}), and the second-model replication
+by \code{run\_a2.py} on Qwen2.5-Coder-7B ($\to$ \code{results/a2\_qwen/}). The end-to-end
+quality probe (Table~\ref{tab:downstream}) is produced by
+\code{run\_a2\_downstream.py}/\code{analyze\_a2\_downstream.py}, the fix loop-suppression check
+by \code{run\_a1\_loopcheck.py}, and the zero-point realism measurement
+(Table~\ref{tab:zeropoint}) by \code{run\_a1\_zeropoint.py}. The cross-stack replication is
+produced by \code{code/smoke\_vllm/} and \code{code/smoke\_llamacpp/} (each with its own README,
+pinned environment, and build steps; raw outputs and per-stack reports in
+\code{results/smoke\_*}). Pre-registered hypotheses and
+frozen decision rules, and a record of which sub-claims were verified, partial, or
+refuted, accompany the code.
+
+\appendix
+
+\section{Pre-registered hypotheses: verified, partial, and refuted}
+\label{app:audit}
+
+Each experiment was pre-registered with a frozen decision rule before its confirmatory run; the
+rules and their raw verdicts ship with the code. The body reports the surviving claims; here we
+record the sub-hypotheses that were only partially confirmed or refuted, so the audit trail is
+complete without slowing the main argument.
+
+\subsection{A1: measurement channel and the shape of the curve}
+
+\paragraph{The effect is content divergence, not a repetition-rate change.} The original
+hypothesis predicted that a weaker-gauge penalty would leave more repetition. At $\thp=1.3$ that
+channel is invisible: the penalty breaks loops under \emph{both} gauges, and a distinct-2
+endpoint saturates at $1.000$ for every $c$. The divergence instead manifests as different
+\emph{content}, which is what the flip-rate endpoint measures and why we adopt it. In a
+non-saturated regime (the smallest $\thp=1.02$) the repetition-rate channel is recoverable but
+weak: for gpt2-large and pythia-2.8b the repetition rate is ordered in the predicted direction
+across $c$ (e.g.\ gpt2-large $0.823 \to 0.771$ from $c=-5$ to $c=+5$), while for gpt2 it is flat
+and noisy. The strong, unambiguous signal is content divergence.
+
+\paragraph{Divergence versus $\thp$: off-zero leap, model-size-dependent shape, and a
+monotonicity clause that overreached.} The flip rate rises from exactly $0$ at $\thp=1$ to a
+large value as soon as the penalty turns on ($0.61$--$0.78$ at $\thp=1.02$, near-ties
+tipped by the sign-branch), with per-$\thp$ bootstrap $95\%$ CIs far above zero at every
+$\thp>1$ (percentile bootstrap over the $16$ prompts, $10^4$ resamples). The later shape varies
+with model size: the larger models climb monotonically toward $\sim$$0.9$, while small gpt2
+peaks near $\thp=1.05$ and trends down (as strong loop-breaking forces both gauges into similar
+non-repetitive text). Our pre-registered A1 rule included a clause requiring the flip rate to be
+\emph{monotone non-decreasing} in $\thp$; that fails for gpt2 and pythia-2.8b, so the frozen rule
+returned ``not confirmed'' for those two. We leave the frozen verdict as printed, but the clause was
+an overreach: nothing in the claim (``a gauge no-op changes behavior'') entails
+that the \emph{amount} of divergence grow monotonically with $\thp$. The substantive clauses
+(flip rate jumps off zero; bootstrap CI excludes zero) hold on all three models. We also report
+the gpt2 non-monotonicity as directional only: at $n=16$ the bump and its $\thp=1.3$ value have
+overlapping CIs.
+
+\subsection{A2: two refuted embellishments and an uninformative control}
+
+\paragraph{``Corrupts the most confident tokens first'': refuted.} The reasoning was that the
+vulnerable gap $\ztop(1-1/\thp)$ grows with $\ztop$, so high-confidence tokens should be hit
+first. It is incomplete: confident tokens also tend to have \emph{larger} gaps $g$, and the gap
+term dominates. Flipped tokens have \emph{lower} mean $\ztop$ than non-flipped tokens: $17.5$
+versus $22.1$ over all penalized positions (difference $95\%$ CI $[-4.7,-4.4]$), and $19.9$
+versus $23.9$ restricted to delimiters (CI $[-4.4,-3.6]$); the same ordering holds on
+Qwen2.5-Coder ($23.9$ versus $28.8$, CI $[-5.1,-4.8]$). Corruption is \emph{gap-driven}: it lands
+on tokens the model is \emph{less} sure about. The threshold formula stands; the
+prediction about \emph{which} tokens it selects was wrong.
+
+\paragraph{Code-specificity is real but model-dependent.} The structural-token flip rate per
+generated token is higher in code than prose, but the ratio varies with the model: on StarCoder2
+it is $0.138$ versus $0.060$, only $2.3\times$ ($2.4\times$ on a brackets-only re-slice), below
+the pre-registered $\ge 5\times$; on Qwen2.5-Coder it is $0.196$ versus $0.035$, a $5.6\times$
+that clears the bar. Two things are stable. First, prose is corrupted at a comparable
+\emph{overall} rate (on StarCoder2 prose flips \emph{more} tokens than code, $36\%$
+versus $31\%$), so the penalty corrupts all token types at a similar rate and is not syntax-specific.
+Second, code concentrates \emph{which} tokens are hit: $19\%$ of code's flips land on delimiters
+versus $7\%$ in prose. The concentration on \emph{structural} tokens is because structured output
+exposes more grammar-obligatory delimiters to a gap-driven threshold.
+
+\paragraph{The validity ``cliff'' was uninformative as measured.} We had intended to show a sharp
+drop in parse validity as $\thp$ crosses the threshold, but StarCoder2's free continuations are
+truncated fragments, so \code{json.loads} sits at the floor ($0.00$) even at $\thp=1.0$ and
+bracket-balance error versus $\thp$ is noise. We make no cliff claim from it; it was
+pre-registered as descriptive and non-gating. (The clean end-to-end measurement on complete
+documents is in Section~\ref{sec:fix}, Table~\ref{tab:downstream}.)
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\end{document}

@@ -1,0 +1,35 @@
+[project]
+name = "novelty"
+version = "0.1.0"
+description = "Novelty-pipeline experiments (Tier-A/B verification runs)"
+requires-python = ">=3.11,<3.13"
+# Pinned to the validated `lab` container hf venv so a cloud pod reproduces local runs bit-for-bit.
+dependencies = [
+    "torch==2.6.0",
+    "transformers==5.11.0",
+    "accelerate==1.13.0",
+    "peft==0.19.1",
+    "datasets==5.0.0",
+    "numpy==2.4.6",
+    "scipy==1.17.1",
+    "scikit-learn==1.9.0",
+    "sentencepiece==0.2.1",
+    "tokenizers==0.22.2",
+    "safetensors==0.8.0",
+    "zstandard==0.25.0",
+    "einops==0.8.2",
+    "tqdm==4.68.2",
+    "pandas==3.0.3",
+    "sympy==1.13.1",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu124" }
+
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
+[tool.setuptools]
+py-modules = []

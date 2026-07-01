@@ -1,0 +1,98 @@
+{
+  "stack": "llama.cpp (commit 4fc4ec5541b243957ae5099edb67372f8f3b550e, own sampler chain)",
+  "manifests": {
+    "a1": "results/bench_a1/prefixes.json",
+    "a2": "results/bench_a2/schemas.json"
+  },
+  "a1": {
+    "model": "gpt2-large f16 GGUF, CPU backend, penalty_last_n=1024, 200 prefixes x 200 tokens",
+    "validity_gate_theta1.0_flip": {
+      "flip_rate": 0.0,
+      "positions": 40000,
+      "flips": 0,
+      "per_prompt_mean": 0.0
+    },
+    "validity_gate_pass": true,
+    "flip_rate_by_theta": {
+      "1.3": {
+        "flip_rate": 0.96355,
+        "positions": 40000,
+        "flips": 38542,
+        "per_prompt_mean": 0.9635499999999996
+      },
+      "1.0": {
+        "flip_rate": 0.0,
+        "positions": 40000,
+        "flips": 0,
+        "per_prompt_mean": 0.0
+      }
+    }
+  },
+  "a2": {
+    "model": "Qwen2.5-Coder-7B bf16 GGUF, CUDA -ngl 26 (see REPORT caveat), stock repeat_penalty, 200 schemas, max_new=512",
+    "valid_rate_by_lastn_theta": {
+      "2048": {
+        "1": {
+          "valid_rate": 0.975,
+          "valid": 195,
+          "total": 200
+        },
+        "1.1": {
+          "valid_rate": 0.945,
+          "valid": 189,
+          "total": 200
+        },
+        "1.3": {
+          "valid_rate": 0.29,
+          "valid": 58,
+          "total": 200
+        }
+      },
+      "64": {
+        "1": {
+          "valid_rate": 0.975,
+          "valid": 195,
+          "total": 200
+        },
+        "1.1": {
+          "valid_rate": 0.93,
+          "valid": 186,
+          "total": 200
+        },
+        "1.3": {
+          "valid_rate": 0.12,
+          "valid": 24,
+          "total": 200
+        }
+      }
+    },
+    "condition_label": {
+      "2048": "whole_context",
+      "64": "default_64"
+    }
+  },
+  "hf_benchmark_reference": {
+    "a1_gpt2_large_flip": {
+      "1.0": 0.0,
+      "1.3": 0.9639
+    },
+    "a2_json_valid_raw": {
+      "1.0": 0.97,
+      "1.1": 0.955,
+      "1.3": 0.225
+    },
+    "a2_json_valid_fix": {
+      "1.0": 0.97,
+      "1.1": 0.975,
+      "1.3": 0.97
+    }
+  },
+  "previous_smoke_round": {
+    "a1_flip_1.3": 0.9413,
+    "a2_valid": {
+      "1.0": 1.0,
+      "1.1": 1.0,
+      "1.3": 0.167
+    }
+  }
+}

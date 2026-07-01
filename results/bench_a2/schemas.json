@@ -1,0 +1,7115 @@
+{
+ "source": "epfl-dlab/JSONSchemaBench",
+ "configs": [
+  "Github_easy",
+  "Github_medium"
+ ],
+ "splits": [
+  "train",
+  "val",
+  "test"
+ ],
+ "seed": 0,
+ "n": 200,
+ "max_gpt2_tokens": 600,
+ "filter_stats": {
+  "parse_fail": 0,
+  "not_object": 42,
+  "compile_fail": 0,
+  "remote_ref": 0,
+  "too_long": 342,
+  "kept": 200
+ },
+ "schemas": [
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o90308",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema",
+   "gpt2_tokens": 429,
+   "schema": {
+    "title": "Ground",
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "Ground defines the main surface of the web scene, based on elevation layers. This object defines the ground properties to be set in the slides.",
+    "properties": {
+     "transparency": {
+      "type": "integer",
+      "description": "The transparency of the ground surface (including basemap). The value has to lie between `100` (full transparency) and `0` (full opacity).",
+      "minimum": 0,
+      "maximum": 100
+     }
+    },
+    "additionalProperties": false,
+    "esriDocumentation": {
+     "examples": [
+      {
+       "title": "ground",
+       "code": {
+        "ground": {
+         "transparency": 30
+        }
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o33695",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 496,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://adnotare.crim.ca/schema/custom-meta-schema#",
+    "description": "A representation of the master schema",
+    "type": "object",
+    "required": [
+     "@context",
+     "@type",
+     "schemaType"
+    ],
+    "properties": {
+     "@context": {
+      "format": "url",
+      "type": "string",
+      "description": "JSON-LD context",
+      "searchable": false,
+      "locked": true
+     },
+     "@type": {
+      "type": "string",
+      "description": "JSON-LD type",
+      "searchable": false,
+      "locked": true
+     },
+     "schemaType": {
+      "type": "string",
+      "description": "Schema type",
+      "searchable": true,
+      "searchModes": [
+       "noop"
+      ],
+      "locked": true
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o24544",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 217,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Input configuration.",
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "integer",
+      "description": "User identification.",
+      "default": 12345
+     },
+     "name": {
+      "type": "string",
+      "description": "User name.",
+      "default": "AVRELIANVS"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o79712",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 271,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "option": {
+      "type": "string",
+      "enum": [
+       "beenden",
+       "abbruch",
+       "ignorieren"
+      ],
+      "default": "ignorieren"
+     },
+     "wiederholungen": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "option"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o31168",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 525,
+   "schema": {
+    "properties": {
+     "channelnumber": {
+      "readonly": true,
+      "type": "integer"
+     },
+     "destip": {
+      "readonly": true,
+      "type": "string"
+     },
+     "destport": {
+      "readonly": true,
+      "type": "integer"
+     },
+     "domain": {
+      "readonly": true,
+      "type": "string"
+     },
+     "nodeid": {
+      "type": "integer"
+     },
+     "peid": {
+      "readonly": true,
+      "type": "integer"
+     },
+     "srcip": {
+      "readonly": true,
+      "type": "string"
+     },
+     "srcport": {
+      "readonly": true,
+      "type": "integer"
+     },
+     "username": {
+      "type": "string"
+     }
+    },
+    "title": "vpnicadtlsconnection",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_medium",
+   "split": "test",
+   "id": "o71320",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 516,
+   "schema": {
+    "type": "object",
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+     "fabric_uuid": {
+      "$id": "/properties/input/properties/fabric_uuid",
+      "format": "uuid",
+      "type": "string",
+      "title": "The Fabric_uuid Schema",
+      "description": "UUID of the fabric object created",
+      "default": "",
+      "examples": [
+       "123456789"
+      ]
+     },
+     "device_count": {
+      "$id": "/properties/input/properties/device_count",
+      "type": "integer",
+      "title": "The Device Count Schema",
+      "description": "Number of devices to discover",
+      "default": 0,
+      "examples": [
+       1,
+       2,
+       3,
+       4,
+       5
+      ]
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o3620",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 237,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+     "realType": {
+      "type": "object",
+      "properties": {
+       "key": {
+        "type": "string"
+       }
+      }
+     }
+    },
+    "type": "object",
+    "properties": {
+     "key": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o41033",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 446,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+     "DestinationCidrBlock": {
+      "pattern": "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])(/(\\d|[1-2]\\d|3[0-2]))|0\\.0\\.0\\.0\\/0$",
+      "type": "string"
+     },
+     "NatGatewayId": {
+      "pattern": "^[a-z][a-z0-9\\-]+$",
+      "type": "string"
+     },
+     "RouteTableId": {
+      "pattern": "^[a-z][a-z0-9\\-]+$",
+      "type": "string"
+     }
+    },
+    "required": [
+     "DestinationCidrBlock",
+     "RouteTableId",
+     "NatGatewayId"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o10012",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 320,
+   "schema": {
+    "title": "OAuthClientResponse",
+    "description": "OAuthClient response when created",
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "pattern": "^[ !\"#$%&\\'()*+,\\-./0-9:;<=>?@A-Z\\[\\\\\\]\\^_`a-z{\\|}]+$",
+      "minLength": 30,
+      "maxLength": 30
+     },
+     "secret": {
+      "type": "string",
+      "pattern": "^[ !\"#$%&\\'()*+,\\-./0-9:;<=>?@A-Z\\[\\\\\\]\\^_`a-z{\\|}]+$",
+      "minLength": 30
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o8450",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 244,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "title": "Container cleanup input",
+    "type": "object",
+    "required": [
+     "fabric_fq_name",
+     "container_name"
+    ],
+    "properties": {
+     "container_name": {
+      "type": "string"
+     },
+     "fabric_fq_name": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o3206",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema",
+   "gpt2_tokens": 525,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "description": "The base schema for all the individual endpoints, used to provide reference",
+    "$id": "file:///home/nate/go/src/github.com/CactusDev/Xerophi/base.json",
+    "type": "object",
+    "definitions": {
+     "messagePacket": {
+      "required": [
+       "data",
+       "text",
+       "type"
+      ],
+      "properties": {
+       "data": {
+        "type": "string"
+       },
+       "text": {
+        "type": "string"
+       },
+       "type": {
+        "type": "string"
+       }
+      }
+     }
+    },
+    "properties": {
+     "messagePacket": {
+      "$ref": "#/definitions/messagePacket"
+     }
+    },
+    "required": [
+     "messagePacket"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o46527",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 411,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Theme",
+    "description": "Theme objects",
+    "type": "object",
+    "properties": {
+     "name": {
+      "description": "Name of the theme",
+      "type": "string"
+     },
+     "author": {
+      "description": "Author of the theme",
+      "type": "string"
+     },
+     "description": {
+      "description": "Description of the theme",
+      "type": "string"
+     },
+     "body": {
+      "type": "array"
+     },
+     "main": {
+      "type": "array"
+     },
+     "diffHeader": {
+      "type": "array"
+     },
+     "diffBody": {
+      "type": "array"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o6167",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 244,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "active",
+       "inactive"
+      ]
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o39754",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 584,
+   "schema": {
+    "title": "JSON schema for Azure Functions extensions.json files",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "extensions": {
+      "type": "array",
+      "description": "The list of installed extensions.",
+      "items": {
+       "type": "object",
+       "properties": {
+        "name": {
+         "description": "The short extension name.",
+         "type": "string",
+         "minLength": 0
+        },
+        "typeName": {
+         "description": "The type assembly qualified name.",
+         "type": "string"
+        },
+        "hintPath": {
+         "description": "An optional file path hint to the assembly containing the type.",
+         "type": "string"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o6262",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 579,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "type": {
+      "type": "string",
+      "enum": [
+       "timer"
+      ]
+     },
+     "outputIds": {
+      "type": "array",
+      "items": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      }
+     },
+     "meta": {
+      "type": "object"
+     },
+     "config": {
+      "type": "object",
+      "properties": {
+       "cron": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "cron"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "required": [
+     "type",
+     "config"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o71408",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 456,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://github.com/route4me/json-schemas/blob/master/Links.dtd",
+    "title": "Links",
+    "type": "object",
+    "properties": {
+     "route": {
+      "type": [
+       "string"
+      ],
+      "title": "Route",
+      "descrption": "API URL Route GET call for the current route"
+     },
+     "view": {
+      "type": [
+       "string"
+      ],
+      "title": "View",
+      "descrption": "A Link to the GET operation for the optimization problem"
+     },
+     "optimization_problem_id": {
+      "type": [
+       "string"
+      ],
+      "title": "Optimization Problem (id)",
+      "descrption": "API URL optimization_problem_id GET call for the current route"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o42304",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 511,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "org.eclipse.persistence.testing.jaxb.xmlelements.Root",
+    "type": "object",
+    "properties": {
+     "root": {
+      "type": "object",
+      "properties": {
+       "string": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "root": {
+        "type": "array",
+        "items": {
+         "$ref": "#/properties/root"
+        }
+       },
+       "theName": {
+        "type": "string"
+       }
+      },
+      "additionalProperties": false
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o68826",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 359,
+   "schema": {
+    "description": "An individual log message",
+    "properties": {
+     "args": {},
+     "created": {},
+     "exc_info": {},
+     "exc_text": {},
+     "filename": {},
+     "funcName": {},
+     "levelname": {},
+     "levelno": {},
+     "lineno": {},
+     "message": {
+      "type": "string"
+     },
+     "module": {},
+     "msecs": {},
+     "name": {},
+     "pathname": {},
+     "process": {},
+     "processName": {},
+     "relativeCreated": {},
+     "thread": {},
+     "threadName": {}
+    },
+    "required": [
+     "message"
+    ],
+    "title": "Record",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o67501",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 177,
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "outDir": {
+      "description": "The output directory for the compiled files",
+      "type": "string"
+     },
+     "tsConfig": {
+      "description": "The name of the Typescript configuration file.",
+      "type": "string"
+     }
+    },
+    "required": [],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o14743",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 567,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "channels": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "description": "Which Twitch chat channels to join and monitor.",
+      "default": []
+     },
+     "streen": {
+      "type": "object",
+      "properties": {
+       "url": {
+        "type": "string",
+        "description": "The full URL (including http:// or https://) of the streen instance to connect to."
+       },
+       "secretKey": {
+        "type": "string",
+        "description": "A pre-shared key. Used to authenticate with streen."
+       }
+      },
+      "required": [
+       "url",
+       "secretKey"
+      ]
+     }
+    },
+    "required": [
+     "channels",
+     "streen"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o13985",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 549,
+   "schema": {
+    "description": "EAID_51FA8E34_8588_4a3c_B96F_E612AFE207AB",
+    "properties": {
+     "attributes": {
+      "properties": {
+       "integer": {
+        "description": "EAID_3FD3F9B4_7201_4847_97D7_F380B3B3F723",
+        "title": "integer",
+        "type": "integer"
+       },
+       "string": {
+        "description": "EAID_BE4EA500_1BB5_4b1a_AC60_B0379E3CE5CB",
+        "items": {
+         "type": "string"
+        },
+        "minItems": 1,
+        "title": "string",
+        "type": "array"
+       }
+      },
+      "title": "feature attributes",
+      "type": "object"
+     }
+    },
+    "title": "DataType2",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o76874",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 238,
+   "schema": {
+    "properties": {
+     "objectIdFieldName": {
+      "title": "field with object identifier ",
+      "type": "string"
+     },
+     "objectIds": {
+      "items": {
+       "title": "object identifier",
+       "type": "integer"
+      },
+      "title": "list of object identifiers",
+      "type": "array"
+     }
+    },
+    "title": "set of feature identifiers",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o9885",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 416,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "version": {
+      "oneOf": [
+       {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+       },
+       {
+        "type": "null"
+       }
+      ]
+     },
+     "slug": {
+      "type": "string",
+      "minLength": 4,
+      "maxLength": 63,
+      "pattern": "^[0-9a-z-]*$"
+     }
+    },
+    "additionalProperties": false,
+    "required": [
+     "slug"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o46416",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 490,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Expense",
+    "description": "Expense",
+    "type": "object",
+    "properties": {
+     "amount": {
+      "title": "Amount",
+      "description": "Expenses associated with the running of the business. The value must be between -99999999999.99 and 99999999999.99.",
+      "type": "number",
+      "multipleOf": 0.01,
+      "minimum": -99999999999.99,
+      "maximum": 99999999999.99,
+      "example": "1000.45"
+     },
+     "disallowableAmount": {
+      "title": "Disallowable amount",
+      "description": "Any expense or partial expense that cannot be claimed for tax purposes. The value must be between -99999999999.99 and 99999999999.99.",
+      "type": "number",
+      "multipleOf": 0.01,
+      "minimum": -99999999999.99,
+      "maximum": 99999999999.99,
+      "example": "1000.45"
+     }
+    },
+    "required": [
+     "amount"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o8412",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 410,
+   "schema": {
+    "properties": {
+     "actions_py": {
+      "type": "string"
+     },
+     "key": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "parent": {
+      "type": "string"
+     },
+     "producers": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "role": {
+      "type": "string"
+     },
+     "state": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "key",
+     "name",
+     "role",
+     "state"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o47061",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 547,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Data Frequency",
+    "description": "Defines the format for describing the update frequency of a data source",
+    "type": "object",
+    "properties": {
+     "split": {
+      "description": "The final component of the data packet name, i.e. the dimension on which data source packets are split.",
+      "type": "string",
+      "enum": [
+       "segment",
+       "timestamp",
+       "version"
+      ]
+     },
+     "avg": {
+      "description": "The average frequency (in ms) for data updates",
+      "type": "integer",
+      "minimum": 0
+     },
+     "max": {
+      "description": "The maximum expected frequency (in ms) for data updates",
+      "type": "integer",
+      "minimum": 0
+     },
+     "min": {
+      "description": "The minimum expected frequency (in ms) for data updates",
+      "type": "integer",
+      "minimum": 0
+     }
+    },
+    "required": [
+     "avg",
+     "min",
+     "max"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o48010",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 320,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "File schema.",
+    "description": "Describe information needed for files in records.",
+    "properties": {
+     "key": {
+      "type": "string"
+     },
+     "file_id": {
+      "type": "string"
+     },
+     "bucket": {
+      "type": "string"
+     },
+     "checksum": {
+      "type": "string"
+     },
+     "size": {
+      "type": "integer"
+     },
+     "version_id": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o53898",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 231,
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "configId": {
+      "description": "Identifier of the currently applied configuration.",
+      "type": "string"
+     },
+     "id": {
+      "description": "ID of the message used to match server response to the request.",
+      "multipleOf": 1.0,
+      "type": "number"
+     }
+    },
+    "required": [
+     "id"
+    ],
+    "title": "5/CMX configuration pull request schema",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o16365",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 227,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Vault Collection Expression",
+    "type": "object",
+    "properties": {
+     "vaults": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "_uniqueItems": true,
+      "minItems": 1
+     }
+    },
+    "required": [
+     "vaults"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o79711",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 383,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "vorgaenger": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "warteart": {
+      "type": "string",
+      "enum": [
+       "beginn",
+       "ende"
+      ],
+      "default": "beginn"
+     },
+     "rechner": {
+      "type": "string"
+     },
+     "wartezeit": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "vorgaenger"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o57232",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 225,
+   "schema": {
+    "description": "Test collection 3",
+    "properties": {
+     "_uid": {
+      "isAutoIncrement": true,
+      "type": "number"
+     },
+     "field_1": {
+      "type": "string"
+     },
+     "field_2": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "_uid",
+     "_metadata"
+    ],
+    "title": "Test 3",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o83269",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 267,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "Cloud resource specifications",
+    "properties": {
+     "hypervisor_hostname": {
+      "type": "string"
+     },
+     "id": {
+      "type": "integer"
+     },
+     "memory_mb": {
+      "type": "integer"
+     },
+     "vcpus": {
+      "type": "integer"
+     },
+     "date": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o65447",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 336,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "A company which is the subject of a statement",
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "jurisdiction": {
+      "type": "string"
+     },
+     "company_number": {
+      "type": "string"
+     },
+     "identifier": {
+      "type": "string",
+      "description": "An official identifier paired with a code for the issuer of the identifier, e.g sec/12345",
+      "pattern": "^[^/]+/[^/]+$"
+     }
+    },
+    "required": [
+     "name",
+     "jurisdiction"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o68286",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 386,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "AdOcean Adapter Params",
+    "description": "A schema which validates params accepted by the AdOcean adapter",
+    "type": "object",
+    "properties": {
+     "emiter": {
+      "type": "string",
+      "description": "AdOcean emiter",
+      "pattern": ".+"
+     },
+     "masterId": {
+      "type": "string",
+      "description": "Master's id",
+      "pattern": "^[\\w.]+$"
+     },
+     "slaveId": {
+      "type": "string",
+      "description": "Slave's id",
+      "pattern": "^adocean[\\w.]+$"
+     }
+    },
+    "required": [
+     "emiter",
+     "masterId",
+     "slaveId"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o7389",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 468,
+   "schema": {
+    "id": "https://raw.githubusercontent.com/InfinniPlatform/InfinniPlatform/master/Files/Schema/mongodbDocumentStorage.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "mongodbDocumentStorage",
+    "description": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438 \u0445\u0440\u0430\u043d\u0438\u043b\u0438\u0449\u0430 \u0434\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u043e\u0432 MongoDB.",
+    "type": "object",
+    "properties": {
+     "ConnectionString": {
+      "description": "\u0421\u0442\u0440\u043e\u043a\u0430 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f. \u041f\u043e\u0434\u0440\u043e\u0431\u043d\u0435\u0435 \u0441\u043c. https://docs.mongodb.com/manual/reference/connection-string.",
+      "type": "string",
+      "default": "mongodb://localhost:27017"
+     }
+    },
+    "required": [
+     "ConnectionString"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o68405",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 240,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Extract",
+    "description": "Extract of a chapter",
+    "type": "object",
+    "properties": {
+     "title": {
+      "description": "Title of the extract",
+      "type": "string",
+      "maxLength": 80
+     },
+     "text": {
+      "desciption": "Content of the extract",
+      "type": "string"
+     }
+    },
+    "required": [
+     "title"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o88674",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 274,
+   "schema": {
+    "description": "Shampoo push message specification",
+    "properties": {
+     "push_data": {
+      "description": "Response data from the called method",
+      "type": "object"
+     },
+     "push_event": {
+      "description": "Name of the push event",
+      "type": "string"
+     },
+     "type": {
+      "pattern": "push",
+      "type": "string"
+     }
+    },
+    "required": [
+     "type",
+     "push_event",
+     "push_data"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o79476",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 518,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+     "email": {
+      "type": "string",
+      "format": "email"
+     },
+     "password": {
+      "type": "string"
+     },
+     "givenName": {
+      "type": "string"
+     },
+     "familyName": {
+      "type": "string"
+     },
+     "image": {
+      "type": "string",
+      "format": "url"
+     }
+    },
+    "type": "object",
+    "properties": {
+     "email": {
+      "$ref": "#/definitions/email"
+     },
+     "password": {
+      "$ref": "#/definitions/password"
+     },
+     "givenName": {
+      "$ref": "#/definitions/givenName"
+     },
+     "familyName": {
+      "$ref": "#/definitions/familyName"
+     },
+     "image": {
+      "$ref": "#/definitions/image"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o9765",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 301,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+     },
+     "description": {
+      "type": "string",
+      "maxLength": 32767
+     },
+     "status": {
+      "type": "string",
+      "enum": [
+       "active",
+       "inactive"
+      ]
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o61120",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 205,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "dependencies": {
+      "type": "object",
+      "description": "List of locked dependencies.",
+      "items": {
+       "type": "string",
+       "description": "Each item contains the package name and version."
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o77704",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 306,
+   "schema": {
+    "properties": {
+     "name": {
+      "description": "The name of the artist.",
+      "type": "string"
+     },
+     "popularity": {
+      "description": "The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.",
+      "type": "integer"
+     },
+     "type": {
+      "description": "The object type: 'artist'",
+      "type": "string"
+     },
+     "uri": {
+      "description": "The Spotify URI for the artist.",
+      "type": "string"
+     }
+    },
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o17460",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 217,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Expense",
+    "type": "object",
+    "properties": {
+     "amount": {
+      "title": "Amount",
+      "description": "Expenses associated with the running of the business",
+      "type": "number",
+      "multipleOf": 0.01,
+      "minimum": 0
+     }
+    },
+    "required": [
+     "amount"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o6205",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 213,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "properties": {
+     "email": {
+      "_format": "email",
+      "maxLength": 1024,
+      "type": "string"
+     },
+     "token": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "email",
+     "token"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o25169",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 216,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+     "bar": {
+      "$ref": "#/definitions/nonNegativeInteger"
+     },
+     "baz": {
+      "type": "integer",
+      "minimum": 0
+     }
+    },
+    "definitions": {
+     "nonNegativeInteger": {
+      "type": "integer",
+      "minimum": 0
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o74932",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 492,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "description": "the shipment id that can be used for requesting info about a shipment or tracking it"
+     },
+     "carrier_tracking_no": {
+      "type": "string",
+      "description": "the original tracking number that can be used on the carriers website"
+     },
+     "tracking_url": {
+      "type": "string",
+      "description": "URL you can send your customers so they can track this shipment"
+     },
+     "label_url": {
+      "type": "string",
+      "description": "URL where you can download the label in pdf format"
+     },
+     "price": {
+      "type": "number",
+      "description": "price that we're going to charge you (exl. VAT)"
+     }
+    },
+    "required": [
+     "id",
+     "carrier_tracking_no",
+     "tracking_url",
+     "label_url",
+     "price"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o22050",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 235,
+   "schema": {
+    "description": "Ng Deploy target options for Firebase.",
+    "properties": {
+     "buildTarget": {
+      "description": "Target to build.",
+      "pattern": "^[^:\\s]+:[^:\\s]+(:[^\\s]+)?$",
+      "type": "string"
+     },
+     "preview": {
+      "description": "Do not deploy the application, just set up the Firebase Function in the project output directory. Can be used for testing the Firebase Function with `firebase serve`.",
+      "type": "boolean"
+     }
+    },
+    "title": "Firebase Deploy"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o68311",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 197,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "GumGum Adapter Params",
+    "description": "A schema which validates params accepted by the GumGum adapter",
+    "type": "object",
+    "properties": {
+     "zone": {
+      "type": "string",
+      "description": "A tracking id used to identify GumGum zone.",
+      "minLength": 8
+     }
+    },
+    "required": [
+     "zone"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o22866",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 446,
+   "schema": {
+    "$license": [
+     "http://www.apache.org/licenses/LICENSE-2.0"
+    ],
+    "description": "https://developer.twitter.com/en/docs/accounts-and-users/subscribe-account-activity/api-reference/get-webhook-config",
+    "javaInterfaces": [
+     "java.io.Serializable"
+    ],
+    "javaType": "org.apache.streams.twitter.api.SubscriptionsListResponse",
+    "properties": {
+     "application_id": {
+      "type": "string"
+     },
+     "environment": {
+      "type": "string"
+     },
+     "subscriptions": {
+      "items": {
+       "properties": {
+        "user_id": {
+         "type": "string"
+        }
+       },
+       "type": "object"
+      },
+      "type": "array"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o54549",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 531,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "LineChartStreamUpdate",
+    "description": "The data contained in a LineChart Stream update object",
+    "type": "object",
+    "properties": {
+     "stream": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "label": {
+         "type": "string"
+        },
+        "data": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         }
+        }
+       },
+       "required": [
+        "label",
+        "data"
+       ]
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o91014",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 526,
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "browser_options": {
+      "type": "object"
+     },
+     "cubes": {
+      "type": "array"
+     },
+     "description": {
+      "type": "string"
+     },
+     "dimensions": {
+      "type": "array"
+     },
+     "info": {
+      "type": "object"
+     },
+     "joins": {
+      "type": "array"
+     },
+     "label": {
+      "type": "string"
+     },
+     "mappings": {
+      "type": "object"
+     },
+     "name": {
+      "type": "string"
+     },
+     "provider": {
+      "type": "string"
+     },
+     "schema": {
+      "type": "string"
+     },
+     "store": {
+      "type": "string"
+     }
+    },
+    "title": "Cubes Model",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o12489",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 448,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://www.ortolang.fr/schemas/1/audio#",
+    "description": "Schema for metadata extracted from audio files",
+    "type": "object",
+    "additionalProperties": true,
+    "properties": {
+     "title": {
+      "type": "string"
+     },
+     "author": {
+      "type": "string"
+     },
+     "xmpDM:duration": {
+      "type": "string"
+     },
+     "xmpDM:audioSampleRate": {
+      "type": "string"
+     },
+     "xmpDM:audioSampleType": {
+      "type": "string"
+     },
+     "xmpDM:audioChannelType": {
+      "type": "string"
+     },
+     "xmpDM:audioCompressor": {
+      "type": "string"
+     },
+     "version": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o41693",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 432,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+     "pets": {
+      "type": "object",
+      "properties": {
+       "dog": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        },
+        "minItems": 4,
+        "maxItems": 42
+       }
+      },
+      "required": [
+       "dog"
+      ]
+     }
+    },
+    "properties": {
+     "pets": {
+      "$ref": "#/definitions/pets"
+     }
+    },
+    "required": [
+     "pets"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o44268",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 418,
+   "schema": {
+    "description": "An instance of <a href='#hotspot-geometry-offset'>a hotspot geometry offset.</a>",
+    "properties": {
+     "x": {
+      "default": 0,
+      "description": "Offset on x in word units.",
+      "example": 20,
+      "title": "X",
+      "type": "number"
+     },
+     "y": {
+      "default": 0,
+      "description": "Offset on y in word units.",
+      "example": -50,
+      "title": "Y",
+      "type": "number"
+     },
+     "z": {
+      "default": 0,
+      "description": "Offset on z in word units.",
+      "example": 5,
+      "title": "Y",
+      "type": "number"
+     }
+    },
+    "title": "HotspotGeometryOffsetConfig",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o83725",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 168,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Addition response",
+    "description": "Answer from addition service",
+    "type": "object",
+    "properties": {
+     "answer": {
+      "type": "integer",
+      "minimum": 1
+     }
+    },
+    "additionalProperties": false,
+    "required": [
+     "answer"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o62380",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 232,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "id": "https://github.com/myedibleenso/processors-server/tree/master/src/main/resources/json/schema/scores.json",
+    "properties": {
+     "scores": {
+      "type": "array",
+      "items": {
+       "type": "integer"
+      },
+      "id": "scores"
+     }
+    },
+    "required": [
+     "scores"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o54554",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 235,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "PageSettings",
+    "description": "The data contained in a Page settings object",
+    "type": "object",
+    "properties": {
+     "title": {
+      "type": "string"
+     },
+     "maxChartsRow": {
+      "type": "integer",
+      "minimum": 1
+     },
+     "maxChartsCol": {
+      "type": "integer",
+      "minimum": 1
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o87817",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 512,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/v0_4/address.json",
+    "description": "An Address following the convention of http://microformats.org/wiki/hcard",
+    "type": "object",
+    "properties": {
+     "post-office-box": {
+      "type": "string"
+     },
+     "extended-address": {
+      "type": "string"
+     },
+     "street-address": {
+      "type": "string"
+     },
+     "locality": {
+      "type": "string"
+     },
+     "region": {
+      "type": "string"
+     },
+     "postal-code": {
+      "type": "string"
+     },
+     "country-name": {
+      "type": "string"
+     }
+    },
+    "dependencies": {
+     "post-office-box": [
+      "street-address"
+     ],
+     "extended-address": [
+      "street-address"
+     ]
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o63977",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 197,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "string": {
+      "type": "string",
+      "default": ""
+     },
+     "array": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o66170",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 265,
+   "schema": {
+    "title": "JSONPath ready predicate",
+    "properties": {
+     "dependency_type": {
+      "default": "jsonpath_ready",
+      "enum": [
+       "jsonpath_ready"
+      ],
+      "type": "string",
+      "title": "Dependency Type"
+     },
+     "expressions": {
+      "type": "array"
+     }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "id": "jsonpath_ready"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o48513",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 214,
+   "schema": {
+    "properties": {
+     "DatasetsUUID": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "NewDatasetID": {
+      "type": "number"
+     },
+     "version": {
+      "type": "string"
+     }
+    },
+    "type": "object",
+    "version": "0.01"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o29003",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 386,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "resource_id": {
+     "type": "string"
+    },
+    "resource": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "priority": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 100
+      }
+     }
+    },
+    "verbs": {
+     "create": {},
+     "update": {}
+    },
+    "properties": {
+     "resource_id": {
+      "$ref": "#/resource_id"
+     },
+     "resource": {
+      "$ref": "#/resource"
+     }
+    },
+    "required": [
+     "resource_id",
+     "resource"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o47860",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 190,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://inowas.com/schema/",
+    "title": "wellType",
+    "description": "well types",
+    "type": "object",
+    "properties": {
+     "well_type": {
+      "type": "string",
+      "maxLength": 4
+     }
+    },
+    "additionalProperties": false,
+    "required": [
+     "well_type"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o83939",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 586,
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "displayGroupOnSameAxis": {
+      "description": "Whether the concepts in this group should be displayed on the same axis, or each on their individual axis in the same card.",
+      "type": "boolean"
+     },
+     "graphType": {
+      "description": "The way the graph should be plotted for this display group. If NONE, then graph will not be displayed.",
+      "enum": [
+       "SCATTER",
+       "LINE",
+       "DIAGNOSTIC",
+       "MICROBIO",
+       "STEP",
+       "NONE"
+      ],
+      "type": "string"
+     },
+     "groupName": {
+      "description": "The display name for this clinical concept group.",
+      "type": "string"
+     },
+     "parentGroupName": {
+      "description": "The name of the parent group that this group should be displayed with. This helps in the case that you want to show multiple resource groups with different graph configurations such as Medication administrations and Medication monitoring.",
+      "type": "string"
+     }
+    },
+    "required": [
+     "groupName",
+     "graphType",
+     "displayGroupOnSameAxis"
+    ],
+    "title": "Clinical Concept Display Group",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o54575",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 493,
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "brand": {
+      "type": "string"
+     },
+     "category": {
+      "type": "string"
+     },
+     "description": {
+      "type": "string"
+     },
+     "id": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "price": {
+      "type": "string"
+     },
+     "schema": {
+      "format": "url",
+      "type": "string"
+     }
+    },
+    "required": [
+     "schema",
+     "id",
+     "brand",
+     "name",
+     "description",
+     "category"
+    ],
+    "self": {
+     "format": "jsonschema",
+     "name": "product/create",
+     "vendor": "com.nordstrom",
+     "version": "1-0-0"
+    },
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o79427",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 385,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+     "refObject": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+       "sub1": {
+        "type": "string",
+        "default": "ta-da"
+       }
+      }
+     }
+    },
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "prop1": {
+      "type": "integer",
+      "default": 57
+     },
+     "prop2": {
+      "$ref": "#/definitions/refObject"
+     }
+    },
+    "required": [
+     "prop1"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o12070",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 491,
+   "schema": {
+    "additionalProperties": true,
+    "properties": {
+     "httpMethod": {
+      "pattern": "^GET$",
+      "type": "string"
+     },
+     "path": {
+      "pattern": "^/products$",
+      "type": "string"
+     },
+     "queryStringParameters": {
+      "additionalProperties": false,
+      "properties": {
+       "category": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "category"
+      ],
+      "type": "object"
+     }
+    },
+    "required": [
+     "path",
+     "httpMethod",
+     "queryStringParameters"
+    ],
+    "self": {
+     "format": "jsonschema",
+     "name": "products/request",
+     "vendor": "com.nordstrom",
+     "version": "1-0-0"
+    },
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o6176",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 290,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "orgId": {
+      "type": "string",
+      "pattern": "^[A-Fa-f\\d]{24}$"
+     },
+     "name": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255
+     },
+     "description": {
+      "type": "string",
+      "maxLength": 32767
+     }
+    },
+    "additionalProperties": false,
+    "required": [
+     "name"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o39141",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 456,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "required": [
+     "id",
+     "category",
+     "priority",
+     "content"
+    ],
+    "properties": {
+     "created": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "modified": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "id": {
+      "type": "string"
+     },
+     "category": {
+      "type": "string"
+     },
+     "priority": {
+      "type": "string"
+     },
+     "content": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+       "type": "string"
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o10337",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 531,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "nestedtest",
+    "type": "object",
+    "properties": {},
+    "required": [
+     "top"
+    ],
+    "definitions": {
+     "top": {
+      "type": "object",
+      "properties": {
+       "basic": {
+        "type": "string"
+       },
+       "nested": {
+        "$ref": "#/definitions/top/definitions/defnested"
+       }
+      },
+      "definitions": {
+       "defnested": {
+        "type": "object",
+        "properties": {
+         "append": {
+          "type": "string"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o58273",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 246,
+   "schema": {
+    "additionalProperties": true,
+    "properties": {
+     "attestationCert": {
+      "_id": "attestationCert",
+      "minLength": 1,
+      "type": "string"
+     },
+     "publicKey": {
+      "_id": "publicKey",
+      "minLength": 1,
+      "type": "string"
+     }
+    },
+    "required": [
+     "publicKey",
+     "attestationCert"
+    ],
+    "title": "u2f.properties",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o46432",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 311,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Other",
+    "description": "Other Items provided annually",
+    "type": "object",
+    "properties": {
+     "nonResidentLandlord": {
+      "title": "Non Resident Landlord Declaration",
+      "description": "An explicit declaration that the user is a Non-Resident Landlord. The default is FALSE",
+      "type": "boolean",
+      "example": "true"
+     },
+     "rarJointLet": {
+      "title": "rarJointLet",
+      "description": "A notification that the Rent A Room income (RAR) is shared with another individual",
+      "type": "boolean",
+      "example": "true"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o37724",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 538,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Image",
+    "description": "An Image",
+    "type": "object",
+    "properties": {
+     "doc_type": {
+      "type": "string"
+     },
+     "title": {
+      "type": "string"
+     },
+     "mimeType": {
+      "enum": [
+       "image/jpeg",
+       "image/png"
+      ]
+     },
+     "data": {
+      "title": "Image Data",
+      "type": "string",
+      "media": {
+       "binaryEncoding": "base64",
+       "type": {
+        "enum": [
+         "image/jpeg",
+         "image/png"
+        ]
+       }
+      }
+     }
+    },
+    "required": [
+     "data",
+     "mimeType"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o80790",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 282,
+   "schema": {
+    "title": "Parameter Publisher",
+    "required": [
+     "publisher_type",
+     "outputmap"
+    ],
+    "id": "parameter_publisher",
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "publisher_type": {
+      "default": "frompar-pub",
+      "enum": [
+       "frompar-pub"
+      ],
+      "type": "string"
+     },
+     "outputmap": {
+      "type": "object"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o73033",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 350,
+   "schema": {
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "$id": "http://www.pucomex.serpro.gov.br/lpco/deferir_prorrogacao_resp.schema.json",
+    "properties": {
+     "situacao": {
+      "type": "object",
+      "properties": {
+       "id": {
+        "type": "string"
+       },
+       "descricao": {
+        "type": "string"
+       }
+      }
+     },
+     "novaDataFimVigencia": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o61536",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 427,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Event",
+    "description": "Festival event schema",
+    "type": "object",
+    "required": [
+     "uuid",
+     "title"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "uuid": {
+      "$ref": "#/definitions/uuid"
+     },
+     "owner": {
+      "$ref": "#/definitions/uuid"
+     },
+     "title": {
+      "type": "string",
+      "maxLength": 255,
+      "description": "event title"
+     }
+    },
+    "definitions": {
+     "uuid": {
+      "type": "string",
+      "pattern": "[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o90919",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 528,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Celium node request",
+    "description": "Format of requests to Celium nodes",
+    "type": "object",
+    "properties": {
+     "commands": {
+      "description": "Array of commands",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+       "type": "object",
+       "properties": {
+        "name": {
+         "description": "Name of command",
+         "type": "string"
+        },
+        "params": {
+         "description": "Array of command params with key => value pairs",
+         "type": "object"
+        }
+       },
+       "required": [
+        "name"
+       ]
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o32502",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 548,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "description": "The uuid of the chapter"
+     },
+     "slug": {
+      "type": "string",
+      "description": "The slug of the chapter"
+     },
+     "title": {
+      "type": "string",
+      "description": "The title of the chapter"
+     },
+     "text": {
+      "type": "string",
+      "description": "The text of the chapter"
+     },
+     "parentSlug": {
+      "type": "string",
+      "description": "The slug of the chapter's parent chapter"
+     },
+     "previousSlug": {
+      "type": "string",
+      "description": "The slug of the chapter's previous sibling"
+     },
+     "nextSlug": {
+      "type": "string",
+      "description": "The slug of the chapter's next sibling"
+     }
+    },
+    "claroline": {
+     "ids": [
+      "id"
+     ]
+    }
+   }
+  },
+  {
+   "config": "Github_medium",
+   "split": "train",
+   "id": "o91036",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 524,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "definitions": {},
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "signing-key": {
+      "additionalProperties": false,
+      "properties": {
+       "data": {
+        "type": "string"
+       },
+       "encoding": {
+        "type": "string"
+       },
+       "type": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "data",
+       "type"
+      ],
+      "type": "object"
+     },
+     "verifying-key": {
+      "additionalProperties": false,
+      "properties": {
+       "data": {
+        "type": "string"
+       },
+       "encoding": {
+        "type": "string"
+       },
+       "type": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "data",
+       "type"
+      ],
+      "type": "object"
+     }
+    },
+    "required": [
+     "id"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o79561",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema",
+   "gpt2_tokens": 250,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "definitions": {
+     "operation": {
+      "enum": [
+       "insert",
+       "update",
+       "delete"
+      ]
+     }
+    },
+    "type": "object",
+    "properties": {
+     "operation": {
+      "$ref": "#/definitions/operation"
+     }
+    },
+    "required": [
+     "operation"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o84353",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 390,
+   "schema": {
+    "description": "Entity sent when creating a new user",
+    "properties": {
+     "email": {
+      "_format": "email",
+      "description": "The email address of the user",
+      "type": "string",
+      "unique": true
+     },
+     "password": {
+      "description": "A password for identifying the user.",
+      "minLength": 6,
+      "type": "string"
+     },
+     "username": {
+      "description": "Username used when locally logging in.",
+      "maxLength": 30,
+      "minLength": 3,
+      "type": "string",
+      "unique": true
+     }
+    },
+    "required": [
+     "username",
+     "password",
+     "email"
+    ],
+    "title": "User Registration",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o73946",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 346,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "JSON schema for Azure Webjobs collection files",
+    "type": "object",
+    "properties": {
+     "WebJobs": {
+      "description": "A list of Azure Webjobs.",
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "filePath": {
+         "type": "string"
+        }
+       },
+       "additionalProperties": false
+      }
+     }
+    },
+    "required": [
+     "WebJobs"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o32481",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 501,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": "string",
+      "description": "The organization id"
+     },
+     "name": {
+      "type": [
+       "null",
+       "string"
+      ],
+      "description": "The organization name",
+      "minLength": 1
+     },
+     "code": {
+      "type": "string",
+      "description": "The organization code",
+      "minLength": 1
+     },
+     "email": {
+      "type": [
+       "null",
+       "string"
+      ],
+      "description": "The organization email"
+     }
+    },
+    "claroline": {
+     "ids": [
+      "id",
+      "code",
+      "email"
+     ]
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o90351",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 439,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://judkins.house/apis/k2/v1/autoScalingConfig.json",
+    "$$target": "autoScalingConfig.json",
+    "title": "AutoScaling configurations",
+    "description": "Describes the autoScaling configuration for a nodePool.",
+    "properties": {
+     "minNodes": {
+      "description": "Minimum number of nodes the cluster auto-scaler should scale down to.",
+      "minimum": 1,
+      "type": "number"
+     },
+     "maxNodes": {
+      "description": "Maximum number of nodes the cluster auto-scaler should scale up to.",
+      "minimum": 2,
+      "type": "number"
+     },
+     "enabled": {
+      "description": "Enable or disable the cluster auto-scaler addon.",
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "minNodes",
+     "maxNodes",
+     "enabled"
+    ],
+    "additionalProperties": false,
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o80622",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 160,
+   "schema": {
+    "additionalProperties": false,
+    "description": "Transport the value of an input",
+    "minProperties": 1,
+    "properties": {
+     "v": {
+      "description": "value as integer",
+      "type": "integer"
+     }
+    },
+    "required": [
+     "v"
+    ],
+    "title": "Single value schema",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o73969",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 448,
+   "schema": {
+    "id": "http://schlothauer.de/schemas/simple_gis_object.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "GIS_object",
+    "description": "A GIS object is an application defined type that owns GIS coordinates",
+    "type": "object",
+    "properties": {
+     "gis": {
+      "description": "Definition of an object that owns GIS coordinates. At minimum an object of this type owns one of the props",
+      "type": "object",
+      "properties": {
+       "center": {
+        "type": "string"
+       },
+       "area": {
+        "type": "string"
+       },
+       "route": {
+        "type": "string"
+       }
+      }
+     }
+    },
+    "required": [
+     "gis"
+    ],
+    "version": 1
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o12617",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 479,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+     "created": {
+      "pattern": "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}",
+      "type": "string"
+     },
+     "description": {
+      "type": "string"
+     },
+     "id": {
+      "type": "integer"
+     },
+     "modified": {
+      "pattern": "\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{6}",
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "resource_uri": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "resource_uri",
+     "created",
+     "modified",
+     "name",
+     "description",
+     "id"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o63147",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema",
+   "gpt2_tokens": 554,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "Annotation Value Resource",
+    "description": "A single annotation value within a BEL Annotation.",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "annotation_value"
+    ],
+    "properties": {
+     "annotation_value": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "type",
+       "identifier",
+       "name"
+      ],
+      "properties": {
+       "type": {
+        "type": "string"
+       },
+       "identifier": {
+        "type": "string"
+       },
+       "name": {
+        "type": "string"
+       },
+       "match_text": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o42986",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 294,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Sound asset",
+    "description": "Specification for the asset type for loading sound files",
+    "type": "object",
+    "properties": {
+     "asset_type": {
+      "type": "string",
+      "pattern": "sound"
+     },
+     "sound_file": {
+      "type": "string",
+      "description": "The path of the file relative to the current asset directory"
+     },
+     "file_type": {
+      "type": "string",
+      "description": "The type of file to load",
+      "pattern": "OGG"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o65305",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 506,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "_id": "account_config.paypal",
+    "description": "Schema for paypal account_config",
+    "properties": {
+     "currency": {
+      "default": "USD",
+      "description": "currency you acept payments in",
+      "type": "string"
+     },
+     "enabled": {
+      "default": false,
+      "description": "PayPal IPN processing enabled",
+      "type": "boolean"
+     },
+     "environment": {
+      "default": "production",
+      "description": "paypal env. type - sandbox or production",
+      "type": "string"
+     },
+     "hosted_button_id": {
+      "default": "hosted_button_id",
+      "description": "hosted_button_id of configured button",
+      "type": "string"
+     },
+     "receiver_id": {
+      "default": "receiver_id",
+      "description": "id of your paypal account",
+      "type": "string"
+     }
+    },
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o50163",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 288,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "User",
+    "description": "Chat user JSON schema",
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 12
+     },
+     "avatar": {
+      "type": "string",
+      "format": "uri"
+     },
+     "role": {
+      "type": "string"
+     },
+     "isConnected": {
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o48244",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 219,
+   "schema": {
+    "properties": {
+     "Id": {
+      "_id": "Id",
+      "type": "string"
+     },
+     "Warnings": {
+      "_id": "Warnings",
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     }
+    },
+    "required": [
+     "Id"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o11187",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 218,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Code Status Response Schema",
+    "description": "The schema for the results of code evaluation",
+    "type": "object",
+    "properties": {
+     "status": {
+      "type": "string",
+      "description": "The status of your code"
+     },
+     "prize": {
+      "type": "string",
+      "description": "The prize won, if any"
+     }
+    },
+    "additionalProperties": true
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o63950",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 201,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "foo": {
+      "type": "string",
+      "default": "foo"
+     },
+     "bar": {
+      "type": "string",
+      "default": "bar"
+     }
+    },
+    "required": [
+     "foo",
+     "bar"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o28210",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 502,
+   "schema": {
+    "description": "An assignment made by the Seller of a SVLAN ID to a UNI or ENNI endpoint.",
+    "properties": {
+     "objectType": {
+      "description": "The type of the object, svlanIdAssignment.",
+      "enum": [
+       "svlanIdAssignment"
+      ],
+      "type": "string"
+     },
+     "sellerEnniId": {
+      "description": "The id assigned by the Seller for the ENNI for this SVLAN ID assignment.",
+      "maxLength": 45,
+      "type": "string"
+     },
+     "sellerUniId": {
+      "description": "The id assigned by the Seller for the UNI for this SVLAN ID assignment.",
+      "maxLength": 45,
+      "type": "string"
+     },
+     "svlanId": {
+      "description": "The SVLAN ID assigned to this UNI or ENNI",
+      "minimum": 0,
+      "type": "integer"
+     }
+    },
+    "required": [
+     "objectType",
+     "svlanId"
+    ],
+    "title": "svlanIdAssignment",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o90886",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 505,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+     "address": {
+      "type": "object",
+      "properties": {
+       "street_address": {
+        "type": "string"
+       },
+       "city": {
+        "type": "string"
+       },
+       "state": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "street_address",
+       "city",
+       "state"
+      ]
+     }
+    },
+    "type": "object",
+    "properties": {
+     "billing_address": {
+      "$ref": "#/definitions/address"
+     },
+     "shipping_address": {
+      "$ref": "#/definitions/address"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o76479",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 531,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "description": "get noop response",
+    "properties": {
+     "links": {
+      "properties": {
+       "self": {
+        "properties": {
+         "href": {
+          "_format": "uri",
+          "type": "string"
+         }
+        },
+        "required": [
+         "href"
+        ],
+        "type": "object"
+       }
+      },
+      "required": [
+       "self"
+      ],
+      "type": "object"
+     }
+    },
+    "required": [
+     "links"
+    ],
+    "title": "get noop response",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o85467",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 354,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "https://raw.githubusercontent.com/washingtonpost/ans-schema/master/src/main/resources/schema/ans/0.10.1/traits/trait_syndication.json",
+    "title": "Syndication",
+    "type": "object",
+    "description": "Key-boolean pair of syndication services where this article may go",
+    "patternProperties": {
+     ".*": {
+      "type": "boolean"
+     }
+    },
+    "properties": {
+     "external_distribution": {
+      "description": "Necessary for fulfilling contractual agreements with third party Globe and Mail clients",
+      "type": "boolean"
+     },
+     "search": {
+      "description": "Necessary so that we can filter out all articles that editorial has deemed should not be discoverable via search",
+      "type": "boolean"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o44363",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 321,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://schema.envirocar.org/phenomenon.json#",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "name",
+     "unit"
+    ],
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "unit": {
+      "type": "string"
+     },
+     "created": {
+      "type": "string",
+      "format": "date-time"
+     },
+     "modified": {
+      "type": "string",
+      "format": "date-time"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o39871",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 244,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Test configuration",
+    "type": "object",
+    "properties": {
+     "spec": {
+      "type": "object",
+      "properties": {
+       "replicas": {
+        "type": "integer",
+        "minimum": 1
+       }
+      }
+     }
+    },
+    "required": [
+     "spec"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o58618",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 313,
+   "schema": {
+    "$id": "https://example.com/restapi/HasBinaryFormats.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "HasBinaryFormats",
+    "type": "object",
+    "definitions": {
+     "BinaryFormat": {
+      "type": "string",
+      "format": "binary"
+     },
+     "ByteFormat": {
+      "type": "string",
+      "format": "byte"
+     }
+    },
+    "properties": {
+     "binaryFormat": {
+      "$ref": "#/definitions/BinaryFormat"
+     },
+     "byteFormat": {
+      "$ref": "#/definitions/ByteFormat"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o12078",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 573,
+   "schema": {
+    "additionalProperties": true,
+    "properties": {
+     "body": {
+      "type": "string"
+     },
+     "headers": {
+      "additionalProperties": true,
+      "properties": {
+       "X-Twilio-Signature": {
+        "pattern": "^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)$",
+        "type": "string"
+       }
+      },
+      "type": "object"
+     },
+     "httpMethod": {
+      "pattern": "^POST$",
+      "type": "string"
+     },
+     "path": {
+      "pattern": "^/sms$",
+      "type": "string"
+     }
+    },
+    "required": [
+     "path",
+     "httpMethod",
+     "headers"
+    ],
+    "self": {
+     "format": "jsonschema",
+     "name": "product-photos/receive",
+     "vendor": "com.nordstrom",
+     "version": "1-0-0"
+    },
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o43977",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 256,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "DataTransferRequest",
+    "type": "object",
+    "properties": {
+     "vendorId": {
+      "type": "string",
+      "maxLength": 255
+     },
+     "messageId": {
+      "type": "string",
+      "maxLength": 50
+     },
+     "data": {
+      "type": "string"
+     }
+    },
+    "additionalProperties": false,
+    "required": [
+     "vendorId"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o10467",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 481,
+   "schema": {
+    "description": "The schema defining a POST request to create a new project",
+    "name": "/",
+    "properties": {
+     "description": {
+      "name": "description",
+      "title": "Description of the project",
+      "type": "string"
+     },
+     "members": {
+      "items": {
+       "type": "string"
+      },
+      "minItems": 0,
+      "type": "array",
+      "_uniqueItems": true
+     },
+     "name": {
+      "_id": "name",
+      "name": "name",
+      "title": "Name for the project",
+      "type": "string"
+     },
+     "owner": {
+      "description": "The name of the project owner",
+      "title": "The Owner",
+      "type": "string"
+     }
+    },
+    "required": [
+     "name",
+     "description"
+    ],
+    "title": "Root schema",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o36270",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 549,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://schemas.digitallinguistics.io/Tags-2.1.0.json",
+    "title": "Tags",
+    "type": "object",
+    "description": "A tag is a piece of metadata that can be applied to almost any DLx object. The tags object contains a set of tags for this resource as pairs of attributes and values. For example, a researcher might tag a suffix with the attribute `person`, and a value of `3`, to indicate that the particular suffix is 3rd Person. If no value is needed, the value may also be set to `true` or `false` (but not `null`), however users are encouraged to use both attribute and value for every tag, since this helps identify the larger category that the tag value belongs to. Note: The Tags object does not have a `type` property.",
+    "additionalProperties": {
+     "title": "Tag",
+     "description": "A single tag, as an attribute-value pair.",
+     "oneOf": [
+      {
+       "type": "string"
+      },
+      {
+       "type": "boolean"
+      },
+      {
+       "type": "number"
+      }
+     ]
+    },
+    "examples": [
+     {
+      "role": "subject",
+      "activated": true
+     },
+     {
+      "VOT": 0.012
+     }
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o53019",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 337,
+   "schema": {
+    "description": "Schema definition of a pokemon Type",
+    "properties": {
+     "slot": {
+      "type": "integer"
+     },
+     "type": {
+      "properties": {
+       "name": {
+        "type": "string"
+       },
+       "url": {
+        "format": "url",
+        "type": "string"
+       }
+      },
+      "required": [],
+      "type": "object"
+     }
+    },
+    "required": [],
+    "title": "type",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o33193",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 555,
+   "schema": {
+    "properties": {
+     "city": {
+      "type": "string"
+     },
+     "closetime": {
+      "type": "string"
+     },
+     "days": {
+      "type": "string"
+     },
+     "latitude": {
+      "type": "number"
+     },
+     "longitude": {
+      "type": "number"
+     },
+     "name": {
+      "type": "string"
+     },
+     "opentime": {
+      "type": "string"
+     },
+     "sitecoordinator": {
+      "type": "integer"
+     },
+     "sitestatus": {
+      "type": "string"
+     },
+     "slug": {
+      "type": "string"
+     },
+     "state": {
+      "type": "string"
+     },
+     "street": {
+      "type": "string"
+     },
+     "zip": {
+      "type": "string"
+     }
+    },
+    "title": "ValidSite",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o34374",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 329,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "schema for a list of authors",
+    "type": "object",
+    "properties": {
+     "author": {
+      "type": "object",
+      "properties": {
+       "id": {
+        "type": "integer"
+       },
+       "first_name": {
+        "type": "string"
+       },
+       "last_name": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o39082",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 428,
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "$schema": {
+      "type": "string"
+     },
+     "$tool": {
+      "const": "json2ts",
+      "description": "Must be set to json2ts.",
+      "type": "string"
+     },
+     "dist": {
+      "description": "The output file path (relative to the pwd), support .ts file.",
+      "type": "string"
+     },
+     "src": {
+      "description": "Input json files(Glob), relative to the pwd.",
+      "items": {
+       "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+     }
+    },
+    "required": [
+     "$tool",
+     "src",
+     "dist"
+    ],
+    "title": "json2ts Config",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o14490",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 444,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Action",
+    "type": "object",
+    "properties": {
+     "target": {
+      "type": "string",
+      "description": "The **generatedIdentifier** given by iFLUX Server. See the API `GET actionTargets` or GET `actionTargets/:id`"
+     },
+     "type": {
+      "type": "string",
+      "description": "Valid URL defining the action type."
+     },
+     "properties": {
+      "type": "object",
+      "description": "Free object that contains the transformation done by the rule evaluation. If no transformation, the event is sent as the properties. In this case, refers to `POST /events`.",
+      "properties": {
+       "*": {
+        "type": "object"
+       }
+      }
+     }
+    },
+    "required": [
+     "target",
+     "type",
+     "properties"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o50970",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 184,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+     "bar": {
+      "type": "string"
+     }
+    },
+    "type": "object",
+    "required": [
+     "foo"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "foo": {
+      "$ref": "#/definitions/bar"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o56866",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 585,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "@type": "OfferItemCondition",
+    "@context": "http://schema.org/",
+    "description": "Schema.org OfferItemCondition",
+    "type": "object",
+    "definitions": {
+     "Thing": {
+      "type": "object",
+      "properties": {
+       "additionalType": {
+        "description": "An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+        "type": "string",
+        "format": "uri"
+       },
+       "description": {
+        "description": "A short description of the item.",
+        "type": "string"
+       },
+       "image": {
+        "description": "URL of an image of the item.",
+        "type": "string",
+        "format": "uri"
+       },
+       "name": {
+        "description": "The name of the item.",
+        "type": "string"
+       },
+       "url": {
+        "description": "URL of the item.",
+        "type": "string",
+        "format": "uri"
+       }
+      }
+     }
+    },
+    "allOf": [
+     {
+      "$ref": "#/definitions/Thing"
+     }
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o26992",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 434,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "h": {
+      "title": "Height",
+      "description": "Image Height",
+      "type": "number"
+     },
+     "w": {
+      "title": "Width",
+      "description": "Image Width",
+      "type": "number"
+     },
+     "id": {
+      "title": "ID",
+      "description": "Image ID",
+      "type": "string"
+     },
+     "p": {
+      "title": "Image name",
+      "description": "Image name",
+      "type": "string"
+     },
+     "u": {
+      "title": "Image path",
+      "description": "Image path",
+      "type": "string"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o71448",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 210,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "host": {
+      "description": "the host name",
+      "type": "string",
+      "default": "localhost"
+     },
+     "port": {
+      "description": "the port where the app should be running",
+      "type": "integer",
+      "default": 8080
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o58915",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 359,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "notification": {
+      "properties": {
+       "person_id": {
+        "type": "integer"
+       },
+       "door_id": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "person_id",
+       "door_id"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "required": [
+     "notification"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o14451",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 366,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "sensorId": {
+      "type": "string"
+     },
+     "temperature": {
+      "type": "object",
+      "properties": {
+       "old": {
+        "type": "number"
+       },
+       "new": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o32487",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 518,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "id": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "The role id"
+     },
+     "name": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "The role name",
+      "minLength": 1
+     },
+     "translationKey": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "The role displayed value",
+      "minLength": 1
+     }
+    },
+    "claroline": {
+     "requiredAtCreation": [
+      "translationKey"
+     ],
+     "ids": [
+      "id",
+      "name"
+     ]
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o20458",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 178,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://localhost:3000/schemas/register-response.json#",
+    "title": "Register response",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "email": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o25701",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 261,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "required": [
+     "locale"
+    ],
+    "properties": {
+     "locale": {
+      "type": "string",
+      "minLength": 1
+     },
+     "system_type": {
+      "type": "string",
+      "enum": [
+       "local",
+       "remote",
+       "docker"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o41717",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 400,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "HealthDescriptor",
+    "description": "Health for an instance",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "srvcId": {
+      "description": "Service ID, normally same as Module ID",
+      "type": "string"
+     },
+     "instId": {
+      "description": "Instance ID, unique on node",
+      "type": "string"
+     },
+     "healthMessage": {
+      "description": "Health message",
+      "type": "string"
+     },
+     "healthStatus": {
+      "description": "Whether healthy",
+      "type": "boolean"
+     }
+    },
+    "required": [
+     "srvcId",
+     "instId",
+     "healthMessage",
+     "healthStatus"
+    ]
+   }
+  },
+  {
+   "config": "Github_medium",
+   "split": "train",
+   "id": "o45404",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 590,
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "entryFile": {
+      "default": "public_api",
+      "description": "The path to create the library's public API file.",
+      "format": "path",
+      "type": "string"
+     },
+     "name": {
+      "$default": {
+       "$source": "argv",
+       "index": 0
+      },
+      "description": "The name of the library.",
+      "type": "string"
+     },
+     "prefix": {
+      "alias": "p",
+      "default": "lib",
+      "description": "The prefix to apply to generated selectors.",
+      "format": "html-selector",
+      "type": "string"
+     },
+     "skipPackageJson": {
+      "default": false,
+      "description": "Do not add dependencies to package.json.",
+      "type": "boolean"
+     },
+     "skipTsConfig": {
+      "default": false,
+      "description": "Do not update tsconfig.json for development experience.",
+      "type": "boolean"
+     }
+    },
+    "required": [],
+    "title": "Library Options Schema",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o21393",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 234,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "bulk_publishing": {
+      "type": "boolean"
+     },
+     "links": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {}
+     },
+     "previous_version": {
+      "type": "string"
+     }
+    },
+    "definitions": {}
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o89900",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 233,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "dictionary": {
+      "type": "object",
+      "patternProperties": {
+       "^[a-zA-Z0-9]{1,10}$": {
+        "type": "string"
+       }
+      },
+      "additionalProperties": false
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o8462",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 61,
+   "schema": {
+    "title": "Hardware Inventory Information",
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "minProperties": 1
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o69579",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 331,
+   "schema": {
+    "id": "http://plugged-in.x-c-o-d-e.com/schema/configuration+v1#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Describes the plugged-in configuration",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+     "context",
+     "provides"
+    ],
+    "properties": {
+     "context": {
+      "description": "The plugin context",
+      "type": "string"
+     },
+     "provides": {
+      "$ref": "#/definitions/provides"
+     }
+    },
+    "definitions": {
+     "provides": {
+      "description": "Provides object",
+      "type": "object"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o64737",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 317,
+   "schema": {
+    "$id": "http://raw.githubusercontent.com/oasis-open/cti-stix2-json-schemas/stix2.1/schemas/common/kill-chain-phase.json",
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "kill-chain-phase",
+    "description": "The kill-chain-phase represents a phase in a kill chain.",
+    "type": "object",
+    "properties": {
+     "kill_chain_name": {
+      "type": "string",
+      "description": "The name of the kill chain."
+     },
+     "phase_name": {
+      "type": "string",
+      "description": "The name of the phase in the kill chain."
+     }
+    },
+    "required": [
+     "kill_chain_name",
+     "phase_name"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o25953",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 462,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "subA": {
+      "$ref": "#/definitions/MySubObject"
+     },
+     "subB": {
+      "$ref": "#/definitions/MySubObject"
+     }
+    },
+    "required": [
+     "subA",
+     "subB"
+    ],
+    "definitions": {
+     "MySubObject": {
+      "type": "object",
+      "properties": {
+       "propA": {
+        "type": "number"
+       },
+       "propB": {
+        "type": "number"
+       }
+      },
+      "required": [
+       "propA",
+       "propB"
+      ]
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o57603",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 491,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "O3D3xx clipping cuboid configuration",
+    "type": "object",
+    "properties": {
+     "Xmin": {
+      "type": "number",
+      "default": 0
+     },
+     "Xmax": {
+      "type": "number",
+      "default": 0
+     },
+     "Ymin": {
+      "type": "number",
+      "default": 0
+     },
+     "Ymax": {
+      "type": "number",
+      "default": 0
+     },
+     "Zmin": {
+      "type": "number",
+      "default": 0
+     },
+     "Zmax": {
+      "type": "number",
+      "default": 0
+     }
+    },
+    "required": [
+     "XMin",
+     "XMax",
+     "YMin",
+     "YMax",
+     "ZMin",
+     "ZMax"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o44299",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 365,
+   "schema": {
+    "description": "The preview object associated to the media. An instance of <a href=\"#scene-media-preview\">a scene media preview.</a>",
+    "properties": {
+     "tile": {
+      "description": "The size of a tile, which corresponds to the width and the height of a tile. It will be used with the width and height to compute the value of the <code>{x}</code> and <code>{y}</code> patterns.",
+      "example": 512,
+      "title": "Tile",
+      "type": "number"
+     },
+     "url": {
+      "description": "The URL for the preview of the media, with a <code>{face}</code> parameter to specify the face when parsing. Only one image per face is authorized, so no other parameter can be specified.",
+      "example": "multi/preview/{face}.jpg",
+      "title": "URL",
+      "type": "string"
+     }
+    },
+    "title": "SceneMediaPreviewConfig",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o90306",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema",
+   "gpt2_tokens": 528,
+   "schema": {
+    "title": "sizeStop",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "A `sizeStop` object describes the size of the symbol at various values of the expression.",
+    "properties": {
+     "label": {
+      "type": "string",
+      "description": "Value if a label is needed on the legend for a stop."
+     },
+     "size": {
+      "type": "number",
+      "description": "Specifies the marker size to use for the specified value."
+     },
+     "value": {
+      "type": "number",
+      "description": "The value to be mapped to a size."
+     }
+    },
+    "required": [
+     "size",
+     "value"
+    ],
+    "additionalProperties": false,
+    "esriDocumentation": {
+     "examples": [
+      {
+       "code": {
+        "stop": {
+         "value": 0,
+         "size": 255
+        }
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o17641",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 574,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+     "MyMap1": {
+      "additionalProperties": {
+       "$ref": "#/definitions/MyType"
+      },
+      "type": "object"
+     },
+     "MyMap2": {
+      "additionalProperties": {
+       "type": [
+        "string",
+        "number"
+       ]
+      },
+      "description": "The additionalProperties annotation should be ignored",
+      "type": "object"
+     },
+     "MyType": {
+      "type": "object"
+     }
+    },
+    "properties": {
+     "map1": {
+      "$ref": "#/definitions/MyMap1"
+     },
+     "map2": {
+      "$ref": "#/definitions/MyMap2"
+     },
+     "map3": {
+      "$ref": "#/definitions/MyMap2"
+     }
+    },
+    "required": [
+     "map1",
+     "map2",
+     "map3"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o44187",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 459,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "schema for type code",
+    "type": "object",
+    "properties": {
+     "Z1K1": {
+      "enum": [
+       "Z16"
+      ]
+     },
+     "Z1K2": {
+      "type": "string",
+      "pattern": "^[a-z_A-Z0-9]+$"
+     },
+     "Z1K3": {},
+     "Z1K4": {},
+     "Z1K5": {},
+     "Z16K1": {
+      "enum": [
+       "javascript",
+       "python"
+      ]
+     },
+     "Z16K2": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "Z1K1",
+     "Z16K1",
+     "Z16K2"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o70022",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 188,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Savegame",
+    "description": "A saved game from Robbie",
+    "type": "object",
+    "properties": {
+     "floors": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o14471",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 223,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Errors",
+    "description": "Define the errors for the API",
+    "type": "object",
+    "patternProperties": {
+     "[a-zA-Z]+": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      },
+      "minItems": 1,
+      "_uniqueItems": true
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o8465",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 49,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "minProperties": 1
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o49986",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema",
+   "gpt2_tokens": 489,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "$license": [
+     "https://creativecommons.org/licenses/by-sa/3.0/legalcode",
+     "http://www.apache.org/licenses/LICENSE-2.0"
+    ],
+    "description": "An Address following the convention of http://microformats.org/wiki/hcard",
+    "type": "object",
+    "properties": {
+     "post-office-box": {
+      "type": "string"
+     },
+     "extended-address": {
+      "type": "string"
+     },
+     "street-address": {
+      "type": "string"
+     },
+     "locality": {
+      "type": "string"
+     },
+     "region": {
+      "type": "string"
+     },
+     "postal-code": {
+      "type": "string"
+     },
+     "country-name": {
+      "type": "string"
+     }
+    },
+    "dependencies": {
+     "post-office-box": [
+      "street-address"
+     ],
+     "extended-address": [
+      "street-address"
+     ],
+     "street-address": [
+      "region"
+     ],
+     "locality": [
+      "region"
+     ],
+     "region": [
+      "country-name"
+     ]
+    },
+    "required": [
+     "locality",
+     "region",
+     "country-name"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o34462",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 289,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "nome": {
+      "type": "string"
+     },
+     "email": {
+      "type": "string"
+     },
+     "senha": {
+      "type": "string"
+     },
+     "telefones": {
+      "type": "array",
+      "items": {}
+     }
+    },
+    "required": [
+     "nome",
+     "email",
+     "senha",
+     "telefones"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o69533",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 316,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "_links": {
+      "type": "object",
+      "patternProperties": {
+       "": {
+        "type": "object",
+        "properties": {
+         "href": {
+          "type": "string"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o36461",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 200,
+   "schema": {
+    "id": "http://localhost:1203/base/test/test-schema.json#",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "test json schema",
+    "type": "object",
+    "properties": {
+     "value": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+     }
+    },
+    "additionalProperties": false,
+    "required": [
+     "value"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o66141",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 222,
+   "schema": {
+    "description": "ATLAS Analysis Limits",
+    "title": "Limits",
+    "properties": {
+     "CLs_exp": {
+      "items": {
+       "type": "number"
+      },
+      "type": "array"
+     },
+     "CLs_obs": {
+      "type": "number"
+     }
+    },
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "id": "limits"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o43222",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 502,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "RewardSet": {
+      "type": "string"
+     },
+     "RewardSourceType": {
+      "type": "integer"
+     },
+     "SpartanRankSource": {
+      "type": [
+       "integer",
+       "null"
+      ]
+     },
+     "CommendationLevelId": {
+      "type": [
+       "string",
+       "null"
+      ]
+     },
+     "CommendationSource": {
+      "type": [
+       "string",
+       "null"
+      ]
+     }
+    },
+    "required": [
+     "RewardSet",
+     "RewardSourceType",
+     "SpartanRankSource",
+     "CommendationLevelId",
+     "CommendationSource"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o8438",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 476,
+   "schema": {
+    "properties": {
+     "ID": {
+      "maxLength": 8,
+      "minLength": 4,
+      "type": "string"
+     },
+     "age": {
+      "maximum": 100,
+      "minimum": 16,
+      "multipleOf": 4,
+      "type": "integer"
+     },
+     "grades": {
+      "items": {
+       "type": "integer"
+      },
+      "maxItems": 5,
+      "minItems": 2,
+      "type": "array",
+      "_uniqueItems": true
+     },
+     "item": {
+      "minLength": 2,
+      "pattern": "^[a-zA-Z]+$",
+      "type": "string"
+     }
+    },
+    "required": [
+     "ID",
+     "age",
+     "grades",
+     "item"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o7291",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 554,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+     "dead_features": {
+      "description": "map of declared optional features that are dead with the time points in which are dead in case of evolution, empty list otherwise.",
+      "additionalProperties": {
+       "type": "array",
+       "description": "List of time points in which optional feature are dead (i.e., can not be selected). Empty in case of no evolution.",
+       "items": {
+        "type": "integer"
+       }
+      }
+     },
+     "false_optionals": {
+      "description": "map of declared optional features that are false optionals with the time points in which are false optionals in case of evolution, empty list otherwise.",
+      "additionalProperties": {
+       "type": "array",
+       "description": "List of time points in which optional feature are false optionals (i.e., must be selected). Empty in case of no evolution.",
+       "items": {
+        "type": "integer"
+       }
+      }
+     }
+    },
+    "type": "object",
+    "required": [
+     "dead_features",
+     "false_optionals"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o21487",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 376,
+   "schema": {
+    "additionalFields": false,
+    "properties": {
+     "api_method": {
+      "type": "string"
+     },
+     "api_method_arguments": {
+      "properties": {
+       "idGoal": {
+        "type": "string"
+       }
+      },
+      "type": "object"
+     },
+     "frequency": {
+      "type": "string"
+     },
+     "period": {
+      "type": "string"
+     },
+     "site_id": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "site_id"
+    ],
+    "title": "Piwik Core Collector Query",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o48814",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 462,
+   "schema": {
+    "properties": {
+     "health": {
+      "maximum": 3,
+      "minimum": 0,
+      "title": "Node health status",
+      "type": "integer"
+     },
+     "help": {
+      "title": "Node health check output",
+      "type": "string"
+     },
+     "host_ip": {
+      "pattern": "^[\\w\\.]+$",
+      "title": "Host IP from ip-detect script",
+      "type": "string"
+     },
+     "role": {
+      "enum": [
+       "master",
+       "agent",
+       "unknown"
+      ],
+      "title": "Node Type",
+      "type": "string"
+     }
+    },
+    "required": [
+     "host_ip",
+     "role",
+     "health"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o37088",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 570,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://mcda.drugis.org/eventsSampleSizeEffect.json#",
+    "title": "MCDA events, sample size effect for the performance table entry of absolute data",
+    "type": "object",
+    "required": [
+     "type",
+     "value",
+     "input"
+    ],
+    "additionalProperties": false,
+    "properties": {
+     "type": {
+      "type": "string",
+      "enum": [
+       "exact"
+      ]
+     },
+     "value": {
+      "type": "number"
+     },
+     "input": {
+      "type": "object",
+      "required": [
+       "events",
+       "sampleSize"
+      ],
+      "additionalProperties": false,
+      "properties": {
+       "events": {
+        "type": "number"
+       },
+       "sampleSize": {
+        "type": "number"
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o58216",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 339,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Text",
+    "description": "Free-form, usually human-readable, text.",
+    "type": "object",
+    "properties": {
+     "format": {
+      "enum": [
+       "text",
+       "html",
+       "asciidoc"
+      ],
+      "description": "Indicates how the content should be parsed."
+     },
+     "href": {
+      "type": "string",
+      "description": "References a related document containing human readable text."
+     },
+     "content": {
+      "type": "string",
+      "description": "The text contents."
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_medium",
+   "split": "train",
+   "id": "o71317",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 595,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "interface_type": {
+      "$id": "/properties/interface_type",
+      "title": "Interface Type",
+      "type": "string",
+      "default": "physical",
+      "enum": [
+       "physical",
+       "logical"
+      ]
+     },
+     "interface_names": {
+      "$id": "/properties/interface_names",
+      "title": "Interface Names",
+      "type": "array",
+      "items": {
+       "$id": "/properties/interface_names/items",
+       "type": "string",
+       "pattern": "^([a-z]{2,3}-[0-9]{1,}/[0-9]{1,}/[0-9]{1,}(.[0-9]{1,})?)$",
+       "title": "Interface Name"
+      },
+      "examples": [
+       "ge-0/0/1",
+       "xe-0/0/0"
+      ]
+     }
+    },
+    "required": [
+     "interface_names"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o25199",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 284,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "properties": {
+     "anInteger": {
+      "type": "integer"
+     },
+     "aNumber": {
+      "type": "number"
+     },
+     "aBoolean": {
+      "type": "boolean"
+     },
+     "anObject": {
+      "type": "object"
+     },
+     "aString": {
+      "type": "string"
+     },
+     "anArray": {
+      "type": "array"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o7375",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 270,
+   "schema": {
+    "type": "object",
+    "properties": {
+     "selectedInstance": {
+      "type": "string"
+     },
+     "instances": {
+      "description": "The extra imported instance path",
+      "default": [],
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     }
+    },
+    "required": [
+     "instances",
+     "selectedInstance"
+    ],
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o49808",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 578,
+   "schema": {
+    "$license": [
+     "http://www.apache.org/licenses/LICENSE-2.0"
+    ],
+    "description": "Detailed information about the relationship between the authenticated user and another user.",
+    "javaInterfaces": [
+     "java.io.Serializable"
+    ],
+    "javaType": "org.apache.streams.twitter.pojo.Friendship",
+    "properties": {
+     "connections": {
+      "items": {
+       "enum": [
+        "following",
+        "following_requested",
+        "followed_by",
+        "none",
+        "blocking",
+        "muting"
+       ],
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "id": {
+      "type": "integer"
+     },
+     "id_str": {
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "screen_name": {
+      "type": "string"
+     }
+    },
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o21500",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 460,
+   "schema": {
+    "properties": {
+     "consulate": {
+      "description": "The consular level for the number of events",
+      "type": "string"
+     },
+     "percent": {
+      "description": "The percentage utilisation (between 0 and 100)",
+      "maximum": 100,
+      "minimum": 0,
+      "type": "number"
+     },
+     "period": {
+      "description": "The period described by each data point",
+      "enum": [
+       "second",
+       "minute",
+       "hour",
+       "day",
+       "week",
+       "month",
+       "year"
+      ]
+     }
+    },
+    "required": [
+     "percent",
+     "consulate",
+     "period"
+    ],
+    "title": "Usage of available hours by consulate",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o90253",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema",
+   "gpt2_tokens": 598,
+   "schema": {
+    "title": "orderByFields",
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "Object indicating the field display order for the related records and whether they should be sorted in ascending or descending order.",
+    "properties": {
+     "field": {
+      "type": "string",
+      "description": "The attribute value of the field selected that will drive the sorting of related records."
+     },
+     "order": {
+      "type": "string",
+      "description": "Set the ascending or descending sort order of the returned related records.",
+      "enum": [
+       "asc",
+       "desc"
+      ]
+     }
+    },
+    "esriDocumentation": {
+     "examples": [
+      {
+       "title": "orderByFields",
+       "code": {
+        "orderByFields": [
+         {
+          "field": "relationships/0/FieldName",
+          "order": "asc"
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o81662",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 499,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "resource_id": {
+     "type": "string"
+    },
+    "resource": {
+     "type": "object",
+     "additionalProperties": false,
+     "properties": {
+      "priority": {
+       "type": "integer",
+       "minimum": 0,
+       "maximum": 100
+      }
+     }
+    },
+    "verbs": {
+     "create": {
+      "required": [
+       "priority"
+      ]
+     },
+     "update": {
+      "required": [
+       "priority"
+      ]
+     }
+    },
+    "properties": {
+     "resource_id": {
+      "$ref": "#/resource_id"
+     },
+     "resource": {
+      "$ref": "#/resource"
+     }
+    },
+    "required": [
+     "resource_id",
+     "resource"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o89523",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 463,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "getQuote": {
+      "type": "object",
+      "properties": {
+       "request": {
+        "type": "object",
+        "properties": {
+         "symbol": {
+          "type": "string"
+         }
+        },
+        "required": [
+         "symbol"
+        ]
+       }
+      },
+      "required": [
+       "request"
+      ]
+     }
+    },
+    "required": [
+     "getQuote"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o84354",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 301,
+   "schema": {
+    "description": "Response when a token was successfully confirmed.",
+    "properties": {
+     "message": {
+      "description": "Success message",
+      "type": "string"
+     },
+     "previous_code": {
+      "description": "The previous email status code. The following are valid values:\n * `pending_registration` - Email address is to be confirmed after registration.\n * `pending_update` - Email address is to be confirmed after profile update.\n\n",
+      "enum": [
+       "pending_registration",
+       "pending_update"
+      ],
+      "type": "string"
+     }
+    },
+    "title": "Email Token Confirmation",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o81495",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 548,
+   "schema": {
+    "additionalProperties": false,
+    "description": "RS from firefightersPost",
+    "properties": {
+     "availableEquipment": {
+      "additionalItems": false,
+      "items": {
+       "additionalProperties": false,
+       "id": "0",
+       "properties": {
+        "name": {
+         "id": "name",
+         "minLength": 1,
+         "type": "string"
+        },
+        "quantity": {
+         "id": "quantity",
+         "type": "integer"
+        }
+       },
+       "type": "object"
+      },
+      "type": "array"
+     },
+     "availableUnits": {
+      "id": "availableUnits",
+      "type": "integer"
+     }
+    },
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o48517",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 363,
+   "schema": {
+    "properties": {
+     "grayscale8": {
+      "type": "string"
+     },
+     "keyvalue": {
+      "type": "string"
+     },
+     "labelmap": {
+      "type": "string"
+     },
+     "labels64": {
+      "type": "string"
+     },
+     "multichan16": {
+      "type": "string"
+     },
+     "quadtree": {
+      "type": "string"
+     },
+     "rgba8": {
+      "type": "string"
+     },
+     "version": {
+      "type": "string"
+     }
+    },
+    "type": "object",
+    "version": "0.01"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o9976",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 425,
+   "schema": {
+    "properties": {
+     "name": {
+      "$default": {
+       "$source": "argv",
+       "index": 0
+      },
+      "type": "string"
+     },
+     "path": {
+      "description": "The path to create the component.",
+      "format": "path",
+      "type": "string",
+      "visible": false
+     },
+     "project": {
+      "$default": {
+       "$source": "projectName"
+      },
+      "description": "The name of the project.",
+      "type": "string"
+     },
+     "proxy": {
+      "description": "if the component needs to proxy its calls to api",
+      "type": "boolean"
+     }
+    },
+    "title": "Menu Schema",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o31276",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 322,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "protocol": {
+      "type": "string",
+      "enum": [
+       "choria:secure:reply:1"
+      ]
+     },
+     "message": {
+      "type": "string",
+      "description": "YAML encoded choria:reply:1"
+     },
+     "hash": {
+      "type": "string",
+      "description": "SHA256 has of the message"
+     }
+    },
+    "required": [
+     "protocol",
+     "message",
+     "hash"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o66187",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 389,
+   "schema": {
+    "title": "String Interpolated Script",
+    "required": [
+     "process_type",
+     "script"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "interpreter": {
+      "default": "sh",
+      "type": "string",
+      "title": "Interpreter"
+     },
+     "process_type": {
+      "default": "interpolated-script-cmd",
+      "enum": [
+       "interpolated-script-cmd"
+      ],
+      "type": "string",
+      "title": "Process Type"
+     },
+     "script": {
+      "type": "string",
+      "title": "Script"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o71309",
+   "validator": "Draft6Validator",
+   "draft": "http://json-schema.org/draft-06/schema#",
+   "gpt2_tokens": 49,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "type": "object",
+    "minProperties": 1
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o39447",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 421,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "name": {
+      "type": "string"
+     },
+     "permissions": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "members": {
+      "type": "array",
+      "items": {
+       "$ref": "#/definitions/Person"
+      }
+     }
+    },
+    "definitions": {
+     "Person": {
+      "type": "object",
+      "properties": {
+       "name": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o37615",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema",
+   "gpt2_tokens": 553,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://www.yacpdb.org/schemas/yacpdb-tourney.schema.json",
+    "type": "object",
+    "properties": {
+     "name": {
+      "$ref": "#/definitions/text"
+     },
+     "comments": {
+      "$ref": "#/definitions/text_list"
+     }
+    },
+    "required": [
+     "name"
+    ],
+    "additionalProperties": false,
+    "definitions": {
+     "text": {
+      "anyOf": [
+       {
+        "type": "number"
+       },
+       {
+        "type": "string",
+        "minLength": 1
+       }
+      ]
+     },
+     "text_list": {
+      "type": "array",
+      "elements": {
+       "$ref": "#/definitions/text"
+      },
+      "minItems": 1,
+      "_uniqueItems": true
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o9857",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 231,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "properties": {
+     "email": {
+      "_format": "email",
+      "maxLength": 1024,
+      "type": "string"
+     },
+     "token": {
+      "minLength": 1,
+      "type": "string"
+     }
+    },
+    "required": [
+     "email",
+     "token"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o21082",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 568,
+   "schema": {
+    "properties": {
+     "acknowledged": {
+      "type": "boolean"
+     },
+     "acknowledged_at": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "acknowledged_by": {
+      "type": "string"
+     },
+     "created_at": {
+      "format": "date-time",
+      "type": "string"
+     },
+     "data": {
+      "description": "No formal validation or schema for this JSON field. Contains the keys and values that have changed.",
+      "type": "object"
+     },
+     "id": {
+      "type": "integer"
+     },
+     "object_id": {
+      "type": "string"
+     },
+     "object_type": {
+      "type": "string"
+     },
+     "type": {
+      "type": "string"
+     },
+     "user": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "type",
+     "acknowledged"
+    ],
+    "title": "AuditEvent",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o5138",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 561,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://github.com/Enfernuz/quik-lua-rpc/json/schema/GetCell.result.scheme.json",
+    "title": "\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442 \u043f\u0440\u043e\u0446\u0435\u0434\u0443\u0440\u044b GetCell",
+    "description": "\u0421\u0445\u0435\u043c\u0430 \u043e\u0431\u044a\u0435\u043a\u0442\u0430 \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u0430 \u0443\u0434\u0430\u043b\u0451\u043d\u043d\u043e\u0433\u043e \u0432\u044b\u0437\u043e\u0432\u0430 \u043f\u0440\u043e\u0446\u0435\u0434\u0443\u0440\u044b GetCell",
+    "type": "object",
+    "properties": {
+     "image": {
+      "description": "\u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440 image",
+      "type": "string"
+     },
+     "value": {
+      "description": "\u041f\u0430\u0440\u0430\u043c\u0435\u0442\u0440 value",
+      "type": "string"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o89607",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 391,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "requires": [
+     "log"
+    ],
+    "log": {
+     "type": "object",
+     "description": "Display log messages received through wrapper events.",
+     "properties": {
+      "stream": {
+       "type": "string",
+       "description": "The topic through which to gather log messages."
+      },
+      "bufferSize": {
+       "type": "integer",
+       "description": "Maximum number of log message items to keep in memory.",
+       "default": 5000
+      }
+     }
+    },
+    "properties": {
+     "log": {
+      "$ref": "#/log"
+     }
+    },
+    "required": [
+     "log"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o64705",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 291,
+   "schema": {
+    "properties": {
+     "name": {
+      "$default": {
+       "$source": "argv",
+       "index": 0
+      },
+      "description": "Presentation name",
+      "type": "string"
+     },
+     "project": {
+      "$default": {
+       "$source": "project"
+      },
+      "description": "Presentation name",
+      "type": "string"
+     }
+    },
+    "required": [
+     "name"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o79434",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 397,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "definitions": {
+     "capability": {
+      "type": "object",
+      "properties": {
+       "name": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "name"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "type": "object",
+    "properties": {
+     "capabilities": {
+      "type": "array",
+      "items": {
+       "$ref": "#/definitions/capability"
+      }
+     }
+    },
+    "required": [
+     "capabilities"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o69520",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 364,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "person": {
+      "type": "object",
+      "properties": {
+       "first_name": {
+        "type": "string"
+       },
+       "last_name": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "first_name",
+       "last_name"
+      ],
+      "additionalProperties": false
+     }
+    },
+    "required": [
+     "person"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o26974",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 304,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "k": {
+      "description": "Property Value",
+      "extended_name": "Value",
+      "type": "number"
+     },
+     "x": {
+      "description": "Property Expression. An AE expression that modifies the value.",
+      "extended_name": "Expression",
+      "type": "string"
+     },
+     "ix": {
+      "description": "Property Index. Used for expressions.",
+      "extended_name": "Property Index",
+      "type": "string"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o66299",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 520,
+   "schema": {
+    "copyright": [
+     "Copyright 2013 Red Hat, Inc. and/or its affiliates.",
+     "This file is part of lightblue.",
+     "This program is free software: you can redistribute it and/or modify",
+     "it under the terms of the GNU General Public License as published by",
+     "the Free Software Foundation, either version 3 of the License, or",
+     "(at your option) any later version.",
+     "This program is distributed in the hope that it will be useful,",
+     "but WITHOUT ANY WARRANTY; without even the implied warranty of",
+     "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the",
+     "GNU General Public License for more details.",
+     "You should have received a copy of the GNU General Public License",
+     "along with this program.  If not, see <http://www.gnu.org/licenses/>."
+    ],
+    "id": "#field",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "field": {
+      "type": "string"
+     },
+     "include": {
+      "type": "boolean"
+     },
+     "recursive": {
+      "type": "boolean",
+      "default": false
+     }
+    },
+    "required": [
+     "field"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o89671",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 584,
+   "schema": {
+    "additionalProperties": false,
+    "properties": {
+     "env": {
+      "default": {},
+      "properties": {},
+      "title": "Env Vars",
+      "type": "object"
+     },
+     "environment_type": {
+      "default": "docker-encapsulated",
+      "enum": [
+       "docker-encapsulated"
+      ],
+      "type": "string"
+     },
+     "envscript": {
+      "default": "",
+      "title": "Env Script",
+      "type": "string"
+     },
+     "image": {
+      "title": "Image",
+      "type": "string"
+     },
+     "imagetag": {
+      "default": "latest",
+      "title": "Tag",
+      "type": "string"
+     },
+     "resources": {
+      "default": [],
+      "title": "Resources",
+      "type": "array"
+     }
+    },
+    "required": [
+     "environment_type",
+     "image"
+    ],
+    "title": "Docker Encapsulated Environment",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o88675",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 389,
+   "schema": {
+    "description": "Shampoo request specification",
+    "properties": {
+     "method": {
+      "description": "Method on the endpoint that has to be called.",
+      "type": "string"
+     },
+     "request_data": {
+      "description": "Data to be passed to the method",
+      "type": "object"
+     },
+     "request_id": {
+      "description": "Identifier for the request. The request_id is returned in the response. The client can use this number to match responses to requests.",
+      "minimum": 0,
+      "type": "integer"
+     },
+     "type": {
+      "pattern": "request",
+      "type": "string"
+     }
+    },
+    "required": [
+     "type",
+     "method",
+     "request_data",
+     "request_id"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o52964",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 564,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "required": [
+     "search"
+    ],
+    "properties": {
+     "search": {
+      "type": "object",
+      "required": [
+       "resource"
+      ],
+      "properties": {
+       "parameter": {
+        "type": "string",
+        "description": "The name of the URL parameter to use",
+        "default": "q"
+       },
+       "resource": {
+        "type": "string",
+        "format": "topic"
+       }
+      }
+     },
+     "i18n": {
+      "type": "object",
+      "properties": {
+       "locale": {
+        "type": "string",
+        "default": "default"
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o46362",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 236,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Crystallisation",
+    "type": "object",
+    "properties": {
+     "calculationId": {
+      "title": "Calculation ID",
+      "description": "The calculation ID that was returned by intent to crystallise endpoint.",
+      "type": "string",
+      "example": "041f7e4d-87d9-4d4a-a296-3cfbdf92f7e2"
+     }
+    },
+    "required": [
+     "calculationId"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o62755",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 339,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "subelement",
+    "description": "A subelement element",
+    "type": "object",
+    "properties": {
+     "content": {
+      "description": "the content",
+      "type": "string"
+     },
+     "children": {
+      "description": "the content",
+      "type": "string"
+     }
+    },
+    "anyOf": [
+     {
+      "required": [
+       "children"
+      ]
+     },
+     {
+      "required": [
+       "content"
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o90225",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema",
+   "gpt2_tokens": 408,
+   "schema": {
+    "title": "labelExpressionInfo",
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "description": "The labelExpressionInfo allows label text to be read similar to that of Popups's description property.",
+    "properties": {
+     "expression": {
+      "type": "string",
+      "description": "An [Arcade expression](https://developers.arcgis.com/arcade/) evaluating to either a string or a number."
+     }
+    },
+    "additionalProperties": false,
+    "esriDocumentation": {
+     "examples": [
+      {
+       "title": "labelExpressionInfo",
+       "code": {
+        "labelExpressionInfo": {
+         "expression": "return $feature[\"state_name\"] + \" (arcade)\";"
+        }
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o43292",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema",
+   "gpt2_tokens": 311,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "Git LFS HTTPS Lock Creation API Request",
+    "type": "object",
+    "properties": {
+     "path": {
+      "type": "string"
+     },
+     "ref": {
+      "type": "object",
+      "properties": {
+       "name": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "name"
+      ]
+     }
+    },
+    "required": [
+     "path"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o22453",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 546,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "server": {
+      "type": "object",
+      "properties": {
+       "host": {
+        "type": "string"
+       },
+       "port": {
+        "type": "integer"
+       }
+      },
+      "required": [
+       "host",
+       "port"
+      ],
+      "additionalProperties": false
+     },
+     "database": {
+      "type": "object",
+      "properties": {
+       "url": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "url"
+      ]
+     }
+    },
+    "required": [
+     "server"
+    ],
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o33707",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 567,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "targetType": "document",
+    "schemaType": "document",
+    "type": "object",
+    "required": [
+     "schemaType",
+     "_documentID",
+     "_corpusID"
+    ],
+    "properties": {
+     "schemaType": {
+      "type": "string",
+      "description": "Schema type",
+      "searchable": true,
+      "searchModes": [
+       "noop"
+      ],
+      "locked": true
+     },
+     "_documentID": {
+      "type": "string",
+      "description": "Internal document GUID",
+      "searchable": true,
+      "searchModes": [
+       "noop"
+      ],
+      "locked": true
+     },
+     "_corpusID": {
+      "type": "string",
+      "description": "Internal Corpus GUID",
+      "searchable": true,
+      "searchModes": [
+       "noop"
+      ],
+      "locked": true
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o7308",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 544,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://epigenomesportal.ca/schemas/analysis.json",
+    "title": "IHEC Data Hub Analysis schema",
+    "description": "IHEC Data Hub Analysis schema",
+    "type": "object",
+    "properties": {
+     "analysis_group": {
+      "type": "string",
+      "description": "The group that ran the bioformatics analysis to produce this dataset tracks."
+     },
+     "alignment_software": {
+      "type": "string",
+      "description": "The name of the software used for mapping."
+     },
+     "alignment_software_version": {
+      "type": "string",
+      "description": "The version of the software used for mapping."
+     },
+     "analysis_software": {
+      "type": "string",
+      "description": "The name of the software used for determining signal (read density)."
+     },
+     "analysis_software_version": {
+      "type": "string",
+      "description": "The version of the software used for determining signal (read density)."
+     }
+    },
+    "required": [
+     "analysis_group",
+     "alignment_software",
+     "alignment_software_version",
+     "analysis_software",
+     "analysis_software_version"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o12629",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema#",
+   "gpt2_tokens": 355,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "https://smapi.io/schemas/i18n.json",
+    "title": "SMAPI i18n file",
+    "description": "A translation file for a SMAPI mod or content pack.",
+    "@documentationUrl": "https://stardewvalleywiki.com/Modding:Modder_Guide/APIs/Translation",
+    "type": "object",
+    "properties": {
+     "$schema": {
+      "title": "Schema",
+      "description": "A reference to this JSON schema. Not part of the actual format, but useful for validation tools.",
+      "type": "string",
+      "const": "https://smapi.io/schemas/manifest.json"
+     }
+    },
+    "additionalProperties": {
+     "type": "string",
+     "@errorMessages": {
+      "type": "Invalid property. Translation files can only contain text property values."
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o41733",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 488,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "TenantModuleDescriptor",
+    "description": "Module transitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+     "id": {
+      "description": "Module ID (or just product part)",
+      "type": "string"
+     },
+     "from": {
+      "description": "Original Module ID when transitioning from one module to another",
+      "type": "string"
+     },
+     "action": {
+      "description": "Module action",
+      "type": "string",
+      "enum": [
+       "enable",
+       "disable",
+       "uptodate",
+       "suggest",
+       "conflict"
+      ]
+     },
+     "message": {
+      "description": "Diagnostic Message",
+      "type": "string"
+     }
+    },
+    "required": [
+     "id"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o90885",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 325,
+   "schema": {
+    "name": "Team",
+    "properties": {
+     "homeCity": {
+      "description": "Name of the city to which this team belongs",
+      "type": "string"
+     },
+     "id": {
+      "description": "A three-letter code that identifies the team id",
+      "maxLength": 3,
+      "minLength": 3,
+      "type": "string"
+     },
+     "name": {
+      "description": "Name of the team",
+      "type": "string"
+     },
+     "stadium": {
+      "description": "Name of the stadium",
+      "type": "string"
+     }
+    },
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o90368",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 472,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://judkins.house/apis/k2/v1/bastionConfigSimple.json",
+    "$$target": "bastionConfigSimple.json",
+    "title": "A Bastion configuration",
+    "description": "Properties pertaining to a Bastion.",
+    "properties": {
+     "name": {
+      "description": "Name of the Bastion configuration.",
+      "type": "string"
+     },
+     "kind": {
+      "description": "Type of bastion config",
+      "enum": [
+       "bastion"
+      ],
+      "type": "string"
+     },
+     "listenPort": {
+      "description": "What port number to open for the ssh tunnel, default is 22",
+      "type": "number",
+      "minimum": 0,
+      "default": 22,
+      "maximum": 65535
+     }
+    },
+    "required": [
+     "name",
+     "kind"
+    ],
+    "additionalProperties": false,
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o9583",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 449,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "kind": {
+      "type": "string",
+      "default": "req",
+      "readonly": "true",
+      "description": "Defines that the message is a request"
+     },
+     "id": {
+      "type": "string",
+      "description": "Request ID generated by the client. It should be unique per WebSocket session in order to identify the request. This ID will be reflected by the server in the response to the request.",
+      "minLength": 1,
+      "maxLength": 64,
+      "default": "0"
+     },
+     "type": {
+      "description": "Contains one of the APIs request type names",
+      "type": "string"
+     },
+     "body": {
+      "type": "object"
+     }
+    },
+    "required": [
+     "kind",
+     "id",
+     "type"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o31092",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 302,
+   "schema": {
+    "properties": {
+     "activepolicy": {
+      "readonly": true,
+      "type": "integer"
+     },
+     "boundto": {
+      "type": "string"
+     },
+     "gotopriorityexpression": {
+      "readonly": true,
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "priority": {
+      "readonly": true,
+      "type": "integer"
+     }
+    },
+    "title": "tunneltrafficpolicy_tunnelglobal_binding",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o9850",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 210,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "updated": {
+      "type": "number"
+     },
+     "failed": {
+      "type": "number"
+     },
+     "skipped": {
+      "type": "number"
+     },
+     "logLink": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "val",
+   "id": "o13111",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 567,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://www.qiskit.org/schemas/backendstatus_schema.json",
+    "description": "OpenQuantum backend status schema",
+    "version": "1.0.0",
+    "type": "object",
+    "required": [
+     "backend_name",
+     "backend_version",
+     "operational",
+     "pending_jobs",
+     "status_msg"
+    ],
+    "properties": {
+     "backend_name": {
+      "type": "string",
+      "description": "Backend name"
+     },
+     "backend_version": {
+      "description": "Backend version in the form X.X.X",
+      "pattern": "[0-9]+.[0-9]+.[0-9]+$",
+      "type": "string"
+     },
+     "operational": {
+      "type": "boolean",
+      "description": "Backend operational and accepting jobs (true/false)"
+     },
+     "pending_jobs": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of pending jobs on the backend"
+     },
+     "status_msg": {
+      "type": "string",
+      "description": "Status message"
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o6173",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 468,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+     "deviceIds": {
+      "type": "array",
+      "items": {
+       "type": "string",
+       "pattern": "^[A-Fa-f\\d]{24}$"
+      }
+     },
+     "deviceTags": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "key": {
+         "type": "string"
+        },
+        "value": {
+         "type": "string"
+        }
+       }
+      }
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o3545",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 581,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Data",
+    "type": "object",
+    "properties": {
+     "SOURCE_NAME": {
+      "type": "object",
+      "properties": {
+       "a": {
+        "type": "string"
+       },
+       "b": {
+        "type": "string"
+       }
+      },
+      "constraints": [
+       {
+        "type": "CONSTRAINT_TYPE",
+        "target": "#/TARGET_NAME"
+       }
+      ]
+     },
+     "TARGET_NAME": {
+      "type": "object",
+      "properties": {
+       "a": {
+        "type": "string"
+       },
+       "b": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o78482",
+   "validator": "Draft7Validator",
+   "draft": "http://json-schema.org/draft-07/schema",
+   "gpt2_tokens": 578,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "title": "WebpackTranspilerOptions",
+    "additionalProperties": false,
+    "type": "object",
+    "properties": {
+     "webpack": {
+      "title": "WebpackOptions",
+      "description": "Configuration for @stryker-mutator/webpack-transpiler",
+      "type": "object",
+      "additionalProperties": false,
+      "default": {},
+      "properties": {
+       "configFile": {
+        "description": "Location of your webpack config file",
+        "type": "string"
+       },
+       "context": {
+        "description": "The [webpack context](https://webpack.js.org/configuration/entry-context/#context)",
+        "type": "string"
+       },
+       "silent": {
+        "description": "Specify to remove the \"ProgressPlugin\" from your webpack config file (making the process silent)",
+        "type": "boolean",
+        "default": true
+       }
+      }
+     }
+    }
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o46428",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 317,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Other",
+    "description": "Other",
+    "type": "object",
+    "properties": {
+     "nonResidentLandlord": {
+      "title": "Non Resident Landlord",
+      "description": "An explicit declaration that the user is a Non-Resident Landlord. The default is FALSE",
+      "type": "boolean",
+      "example": "true"
+     },
+     "rarJointLet": {
+      "title": "Other Capital allowance",
+      "description": "A notification that the Rent A Room income (RAR) is shared with another individual.",
+      "type": "boolean",
+      "example": "true"
+     }
+    },
+    "additionalProperties": false
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o66192",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 324,
+   "schema": {
+    "title": "String Interpolated Command",
+    "required": [
+     "process_type",
+     "cmd"
+    ],
+    "properties": {
+     "cmd": {
+      "type": "string",
+      "title": "Command"
+     },
+     "process_type": {
+      "default": "string-interpolated-cmd",
+      "enum": [
+       "string-interpolated-cmd"
+      ],
+      "type": "string",
+      "title": "Process Type"
+     }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "id": "string_interpolated"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o43997",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 315,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "additionalProperties": false,
+    "properties": {
+     "location": {
+      "_format": "uri",
+      "type": "string"
+     },
+     "retries": {
+      "type": "number"
+     },
+     "retrieveDate": {
+      "_format": "date-time",
+      "type": "string"
+     },
+     "retryInterval": {
+      "type": "number"
+     }
+    },
+    "required": [
+     "location",
+     "retrieveDate"
+    ],
+    "title": "UpdateFirmwareRequest",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o48257",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 506,
+   "schema": {
+    "properties": {
+     "description": {
+      "type": "string"
+     },
+     "entities": {
+      "properties": {
+       "group": {
+        "type": "string"
+       },
+       "items": {
+        "properties": {
+         "name": {
+          "type": "string"
+         }
+        },
+        "type": "array"
+       }
+      },
+      "type": "object"
+     },
+     "name": {
+      "type": "string"
+     },
+     "version": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "name",
+     "entities"
+    ],
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o65462",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 307,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "name": "PreviousName",
+    "description": "A previous name of a company",
+    "type": "object",
+    "properties": {
+     "company_name": {
+      "type": "string",
+      "minLength": 1
+     },
+     "con_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The end (conversion) date of the name"
+     },
+     "start_date": {
+      "type": "string",
+      "format": "date"
+     }
+    },
+    "required": [
+     "company_name"
+    ]
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "test",
+   "id": "o31043",
+   "validator": "Draft202012Validator",
+   "draft": "https://json-schema.org/draft/2020-12/schema",
+   "gpt2_tokens": 428,
+   "schema": {
+    "properties": {
+     "backupfilename": {
+      "readonly": true,
+      "type": "string"
+     },
+     "createdby": {
+      "readonly": true,
+      "type": "string"
+     },
+     "creationtime": {
+      "readonly": true,
+      "type": "string"
+     },
+     "filename": {
+      "type": "string"
+     },
+     "ipaddress": {
+      "readonly": true,
+      "type": "string"
+     },
+     "techsuprtname": {
+      "readonly": true,
+      "type": "string"
+     },
+     "version": {
+      "readonly": true,
+      "type": "string"
+     }
+    },
+    "title": "systemrestorepoint",
+    "type": "object"
+   }
+  },
+  {
+   "config": "Github_easy",
+   "split": "train",
+   "id": "o7294",
+   "validator": "Draft4Validator",
+   "draft": "http://json-schema.org/draft-04/schema#",
+   "gpt2_tokens": 554,
+   "schema": {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "description": "Result of validation attempt",
+    "type": "object",
+    "properties": {
+     "result": {
+      "description": "The result may be valid or not_valid",
+      "type": "string"
+     },
+     "contexts": {
+      "description": "Values of the context that causes FM to be void",
+      "type": "array",
+      "items": {
+       "type": "object",
+       "properties": {
+        "id": {
+         "type": "string"
+        },
+        "value": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "id",
+        "value"
+       ]
+      }
+     }
+    },
+    "additionalProperties": false,
+    "required": [
+     "result"
+    ]
+   }
+  }
+ ]
+}

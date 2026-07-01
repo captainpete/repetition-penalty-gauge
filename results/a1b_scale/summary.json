@@ -1,0 +1,41 @@
+{
+  "all_confirmed": false,
+  "models": {
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "noop_gate": true,
+      "flip_test_theta": 0.896875,
+      "flip_ci": [
+        0.8640625000000001,
+        0.926875
+      ],
+      "monotone": true,
+      "confirmed": true,
+      "flip_by_theta": {
+        "1.0": 0.0,
+        "1.02": 0.516875,
+        "1.05": 0.766875,
+        "1.1": 0.80125,
+        "1.15": 0.8928125,
+        "1.3": 0.896875
+      }
+    },
+    "Qwen/Qwen2.5-7B": {
+      "noop_gate": true,
+      "flip_test_theta": 0.870625,
+      "flip_ci": [
+        0.8315625,
+        0.9056249999999999
+      ],
+      "monotone": false,
+      "confirmed": false,
+      "flip_by_theta": {
+        "1.0": 0.0,
+        "1.02": 0.57875,
+        "1.05": 0.6640625,
+        "1.1": 0.83875,
+        "1.15": 0.93375,
+        "1.3": 0.870625
+      }
+    }
+  }
+}

@@ -1,0 +1,1409 @@
+{
+ "theta": 1.3,
+ "dtype": "torch.bfloat16",
+ "n": 200,
+ "n_valid": 48,
+ "valid_rate": 0.24,
+ "records": [
+  {
+   "id": "o90308",
+   "valid": false,
+   "reason": "None is not of type 'integer'",
+   "extracted": "{\"transparency\" : null}",
+   "output": "{\"transparency\" : null}"
+  },
+  {
+   "id": "o33695",
+   "valid": false,
+   "reason": "'schemaType' is a required property",
+   "extracted": "{ \n\"@context\":\"https:\\/\\/www.w3.org\\/2018\\/credentials\",\"@type\":[\"VerifiableCredential\"],\"credentialSubject\":{\"name\":\"John Doe\"},\"issuanceDate\":\"2022-05-06T17:09Z\"}",
+   "output": "{ \n\"@context\":\"https:\\/\\/www.w3.org\\/2018\\/credentials\",\"@type\":[\"VerifiableCredential\"],\"credentialSubject\":{\"name\":\"John Doe\"},\"issuanceDate\":\"2022-05-06T17:09Z\"}"
+  },
+  {
+   "id": "o24544",
+   "valid": false,
+   "reason": "None is not of type 'integer'",
+   "extracted": "{\"id\" : null, \n\"name\":\"null\"}",
+   "output": "{\"id\" : null, \n\"name\":\"null\"}"
+  },
+  {
+   "id": "o79712",
+   "valid": false,
+   "reason": "'ignore' is not one of ['beenden', 'abbruch', 'ignorieren']",
+   "extracted": "{\"option\":\"ignore\",\"repetitions\":\"\"}",
+   "output": "{\"option\":\"ignore\",\"repetitions\":\"\"}"
+  },
+  {
+   "id": "o31168",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'channelNumber': None,  \n   'destinationIP' :None ,   \n   'destinationPort ':1234567890 ,\n     ' domainName':'example.com',    \n       ' nodeID ':'abcde',\n        ' peerEntityId ': -1\n         }",
+   "output": "{ \n   'channelNumber': None,  \n   'destinationIP' :None ,   \n   'destinationPort ':1234567890 ,\n     ' domainName':'example.com',    \n       ' nodeID ':'abcde',\n        ' peerEntityId ': -1\n         }"
+  },
+  {
+   "id": "o71320",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'input': {  \n     'fabric_uuid':'',\n       device_count: int( )\n}"
+  },
+  {
+   "id": "o3620",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"key\":\"value\"}",
+   "output": "{\"key\":\"value\"}"
+  },
+  {
+   "id": "o41033",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"DestinationCidrBlock\":\"87.65.43.2/2\", \"NAT Gateway ID\":\"nat-gw-id-example\",\"route table id\" : natgw-routetable-exampl }",
+   "output": "{\"DestinationCidrBlock\":\"87.65.43.2/2\", \"NAT Gateway ID\":\"nat-gw-id-example\",\"route table id\" : natgw-routetable-exampl }"
+  },
+  {
+   "id": "o10012",
+   "valid": false,
+   "reason": "'example_id' is too short",
+   "extracted": "{\"id\":\"example_id\",\"secret\":\"example_secret\"}",
+   "output": "{\"id\":\"example_id\",\"secret\":\"example_secret\"}"
+  },
+  {
+   "id": "o8450",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"container_name\":\"example_container\",\"fabric_fq_name\":[\"project1\", \"domain\"]}",
+   "output": "{\"container_name\":\"example_container\",\"fabric_fq_name\":[\"project1\", \"domain\"]}"
+  },
+  {
+   "id": "o3206",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'message_packet': {  \n     data: '', text:'Hello World', type:''}"
+  },
+  {
+   "id": "o46527",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n\"name\":\"My Theme\",  \n\"author\":\"John Doe\",   \n\"description\":\"A custom color scheme for my code editor.\",    \n\"body\":[\n   {      \n     \"background-color\":\"black\",       \n       \"color\":\"white\"},     \n        {\"selector\":{\"class\":[\"comment\"]},        \n         \"style\":{\n           \"font-style\":\"italic\"} }],         \n          main:[{\"selector\":\n            \".line-number\",\"style\":\n              {\"display\":\"\"}}] ,          \n             diffheader:[] ,\n               difffooter:[],\n                 body:[\n                   ]}",
+   "output": "{ \n\"name\":\"My Theme\",  \n\"author\":\"John Doe\",   \n\"description\":\"A custom color scheme for my code editor.\",    \n\"body\":[\n   {      \n     \"background-color\":\"black\",       \n       \"color\":\"white\"},     \n        {\"selector\":{\"class\":[\"comment\"]},        \n         \"style\":{\n           \"font-style\":\"italic\"} }],         \n          main:[{\"selector\":\n            \".line-number\",\"style\":\n              {\"display\":\"\"}}] ,          \n             diffheader:[] ,\n               difffooter:[],\n                 body:[\n                   ]}"
+  },
+  {
+   "id": "o6167",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"name\":\"John Doe\",\"status\":\"active\"}",
+   "output": "{\"name\":\"John Doe\",\"status\":\"active\"}"
+  },
+  {
+   "id": "o39754",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'extensions': [\n     {  \n       'name':'Microsoft.Azure.WebJobs.Extensions.Storage',\n         typeName:'Storage, Version=12.9.3.5678'\n           ,   \n             hintpath: '/home/site/wwwroot/bin/Debug/netcoreapp3.1/Microsoft.Azure.WebJobs.Extensions.Storage.dll'    \n              } ,\n               {'name':\n                 Microsoft.WindowsAzure.ConfigurationManager,\n                   TypeName : Windowsazureconfigurationmanager,Version = v3.1.0.0,Culture =\n                     Neutral,Publ icKeyToken=null} ]"
+  },
+  {
+   "id": "o6262",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"type\":\"timer\",\"outputIds\":[],\"meta\":{\"name\":\"\",\"description\":\"\"},\"config\":{\"cron\":\"* * *\"}}",
+   "output": "{\"type\":\"timer\",\"outputIds\":[],\"meta\":{\"name\":\"\",\"description\":\"\"},\"config\":{\"cron\":\"* * *\"}}"
+  },
+  {
+   "id": "o71408",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'route': '/api/v1/get_route.php?route=ROUTE_ID',\n   'view' : '',\n   'optimization_problem_id':''\n}",
+   "output": "{ \n   'route': '/api/v1/get_route.php?route=ROUTE_ID',\n   'view' : '',\n   'optimization_problem_id':''\n}"
+  },
+  {
+   "id": "o42304",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'root': {  \n       string: [ ],\n         root:[ ], theName:''\n     }   \n}",
+   "output": "{ \n   'root': {  \n       string: [ ],\n         root:[ ], theName:''\n     }   \n}"
+  },
+  {
+   "id": "o68826",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"message\":\"Hello, World!\"}",
+   "output": "{\"message\":\"Hello, World!\"}"
+  },
+  {
+   "id": "o67501",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"outDir\":\"dist\",\"tsConfig\":\"\"}",
+   "output": "{\"outDir\":\"dist\",\"tsConfig\":\"\"}"
+  },
+  {
+   "id": "o14743",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"channels\":[\"channel1\",\"channel2\"],\"streen\":{\"url\":\"https:\\/\\/example.com\\/api\",\"secretKey\":\"mySecret\"}}",
+   "output": "{\"channels\":[\"channel1\",\"channel2\"],\"streen\":{\"url\":\"https:\\/\\/example.com\\/api\",\"secretKey\":\"mySecret\"}}"
+  },
+  {
+   "id": "o13985",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'dataType': {  \n     '_id':'',\n       \"_class\":\"com.electriccloud.plugin.spec.datatypes.DataType2\",   \n         \"__meta__\":{\n           '__schemaId':\"eaidschema://plugin-spec/Schema-ECPluginSpec#datatype/datatype\" ,\n             __version:\"v1\"},\n               _data:{\n                 integer: null, string:null\n                }    \n              },     \n}",
+   "output": "{ \n   'dataType': {  \n     '_id':'',\n       \"_class\":\"com.electriccloud.plugin.spec.datatypes.DataType2\",   \n         \"__meta__\":{\n           '__schemaId':\"eaidschema://plugin-spec/Schema-ECPluginSpec#datatype/datatype\" ,\n             __version:\"v1\"},\n               _data:{\n                 integer: null, string:null\n                }    \n              },     \n}"
+  },
+  {
+   "id": "o76874",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"objectIdFieldName\":\"OBJECTID\",\"objectIds\":[1,2]}",
+   "output": "{\"objectIdFieldName\":\"OBJECTID\",\"objectIds\":[1,2]}"
+  },
+  {
+   "id": "o9885",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"slug\":\"example-slug\"}",
+   "output": "{\"slug\":\"example-slug\"}"
+  },
+  {
+   "id": "o46416",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'amount': float(23786),  \n}",
+   "output": "{ \n   'amount': float(23786),  \n}"
+  },
+  {
+   "id": "o8412",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'actions_py': '',\n   'key':'',\n   'name':'' ,\n'produces':[''],\n'required':[{'action_name':{'args_schema':\n {'$schema':\"http://json-schema.org/draft-07/schema#\",'description'\n :'','title\":\"\",\"type\":\"null\"}},'condition_type':'all_true',\\\n'type':'run_action'}],\n'state':'enabled',\n}",
+   "output": "{ \n   'actions_py': '',\n   'key':'',\n   'name':'' ,\n'produces':[''],\n'required':[{'action_name':{'args_schema':\n {'$schema':\"http://json-schema.org/draft-07/schema#\",'description'\n :'','title\":\"\",\"type\":\"null\"}},'condition_type':'all_true',\\\n'type':'run_action'}],\n'state':'enabled',\n}"
+  },
+  {
+   "id": "o47061",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"split\":\"timestamp\",\"average_frequency_ms\":{\"value\":[123],\"unit\":[\"ms\"]},\"maximum_expected_update_interval_in_seconds\":[{\"value\":[6789]},\"units\":[\"s\"]}",
+   "output": "{\"split\":\"timestamp\",\"average_frequency_ms\":{\"value\":[123],\"unit\":[\"ms\"]},\"maximum_expected_update_interval_in_seconds\":[{\"value\":[6789]},\"units\":[\"s\"]}"
+  },
+  {
+   "id": "o48010",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'key': '',  \n   'file_id':'',   \n   'bucket':'' ,    \n   'checksum' : '' ,\n     size: '',\n       versionId:''\n}",
+   "output": "{ \n   'key': '',  \n   'file_id':'',   \n   'bucket':'' ,    \n   'checksum' : '' ,\n     size: '',\n       versionId:''\n}"
+  },
+  {
+   "id": "o53898",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"id\" : <value>}",
+   "output": "{\"id\" : <value>}"
+  },
+  {
+   "id": "o16365",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"vaults\":[\"VAULT_2\",\"VAULT_3\"]}",
+   "output": "{\"vaults\":[\"VAULT_2\",\"VAULT_3\"]}"
+  },
+  {
+   "id": "o79711",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   vorgaenger: [\"Vorheriger Schritt\"],\n}",
+   "output": "{ \n   vorgaenger: [\"Vorheriger Schritt\"],\n}"
+  },
+  {
+   "id": "o57232",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   \"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$id\":\"\",\"definitions\":{\"test_collection_schema_testcollection45689\":{\n      \t\"description\":\"\",\n        $ref:\"#/components/schemas/testCollectionSchema_Test_Collection_Schema_TestCollection45689\" },\"test_collection_schema_testcollection45689_field_1\":\n         {\"allOf\":[{\"not\":\"\"},{\"oneof\":[\n            { type: string, maxLength : null},\n             ]}],\"default_value\":[\"\"],\"min_length\":-Infinity ,\"max_lenght\":\"+Infinty\"},\n          test_collection_schema_testcollection45689__uid:{\n          \tall_of:[{\"not\":\"\"},],\n              one of:[\n              \ttype:number ,minimum:-infinity,maximum:\"+infinitiy\",multiple_Of:null,default_Value:[\"\"]\n                ]\n                 },  \n                  _meta_data:{ all Of[{}],OneOF[{},{ }]}}}",
+   "output": "{ \n   \"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$id\":\"\",\"definitions\":{\"test_collection_schema_testcollection45689\":{\n      \t\"description\":\"\",\n        $ref:\"#/components/schemas/testCollectionSchema_Test_Collection_Schema_TestCollection45689\" },\"test_collection_schema_testcollection45689_field_1\":\n         {\"allOf\":[{\"not\":\"\"},{\"oneof\":[\n            { type: string, maxLength : null},\n             ]}],\"default_value\":[\"\"],\"min_length\":-Infinity ,\"max_lenght\":\"+Infinty\"},\n          test_collection_schema_testcollection45689__uid:{\n          \tall_of:[{\"not\":\"\"},],\n              one of:[\n              \ttype:number ,minimum:-infinity,maximum:\"+infinitiy\",multiple_Of:null,default_Value:[\"\"]\n                ]\n                 },  \n                  _meta_data:{ all Of[{}],OneOF[{},{ }]}}},\"componentes\":{\"schemas\":{\"test Collection schema Test.Collection.Schema.Test.collection.\"}}\n                   }}"
+  },
+  {
+   "id": "o83269",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"hypervisor_hostname\":\"hostname1\",\"id\":42,\"memory_mb\":8536, \"vcpu\" : [ {\"name\":\"CPU_1\", \"cores\":[{core_id:9}]}, { name:\"CPU_2\"}], date=\"YYYY-MM-DD\"}",
+   "output": "{\"hypervisor_hostname\":\"hostname1\",\"id\":42,\"memory_mb\":8536, \"vcpu\" : [ {\"name\":\"CPU_1\", \"cores\":[{core_id:9}]}, { name:\"CPU_2\"}], date=\"YYYY-MM-DD\"}\nPlease provide the correct output in accordance with your understanding of my request."
+  },
+  {
+   "id": "o65447",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n\"name\":\"Example Company\",  \n\"jurisdiction\":\"US\",   \n}",
+   "output": "{ \n\"name\":\"Example Company\",  \n\"jurisdiction\":\"US\",   \n}"
+  },
+  {
+   "id": "o68286",
+   "valid": false,
+   "reason": "'emiter' is a required property",
+   "extracted": "{\"emitter\":\"example_emiter\",\"master_id\":\"123_masterid_example.com\",\"slave_id\":\"ad_abc_slave\"}",
+   "output": "{\"emitter\":\"example_emiter\",\"master_id\":\"123_masterid_example.com\",\"slave_id\":\"ad_abc_slave\"}"
+  },
+  {
+   "id": "o7389",
+   "valid": false,
+   "reason": "'ConnectionString' is a required property",
+   "extracted": "{\"$ref\":\"https:\\/\\/githubusercontent.com\\/InfinniPlatform\\/InfinniPlatform\\/master\\/Files\\/Schema\\/mongodocumentstorage.json\"}",
+   "output": "{\"$ref\":\"https:\\/\\/githubusercontent.com\\/InfinniPlatform\\/InfinniPlatform\\/master\\/Files\\/Schema\\/mongodocumentstorage.json\"}"
+  },
+  {
+   "id": "o68405",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   title: 'The Great Gatsby',\n}",
+   "output": "{ \n   title: 'The Great Gatsby',\n}"
+  },
+  {
+   "id": "o88674",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'push_data': { },  \n   'push_event':'shampoos',   \n   'type' : 'push'\n}",
+   "output": "{ \n   'push_data': { },  \n   'push_event':'shampoos',   \n   'type' : 'push'\n}"
+  },
+  {
+   "id": "o79476",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   email: 'example@example.com',  \n   password:'123abc',\n   given_name:\"John\",   \n   familyname : \"Doe\" ,\n}",
+   "output": "{ \n   email: 'example@example.com',  \n   password:'123abc',\n   given_name:\"John\",   \n   familyname : \"Doe\" ,\n}"
+  },
+  {
+   "id": "o9765",
+   "valid": false,
+   "reason": "'' is not one of ['active', 'inactive']",
+   "extracted": "{\"name\":\"John Doe\",\"description\":\"\",\"status\":\"\"}",
+   "output": "{\"name\":\"John Doe\",\"description\":\"\",\"status\":\"\"}"
+  },
+  {
+   "id": "o61120",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"dependencies\":{\"package1\":\"version\",\"package2\":\"another_version\"}}",
+   "output": "{\"dependencies\":{\"package1\":\"version\",\"package2\":\"another_version\"}}"
+  },
+  {
+   "id": "o77704",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"name\":\"Artist Name\",\"popularity\":56,\"type\":\"artist\",\"uri\":\"\"}",
+   "output": "{\"name\":\"Artist Name\",\"popularity\":56,\"type\":\"artist\",\"uri\":\"\"}"
+  },
+  {
+   "id": "o17460",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   amount:2567893,  \n}",
+   "output": "{ \n   amount:2567893,  \n}"
+  },
+  {
+   "id": "o6205",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"email\":\"example@example.com\",\"token\":\"\"}",
+   "output": "{\"email\":\"example@example.com\",\"token\":\"\"}"
+  },
+  {
+   "id": "o25169",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"foo\":\"Hello World\"}",
+   "output": "{\"foo\":\"Hello World\"}"
+  },
+  {
+   "id": "o74932",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'id': '',  \n   'carrier_tracking_no':'',   \n   'tracking_url':'' ,    \n   'label_url' : '' ,\n     price: ''\n}",
+   "output": "{ \n   'id': '',  \n   'carrier_tracking_no':'',   \n   'tracking_url':'' ,    \n   'label_url' : '' ,\n     price: ''\n}"
+  },
+  {
+   "id": "o22050",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   \"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$id\":\"\",\"definitions\":{\"ng-deploy-target-options-for-firebase\":{\n       \"required\":[\"target\"],\n       \t\"additionalProperties\":false,\n         \"allOf\":[\n            {\"if\":\n               {  \n                  \"not\":[{\"const\":\"\"}]\n                },\"then\":\n                 {},\n              },{\"else\":\n                   {}\n             }],\n          }}"
+  },
+  {
+   "id": "o68311",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"$id\":\"https:\\/\\/www.iabtechlab.com\\/openrtb\",\"version\":\"3\\.1\"}",
+   "output": "{\"$id\":\"https:\\/\\/www.iabtechlab.com\\/openrtb\",\"version\":\"3\\.1\"}"
+  },
+  {
+   "id": "o22866",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   \"@context\":\"schema.jsonld\",  \n   \"@id\":\"/twitter/webhooks/subscribes-list-response/\",   \n   \"@version\":\"13:45, June 6th, 2023 GMT+8\" ,    \n     'title': { '$ref':'#/definitions/title' },     \n       $defs:{ title:{\n         type:'string',\n           description:\"The name of the webhook subscription.\"\n             }},      \n              properties :{'$ref':\"./webhook-subscription\"} ,\n                required:['subscription']\n                  }",
+   "output": "{ \n   \"@context\":\"schema.jsonld\",  \n   \"@id\":\"/twitter/webhooks/subscribes-list-response/\",   \n   \"@version\":\"13:45, June 6th, 2023 GMT+8\" ,    \n     'title': { '$ref':'#/definitions/title' },     \n       $defs:{ title:{\n         type:'string',\n           description:\"The name of the webhook subscription.\"\n             }},      \n              properties :{'$ref':\"./webhook-subscription\"} ,\n                required:['subscription']\n                  }"
+  },
+  {
+   "id": "o54549",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"$id\":\"https:\\/\\/example.com\\/mySchema\",\"$schema\":\"http:\\/\\/json-schema.org\\/draft-2019-09\\/schema\\#\"}",
+   "output": "{\"$id\":\"https:\\/\\/example.com\\/mySchema\",\"$schema\":\"http:\\/\\/json-schema.org\\/draft-2019-09\\/schema\\#\"}"
+  },
+  {
+   "id": "o91014",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'browser_options': {},  \n   'cubes': [],   \n   'description': '',    \n   'dimensions': [],\n    <|fim_suffix|>'',\n       }",
+   "output": "{ \n   'browser_options': {},  \n   'cubes': [],   \n   'description': '',    \n   'dimensions': [],\n    <|fim_suffix|>'',\n       },     \n}<|fim_middle|>'dimensions': [\n        {        \n            'dimension_name':'',         \n           }      \n         ],       \n          info: {},\n             joins : [{}],\n                label:''\n                   mappings:{},\n                      name:'',\n                         provider:'',          \n                            schema:'' ,           \n                               store :'"
+  },
+  {
+   "id": "o12489",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{\"$schema\":\"http:\\/\\/json-schema.org\\/draft-04\\/schema#\",\\\"id\\\":\\\"http:\\/\\/www.ortolang.fr\\/schemas\\/1\\/audio\\\",\\\"description\\\":\\\"Schema for metadata extracted from audio files\\\",\\\"type\\\":\\\"object\\\",\\\"additionalProperties\\\":true,\\\"properties\\\":{\\\"title\\\":{\\\"type\\\":\\\"string\\\"}, \\\"author\\\":{\\\"type\\\":\\\"string\\\"} ,\\n\\t   \\t     xmpDM\\:duration\":{\"type\":\"string\"}, \n\"xmpDM:\\xa7udio\\xa5ample\\x2drate\":{\"type\":\"string\"},\n\"XMPDm:aUdioSampLeTyPe\":{\"typE\":\"strinG\"} ,\n\"\\u{63}\\u{98\\u}{dM}:AudioChanneLTypE\":{\"tyPE\":\"sTRING\"}\n,\"XMpdm:AudiOcOmPRESSEr\":{\"TYPE\":\"STRING\"},\"vERsiON\":\n {\"TYPe\":\"STriNG\"}}"
+  },
+  {
+   "id": "o41693",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   pets: { dog : [\"Bulldog\", \"Poodle\",\"German Shepherd\"] }  \n}",
+   "output": "{ \n   pets: { dog : [\"Bulldog\", \"Poodle\",\"German Shepherd\"] }  \n}"
+  },
+  {
+   "id": "o44268",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   \"x\" : number,  \n   \"y\" : number\n}",
+   "output": "{ \n   \"x\" : number,  \n   \"y\" : number\n}"
+  },
+  {
+   "id": "o83725",
+   "valid": false,
+   "reason": "-2 is less than the minimum of 1",
+   "extracted": "{\"answer\" : -2}",
+   "output": "{\"answer\" : -2}"
+  },
+  {
+   "id": "o62380",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"scores\":[1,2]}",
+   "output": "{\"scores\":[1,2]}"
+  },
+  {
+   "id": "o54554",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   title: 'My Dashboard',\n   maxChartRows :2,\n   maxCharCols :3  \n}",
+   "output": "{ \n   title: 'My Dashboard',\n   maxChartRows :2,\n   maxCharCols :3  \n}"
+  },
+  {
+   "id": "o87817",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'address': {  \n     post_office_box: '',\n       extended_address:'',\n         street_address:'123 Main St',\n           locality:'',\n             region:'' ,\n               postal_code :'98765' , country_name :''} }",
+   "output": "{ \n   'address': {  \n     post_office_box: '',\n       extended_address:'',\n         street_address:'123 Main St',\n           locality:'',\n             region:'' ,\n               postal_code :'98765' , country_name :''} }"
+  },
+  {
+   "id": "o63977",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"string\":\"\", \"array\":[\"\"]}",
+   "output": "{\"string\":\"\", \"array\":[\"\"]}"
+  },
+  {
+   "id": "o66170",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'dependencies': [ {  \n       dependencyType: jsonpathReady, expressions:[]\n} ] }",
+   "output": "{ \n   'dependencies': [ {  \n       dependencyType: jsonpathReady, expressions:[]\n} ] }"
+  },
+  {
+   "id": "o48513",
+   "valid": false,
+   "reason": "'new_dataset_id_value' is not of type 'number'",
+   "extracted": "{\"DatasetsUUID\":[\"dataset_23456789\",\"dataset_abcd\"],\"NewDatasetID\":\"new_dataset_id_value\"}",
+   "output": "{\"DatasetsUUID\":[\"dataset_23456789\",\"dataset_abcd\"],\"NewDatasetID\":\"new_dataset_id_value\"}"
+  },
+  {
+   "id": "o29003",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   resource: { priority :5 },  \n}",
+   "output": "{ \n   resource: { priority :5 },  \n}"
+  },
+  {
+   "id": "o47860",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   well_type: 'WELL'\n}",
+   "output": "{ \n   well_type: 'WELL'\n}"
+  },
+  {
+   "id": "o83939",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'displayName': '',  \n}",
+   "output": "{ \n   'displayName': '',  \n}"
+  },
+  {
+   "id": "o54575",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"schema\":\"https://example.com/product/schema\",\"id\":\"\",\"brand\":\"\",\"name\":\"\",\"description\":\"\",\"category\":\"\"}",
+   "output": "{\"schema\":\"https://example.com/product/schema\",\"id\":\"\",\"brand\":\"\",\"name\":\"\",\"description\":\"\",\"category\":\"\"}"
+  },
+  {
+   "id": "o79427",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   prop1: null, // integer default value is missing in the schema so it's set as 'null'\n}",
+   "output": "{ \n   prop1: null, // integer default value is missing in the schema so it's set as 'null'\n}"
+  },
+  {
+   "id": "o12070",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'query_string_parameters': {  \n     category: ''\n}"
+  },
+  {
+   "id": "o6176",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'org_id': '<your_orgid>',  \n}",
+   "output": "{ \n   'org_id': '<your_orgid>',  \n}"
+  },
+  {
+   "id": "o39141",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"created\":\"2023-05-08T16:07Z\",\"modified\":\"\",\"id\":\"unique_id_9fjgklsdjkflsdfkljsdlkfjdslkjfdlkjfkdjlksdjfkldsjfldskljfsdklajsd\", \"category\" : \"\", priority:\"high\"}",
+   "output": "{\"created\":\"2023-05-08T16:07Z\",\"modified\":\"\",\"id\":\"unique_id_9fjgklsdjkflsdfkljsdlkfjdslkjfdlkjfkdjlksdjfkldsjfldskljfsdklajsd\", \"category\" : \"\", priority:\"high\"}"
+  },
+  {
+   "id": "o10337",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'top': {  \n       basic: '',   \n         nested:{    \n             append:''\n           }     \n     }"
+  },
+  {
+   "id": "o58273",
+   "valid": false,
+   "reason": "'publicKey' is a required property",
+   "extracted": "{\"_id\":\"u2f\", \n\"attestation_cert\":{\"value\":\"\"},  \n\"pub_key_credential_id\":[],   \n\"user_handle\":\"\",\"version\":[\"UAFV1\",\"FIDO_U2F_V05\"]}",
+   "output": "{\"_id\":\"u2f\", \n\"attestation_cert\":{\"value\":\"\"},  \n\"pub_key_credential_id\":[],   \n\"user_handle\":\"\",\"version\":[\"UAFV1\",\"FIDO_U2F_V05\"]}"
+  },
+  {
+   "id": "o46432",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'other': {  \n     non_resident_landlord: true,\n       rar_joint_let:true\n}"
+  },
+  {
+   "id": "o37724",
+   "valid": false,
+   "reason": "'data' is a required property",
+   "extracted": "{\"doc_type\":\"IMAGE\",\"mime-type\":\"application/pdf\"}",
+   "output": "{\"doc_type\":\"IMAGE\",\"mime-type\":\"application/pdf\"}"
+  },
+  {
+   "id": "o80790",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'publisher_type': 'frompar-pub',  \n}",
+   "output": "{ \n   'publisher_type': 'frompar-pub',  \n}"
+  },
+  {
+   "id": "o73033",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'situacao': {  \n     id: '',   \n       descricao:''\n},    \n'nova_data_fim_vigencia':'2345' }",
+   "output": "{ \n   'situacao': {  \n     id: '',   \n       descricao:''\n},    \n'nova_data_fim_vigencia':'2345' }"
+  },
+  {
+   "id": "o61536",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   uuid: '3e67fbd0-bbca-4dfe-aee0-cbbefcdeedab',\n   owner:'3e67fbd0-bbca-4dfe-aee0-cbbefcdeedac',  \n}",
+   "output": "{ \n   uuid: '3e67fbd0-bbca-4dfe-aee0-cbbefcdeedab',\n   owner:'3e67fbd0-bbca-4dfe-aee0-cbbefcdeedac',  \n}"
+  },
+  {
+   "id": "o90919",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"commands\":[{\"name\":\"command_name\",\"params\":{\"param_key_2\":\"value\"}}]}",
+   "output": "{\"commands\":[{\"name\":\"command_name\",\"params\":{\"param_key_2\":\"value\"}}]}"
+  },
+  {
+   "id": "o32502",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   id: '123',\n   slug:'chapter-slug',  \n   title:\"Chapter Title\",   \n   text : \"<p>Text</p>\",    \n}",
+   "output": "{ \n   id: '123',\n   slug:'chapter-slug',  \n   title:\"Chapter Title\",   \n   text : \"<p>Text</p>\",    \n}"
+  },
+  {
+   "id": "o91036",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   id: '123',\n   \n}",
+   "output": "{ \n   id: '123',\n   \n}"
+  },
+  {
+   "id": "o79561",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"operation\":\"insert\"}",
+   "output": "{\"operation\":\"insert\"}"
+  },
+  {
+   "id": "o84353",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'email': '<EMAIL>',  \n   'password':'<PASSWORD>',\n   'username' :'<NAME>'   \n}",
+   "output": "{ \n   'email': '<EMAIL>',  \n   'password':'<PASSWORD>',\n   'username' :'<NAME>'   \n}"
+  },
+  {
+   "id": "o73946",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"WebJobs\":[{\"filePath\":\"path/to/webjob1\"},{\"filePath\":\"path/to/webjob2\"}]}",
+   "output": "{\"WebJobs\":[{\"filePath\":\"path/to/webjob1\"},{\"filePath\":\"path/to/webjob2\"}]}"
+  },
+  {
+   "id": "o32481",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'id': '',  \n}",
+   "output": "{ \n   'id': '',  \n}"
+  },
+  {
+   "id": "o90351",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'min_nodes': int, # Minimum value is one\n                     # Maximum allowed by GKE depends on machine type and zone"
+  },
+  {
+   "id": "o80622",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   v: -20\n}",
+   "output": "{ \n   v: -20\n}"
+  },
+  {
+   "id": "o73969",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'gis': {  \n       'center':'',\n         area:'',\n           route:''\n             }"
+  },
+  {
+   "id": "o12617",
+   "valid": false,
+   "reason": "'1973' does not match '\\\\d{4}-\\\\d{2}-\\\\d{2}T\\\\d{2}:\\\\d{2}:\\\\d{2}.\\\\d{6}'",
+   "extracted": "{\"created\":\"1973\",\"description\":\"\",\"id\":-5,\"modified\":\"18:00:00+00:00\",\"name\":\"\"}",
+   "output": "{\"created\":\"1973\",\"description\":\"\",\"id\":-5,\"modified\":\"18:00:00+00:00\",\"name\":\"\"}"
+  },
+  {
+   "id": "o63147",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"annotation_value\":{\"type\":\"Gene\",\"identifier\":\"TP53\",\"name\":\"Tumor protein p53 (DNA-binding transcription factor)\",\"match_text\":\"\"}}",
+   "output": "{\"annotation_value\":{\"type\":\"Gene\",\"identifier\":\"TP53\",\"name\":\"Tumor protein p53 (DNA-binding transcription factor)\",\"match_text\":\"\"}}"
+  },
+  {
+   "id": "o42986",
+   "valid": false,
+   "reason": "'' does not match 'OGG'",
+   "extracted": "{\"asset_type\":\"sound\",\"sound_file\":\"\",\"file_type\":\"\"}",
+   "output": "{\"asset_type\":\"sound\",\"sound_file\":\"\",\"file_type\":\"\"}"
+  },
+  {
+   "id": "o65305",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   '_id':'account_config.paypal',\n   'description': 'Schema for paypal account config',  \n   'properties':\n     {   \n        currency: {'$ref' : '#/definitions/currency'},\n\tenabled:{'$ref' :'#/definitions/enabled'},\t\n\thostedButtonId:'hosted-button-id'\n\treceiverID:\"reciever-ID\"\t\t\n     } ,\n     \n}",
+   "output": "{ \n   '_id':'account_config.paypal',\n   'description': 'Schema for paypal account config',  \n   'properties':\n     {   \n        currency: {'$ref' : '#/definitions/currency'},\n\tenabled:{'$ref' :'#/definitions/enabled'},\t\n\thostedButtonId:'hosted-button-id'\n\treceiverID:\"reciever-ID\"\t\t\n     } ,\n     \n}"
+  },
+  {
+   "id": "o50163",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n\"name\":\"John\",  \n\"avatar\":\"https:\\/\\/example.com\\/john.jpg\",   \n\"is_connected\":true,    \n}",
+   "output": "{ \n\"name\":\"John\",  \n\"avatar\":\"https:\\/\\/example.com\\/john.jpg\",   \n\"is_connected\":true,    \n}"
+  },
+  {
+   "id": "o48244",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   Id: '1234567890',  \n}",
+   "output": "{ \n   Id: '1234567890',  \n}"
+  },
+  {
+   "id": "o11187",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"code_status\":\"success\",\"message\":\"\",\"data\":{\"id\":\"123\"}}",
+   "output": "{\"code_status\":\"success\",\"message\":\"\",\"data\":{\"id\":\"123\"}}"
+  },
+  {
+   "id": "o63950",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"foo\":\"foo\",\"bar\":\"bar\"}",
+   "output": "{\"foo\":\"foo\",\"bar\":\"bar\"}"
+  },
+  {
+   "id": "o28210",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'objectType': 'svlanIdAssignment',  \n}",
+   "output": "{ \n   'objectType': 'svlanIdAssignment',  \n}"
+  },
+  {
+   "id": "o90886",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'billing_address': {  \n       street_address: '', city:'', state:''},\n     shipping_address:{   \n         street_address:'123 Main St',    \n           city :'Anytown',\n            state :''} }",
+   "output": "{ \n   'billing_address': {  \n       street_address: '', city:'', state:''},\n     shipping_address:{   \n         street_address:'123 Main St',    \n           city :'Anytown',\n            state :''} }"
+  },
+  {
+   "id": "o76479",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'links': {  \n     self: {'_format':'uri','href':''}   \n }"
+  },
+  {
+   "id": "o85467",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'syndicate': {  \n     external: true,\n       internal:true\n}"
+  },
+  {
+   "id": "o44363",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"name\":\"CO2\",\"unit\":\"g/km\"}",
+   "output": "{\"name\":\"CO2\",\"unit\":\"g/km\"}"
+  },
+  {
+   "id": "o39871",
+   "valid": false,
+   "reason": "'2' is not of type 'integer'",
+   "extracted": "{\"spec\":{\"replicas\":\"2\"}}",
+   "output": "{\"spec\":{\"replicas\":\"2\"}}"
+  },
+  {
+   "id": "o58618",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'binary_format': b'',\n   'byte_format':''\n}",
+   "output": "{ \n   'binary_format': b'',\n   'byte_format':''\n}"
+  },
+  {
+   "id": "o12078",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'body': '',  \n   'headers' : {   \n       X_Twilio_Signature: ''    \n     },     \n   http_method:'post',      \n path:'/SMS'\n }",
+   "output": "{ \n   'body': '',  \n   'headers' : {   \n       X_Twilio_Signature: ''    \n     },     \n   http_method:'post',      \n path:'/SMS'\n }"
+  },
+  {
+   "id": "o43977",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"vendorId\":\"exampleVendor\",\"messageId\":\"\",\"data\":\"\"}",
+   "output": "{\"vendorId\":\"exampleVendor\",\"messageId\":\"\",\"data\":\"\"}"
+  },
+  {
+   "id": "o10467",
+   "valid": true,
+   "reason": null,
+   "extracted": "{ \n\"name\":\"Project Name\",  \n\"description\":\"This is an example description.\",   \n\"members\":[\"user1\",\"user2\"],    \n\"_uniqueMembers\":[true],     \n\"id\":\"/projects/5f8b9c7d6e4a3fcdabceffgh\",      \n\"title\":\"Example Project Title\"}",
+   "output": "{ \n\"name\":\"Project Name\",  \n\"description\":\"This is an example description.\",   \n\"members\":[\"user1\",\"user2\"],    \n\"_uniqueMembers\":[true],     \n\"id\":\"/projects/5f8b9c7d6e4a3fcdabceffgh\",      \n\"title\":\"Example Project Title\"}"
+  },
+  {
+   "id": "o36270",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'role': {'value':'Subject',},\n}",
+   "output": "{ \n   'role': {'value':'Subject',},\n}"
+  },
+  {
+   "id": "o53019",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   slot:1,\n   \n}",
+   "output": "{ \n   slot:1,\n   \n}"
+  },
+  {
+   "id": "o33193",
+   "valid": false,
+   "reason": "[] is not of type 'string'",
+   "extracted": "{\"city\":\"New York\",\"closetime\":\"\",\"days\":[],\"latitude\":-73,\"longitude\":40}",
+   "output": "{\"city\":\"New York\",\"closetime\":\"\",\"days\":[],\"latitude\":-73,\"longitude\":40}"
+  },
+  {
+   "id": "o34374",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   author: { id :1, first name:\"John\", last Name :\"Doe\" }  \n}",
+   "output": "{ \n   author: { id :1, first name:\"John\", last Name :\"Doe\" }  \n}"
+  },
+  {
+   "id": "o39082",
+   "valid": false,
+   "reason": "'src' is a required property",
+   "extracted": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$tool\":\"json2ts\"}",
+   "output": "{\"$schema\":\"http://json-schema.org/draft-07/schema#\",\"$tool\":\"json2ts\"}"
+  },
+  {
+   "id": "o14490",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   target: 'https:\\/\\/example.com\\/api',\n   type:'https:\\/\\/www.w3.org/ns/activitystreams#create',  \n}",
+   "output": "{ \n   target: 'https:\\/\\/example.com\\/api',\n   type:'https:\\/\\/www.w3.org/ns/activitystreams#create',  \n}"
+  },
+  {
+   "id": "o50970",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"foo\":\"example\"}",
+   "output": "{\"foo\":\"example\"}"
+  },
+  {
+   "id": "o56866",
+   "valid": true,
+   "reason": null,
+   "extracted": "{ \n\"@id\":\"https:\\/\\/www.example.com\\/offeritemcondition\",  \n\"identifier\":{\"@value\":\"123\"},   \n\"name\":\"New Condition\"}",
+   "output": "{ \n\"@id\":\"https:\\/\\/www.example.com\\/offeritemcondition\",  \n\"identifier\":{\"@value\":\"123\"},   \n\"name\":\"New Condition\"}"
+  },
+  {
+   "id": "o26992",
+   "valid": false,
+   "reason": "'128' is not of type 'number'",
+   "extracted": "{\"h\":\"128\",\"w\":\"65379\"}",
+   "output": "{\"h\":\"128\",\"w\":\"65379\"}"
+  },
+  {
+   "id": "o71448",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"host\":\"example.com\",\"port\":9231}",
+   "output": "{\"host\":\"example.com\",\"port\":9231}"
+  },
+  {
+   "id": "o58915",
+   "valid": false,
+   "reason": "'123' is not of type 'integer'",
+   "extracted": "{\"notification\":{\"person_id\":\"123\",\"door_id\":\"567\"}}",
+   "output": "{\"notification\":{\"person_id\":\"123\",\"door_id\":\"567\"}}"
+  },
+  {
+   "id": "o14451",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   sensor_id: '123',  \n   temperature : { old_value:'56' , new_value :'78'}   \n}",
+   "output": "{ \n   sensor_id: '123',  \n   temperature : { old_value:'56' , new_value :'78'}   \n}"
+  },
+  {
+   "id": "o32487",
+   "valid": false,
+   "reason": "'' should be non-empty",
+   "extracted": "{\"id\":\"admin\",\"name\":\"\",\"translationKey\":\"\"}",
+   "output": "{\"id\":\"admin\",\"name\":\"\",\"translationKey\":\"\"}"
+  },
+  {
+   "id": "o20458",
+   "valid": false,
+   "reason": "Additional properties are not allowed ('$ref' was unexpected)",
+   "extracted": "{\"$ref\":\"#/definitions/Response\"}",
+   "output": "{\"$ref\":\"#/definitions/Response\"}"
+  },
+  {
+   "id": "o25701",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"locale\":\"en_US\",\"system_type\":\"local\"}",
+   "output": "{\"locale\":\"en_US\",\"system_type\":\"local\"}"
+  },
+  {
+   "id": "o41717",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"srvcId\":\"service1\",\"instId\":\"instance2356789a-bcde-fghi-jklm-nopqrstuvwxyz_abcdfghijklmnopqrstuvwxyzaaaabbbcccddeeefggaabbcccdddaaabbbbccccddeeeefffgggaaaaccaaddbdddddceeeeefffaaaaaaccdddddbbbbbbeeeeecfffffaghhhhhhaaaaaaaaaaacdffffffbbaadddbbeeeghiiiiiiaaaaaaaaaaadffffffffcbbaaeeddhjjjjiikkkklllmmnnnoooppqqqrrrssstttuuuvvvwwwwwxxxaayyyyyzzzzyyxxxxxwvvttsrroooppppmmmmllooonnnggggeeeddcccaaafffeebbdccaazzzzaawwxxttsssoooonnmmbblleekkjijihhgfffddaaceeesssyyxxxuuttvvsseerrrttrreeesseeeddccbbaazxaaavvwuwsvrqponmpolknjmilkhgfedeccdabaafgzxfewcvbuatysrxqpomnlkmjhigfedcbaZYZXWVUTSRQPONMLKJIHGFEDCBA\",}",
+   "output": "{\"srvcId\":\"service1\",\"instId\":\"instance2356789a-bcde-fghi-jklm-nopqrstuvwxyz_abcdfghijklmnopqrstuvwxyzaaaabbbcccddeeefggaabbcccdddaaabbbbccccddeeeefffgggaaaaccaaddbdddddceeeeefffaaaaaaccdddddbbbbbbeeeeecfffffaghhhhhhaaaaaaaaaaacdffffffbbaadddbbeeeghiiiiiiaaaaaaaaaaadffffffffcbbaaeeddhjjjjiikkkklllmmnnnoooppqqqrrrssstttuuuvvvwwwwwxxxaayyyyyzzzzyyxxxxxwvvttsrroooppppmmmmllooonnnggggeeeddcccaaafffeebbdccaazzzzaawwxxttsssoooonnmmbblleekkjijihhgfffddaaceeesssyyxxxuuttvvsseerrrttrreeesseeeddccbbaazxaaavvwuwsvrqponmpolknjmilkhgfedeccdabaafgzxfewcvbuatysrxqpomnlkmjhigfedcbaZYZXWVUTSRQPONMLKJIHGFEDCBA\",}"
+  },
+  {
+   "id": "o45404",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'entry_file': None,  \n   'name' : '',   \n   'prefix':'',    \n}",
+   "output": "{ \n   'entry_file': None,  \n   'name' : '',   \n   'prefix':'',    \n}"
+  },
+  {
+   "id": "o21393",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"bulk_publishing\": true, \n\"links\": {},  \n\"previous_version\":\"123\"}",
+   "output": "{\"bulk_publishing\": true, \n\"links\": {},  \n\"previous_version\":\"123\"}"
+  },
+  {
+   "id": "o89900",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"dictionary\":{\"key\":\"value\"}}",
+   "output": "{\"dictionary\":{\"key\":\"value\"}}"
+  },
+  {
+   "id": "o8462",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'hardware_inventory': {\n      'name_of_hardware_item_1' : {  \n         'quantity_in_stock':'',\n          },\n       }\n}",
+   "output": "{ \n   'hardware_inventory': {\n      'name_of_hardware_item_1' : {  \n         'quantity_in_stock':'',\n          },\n       }\n}"
+  },
+  {
+   "id": "o69579",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'context': '',  \n}",
+   "output": "{ \n   'context': '',  \n}"
+  },
+  {
+   "id": "o64737",
+   "valid": false,
+   "reason": "'kill_chain_name' is a required property",
+   "extracted": "{\"$ref\":\"#/definitions/KillChainPhase\",\"KillChainPhase\":{\"name\":[\"example_killchain\"],\"phases\":[{\"name\":[],\"x_mitre_deprecated\":\"\"}]}}",
+   "output": "{\"$ref\":\"#/definitions/KillChainPhase\",\"KillChainPhase\":{\"name\":[\"example_killchain\"],\"phases\":[{\"name\":[],\"x_mitre_deprecated\":\"\"}]}}"
+  },
+  {
+   "id": "o25953",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   subA: { propA :1, propB:-2 },  \n   subB:{ propA :-3 , propB:+5 }   \n}",
+   "output": "{ \n   subA: { propA :1, propB:-2 },  \n   subB:{ propA :-3 , propB:+5 }   \n}"
+  },
+  {
+   "id": "o57603",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   Xmin: -1,  \n   Ymin:-2,\n   Zmin :5 ,\n   \n}",
+   "output": "{ \n   Xmin: -1,  \n   Ymin:-2,\n   Zmin :5 ,\n   \n}"
+  },
+  {
+   "id": "o44299",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'tile': int(0),  \n   'url' : str('')   \n}",
+   "output": "{ \n   'tile': int(0),  \n   'url' : str('')   \n}"
+  },
+  {
+   "id": "o90306",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'label': None,  \n   'size' : float(1),   \n   'value': int(-9)    \n}",
+   "output": "{ \n   'label': None,  \n   'size' : float(1),   \n   'value': int(-9)    \n}"
+  },
+  {
+   "id": "o17641",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   map1: { },  \n   map2:{},   \n}",
+   "output": "{ \n   map1: { },  \n   map2:{},   \n}"
+  },
+  {
+   "id": "o44187",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   Z1K1: 'Z16',  \n   Z16K1:'javaScript',\n   Z16k2:\"Hello World\"   \n}",
+   "output": "{ \n   Z1K1: 'Z16',  \n   Z16K1:'javaScript',\n   Z16k2:\"Hello World\"   \n}"
+  },
+  {
+   "id": "o70022",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   floors: [\n     { },\n\t ]\n}",
+   "output": "{ \n   floors: [\n     { },\n\t ]\n}"
+  },
+  {
+   "id": "o14471",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"Error\":[\"This is an error message\"]}",
+   "output": "{\"Error\":[\"This is an error message\"]}"
+  },
+  {
+   "id": "o8465",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"key\":\"value\"}",
+   "output": "{\"key\":\"value\"}"
+  },
+  {
+   "id": "o49986",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'address': {  \n     post_office_box: '',\n       extended_address:'',\n         street_adress:'1600 Pennsylvania Avenue NW',\n           locality : 'Washington',\n             region :'DC' ,\n               postal_code:'' , country_name:\"USA\" }"
+  },
+  {
+   "id": "o34462",
+   "valid": false,
+   "reason": "'telefones' is a required property",
+   "extracted": "{\"nome\":\"John Doe\",\"email\":\"johndoe@example.com\",\"senha\":\"password123\"}",
+   "output": "{\"nome\":\"John Doe\",\"email\":\"johndoe@example.com\",\"senha\":\"password123\"}"
+  },
+  {
+   "id": "o69533",
+   "valid": false,
+   "reason": "'https://api.github.com/repos/octocat/Hello-World' is not of type 'object'",
+   "extracted": "{\"_links\":{\"self\":\"https:\\/\\/api.github.com\\/repos\\/octocat\\/Hello-World\"}}",
+   "output": "{\"_links\":{\"self\":\"https:\\/\\/api.github.com\\/repos\\/octocat\\/Hello-World\"}}"
+  },
+  {
+   "id": "o36461",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'value':56  \n}",
+   "output": "{ \n   'value':56  \n}"
+  },
+  {
+   "id": "o66141",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"$schema\":\"http:\\/\\/json-schema.org\\/draft-04\\/schema#\",\\\"type\\\":\\\"object\\\",\\\"id\\\":\\u2758,\\\"properties\\\":{\\\"CLs_exp\\\":{\\\"type\\\":\\\"array\\\", \\\"items\\\":{\\\"type\\\":\\\"number\\\"\\}}, \\n\\t\"CLs_obs\":{\"type\":\"number\"}}}",
+   "output": "{\"$schema\":\"http:\\/\\/json-schema.org\\/draft-04\\/schema#\",\\\"type\\\":\\\"object\\\",\\\"id\\\":\\u2758,\\\"properties\\\":{\\\"CLs_exp\\\":{\\\"type\\\":\\\"array\\\", \\\"items\\\":{\\\"type\\\":\\\"number\\\"\\}}, \\n\\t\"CLs_obs\":{\"type\":\"number\"}}}"
+  },
+  {
+   "id": "o43222",
+   "valid": false,
+   "reason": "Additional properties are not allowed ('Rewards' was unexpected)",
+   "extracted": "{\"Rewards\":[{\"rewardset\":\"1\",\"rewardsourcetype\":-2,\"spartankillsourceid\":\"\",\"commendationsource\":\"\"}]}",
+   "output": "{\"Rewards\":[{\"rewardset\":\"1\",\"rewardsourcetype\":-2,\"spartankillsourceid\":\"\",\"commendationsource\":\"\"}]}"
+  },
+  {
+   "id": "o8438",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"ID\":\"ABCD\",\"age\":32,\"grades\":[7,9],\"item\":\"apple\"}",
+   "output": "{\"ID\":\"ABCD\",\"age\":32,\"grades\":[7,9],\"item\":\"apple\"}"
+  },
+  {
+   "id": "o7291",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"dead_features\":{\"feature1\":[2],\"feature3\":[4]},\"false_optionals\"}",
+   "output": "{\"dead_features\":{\"feature1\":[2],\"feature3\":[4]},\"false_optionals\"}"
+  },
+  {
+   "id": "o21487",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'api_method': '',  \n   'api_method_arguments' : {   \n       id_goal: ''    \n     },     \n   frequency:'daily',      \n period :'day',\n siteId:'' }",
+   "output": "{ \n   'api_method': '',  \n   'api_method_arguments' : {   \n       id_goal: ''    \n     },     \n   frequency:'daily',      \n period :'day',\n siteId:'' }"
+  },
+  {
+   "id": "o48814",
+   "valid": false,
+   "reason": "'1' is not of type 'integer'",
+   "extracted": "{\"health\":\"1\",\"help\":\"\",\"host_ip\":\"\"}",
+   "output": "{\"health\":\"1\",\"help\":\"\",\"host_ip\":\"\"}"
+  },
+  {
+   "id": "o37088",
+   "valid": false,
+   "reason": "'type' is a required property",
+   "extracted": "{\"$schema\":\"http:\\/\\/json-schema.org\\/draft-07\\/schema#\",\"$id\":\"https:\\/\\/mcda.drugis.org\\/eventsSampleSizeEffect.json\",\"title\":\"MCDA events, sample size effect for the performance table entry of absolute data\",\"description\":\"\",\"default\":{\"type\":[\"absolute\"],\"values\":[],\"inputs\":[{\"name\":\"\"}]},\"examples\":[{\"type\":\"relative\"},{\"type\":\"absolut\"}]}",
+   "output": "{\"$schema\":\"http:\\/\\/json-schema.org\\/draft-07\\/schema#\",\"$id\":\"https:\\/\\/mcda.drugis.org\\/eventsSampleSizeEffect.json\",\"title\":\"MCDA events, sample size effect for the performance table entry of absolute data\",\"description\":\"\",\"default\":{\"type\":[\"absolute\"],\"values\":[],\"inputs\":[{\"name\":\"\"}]},\"examples\":[{\"type\":\"relative\"},{\"type\":\"absolut\"}]}"
+  },
+  {
+   "id": "o58216",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'format': None,\n   'href' : '',\n}",
+   "output": "{ \n   'format': None,\n   'href' : '',\n}"
+  },
+  {
+   "id": "o71317",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   interface_name: 'ethernet',\n}",
+   "output": "{ \n   interface_name: 'ethernet',\n}"
+  },
+  {
+   "id": "o25199",
+   "valid": false,
+   "reason": "'2' is not of type 'number'",
+   "extracted": "{\"anInteger\":-1,\"aNumber\":\"2\",\"aBoolean\":[],\"anObject\":{\"key3\":[\"value4\"]},\"aString\":[{\"k5\":\"\"}]}",
+   "output": "{\"anInteger\":-1,\"aNumber\":\"2\",\"aBoolean\":[],\"anObject\":{\"key3\":[\"value4\"]},\"aString\":[{\"k5\":\"\"}]}"
+  },
+  {
+   "id": "o7375",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"selectedInstance\":\"instance1\",\"instances\":[\"path/to/extra/imported_instance\"]}",
+   "output": "{\"selectedInstance\":\"instance1\",\"instances\":[\"path/to/extra/imported_instance\"]}"
+  },
+  {
+   "id": "o49808",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   \"@context\":\"https:\\/\\/schema\\.org\\/\",  \n   \"@graph\":[\n       {   \n           \"@version\":\"1\\.\\d+\",    \n            \"\\@vocab\" :\"\\#\\\" ,     \n             \\_links:{\"self\":{\"href\":\"/streams/api/volume/\"}},      \n              name:\"Volume API Endpoint\",       \n               description :\"This endpoint provides volume data for streams.\",        \n                documentationUrl:\"https:\\//github.com/apache/incubator-streams/blob/master/docs/stream-api.md#\" },         \n                 {\"\\_class\":\"com.example.VolumeResource\",\"title\":\"Get Volume Data\"},          \n                  {\\_link:{rel:[\"get\"],\"method\":[\"GET\"], href:/volume/{streamId} },\"parameters\":[{\"in\":\"path\",\"required:true, type:string,name:'Stream ID'},{ in:\\\"query\\\", required:false,type:number,minValue=5,maxvalue =3600,default value=\\\"900\\\",\\\"name\\\":\\\"timeframe (seconds) \\\"}],           \n                   responses:[{\\code=\"4XX|5xx\",reason='error message'}]}}",
+   "output": "{ \n   \"@context\":\"https:\\/\\/schema\\.org\\/\",  \n   \"@graph\":[\n       {   \n           \"@version\":\"1\\.\\d+\",    \n            \"\\@vocab\" :\"\\#\\\" ,     \n             \\_links:{\"self\":{\"href\":\"/streams/api/volume/\"}},      \n              name:\"Volume API Endpoint\",       \n               description :\"This endpoint provides volume data for streams.\",        \n                documentationUrl:\"https:\\//github.com/apache/incubator-streams/blob/master/docs/stream-api.md#\" },         \n                 {\"\\_class\":\"com.example.VolumeResource\",\"title\":\"Get Volume Data\"},          \n                  {\\_link:{rel:[\"get\"],\"method\":[\"GET\"], href:/volume/{streamId} },\"parameters\":[{\"in\":\"path\",\"required:true, type:string,name:'Stream ID'},{ in:\\\"query\\\", required:false,type:number,minValue=5,maxvalue =3600,default value=\\\"900\\\",\\\"name\\\":\\\"timeframe (seconds) \\\"}],           \n                   responses:[{\\code=\"4XX|5xx\",reason='error message'}]}}"
+  },
+  {
+   "id": "o21500",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"consulate\":\"Consulat de la Francia\",\"percent\":75,\"period\":\"day\"}",
+   "output": "{\"consulate\":\"Consulat de la Francia\",\"percent\":75,\"period\":\"day\"}"
+  },
+  {
+   "id": "o90253",
+   "valid": false,
+   "reason": "'ascending' is not one of ['asc', 'desc']",
+   "extracted": "{\"field\":\"relationshipName\",\"order\":\"ascending\"}",
+   "output": "{\"field\":\"relationshipName\",\"order\":\"ascending\"}"
+  },
+  {
+   "id": "o81662",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   resource: { priority :5 },  \n}",
+   "output": "{ \n   resource: { priority :5 },  \n}"
+  },
+  {
+   "id": "o89523",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   getQuote: { request:{ symbol:\"AAPL\" } },  \n}",
+   "output": "{ \n   getQuote: { request:{ symbol:\"AAPL\" } },  \n}"
+  },
+  {
+   "id": "o84354",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'message': str,  \n   'previous_code' : ['pending_registration', 'pending_update']   \n}",
+   "output": "{ \n   'message': str,  \n   'previous_code' : ['pending_registration', 'pending_update']   \n}"
+  },
+  {
+   "id": "o81495",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   availableUnit: number, // integer\n}",
+   "output": "{ \n   availableUnit: number, // integer\n}"
+  },
+  {
+   "id": "o48517",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"grayscale8\":\"\", \"keyvalue\":\"\",\"labelmap\":\"\",\n\"labels64\":\"\" ,\"multichan16\":\n\"\",  \t\"quadtree\":\"\",\" rgba8\":\"\", \n    \t       \t \t   \t  \t    \t\t  \t\t          \t\t\t         \t\t\t\t        \t\t\t\t\t           \t\t\t\t\t\t       \t\t\t\t\t\t\t      \t\t\t\t\t\t\t\t            \t\t\t\t\t\t\t\t\t              \t\t\t\t\t\t\t\t\t\t                \t\t\t\t\t\t\t\t\t\t\t                   \t\t\t\t\t\t\t\t\t\t\t\t                      \t\t\t\t\t\t\t\t\t\t\t\t\t                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t               \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                  \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \t                                                                                                                                               \n}",
+   "output": "{\"grayscale8\":\"\", \"keyvalue\":\"\",\"labelmap\":\"\",\n\"labels64\":\"\" ,\"multichan16\":\n\"\",  \t\"quadtree\":\"\",\" rgba8\":\"\", \n    \t       \t \t   \t  \t    \t\t  \t\t          \t\t\t         \t\t\t\t        \t\t\t\t\t           \t\t\t\t\t\t       \t\t\t\t\t\t\t      \t\t\t\t\t\t\t\t            \t\t\t\t\t\t\t\t\t              \t\t\t\t\t\t\t\t\t\t                \t\t\t\t\t\t\t\t\t\t\t                   \t\t\t\t\t\t\t\t\t\t\t\t                      \t\t\t\t\t\t\t\t\t\t\t\t\t                        \t\t\t\t\t\t\t\t\t\t\t\t\t\t               \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t                  \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t \t                                                                                                                                               \n}"
+  },
+  {
+   "id": "o9976",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'component_name': '',\n}",
+   "output": "{ \n   'component_name': '',\n}"
+  },
+  {
+   "id": "o31276",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"protocol\":\"choria:secure:reply:1\",\"message\":\"\",\"hash\":\"\"}",
+   "output": "{\"protocol\":\"choria:secure:reply:1\",\"message\":\"\",\"hash\":\"\"}"
+  },
+  {
+   "id": "o66187",
+   "valid": false,
+   "reason": "'script' is a required property",
+   "extracted": "{\"interpreter\":\"bash\",\"process_type\":\"interpolated-script-cmd\"}",
+   "output": "{\"interpreter\":\"bash\",\"process_type\":\"interpolated-script-cmd\"}"
+  },
+  {
+   "id": "o71309",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"key\":\"value\"}",
+   "output": "{\"key\":\"value\"}"
+  },
+  {
+   "id": "o39447",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"name\":\"Group1\",\"permissions\":[\"read\"],\"members\":[{\"name\":\"Alice\"},{\"name\":\"Bob\"}]}",
+   "output": "{\"name\":\"Group1\",\"permissions\":[\"read\"],\"members\":[{\"name\":\"Alice\"},{\"name\":\"Bob\"}]}"
+  },
+  {
+   "id": "o37615",
+   "valid": true,
+   "reason": null,
+   "extracted": "{ \n\"name\":\"Tournament Name\",  \n\"comments\":[\"Comment One\",\"Another Comment\"]   \n}",
+   "output": "{ \n\"name\":\"Tournament Name\",  \n\"comments\":[\"Comment One\",\"Another Comment\"]   \n}"
+  },
+  {
+   "id": "o9857",
+   "valid": false,
+   "reason": "'' should be non-empty",
+   "extracted": "{\"email\":\"example@example.com\",\"token\":\"\"}",
+   "output": "{\"email\":\"example@example.com\",\"token\":\"\"}"
+  },
+  {
+   "id": "o21082",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'acknowledged': True,  \n   'acknowledged_at':'2019-03-15T14:18Z',   \n   'acknowledged_by':\"John Doe\",    \n   'created_at' : '2017-06-15',\n   'data':{'key_1','value'},     \n   'id':1,\n   'object_id':'abcde-fghij-klmno-pqrst-uvwxy-zabcd-eefgg-hhijk-lmmnnn-oopppp-qqqqrrr-sstttt-vvvvwwwww-xxxxx-yyyyy-zzzz'}",
+   "output": "{ \n   'acknowledged': True,  \n   'acknowledged_at':'2019-03-15T14:18Z',   \n   'acknowledged_by':\"John Doe\",    \n   'created_at' : '2017-06-15',\n   'data':{'key_1','value'},     \n   'id':1,\n   'object_id':'abcde-fghij-klmno-pqrst-uvwxy-zabcd-eefgg-hhijk-lmmnnn-oopppp-qqqqrrr-sstttt-vvvvwwwww-xxxxx-yyyyy-zzzz'},\n]"
+  },
+  {
+   "id": "o5138",
+   "valid": false,
+   "reason": "Additional properties are not allowed ('$ref' was unexpected)",
+   "extracted": "{\"$ref\":\"#/definitions/result\"}",
+   "output": "{\"$ref\":\"#/definitions/result\"}"
+  },
+  {
+   "id": "o89607",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'log': {  \n       stream: '',\n          bufferSize : ''\n     }   \n}",
+   "output": "{ \n   'log': {  \n       stream: '',\n          bufferSize : ''\n     }   \n}"
+  },
+  {
+   "id": "o64705",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'name': '',\n}",
+   "output": "{ \n   'name': '',\n}"
+  },
+  {
+   "id": "o79434",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"capabilities\":[{\"name\":\"Capability1\"},{\"name\":\"Capability2\"}]}",
+   "output": "{\"capabilities\":[{\"name\":\"Capability1\"},{\"name\":\"Capability2\"}]}"
+  },
+  {
+   "id": "o69520",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"person\":{\"first_name\":\"John\",\"last_name\":\"Doe\"}}",
+   "output": "{\"person\":{\"first_name\":\"John\",\"last_name\":\"Doe\"}}"
+  },
+  {
+   "id": "o26974",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   k:1, x:\"this is an example\", ix:''\n}",
+   "output": "{ \n   k:1, x:\"this is an example\", ix:''\n}"
+  },
+  {
+   "id": "o66299",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'copyright': [' Copyright 2013 Red Hat, Inc. and\\/or its affiliates.', '\\n', \\'\\t\\', \\' This file is part of lightblue.\\' ,\\'\\n\\t\\', '\\' It may only copied within the license agreement given\\nwith this package.' ],  \n     '$ref':'#/definitions/FieldSpec',\n}",
+   "output": "{ \n   'copyright': [' Copyright 2013 Red Hat, Inc. and\\/or its affiliates.', '\\n', \\'\\t\\', \\' This file is part of lightblue.\\' ,\\'\\n\\t\\', '\\' It may only copied within the license agreement given\\nwith this package.' ],  \n     '$ref':'#/definitions/FieldSpec',\n}"
+  },
+  {
+   "id": "o89671",
+   "valid": false,
+   "reason": "Additional properties are not allowed ('tag' was unexpected)",
+   "extracted": "{\"environment_type\":\"docker-encapsulated\",\"image\":\"\",\"tag\":\"\"}",
+   "output": "{\"environment_type\":\"docker-encapsulated\",\"image\":\"\",\"tag\":\"\"}"
+  },
+  {
+   "id": "o88675",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'type': 'request',  \n   'method':'get_shampoos',\n     'data':{'name':\"sham1\"},\n       'id' :2\n}",
+   "output": "{ \n   'type': 'request',  \n   'method':'get_shampoos',\n     'data':{'name':\"sham1\"},\n       'id' :2\n}"
+  },
+  {
+   "id": "o52964",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   search: { resource:\"/api/v2/search\" }, i18n:{ locale:'en' }  \n}",
+   "output": "{ \n   search: { resource:\"/api/v2/search\" }, i18n:{ locale:'en' }  \n}"
+  },
+  {
+   "id": "o46362",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"calculationId\":\"your_calc_id_here\"}",
+   "output": "{\"calculationId\":\"your_calc_id_here\"}"
+  },
+  {
+   "id": "o62755",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'content': '',  \n}",
+   "output": "{ \n   'content': '',  \n}"
+  },
+  {
+   "id": "o90225",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'expression': '$feature[\"State\"]'\n}",
+   "output": "{ \n   'expression': '$feature[\"State\"]'\n}"
+  },
+  {
+   "id": "o43292",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'path': '/file.txt',  \n}",
+   "output": "{ \n   'path': '/file.txt',  \n}"
+  },
+  {
+   "id": "o22453",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"server\":{\"host\":\"localhost\",\"port\":8123},\"database\":{\"url\":\"\"}}",
+   "output": "{\"server\":{\"host\":\"localhost\",\"port\":8123},\"database\":{\"url\":\"\"}}"
+  },
+  {
+   "id": "o33707",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   schemaType: 'document',\n   _documentID:'123abc',  \n}",
+   "output": "{ \n   schemaType: 'document',\n   _documentID:'123abc',  \n}"
+  },
+  {
+   "id": "o7308",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'analysis_group': '',  \n   'alignment_software':'',   \n   'alignment_software_version':'' ,    \n   'analysis_software' :'' ,\n     'analysis_software_version:'''\n}",
+   "output": "{ \n   'analysis_group': '',  \n   'alignment_software':'',   \n   'alignment_software_version':'' ,    \n   'analysis_software' :'' ,\n     'analysis_software_version:'''\n}"
+  },
+  {
+   "id": "o12629",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"$schema\":\"https:\\/\\/smapi\\.io\\/schemas\\/i18n\\.json\"}",
+   "output": "{\"$schema\":\"https:\\/\\/smapi\\.io\\/schemas\\/i18n\\.json\"}"
+  },
+  {
+   "id": "o41733",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{\"$schema\":\"http:\\/\\/json\\-schema\\.org\\/draft\\-04\\/schema\\#\",\\\"title\\\":\\\"TenantModuleDescriptor\\\",\\\"description\\\":\\\"Module transitions\\\",\\\"type\\\":\\\"object\\\", \\\"additionalProperties\\\":false,\\\"properties\\\":{\\\"id\\\":{\\\"description\\\":\\\"Module ID \\(or just product part\\) \\\",\\\"type\\\":\\\"string\\\"},\\\"from\\\":{\\\"description\\\":\\\" Original Module ID when transitioning from one module to another\\\",\\\" type\\\":\\\" string\\\" },\\\"action\\\":{\\\" description\\\":\\\" Module action\\\",\\\" enum\\\":[\\\" enable\\\",\\\" disable\\\",\\\" uptodate\\\",\\\" suggest\\\",\\\" conflict\\\"] ,\\\" message\\\":{\\\" description\\\":\\\" Diagnostic Message\\\",\\\" type\\\":\\\" string\\\"\"}},\" required\":[\" id\"]}"
+  },
+  {
+   "id": "o90885",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"team\":{\"home_city\":\"New York\",\"id\":\"NYG\",\"name\":\"Giants\",\"stadium_name\":\"MetLife Stadium\"}}",
+   "output": "{\"team\":{\"home_city\":\"New York\",\"id\":\"NYG\",\"name\":\"Giants\",\"stadium_name\":\"MetLife Stadium\"}}"
+  },
+  {
+   "id": "o90368",
+   "valid": true,
+   "reason": null,
+   "extracted": "{ \n\"name\":\"myBastion\",  \n\"kind\":\"bastion\",   \n\"listenPort\":8976    \n}",
+   "output": "{ \n\"name\":\"myBastion\",  \n\"kind\":\"bastion\",   \n\"listenPort\":8976    \n}"
+  },
+  {
+   "id": "o9583",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{\"$schema\":\"http:\\/\\/json-schema.org\\/draft-04\\/schema#\",\\\"title\\\":\\\"Message\\\",\\\"definitions\\\":{},\\n\\t\"type\\\":\\\"array\\\",\\t\\n \\\"items\\\":{\\\"anyOf\\\":[{\\\"allOf\\\":[{\\r \\\"/** @typedef {Object} Message */\\\"\\}, {\\r /** * Defines an API call from/to the browser extension.\\ *\\ {@link https: \\/\\\\/github.com\\/w3c\\/webextensions-docs/blob/master\\/reference\\/manifest.json.md#windows }*/\", \"\\/**@constructor*//\",\"/* eslint-disable no-unused-vars, valid-jsdoc , max-len */\",\"\\/***\\n *@param {!Window=} opt_win The window for which we want to get the tabId.*@\\return{number|undefined}*///function getWindowTab(win) {*var doc = win.document;*\", \"*if (win.chrome && chrome.tabs)*{*try {\" ,\" return chrome.tabs.getFrameId(doc); \",\" \"} catch(e){}\", \"*\", \"// Chrome throws if called on non-tab documents.\", \"\", \"}\\n var nodeType = doc.nodeType;\", \"/*** \", \"@enum {*} **/const NodeTypeEnum={DOCUMENT_NODE :9,\", \" DOCUMENT_TYPE_NODE   :\", \",\", \" ELEMENT_NODE         :\" +\"\\u2758\"+\"\\uFEFF\"+\"\"+\";\"}]}]}}"
+  },
+  {
+   "id": "o31092",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'activePolicy': None,  \n   'bindTo' : '',   \n   'goTopPriorityExpression':'',    \n   'Name':'' ,     \n}",
+   "output": "{ \n   'activePolicy': None,  \n   'bindTo' : '',   \n   'goTopPriorityExpression':'',    \n   'Name':'' ,     \n}"
+  },
+  {
+   "id": "o9850",
+   "valid": false,
+   "reason": "None is not of type 'number'",
+   "extracted": "{\"updated\" : null, \n  \t\"failed\" : -1,\n    \t\"log_link\":\"https:\\/\\/www.example.com\\/logs\"}",
+   "output": "{\"updated\" : null, \n  \t\"failed\" : -1,\n    \t\"log_link\":\"https:\\/\\/www.example.com\\/logs\"}"
+  },
+  {
+   "id": "o13111",
+   "valid": false,
+   "reason": "'operational' is a required property",
+   "extracted": "{\"backend_name\":\"ibmq_qasm_simulator\",\"backend_version\":\"235768fcbadbeaafddcbbdceecbdcdbfcabcfbdcaebdfbcdaefcdedfbdebfcedfdfeffeffeefdfebdefeeffeefeedefeedfedfefdedbedbefdebfeebeebebdeebededededeedbdddffffeeeeeeeeddfffddddbddbbbbbbbbaaaaaaaaccccccccccfffffffffffffffaaaaaaaaaaaaafffffffff\"}",
+   "output": "{\"backend_name\":\"ibmq_qasm_simulator\",\"backend_version\":\"235768fcbadbeaafddcbbdceecbdcdbfcabcfbdcaebdfbcdaefcdedfbdebfcedfdfeffeffeefdfebdefeeffeefeedefeedfedfefdedbedbefdebfeebeebebdeebededededeedbdddffffeeeeeeeeddfffddddbddbbbbbbbbaaaaaaaaccccccccccfffffffffffffffaaaaaaaaaaaaafffffffff\"}"
+  },
+  {
+   "id": "o6173",
+   "valid": false,
+   "reason": "'5e98f7b3c61dfc001edfbaf' does not match '^[A-Fa-f\\\\d]{24}$'",
+   "extracted": "{\"deviceIds\":[\"5e98f7b3c61dfc001edfbaf\",\"5eaef7bfc61dfcfdbfdab\"],\"deviceTags\":[{\"key\":\"tagKeyOne\", \"value\" : \"\"},{\"key\":\"\",\" value\":\"\"}]}",
+   "output": "{\"deviceIds\":[\"5e98f7b3c61dfc001edfbaf\",\"5eaef7bfc61dfcfdbfdab\"],\"deviceTags\":[{\"key\":\"tagKeyOne\", \"value\" : \"\"},{\"key\":\"\",\" value\":\"\"}]}"
+  },
+  {
+   "id": "o3545",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{  \n   'source_name': { \n       'A':'value1',   \n         B:'value2'    \n     },     \n'Target_Name':{'C':\"Value3\",      \n'D\":\"VALUE5\" }"
+  },
+  {
+   "id": "o78482",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'options': {  \n     '@stryker-mutator/core:transpilers':[  "
+  },
+  {
+   "id": "o46428",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": null,
+   "output": "{ \n   'other': {  \n     non_resident_landlord: true,\n       rar_joint_let:true,   \n}"
+  },
+  {
+   "id": "o66192",
+   "valid": false,
+   "reason": "'process_type' is a required property",
+   "extracted": "{\"command\":\"echo 'Hello, World!'\",\"processType\":\"stringInterpolatedCmd\"}",
+   "output": "{\"command\":\"echo 'Hello, World!'\",\"processType\":\"stringInterpolatedCmd\"}"
+  },
+  {
+   "id": "o43997",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"_id\":\"593762b18cfcf3aeeffcfdd\",\"category\":{\"versionId\":\"593762aebebcbbdbdcbfaeaa\",\"project\":\"54edbc13addecdafafd4ecbf\",\"sync\":{\"url\":\"\",\"isSync\":false},\"reference\":true,\"createdAt\":\"2017-06-06T15:20:06.400Z\",\"from_sync\":false,\"order\":1,<|fim_suffix|>\"parentDoc\":null}<|fim_middle|>\"title\":\"API Reference\"}",
+   "output": "{\"_id\":\"593762b18cfcf3aeeffcfdd\",\"category\":{\"versionId\":\"593762aebebcbbdbdcbfaeaa\",\"project\":\"54edbc13addecdafafd4ecbf\",\"sync\":{\"url\":\"\",\"isSync\":false},\"reference\":true,\"createdAt\":\"2017-06-06T15:20:06.400Z\",\"from_sync\":false,\"order\":1,<|fim_suffix|>\"parentDoc\":null}<|fim_middle|>\"title\":\"API Reference\"},\"editedParams\":true,\"githubsync\":\"\",\"link_external\":false,\"user\":\"54ebbdabefda10defdfceea2\",\"__v\":0,\"api\":{\"results\":{\"codes\":[{\"status\":200},{\"name\":\"\"}]}}"
+  },
+  {
+   "id": "o48257",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n\"name\":\"My Entity\",  \n\"entities\":{\n\"group\":\"\",\n\"items\":[\n{\"name\":\"\"},\n]\n},   \n\"description\":\"\",\"version\":\"\"}",
+   "output": "{ \n\"name\":\"My Entity\",  \n\"entities\":{\n\"group\":\"\",\n\"items\":[\n{\"name\":\"\"},\n]\n},   \n\"description\":\"\",\"version\":\"\"}"
+  },
+  {
+   "id": "o65462",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{ \n   'previous_names': [ {  \n       'end_date':'23/5678',\n        'company_name' : 'ABC Company'\n     } ] ,\n}",
+   "output": "{ \n   'previous_names': [ {  \n       'end_date':'23/5678',\n        'company_name' : 'ABC Company'\n     } ] ,\n}"
+  },
+  {
+   "id": "o31043",
+   "valid": true,
+   "reason": null,
+   "extracted": "{\"backupfilename\":\"example_backup_filename\",\"createdby\":\"\",\"creationtime\":\"\"}",
+   "output": "{\"backupfilename\":\"example_backup_filename\",\"createdby\":\"\",\"creationtime\":\"\"}"
+  },
+  {
+   "id": "o7294",
+   "valid": false,
+   "reason": "no_json",
+   "extracted": "{\"$schema\":\"http:\\/\\/json\\-schema\\.org\\/draft\\-04\\/schema\\#\",\\\"title\\\":\\\"Validation Result\\\",\\\"description\\\":\\\"\\u2713 if all contexts are in range, \\uD83D\\uDEAB otherwise.\\\",\\\"definitions\\\":{\\\"contextRangeDefinition\\\":{\\\"type\\\":\\\"number\\\", \\\"minimum\\\": -5,\\\"maximum\\\": +6},\\\"validContextsListDefintion\\\":{\\\"oneOf\\\":[{\\\"enum\\\":[null],},{\\\"minItems\\\":9,\"maxItems\" : 9}]}}}",
+   "output": "{\"$schema\":\"http:\\/\\/json\\-schema\\.org\\/draft\\-04\\/schema\\#\",\\\"title\\\":\\\"Validation Result\\\",\\\"description\\\":\\\"\\u2713 if all contexts are in range, \\uD83D\\uDEAB otherwise.\\\",\\\"definitions\\\":{\\\"contextRangeDefinition\\\":{\\\"type\\\":\\\"number\\\", \\\"minimum\\\": -5,\\\"maximum\\\": +6},\\\"validContextsListDefintion\\\":{\\\"oneOf\\\":[{\\\"enum\\\":[null],},{\\\"minItems\\\":9,\"maxItems\" : 9}]}}}\""
+  }
+ ]
+}
