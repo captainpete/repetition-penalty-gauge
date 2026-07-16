@@ -1,5 +1,7 @@
 # Gauge dependence and structured-output corruption in sign-branched repetition penalties
 
+[![arXiv](https://img.shields.io/badge/arXiv-2607.09791-b31b1b.svg)](https://arxiv.org/abs/2607.09791)
+
 Companion code, data, and paper for the finding that the multiplicative (CTRL-style) repetition
 penalty, as shipped by HuggingFace Transformers, vLLM, llama.cpp, and most of the inference
 ecosystem, branches on the **sign of the raw logit** and is therefore **gauge-dependent**: since
@@ -35,6 +37,8 @@ Two measurable consequences, with shift-invariant penalties as measured controls
   candle, Ollama, and others (verbatim excerpts at pinned commits); none normalizes first.
 
 ## Paper
+
+Published as [arXiv:2607.09791](https://arxiv.org/abs/2607.09791) (cs.LG).
 
 - **`paper/paper-note.pdf`** — the short note (8 pages): mechanism and cost figures, the
   measurements, the cross-stack replication, and the normalized variant. Start here.
@@ -83,12 +87,16 @@ argmax decision stay in fp32, so the no-op gate is exact regardless of model dty
 
 ```bibtex
 @misc{hollows2026repetition,
-  title  = {Gauge dependence and structured-output corruption in sign-branched
-            repetition penalties: measurements across models, inference stacks,
-            and alternative repetition controls},
-  author = {Hollows, Peter},
-  year   = {2026},
-  note   = {\url{https://github.com/captainpete/repetition-penalty-gauge}}
+  title         = {Gauge dependence and structured-output corruption in sign-branched
+                   repetition penalties: measurements across models, inference stacks,
+                   and alternative repetition controls},
+  author        = {Hollows, Peter},
+  year          = {2026},
+  eprint        = {2607.09791},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  doi           = {10.48550/arXiv.2607.09791},
+  url           = {https://arxiv.org/abs/2607.09791}
 }
 ```
 
