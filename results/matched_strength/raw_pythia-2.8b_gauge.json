@@ -1,0 +1,932 @@
+{
+ "experiment": "MATCHED",
+ "request": "MATCHED",
+ "stage": "gauge",
+ "model": "EleutherAI/pythia-2.8b",
+ "model_slug": "pythia-2.8b",
+ "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+ "device": "cuda",
+ "dtype": "float32",
+ "max_new": 256,
+ "seed": 1234,
+ "limit": 0,
+ "pairs": [
+  {
+   "theta_raw": 1.02,
+   "theta_fix": 1.2109375,
+   "frozen_theta_fix_2dp": 1.21,
+   "fixcal_target_rep_rate": 0.831298828125,
+   "fixcal_achieved_rep_rate": 0.837158203125,
+   "fixcal_delta": 0.005859375,
+   "is_deployed_anchor": false
+  },
+  {
+   "theta_raw": 1.05,
+   "theta_fix": 1.703125,
+   "frozen_theta_fix_2dp": 1.7,
+   "fixcal_target_rep_rate": 0.684814453125,
+   "fixcal_achieved_rep_rate": 0.6806640625,
+   "fixcal_delta": -0.004150390625,
+   "is_deployed_anchor": false
+  },
+  {
+   "theta_raw": 1.1,
+   "theta_fix": 2.51171875,
+   "frozen_theta_fix_2dp": 2.51,
+   "fixcal_target_rep_rate": 0.509521484375,
+   "fixcal_achieved_rep_rate": 0.5087890625,
+   "fixcal_delta": -0.000732421875,
+   "is_deployed_anchor": true
+  }
+ ],
+ "pairs_meta": {
+  "pairs_json": "/work/code/fix_calibration_summary.json",
+  "pairs_json_sha256": "930039cc6b90c4714d80fe85bd8805326eb26820a317e691c203482fb6fba500",
+  "fixcal_model": "EleutherAI/pythia-2.8b",
+  "fixcal_revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+  "fixcal_dtype": "float32",
+  "fixcal_max_new": 256,
+  "fixcal_n_prompts": 16,
+  "allowlist": [
+   1.02,
+   1.05,
+   1.1,
+   1.15
+  ],
+  "levels_used": [
+   1.02,
+   1.05,
+   1.1
+  ],
+  "deployed_anchor_available": true
+ },
+ "rep_rate_tol": 0.01,
+ "deployed_anchor": 1.1,
+ "started": "2026-08-18T00:43:49",
+ "n_prompts": 16,
+ "cs": [
+  -5.0,
+  5.0
+ ],
+ "gauge": [
+  {
+   "kind": "noop_control",
+   "theta_raw": null,
+   "op": "raw",
+   "theta": 1.0,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  },
+  {
+   "kind": "noop_control",
+   "theta_raw": null,
+   "op": "fix",
+   "theta": 1.0,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.02,
+   "theta_fix": 1.2109375,
+   "op": "raw",
+   "theta": 1.02,
+   "is_deployed_anchor": false,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 252,
+     "flip_rate": 0.984375
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 208,
+     "flip_rate": 0.8125
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 203,
+     "flip_rate": 0.79296875
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 172,
+     "flip_rate": 0.671875
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 172,
+     "flip_rate": 0.671875
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 190,
+     "flip_rate": 0.7421875
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 192,
+     "flip_rate": 0.75
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 215,
+     "flip_rate": 0.83984375
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 229,
+     "flip_rate": 0.89453125
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 213,
+     "flip_rate": 0.83203125
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 172,
+     "flip_rate": 0.671875
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 195,
+     "flip_rate": 0.76171875
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 227,
+     "flip_rate": 0.88671875
+    }
+   ],
+   "pooled_flip_rate": 0.64453125
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.02,
+   "theta_fix": 1.2109375,
+   "op": "fix",
+   "theta": 1.2109375,
+   "is_deployed_anchor": false,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.05,
+   "theta_fix": 1.703125,
+   "op": "raw",
+   "theta": 1.05,
+   "is_deployed_anchor": false,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 228,
+     "flip_rate": 0.890625
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 204,
+     "flip_rate": 0.796875
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 240,
+     "flip_rate": 0.9375
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 242,
+     "flip_rate": 0.9453125
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 213,
+     "flip_rate": 0.83203125
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 235,
+     "flip_rate": 0.91796875
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 232,
+     "flip_rate": 0.90625
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 225,
+     "flip_rate": 0.87890625
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 236,
+     "flip_rate": 0.921875
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 225,
+     "flip_rate": 0.87890625
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 243,
+     "flip_rate": 0.94921875
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 196,
+     "flip_rate": 0.765625
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 238,
+     "flip_rate": 0.9296875
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 173,
+     "flip_rate": 0.67578125
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 231,
+     "flip_rate": 0.90234375
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 236,
+     "flip_rate": 0.921875
+    }
+   ],
+   "pooled_flip_rate": 0.878173828125
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.05,
+   "theta_fix": 1.703125,
+   "op": "fix",
+   "theta": 1.703125,
+   "is_deployed_anchor": false,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.1,
+   "theta_fix": 2.51171875,
+   "op": "raw",
+   "theta": 1.1,
+   "is_deployed_anchor": true,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 252,
+     "flip_rate": 0.984375
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 235,
+     "flip_rate": 0.91796875
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 235,
+     "flip_rate": 0.91796875
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 241,
+     "flip_rate": 0.94140625
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 244,
+     "flip_rate": 0.953125
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 245,
+     "flip_rate": 0.95703125
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 241,
+     "flip_rate": 0.94140625
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 251,
+     "flip_rate": 0.98046875
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 238,
+     "flip_rate": 0.9296875
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 244,
+     "flip_rate": 0.953125
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 221,
+     "flip_rate": 0.86328125
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 235,
+     "flip_rate": 0.91796875
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 244,
+     "flip_rate": 0.953125
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 222,
+     "flip_rate": 0.8671875
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 239,
+     "flip_rate": 0.93359375
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 237,
+     "flip_rate": 0.92578125
+    }
+   ],
+   "pooled_flip_rate": 0.93359375
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.1,
+   "theta_fix": 2.51171875,
+   "op": "fix",
+   "theta": 2.51171875,
+   "is_deployed_anchor": true,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  }
+ ],
+ "controls": {
+  "noop_flip_raw": 0.0,
+  "noop_flip_fix": 0.0,
+  "noop_gate_exact_zero": true,
+  "instrumented_eq_loopcheck": true
+ },
+ "elapsed_s": 1119.7466053962708
+}

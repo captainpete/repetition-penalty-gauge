@@ -1,0 +1,670 @@
+{
+ "experiment": "ZPREACH",
+ "req": "ZPREACH",
+ "question": "Does the post-hoc gauge-artifact reading (zero-point extremity -> raw steepness -> fix un-reachability at theta_raw=1.1) survive a pre-registered ordering test at n=7?",
+ "disposition": "MECHANISM-NOT-ESTABLISHED",
+ "branch": "frozen rule 7 -- failure branch",
+ "cohort": [
+  "gpt2",
+  "gpt2-large",
+  "pythia-2.8b",
+  "Qwen2.5-7B",
+  "Qwen2.5-7B-Instruct",
+  "Qwen2.5-Coder-7B",
+  "starcoder2-7b"
+ ],
+ "present": [
+  "gpt2",
+  "gpt2-large",
+  "pythia-2.8b",
+  "Qwen2.5-7B",
+  "Qwen2.5-7B-Instruct",
+  "Qwen2.5-Coder-7B",
+  "starcoder2-7b"
+ ],
+ "missing": {},
+ "n_present": 7,
+ "n_cohort": 7,
+ "effective_n": 2,
+ "family_confounded": true,
+ "reachability_score_definition": "reach_score = theta' if MATCHED at theta_raw=1.1 (rep_rate) | 1.0 if TRIVIAL | +inf if UNREACHABLE. LOWER = MORE reachable. Ranked by ascending midranks (rank 1 = most reachable); all UNREACHABLE models tie at +inf in one midrank block and are never separated by their shortfalls; pairs tied on either variable are excluded from C/D and counted as T.",
+ "group_split_rule": "EXTREME = frac_seen_logit_positive < 0.5 (multiply-branch dominant) vs NON-EXTREME >= 0.5",
+ "steepness_definition": "raw_grid['1.000000000'].rep_rate - raw_grid['1.050000000'].rep_rate",
+ "deployed_anchor": 1.1,
+ "validity": {
+  "invalid": false,
+  "duplicate_disagreements": [],
+  "fixcal_control_failures": [],
+  "controls_by_model": {
+   "gpt2": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "gpt2-large": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "pythia-2.8b": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "Qwen2.5-7B": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "Qwen2.5-7B-Instruct": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "Qwen2.5-Coder-7B": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "starcoder2-7b": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   }
+  }
+ },
+ "models": {
+  "gpt2": {
+   "model": "gpt2",
+   "family": "gpt2",
+   "frac_pos": 0.0914460020768432,
+   "frac_neg": 0.9085539979231568,
+   "median_top1_logit": -97.5,
+   "group": "EXTREME",
+   "zp_source": "results/a1_zeropoint/raw_gpt2.json",
+   "fixcal_source": "results/fix_calibration/raw_gpt2.json",
+   "steepness": 0.79931640625,
+   "rep_rate_1.00": 0.9384765625,
+   "rep_rate_1.05": 0.13916015625,
+   "reach_verdict": "UNREACHABLE",
+   "reach_theta_fix": null,
+   "reach_ratio": null,
+   "reach_achieved": 0.152099609375,
+   "reach_target": 0.0654296875,
+   "reach_shortfall": 0.086669921875,
+   "reach_raw_suppresses": true,
+   "reach_converged": false,
+   "reach_score": "+inf",
+   "controls_ok": true,
+   "control_detail": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "complete": true
+  },
+  "gpt2-large": {
+   "model": "gpt2-large",
+   "family": "gpt2",
+   "frac_pos": 0.7458771983204527,
+   "frac_neg": 0.25412280167954726,
+   "median_top1_logit": 11.875,
+   "group": "NON-EXTREME",
+   "zp_source": "results/a1_zeropoint/raw_gpt2-large.json",
+   "fixcal_source": "results/fix_calibration/raw_gpt2-large.json",
+   "steepness": 0.100830078125,
+   "rep_rate_1.00": 0.886962890625,
+   "rep_rate_1.05": 0.7861328125,
+   "reach_verdict": "MATCHED",
+   "reach_theta_fix": 1.73828125,
+   "reach_ratio": 1.5802556818181817,
+   "reach_achieved": 0.634765625,
+   "reach_target": 0.63720703125,
+   "reach_shortfall": null,
+   "reach_raw_suppresses": true,
+   "reach_converged": true,
+   "reach_score": 1.73828125,
+   "controls_ok": true,
+   "control_detail": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "complete": true
+  },
+  "pythia-2.8b": {
+   "model": "pythia-2.8b",
+   "family": "pythia",
+   "frac_pos": 0.9381627698990673,
+   "frac_neg": 0.06183723010093267,
+   "median_top1_logit": 17.625,
+   "group": "NON-EXTREME",
+   "zp_source": "results/a1_zeropoint/raw_pythia-2.8b.json",
+   "fixcal_source": "results/fix_calibration/raw_pythia-2.8b.json",
+   "steepness": 0.176025390625,
+   "rep_rate_1.00": 0.86083984375,
+   "rep_rate_1.05": 0.684814453125,
+   "reach_verdict": "MATCHED",
+   "reach_theta_fix": 2.51171875,
+   "reach_ratio": 2.2833806818181817,
+   "reach_achieved": 0.5087890625,
+   "reach_target": 0.509521484375,
+   "reach_shortfall": null,
+   "reach_raw_suppresses": true,
+   "reach_converged": true,
+   "reach_score": 2.51171875,
+   "controls_ok": true,
+   "control_detail": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "complete": true
+  },
+  "Qwen2.5-7B": {
+   "model": "Qwen2.5-7B",
+   "family": "qwen",
+   "frac_pos": 0.9607811316672076,
+   "frac_neg": 0.03921886833279242,
+   "median_top1_logit": 23.1875,
+   "group": "NON-EXTREME",
+   "zp_source": "results/a1_zeropoint/raw_Qwen2.5-7B.json",
+   "fixcal_source": "results/fix_calibration/raw_Qwen2.5-7B.json",
+   "steepness": 0.082763671875,
+   "rep_rate_1.00": 0.613525390625,
+   "rep_rate_1.05": 0.53076171875,
+   "reach_verdict": "MATCHED",
+   "reach_theta_fix": 5.5,
+   "reach_ratio": 5.0,
+   "reach_achieved": 0.401611328125,
+   "reach_target": 0.402099609375,
+   "reach_shortfall": null,
+   "reach_raw_suppresses": true,
+   "reach_converged": true,
+   "reach_score": 5.5,
+   "controls_ok": true,
+   "control_detail": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "complete": true
+  },
+  "Qwen2.5-7B-Instruct": {
+   "model": "Qwen2.5-7B-Instruct",
+   "family": "qwen",
+   "frac_pos": 0.9439599483204134,
+   "frac_neg": 0.05604005167958659,
+   "median_top1_logit": 23.625,
+   "group": "NON-EXTREME",
+   "zp_source": "results/a1_zeropoint/raw_Qwen2.5-7B-Instruct.json",
+   "fixcal_source": "results/fix_calibration/raw_Qwen2.5-7B-Instruct.json",
+   "steepness": 0.07275390625,
+   "rep_rate_1.00": 0.58544921875,
+   "rep_rate_1.05": 0.5126953125,
+   "reach_verdict": "MATCHED",
+   "reach_theta_fix": 4.9375,
+   "reach_ratio": 4.488636363636363,
+   "reach_achieved": 0.424560546875,
+   "reach_target": 0.43115234375,
+   "reach_shortfall": null,
+   "reach_raw_suppresses": true,
+   "reach_converged": true,
+   "reach_score": 4.9375,
+   "controls_ok": true,
+   "control_detail": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "complete": true
+  },
+  "Qwen2.5-Coder-7B": {
+   "model": "Qwen2.5-Coder-7B",
+   "family": "qwen",
+   "frac_pos": 0.9861802988912101,
+   "frac_neg": 0.013819701108789939,
+   "median_top1_logit": 24.1875,
+   "group": "NON-EXTREME",
+   "zp_source": "results/a1_zeropoint/raw_Qwen2.5-Coder-7B.json",
+   "fixcal_source": "results/fix_calibration/raw_Qwen2.5-Coder-7B.json",
+   "steepness": 0.171630859375,
+   "rep_rate_1.00": 0.6884765625,
+   "rep_rate_1.05": 0.516845703125,
+   "reach_verdict": "MATCHED",
+   "reach_theta_fix": 6.625,
+   "reach_ratio": 6.0227272727272725,
+   "reach_achieved": 0.377685546875,
+   "reach_target": 0.37451171875,
+   "reach_shortfall": null,
+   "reach_raw_suppresses": true,
+   "reach_converged": true,
+   "reach_score": 6.625,
+   "controls_ok": true,
+   "control_detail": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "complete": true
+  },
+  "starcoder2-7b": {
+   "model": "starcoder2-7b",
+   "family": "starcoder",
+   "frac_pos": 0.8278847852977558,
+   "frac_neg": 0.17211521470224422,
+   "median_top1_logit": 15.5,
+   "group": "NON-EXTREME",
+   "zp_source": "results/a1_zeropoint/raw_starcoder2-7b.json",
+   "fixcal_source": "results/fix_calibration/raw_starcoder2-7b.json",
+   "steepness": 0.100341796875,
+   "rep_rate_1.00": 0.86376953125,
+   "rep_rate_1.05": 0.763427734375,
+   "reach_verdict": "MATCHED",
+   "reach_theta_fix": 2.546875,
+   "reach_ratio": 2.3153409090909087,
+   "reach_achieved": 0.529541015625,
+   "reach_target": 0.53125,
+   "reach_shortfall": null,
+   "reach_raw_suppresses": true,
+   "reach_converged": true,
+   "reach_score": 2.546875,
+   "controls_ok": true,
+   "control_detail": {
+    "noop_raw1_eq_fix1": true,
+    "instrumented_eq_raw1": true
+   },
+   "complete": true
+  }
+ },
+ "P1": {
+  "statement": "raw steepness increases with zero-point extremity (frac-seen-logit-NEGATIVE -- multiply-branch dominance)",
+  "x": "frac_neg",
+  "y": "steepness",
+  "direction": "positive",
+  "C": 14,
+  "D": 7,
+  "T": 0,
+  "n": 7,
+  "computable": true,
+  "holds": true,
+  "strict_monotone": false,
+  "models": [
+   "gpt2",
+   "gpt2-large",
+   "pythia-2.8b",
+   "Qwen2.5-7B",
+   "Qwen2.5-7B-Instruct",
+   "Qwen2.5-Coder-7B",
+   "starcoder2-7b"
+  ],
+  "rho_descriptive": 0.42857142857142855,
+  "x_ranks": {
+   "gpt2": 7.0,
+   "gpt2-large": 6.0,
+   "pythia-2.8b": 4.0,
+   "Qwen2.5-7B": 2.0,
+   "Qwen2.5-7B-Instruct": 3.0,
+   "Qwen2.5-Coder-7B": 1.0,
+   "starcoder2-7b": 5.0
+  },
+  "y_ranks": {
+   "gpt2": 7.0,
+   "gpt2-large": 4.0,
+   "pythia-2.8b": 6.0,
+   "Qwen2.5-7B": 2.0,
+   "Qwen2.5-7B-Instruct": 1.0,
+   "Qwen2.5-Coder-7B": 5.0,
+   "starcoder2-7b": 3.0
+  },
+  "by_predictor": [
+   "Qwen2.5-Coder-7B",
+   "Qwen2.5-7B",
+   "Qwen2.5-7B-Instruct",
+   "pythia-2.8b",
+   "starcoder2-7b",
+   "gpt2-large",
+   "gpt2"
+  ]
+ },
+ "P2": {
+  "statement": "reachability at 1.1 decreases with raw steepness (i.e. the matching-cost score increases with steepness)",
+  "x": "steepness",
+  "y": "reach_score",
+  "direction": "positive",
+  "C": 12,
+  "D": 9,
+  "T": 0,
+  "n": 7,
+  "computable": true,
+  "holds": true,
+  "strict_monotone": false,
+  "models": [
+   "gpt2",
+   "gpt2-large",
+   "pythia-2.8b",
+   "Qwen2.5-7B",
+   "Qwen2.5-7B-Instruct",
+   "Qwen2.5-Coder-7B",
+   "starcoder2-7b"
+  ],
+  "rho_descriptive": 0.21428571428571427,
+  "x_ranks": {
+   "gpt2": 7.0,
+   "gpt2-large": 4.0,
+   "pythia-2.8b": 6.0,
+   "Qwen2.5-7B": 2.0,
+   "Qwen2.5-7B-Instruct": 1.0,
+   "Qwen2.5-Coder-7B": 5.0,
+   "starcoder2-7b": 3.0
+  },
+  "y_ranks": {
+   "gpt2": 7.0,
+   "gpt2-large": 1.0,
+   "pythia-2.8b": 2.0,
+   "Qwen2.5-7B": 5.0,
+   "Qwen2.5-7B-Instruct": 4.0,
+   "Qwen2.5-Coder-7B": 6.0,
+   "starcoder2-7b": 3.0
+  },
+  "by_predictor": [
+   "Qwen2.5-7B-Instruct",
+   "Qwen2.5-7B",
+   "starcoder2-7b",
+   "gpt2-large",
+   "Qwen2.5-Coder-7B",
+   "pythia-2.8b",
+   "gpt2"
+  ]
+ },
+ "P3": {
+  "statement": "gpt2-large patterns with gpt2 (both extreme zero-points per the a1_zeropoint run)",
+  "computable": true,
+  "n_cohort_present": 7,
+  "median_low_steepness_rank": 4.0,
+  "median_low_reach_score_rank": 4.0,
+  "steepness_degenerate": false,
+  "reach_score_degenerate": false,
+  "gpt2": {
+   "steepness": 0.79931640625,
+   "steepness_rank": 7.0,
+   "steepness_side": "high",
+   "reach_verdict": "UNREACHABLE",
+   "reach_score": "+inf",
+   "reach_score_rank": 7.0,
+   "reach_score_side": "high"
+  },
+  "gpt2-large": {
+   "steepness": 0.100830078125,
+   "steepness_rank": 4.0,
+   "steepness_side": "low",
+   "reach_verdict": "MATCHED",
+   "reach_score": 1.73828125,
+   "reach_score_rank": 1.0,
+   "reach_score_side": "low"
+  },
+  "P3b_same_side_steepness": false,
+  "P3c_same_side_reach": false,
+  "holds": false,
+  "P3a_premise_gpt2large_extreme": false,
+  "P3a_frac_pos_gpt2large": 0.7458771983204527
+ },
+ "within_group": {
+  "split_rule": "EXTREME = frac_seen_logit_positive < 0.5 (multiply-branch dominant) vs NON-EXTREME >= 0.5",
+  "groups": {
+   "EXTREME": {
+    "models": [
+     "gpt2"
+    ],
+    "n": 1,
+    "eligible": false,
+    "P1": null,
+    "P2": null
+   },
+   "NON-EXTREME": {
+    "models": [
+     "gpt2-large",
+     "pythia-2.8b",
+     "Qwen2.5-7B",
+     "Qwen2.5-7B-Instruct",
+     "Qwen2.5-Coder-7B",
+     "starcoder2-7b"
+    ],
+    "n": 6,
+    "eligible": true,
+    "P1": {
+     "C": 8,
+     "D": 7,
+     "T": 0,
+     "n": 6,
+     "computable": true,
+     "holds": true,
+     "strict_monotone": false,
+     "models": [
+      "gpt2-large",
+      "pythia-2.8b",
+      "Qwen2.5-7B",
+      "Qwen2.5-7B-Instruct",
+      "Qwen2.5-Coder-7B",
+      "starcoder2-7b"
+     ],
+     "rho_descriptive": 0.08571428571428572,
+     "x_ranks": {
+      "gpt2-large": 6.0,
+      "pythia-2.8b": 4.0,
+      "Qwen2.5-7B": 2.0,
+      "Qwen2.5-7B-Instruct": 3.0,
+      "Qwen2.5-Coder-7B": 1.0,
+      "starcoder2-7b": 5.0
+     },
+     "y_ranks": {
+      "gpt2-large": 4.0,
+      "pythia-2.8b": 6.0,
+      "Qwen2.5-7B": 2.0,
+      "Qwen2.5-7B-Instruct": 1.0,
+      "Qwen2.5-Coder-7B": 5.0,
+      "starcoder2-7b": 3.0
+     },
+     "by_predictor": [
+      "Qwen2.5-Coder-7B",
+      "Qwen2.5-7B",
+      "Qwen2.5-7B-Instruct",
+      "pythia-2.8b",
+      "starcoder2-7b",
+      "gpt2-large"
+     ]
+    },
+    "P2": {
+     "C": 6,
+     "D": 9,
+     "T": 0,
+     "n": 6,
+     "computable": true,
+     "holds": false,
+     "strict_monotone": false,
+     "models": [
+      "gpt2-large",
+      "pythia-2.8b",
+      "Qwen2.5-7B",
+      "Qwen2.5-7B-Instruct",
+      "Qwen2.5-Coder-7B",
+      "starcoder2-7b"
+     ],
+     "rho_descriptive": -0.2571428571428571,
+     "x_ranks": {
+      "gpt2-large": 4.0,
+      "pythia-2.8b": 6.0,
+      "Qwen2.5-7B": 2.0,
+      "Qwen2.5-7B-Instruct": 1.0,
+      "Qwen2.5-Coder-7B": 5.0,
+      "starcoder2-7b": 3.0
+     },
+     "y_ranks": {
+      "gpt2-large": 1.0,
+      "pythia-2.8b": 2.0,
+      "Qwen2.5-7B": 5.0,
+      "Qwen2.5-7B-Instruct": 4.0,
+      "Qwen2.5-Coder-7B": 6.0,
+      "starcoder2-7b": 3.0
+     },
+     "by_predictor": [
+      "Qwen2.5-7B-Instruct",
+      "Qwen2.5-7B",
+      "starcoder2-7b",
+      "gpt2-large",
+      "Qwen2.5-Coder-7B",
+      "pythia-2.8b"
+     ]
+    }
+   }
+  },
+  "largest_eligible_group": "NON-EXTREME",
+  "computable": true,
+  "holds": false
+ },
+ "family_diagnostic": {
+  "gpt2": {
+   "models": [
+    "gpt2",
+    "gpt2-large"
+   ],
+   "n": 2,
+   "P1": {
+    "C": 1,
+    "D": 0,
+    "T": 0,
+    "n": 2,
+    "computable": true,
+    "holds": true,
+    "strict_monotone": true,
+    "models": [
+     "gpt2",
+     "gpt2-large"
+    ],
+    "rho_descriptive": 1.0,
+    "x_ranks": {
+     "gpt2": 2.0,
+     "gpt2-large": 1.0
+    },
+    "y_ranks": {
+     "gpt2": 2.0,
+     "gpt2-large": 1.0
+    },
+    "by_predictor": [
+     "gpt2-large",
+     "gpt2"
+    ]
+   },
+   "P2": {
+    "C": 1,
+    "D": 0,
+    "T": 0,
+    "n": 2,
+    "computable": true,
+    "holds": true,
+    "strict_monotone": true,
+    "models": [
+     "gpt2",
+     "gpt2-large"
+    ],
+    "rho_descriptive": 1.0,
+    "x_ranks": {
+     "gpt2": 2.0,
+     "gpt2-large": 1.0
+    },
+    "y_ranks": {
+     "gpt2": 2.0,
+     "gpt2-large": 1.0
+    },
+    "by_predictor": [
+     "gpt2-large",
+     "gpt2"
+    ]
+   }
+  },
+  "pythia": {
+   "models": [
+    "pythia-2.8b"
+   ],
+   "n": 1,
+   "P1": null,
+   "P2": null
+  },
+  "qwen": {
+   "models": [
+    "Qwen2.5-7B",
+    "Qwen2.5-7B-Instruct",
+    "Qwen2.5-Coder-7B"
+   ],
+   "n": 3,
+   "P1": {
+    "C": 0,
+    "D": 3,
+    "T": 0,
+    "n": 3,
+    "computable": true,
+    "holds": false,
+    "strict_monotone": false,
+    "models": [
+     "Qwen2.5-7B",
+     "Qwen2.5-7B-Instruct",
+     "Qwen2.5-Coder-7B"
+    ],
+    "rho_descriptive": -1.0,
+    "x_ranks": {
+     "Qwen2.5-7B": 2.0,
+     "Qwen2.5-7B-Instruct": 3.0,
+     "Qwen2.5-Coder-7B": 1.0
+    },
+    "y_ranks": {
+     "Qwen2.5-7B": 2.0,
+     "Qwen2.5-7B-Instruct": 1.0,
+     "Qwen2.5-Coder-7B": 3.0
+    },
+    "by_predictor": [
+     "Qwen2.5-Coder-7B",
+     "Qwen2.5-7B",
+     "Qwen2.5-7B-Instruct"
+    ]
+   },
+   "P2": {
+    "C": 3,
+    "D": 0,
+    "T": 0,
+    "n": 3,
+    "computable": true,
+    "holds": true,
+    "strict_monotone": true,
+    "models": [
+     "Qwen2.5-7B",
+     "Qwen2.5-7B-Instruct",
+     "Qwen2.5-Coder-7B"
+    ],
+    "rho_descriptive": 1.0,
+    "x_ranks": {
+     "Qwen2.5-7B": 2.0,
+     "Qwen2.5-7B-Instruct": 1.0,
+     "Qwen2.5-Coder-7B": 3.0
+    },
+    "y_ranks": {
+     "Qwen2.5-7B": 2.0,
+     "Qwen2.5-7B-Instruct": 1.0,
+     "Qwen2.5-Coder-7B": 3.0
+    },
+    "by_predictor": [
+     "Qwen2.5-7B-Instruct",
+     "Qwen2.5-7B",
+     "Qwen2.5-Coder-7B"
+    ]
+   }
+  },
+  "starcoder": {
+   "models": [
+    "starcoder2-7b"
+   ],
+   "n": 1,
+   "P1": null,
+   "P2": null
+  }
+ },
+ "inputs": {
+  "zeropoint_dirs_used": [
+   {
+    "dir": "results/a1_zeropoint",
+    "raws_with_zero_point": 7
+   }
+  ],
+  "zeropoint_dirs_absent": [],
+  "fixcal_dir": "results/fix_calibration",
+  "fixcal_notes": [],
+  "models_outside_cohort_seen": []
+ },
+ "frozen_rule_verbatim": "(could not read PREREG.md Sec 5 next to the analyzer: [Errno 2] No such file or directory: '/home/peter/paper-repetition-penalty/public/code/PREREG.md')"
+}

@@ -1,0 +1,1434 @@
+{
+ "experiment": "MATCHED",
+ "request": "MATCHED",
+ "stage": "open",
+ "model": "EleutherAI/pythia-2.8b",
+ "model_slug": "pythia-2.8b",
+ "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+ "device": "cuda",
+ "dtype": "float32",
+ "max_new": 256,
+ "seed": 1234,
+ "limit": 0,
+ "pairs": [
+  {
+   "theta_raw": 1.02,
+   "theta_fix": 1.2109375,
+   "frozen_theta_fix_2dp": 1.21,
+   "fixcal_target_rep_rate": 0.831298828125,
+   "fixcal_achieved_rep_rate": 0.837158203125,
+   "fixcal_delta": 0.005859375,
+   "is_deployed_anchor": false
+  },
+  {
+   "theta_raw": 1.05,
+   "theta_fix": 1.703125,
+   "frozen_theta_fix_2dp": 1.7,
+   "fixcal_target_rep_rate": 0.684814453125,
+   "fixcal_achieved_rep_rate": 0.6806640625,
+   "fixcal_delta": -0.004150390625,
+   "is_deployed_anchor": false
+  },
+  {
+   "theta_raw": 1.1,
+   "theta_fix": 2.51171875,
+   "frozen_theta_fix_2dp": 2.51,
+   "fixcal_target_rep_rate": 0.509521484375,
+   "fixcal_achieved_rep_rate": 0.5087890625,
+   "fixcal_delta": -0.000732421875,
+   "is_deployed_anchor": true
+  }
+ ],
+ "pairs_meta": {
+  "pairs_json": "/work/code/fix_calibration_summary.json",
+  "pairs_json_sha256": "930039cc6b90c4714d80fe85bd8805326eb26820a317e691c203482fb6fba500",
+  "fixcal_model": "EleutherAI/pythia-2.8b",
+  "fixcal_revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+  "fixcal_dtype": "float32",
+  "fixcal_max_new": 256,
+  "fixcal_n_prompts": 16,
+  "allowlist": [
+   1.02,
+   1.05,
+   1.1,
+   1.15
+  ],
+  "levels_used": [
+   1.02,
+   1.05,
+   1.1
+  ],
+  "deployed_anchor_available": true
+ },
+ "rep_rate_tol": 0.01,
+ "deployed_anchor": 1.1,
+ "started": "2026-08-18T02:11:37",
+ "n_prompts": 16,
+ "conditions": [
+  {
+   "label": "baseline_raw",
+   "op": "raw",
+   "theta": 1.0,
+   "pair_idx": null,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.83203125,
+     "distinct1": 0.17578125,
+     "distinct2": 0.25098039215686274,
+     "longest_run": 1,
+     "gen_sha": "9b0357c85afd5b5d",
+     "text": " with the founding of the city of Rome in 753 BC. The city was founded by the Etruscans, a people who had migrated from the Italian peninsula. The Etruscans were a warrior people who had a reputation for being cruel and violent. The Etruscans were known for their use of the bow and arrow, and their use of the sword. The Etruscans were also known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.84765625,
+     "distinct1": 0.16015625,
+     "distinct2": 0.2784313725490196,
+     "longest_run": 2,
+     "gen_sha": "683bdf35f830b886",
+     "text": "\n\n1. The smell of fresh-baked bread.\n\n2. The sound of a baby crying.\n\n3. The sight of a baby sleeping.\n\n4. The sight of a baby smiling.\n\n5. The sight of a baby laughing.\n\n6. The sight of a baby crying.\n\n7. The sight of a baby sleeping.\n\n8. The sight of a baby smiling.\n\n9. The sight of a baby laughing.\n\n10. The sight of a baby crying.\n\n11. The sound of a baby crying.\n\n12. The sound of a baby laughing.\n\n13. The sound of a baby smiling.\n\n14. The sound of a baby crying.\n\n15. The sight of a baby sleeping.\n\n16. The sight of a baby smiling.\n\n17. The sight of a baby laughing.\n\n18. The sight of a baby crying.\n\n19. The sound of a baby crying.\n\n20. The sound of a baby laughing.\n\n21. The sound of a baby smiling.\n\n22. The sight of a baby sleeping.\n\n23. The sight of a baby smiling.\n",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.9296875,
+     "distinct1": 0.078125,
+     "distinct2": 0.09803921568627451,
+     "longest_run": 1,
+     "gen_sha": "8aa21298ccce606b",
+     "text": " I get up, make coffee, and then I go to the gym. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.90625,
+     "distinct1": 0.109375,
+     "distinct2": 0.17647058823529413,
+     "longest_run": 2,
+     "gen_sha": "fcf44fdc510669d5",
+     "text": " to have a good fire.\n\nThe fire is the heart of the kitchen. It is the source of heat, light, and cooking fuel. It is the source of the heat that cooks food. It is the source of the light that illuminates the kitchen. It is the source of the fuel that keeps the fire burning.\n\nThe fire is the heart of the kitchen. It is the source of heat, light, and cooking fuel. It is the source of the heat that cooks food. It is the source of the light that illuminates the kitchen. It is the source of the fuel that keeps the fire burning.\n\nThe fire is the heart of the kitchen. It is the source of heat, light, and cooking fuel. It is the source of the heat that cooks food. It is the source of the light that illuminates the kitchen. It is the source of the fuel that keeps the fire burning.\n\nThe fire is the heart of the kitchen. It is the source of heat, light, and cooking fuel. It is the source of the heat that cooks food. It is the source of the light that illuminates the kitchen. It is the source of the fuel that keeps the fire burning.\n\nThe fire is the",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.90234375,
+     "distinct1": 0.10546875,
+     "distinct2": 0.1450980392156863,
+     "longest_run": 2,
+     "gen_sha": "094a7a0754dd3c17",
+     "text": " the only thing that was ever mentioned in the same breath as the word \u201cfeminism\u201d was \u201clesbianism.\u201d\n\nI was a lesbian. I was a feminist. I was a lesbian feminist. I was a feminist lesbian. I was a lesbian feminist. I was a lesbian feminist lesbian. I was a lesbian feminist lesbian feminist. I was a lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.89453125,
+     "distinct1": 0.1171875,
+     "distinct2": 0.1607843137254902,
+     "longest_run": 2,
+     "gen_sha": "85ac57d0e2464131",
+     "text": " you on behalf of the\n\nUnited States of America.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.90234375,
+     "distinct1": 0.09765625,
+     "distinct2": 0.12941176470588237,
+     "longest_run": 2,
+     "gen_sha": "3921315944179c79",
+     "text": " going to be a little bit warmer than yesterday, so we\u2019re going to have a little bit more sun. We\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.796875,
+     "distinct1": 0.20703125,
+     "distinct2": 0.3137254901960784,
+     "longest_run": 2,
+     "gen_sha": "beae28e3f9b6e3b9",
+     "text": " a man in a white coat standing in the hallway.\n\n\"I'm Dr. Kramer,\" he said. \"I'm here to help you.\"\n\n\"I don't need help,\" she said. \"I'm fine.\"\n\n\"I'm sorry,\" he said. \"I can't let you leave until I've examined you.\"\n\n\"I don't want to be examined,\" she said. \"I want to go home.\"\n\n\"I'm afraid that's not possible,\" he said. \"I'm afraid you're going to have to stay here for a while.\"\n\n\"I don't want to stay here,\" she said. \"I want to go home.\"\n\n\"I'm afraid that's not possible,\" he said. \"I'm afraid you're going to have to stay here for a while.\"\n\n\"I don't want to stay here,\" she said. \"I want to go home.\"\n\n\"I'm afraid that's not possible,\" he said. \"I'm afraid you're going to have to stay here for a while.\"\n\n\"I don't want to stay here,\" she said. \"I want to go home.\"\n\n\"I'm afraid that's not possible",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.82421875,
+     "distinct1": 0.1875,
+     "distinct2": 0.24705882352941178,
+     "longest_run": 2,
+     "gen_sha": "52e5e6a5a4f43070",
+     "text": " from a friend who said, \"If you're not going to do it, don't talk about it.\"\n\nI've been a writer for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.74609375,
+     "distinct1": 0.26171875,
+     "distinct2": 0.4666666666666667,
+     "longest_run": 2,
+     "gen_sha": "476ce0540732f55b",
+     "text": " there was a king who had a beautiful daughter. He loved her very much, and he wanted to marry her. But the king had a daughter of his own, and he wanted to marry her. So he told the king, \u201cI\u2019ll give you my daughter if you give me your daughter.\u201d\n\nThe king agreed, and the two of them married. But the king\u2019s daughter was very unhappy. She was unhappy because she was married to a king, and she was unhappy because she was married to a king who was very old.\n\nOne day, the king\u2019s daughter said to her husband, \u201cI\u2019m going to have a baby.\u201d\n\n\u201cWhat are you going to do?\u201d the king asked.\n\n\u201cI\u2019m going to have a baby,\u201d the princess said.\n\n\u201cHow are you going to have a baby?\u201d the king asked.\n\n\u201cI\u2019m going to have a baby,\u201d the princess said.\n\n\u201cHow are you going to have a baby?\u201d the king asked.\n\n\u201cI\u2019m going to have a baby,\u201d the princess said.\n\n\u201cHow are you going to have a baby?\u201d the king asked.\n\n\u201cI\u2019m going to have a",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.828125,
+     "distinct1": 0.171875,
+     "distinct2": 0.3058823529411765,
+     "longest_run": 2,
+     "gen_sha": "f7941d5d83a2baf2",
+     "text": " the jury was to consider the evidence of the\n\ndefendant\u2019s prior conviction only if it found that the defendant had been convicted of\n\nthe prior offense. The jury was not to consider the evidence of the prior conviction\n\nunless it found that the defendant had been convicted of the prior offense. The jury\n\nfound that the defendant had been convicted of the prior offense. The jury was\n\ninstructed that it could consider the evidence of the prior conviction only if it found\n\nthat the defendant had been convicted of the prior offense. The jury found that the\n\ndefendant had been convicted of the prior offense. The jury was instructed that it\n\ncould consider the evidence of the prior conviction only if it found that the defendant\n\nhad been convicted of the prior offense. The jury found that the defendant had been\n\nconvicted of the prior offense. The jury was instructed that it could consider the\n\nevidence of the prior conviction only if it found that the defendant had been convicted\n\nof the prior offense. The jury found that the defendant had been convicted of the prior\n\noffense. The jury was instructed that it could consider the evidence of the prior\n\nconviction only if it found that the defendant had been convicted of the",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.68359375,
+     "distinct1": 0.31640625,
+     "distinct2": 0.49411764705882355,
+     "longest_run": 2,
+     "gen_sha": "56e76c58e00805a1",
+     "text": " The U.S. Department of Justice has filed a lawsuit against the city of San Francisco, claiming that the city\u2019s ban on plastic bags is unconstitutional.\n\nThe lawsuit, filed in the U.S. District Court for the Northern District of California, claims that the ban violates the First Amendment\u2019s free speech clause.\n\n\u201cThe City\u2019s ban on plastic bags is a content-based restriction on speech that is not narrowly tailored to serve a significant government interest,\u201d the lawsuit reads. \u201cThe City\u2019s ban on plastic bags is not narrowly tailored to serve a significant government interest because it is not narrowly tailored to serve any significant government interest.\u201d\n\nThe lawsuit also claims that the ban violates the First Amendment\u2019s free exercise clause.\n\n\u201cThe City\u2019s ban on plastic bags is a content-based restriction on speech that is not narrowly tailored to serve a significant government interest,\u201d the lawsuit reads. \u201cThe City\u2019s ban on plastic bags is not narrowly tailored to serve a significant government interest because it is not narrowly tailored to serve any significant government interest.\u201d\n\nThe lawsuit was filed by the American Civil Liberties Union of Northern California, the Center for Biological Diversity, and the Natural Resources Defense Council.\n\n\u201cThe City",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.9609375,
+     "distinct1": 0.0546875,
+     "distinct2": 0.058823529411764705,
+     "longest_run": 1,
+     "gen_sha": "1a13d2aa5f11408a",
+     "text": " the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.9296875,
+     "distinct1": 0.0703125,
+     "distinct2": 0.11372549019607843,
+     "longest_run": 2,
+     "gen_sha": "5cb8cc67451c514c",
+     "text": "\n\n1 cup of water\n\n1 cup of sugar\n\n1 cup of brown sugar\n\n1 cup of molasses\n\n1 cup of butter\n\n1 cup of flour\n\n1 cup of cornmeal\n\n1 cup of baking soda\n\n1 cup of salt\n\n1 cup of baking powder\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.8359375,
+     "distinct1": 0.16796875,
+     "distinct2": 0.20784313725490197,
+     "longest_run": 2,
+     "gen_sha": "4426bb216754472c",
+     "text": " finally found a way to make the world\u2019s most popular drug, heroin, more effective.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.953125,
+     "distinct1": 0.05078125,
+     "distinct2": 0.058823529411764705,
+     "longest_run": 1,
+     "gen_sha": "9e448ec41ddce9b2",
+     "text": " a good day. I got to see my friend, and I got to see my friend's friend. I got to see my friend's friend's friend. I got to see my friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend",
+     "quality": 2.0
+    }
+   ]
+  },
+  {
+   "label": "baseline_fix",
+   "op": "fix",
+   "theta": 1.0,
+   "pair_idx": null,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.83203125,
+     "distinct1": 0.17578125,
+     "distinct2": 0.25098039215686274,
+     "longest_run": 1,
+     "gen_sha": "9b0357c85afd5b5d",
+     "text": " with the founding of the city of Rome in 753 BC. The city was founded by the Etruscans, a people who had migrated from the Italian peninsula. The Etruscans were a warrior people who had a reputation for being cruel and violent. The Etruscans were known for their use of the bow and arrow, and their use of the sword. The Etruscans were also known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot. The Etruscans were known for their use of the chariot",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.84765625,
+     "distinct1": 0.16015625,
+     "distinct2": 0.2784313725490196,
+     "longest_run": 2,
+     "gen_sha": "683bdf35f830b886",
+     "text": "\n\n1. The smell of fresh-baked bread.\n\n2. The sound of a baby crying.\n\n3. The sight of a baby sleeping.\n\n4. The sight of a baby smiling.\n\n5. The sight of a baby laughing.\n\n6. The sight of a baby crying.\n\n7. The sight of a baby sleeping.\n\n8. The sight of a baby smiling.\n\n9. The sight of a baby laughing.\n\n10. The sight of a baby crying.\n\n11. The sound of a baby crying.\n\n12. The sound of a baby laughing.\n\n13. The sound of a baby smiling.\n\n14. The sound of a baby crying.\n\n15. The sight of a baby sleeping.\n\n16. The sight of a baby smiling.\n\n17. The sight of a baby laughing.\n\n18. The sight of a baby crying.\n\n19. The sound of a baby crying.\n\n20. The sound of a baby laughing.\n\n21. The sound of a baby smiling.\n\n22. The sight of a baby sleeping.\n\n23. The sight of a baby smiling.\n",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.9296875,
+     "distinct1": 0.078125,
+     "distinct2": 0.09803921568627451,
+     "longest_run": 1,
+     "gen_sha": "8aa21298ccce606b",
+     "text": " I get up, make coffee, and then I go to the gym. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I work out for about an hour, then I go to the gym again. I",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.90625,
+     "distinct1": 0.109375,
+     "distinct2": 0.17647058823529413,
+     "longest_run": 2,
+     "gen_sha": "fcf44fdc510669d5",
+     "text": " to have a good fire.\n\nThe fire is the heart of the kitchen. It is the source of heat, light, and cooking fuel. It is the source of the heat that cooks food. It is the source of the light that illuminates the kitchen. It is the source of the fuel that keeps the fire burning.\n\nThe fire is the heart of the kitchen. It is the source of heat, light, and cooking fuel. It is the source of the heat that cooks food. It is the source of the light that illuminates the kitchen. It is the source of the fuel that keeps the fire burning.\n\nThe fire is the heart of the kitchen. It is the source of heat, light, and cooking fuel. It is the source of the heat that cooks food. It is the source of the light that illuminates the kitchen. It is the source of the fuel that keeps the fire burning.\n\nThe fire is the heart of the kitchen. It is the source of heat, light, and cooking fuel. It is the source of the heat that cooks food. It is the source of the light that illuminates the kitchen. It is the source of the fuel that keeps the fire burning.\n\nThe fire is the",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.90234375,
+     "distinct1": 0.10546875,
+     "distinct2": 0.1450980392156863,
+     "longest_run": 2,
+     "gen_sha": "094a7a0754dd3c17",
+     "text": " the only thing that was ever mentioned in the same breath as the word \u201cfeminism\u201d was \u201clesbianism.\u201d\n\nI was a lesbian. I was a feminist. I was a lesbian feminist. I was a feminist lesbian. I was a lesbian feminist. I was a lesbian feminist lesbian. I was a lesbian feminist lesbian feminist. I was a lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian feminist lesbian",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.89453125,
+     "distinct1": 0.1171875,
+     "distinct2": 0.1607843137254902,
+     "longest_run": 2,
+     "gen_sha": "85ac57d0e2464131",
+     "text": " you on behalf of the\n\nUnited States of America.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of terrorism.\n\nI am writing to inform you that the United States of America has\n\nbeen notified by the United Nations that the United States of America\n\nhas been designated as a state sponsor of",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.90234375,
+     "distinct1": 0.09765625,
+     "distinct2": 0.12941176470588237,
+     "longest_run": 2,
+     "gen_sha": "3921315944179c79",
+     "text": " going to be a little bit warmer than yesterday, so we\u2019re going to have a little bit more sun. We\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n\nWe\u2019re going to have a little bit more sun, but it\u2019s going to be a little bit cooler.\n",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.796875,
+     "distinct1": 0.20703125,
+     "distinct2": 0.3137254901960784,
+     "longest_run": 2,
+     "gen_sha": "beae28e3f9b6e3b9",
+     "text": " a man in a white coat standing in the hallway.\n\n\"I'm Dr. Kramer,\" he said. \"I'm here to help you.\"\n\n\"I don't need help,\" she said. \"I'm fine.\"\n\n\"I'm sorry,\" he said. \"I can't let you leave until I've examined you.\"\n\n\"I don't want to be examined,\" she said. \"I want to go home.\"\n\n\"I'm afraid that's not possible,\" he said. \"I'm afraid you're going to have to stay here for a while.\"\n\n\"I don't want to stay here,\" she said. \"I want to go home.\"\n\n\"I'm afraid that's not possible,\" he said. \"I'm afraid you're going to have to stay here for a while.\"\n\n\"I don't want to stay here,\" she said. \"I want to go home.\"\n\n\"I'm afraid that's not possible,\" he said. \"I'm afraid you're going to have to stay here for a while.\"\n\n\"I don't want to stay here,\" she said. \"I want to go home.\"\n\n\"I'm afraid that's not possible",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.82421875,
+     "distinct1": 0.1875,
+     "distinct2": 0.24705882352941178,
+     "longest_run": 2,
+     "gen_sha": "52e5e6a5a4f43070",
+     "text": " from a friend who said, \"If you're not going to do it, don't talk about it.\"\n\nI've been a writer for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been more excited about a project than I was when I started writing _The Last Days of the American Dream_. I've been writing for more than thirty years, and I've never been",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.74609375,
+     "distinct1": 0.26171875,
+     "distinct2": 0.4666666666666667,
+     "longest_run": 2,
+     "gen_sha": "476ce0540732f55b",
+     "text": " there was a king who had a beautiful daughter. He loved her very much, and he wanted to marry her. But the king had a daughter of his own, and he wanted to marry her. So he told the king, \u201cI\u2019ll give you my daughter if you give me your daughter.\u201d\n\nThe king agreed, and the two of them married. But the king\u2019s daughter was very unhappy. She was unhappy because she was married to a king, and she was unhappy because she was married to a king who was very old.\n\nOne day, the king\u2019s daughter said to her husband, \u201cI\u2019m going to have a baby.\u201d\n\n\u201cWhat are you going to do?\u201d the king asked.\n\n\u201cI\u2019m going to have a baby,\u201d the princess said.\n\n\u201cHow are you going to have a baby?\u201d the king asked.\n\n\u201cI\u2019m going to have a baby,\u201d the princess said.\n\n\u201cHow are you going to have a baby?\u201d the king asked.\n\n\u201cI\u2019m going to have a baby,\u201d the princess said.\n\n\u201cHow are you going to have a baby?\u201d the king asked.\n\n\u201cI\u2019m going to have a",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.828125,
+     "distinct1": 0.171875,
+     "distinct2": 0.3058823529411765,
+     "longest_run": 2,
+     "gen_sha": "f7941d5d83a2baf2",
+     "text": " the jury was to consider the evidence of the\n\ndefendant\u2019s prior conviction only if it found that the defendant had been convicted of\n\nthe prior offense. The jury was not to consider the evidence of the prior conviction\n\nunless it found that the defendant had been convicted of the prior offense. The jury\n\nfound that the defendant had been convicted of the prior offense. The jury was\n\ninstructed that it could consider the evidence of the prior conviction only if it found\n\nthat the defendant had been convicted of the prior offense. The jury found that the\n\ndefendant had been convicted of the prior offense. The jury was instructed that it\n\ncould consider the evidence of the prior conviction only if it found that the defendant\n\nhad been convicted of the prior offense. The jury found that the defendant had been\n\nconvicted of the prior offense. The jury was instructed that it could consider the\n\nevidence of the prior conviction only if it found that the defendant had been convicted\n\nof the prior offense. The jury found that the defendant had been convicted of the prior\n\noffense. The jury was instructed that it could consider the evidence of the prior\n\nconviction only if it found that the defendant had been convicted of the",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.68359375,
+     "distinct1": 0.31640625,
+     "distinct2": 0.49411764705882355,
+     "longest_run": 2,
+     "gen_sha": "56e76c58e00805a1",
+     "text": " The U.S. Department of Justice has filed a lawsuit against the city of San Francisco, claiming that the city\u2019s ban on plastic bags is unconstitutional.\n\nThe lawsuit, filed in the U.S. District Court for the Northern District of California, claims that the ban violates the First Amendment\u2019s free speech clause.\n\n\u201cThe City\u2019s ban on plastic bags is a content-based restriction on speech that is not narrowly tailored to serve a significant government interest,\u201d the lawsuit reads. \u201cThe City\u2019s ban on plastic bags is not narrowly tailored to serve a significant government interest because it is not narrowly tailored to serve any significant government interest.\u201d\n\nThe lawsuit also claims that the ban violates the First Amendment\u2019s free exercise clause.\n\n\u201cThe City\u2019s ban on plastic bags is a content-based restriction on speech that is not narrowly tailored to serve a significant government interest,\u201d the lawsuit reads. \u201cThe City\u2019s ban on plastic bags is not narrowly tailored to serve a significant government interest because it is not narrowly tailored to serve any significant government interest.\u201d\n\nThe lawsuit was filed by the American Civil Liberties Union of Northern California, the Center for Biological Diversity, and the Natural Resources Defense Council.\n\n\u201cThe City",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.9609375,
+     "distinct1": 0.0546875,
+     "distinct2": 0.058823529411764705,
+     "longest_run": 1,
+     "gen_sha": "1a13d2aa5f11408a",
+     "text": " the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to get a job is to get a job. I have always believed that the best way to",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.9296875,
+     "distinct1": 0.0703125,
+     "distinct2": 0.11372549019607843,
+     "longest_run": 2,
+     "gen_sha": "5cb8cc67451c514c",
+     "text": "\n\n1 cup of water\n\n1 cup of sugar\n\n1 cup of brown sugar\n\n1 cup of molasses\n\n1 cup of butter\n\n1 cup of flour\n\n1 cup of cornmeal\n\n1 cup of baking soda\n\n1 cup of salt\n\n1 cup of baking powder\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of vinegar\n\n1 cup of",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.8359375,
+     "distinct1": 0.16796875,
+     "distinct2": 0.20784313725490197,
+     "longest_run": 2,
+     "gen_sha": "4426bb216754472c",
+     "text": " finally found a way to make the world\u2019s most popular drug, heroin, more effective.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe new method, which is being",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.953125,
+     "distinct1": 0.05078125,
+     "distinct2": 0.058823529411764705,
+     "longest_run": 1,
+     "gen_sha": "9e448ec41ddce9b2",
+     "text": " a good day. I got to see my friend, and I got to see my friend's friend. I got to see my friend's friend's friend. I got to see my friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend's friend's friend's friend's friend's friend. I got to see my friend's friend",
+     "quality": 2.0
+    }
+   ]
+  },
+  {
+   "label": "raw@1.02",
+   "op": "raw",
+   "theta": 1.02,
+   "pair_idx": 0,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.76953125,
+     "distinct1": 0.23828125,
+     "distinct2": 0.3607843137254902,
+     "longest_run": 1,
+     "gen_sha": "eb73b0821db89316",
+     "text": " with the founding of Rome in 753 BC. The city was founded by the Etruscans, a people who had migrated from the Italian peninsula. The Etruscans were a warrior people who had developed a highly advanced civilization. They were skilled in the art of war and were known for their military prowess. The Etruscans were also known for their architecture, which was built using stone. The Etruscans were also known for their art, which was highly developed. The Etruscans were also known for their writing system, which was highly developed. The Etruscans were also known for their mathematics, which was highly developed. The Etruscans were also known for their philosophy, which was highly developed. The Etruscans were also known for their religion, which was highly developed. The Etruscans were also known for their literature, which was highly developed. The Etruscans were also known for their science, which was highly developed. The Etruscans were also known for their medicine, which was highly developed. The Etruscans were also known for their law, which was highly developed. The Etruscans were also known for their government, which was highly developed. The E",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.8671875,
+     "distinct1": 0.13671875,
+     "distinct2": 0.23137254901960785,
+     "longest_run": 2,
+     "gen_sha": "5b695a946fe8fe02",
+     "text": "\n\n1. The smell of fresh-baked bread.\n\n2. The sound of the rain on the roof.\n\n3. The smell of fresh-baked bread.\n\n4. The sound of the rain on the roof.\n\n5. The smell of fresh-baked bread.\n\n6. The sound of the rain on the roof.\n\n7. The smell of fresh-baked bread.\n\n8. The sound of the rain on the roof.\n\n9. The smell of fresh-baked bread.\n\n10. The sound of the rain on the roof.\n\n11. The smell of fresh-baked bread.\n\n12. The sound of the rain on the roof.\n\n13. The smell of fresh-baked bread.\n\n14. The sound of the rain on the roof.\n\n15. The smell of fresh-baked bread.\n\n16. The sound of the rain on the roof.\n\n17. The smell of fresh-baked bread.\n\n18. The sound of the rain on the roof.\n\n19. The smell of fresh-baked bread.\n\n20. The sound of the rain",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.8125,
+     "distinct1": 0.1953125,
+     "distinct2": 0.3137254901960784,
+     "longest_run": 1,
+     "gen_sha": "dc3c807bd1b6e8a5",
+     "text": " I get up and make a cup of coffee. Then I take a shower and dress in my favorite outfit. I love to wear a skirt and a top that are both comfortable and flattering. I also love to wear heels. I have a pair of black pumps that I wear all the time. I love to wear a scarf and a pair of earrings. I also love to wear a necklace. I love to wear a necklace with a pendant. I love to wear a necklace with a pendant that has a stone. I love to wear a necklace with a pendant that has a stone that is a birthstone. I love to wear a necklace with a pendant that has a stone that is a birthstone that is a gemstone. I love to wear a necklace with a pendant that has a stone that is a birthstone that is a gemstone that is a gemstone. I love to wear a necklace with a pendant that has a stone that is a birthstone that is a gemstone that is a gemstone that is a gemstone. I love to wear a necklace with a pendant that has a stone that is a birthstone that is a gemstone that is a gemstone that is a gemstone that is a gemstone. I love to wear a necklace",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.859375,
+     "distinct1": 0.14453125,
+     "distinct2": 0.25882352941176473,
+     "longest_run": 2,
+     "gen_sha": "654311c0b4f38c8a",
+     "text": " to have a good fire.\n\nThe fire should be large enough to cook the food, but not so large that it will burn down the house.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n\nThe fire should be built in a way that it will not be too cool, but will be cool enough to keep the food from burning.\n\nThe fire should be built in a way that it will not be too dry, but will be dry enough to keep the food from burning.\n\nThe fire should be built in a way that it will not be too wet, but will be wet enough to keep the food from burning.\n\nThe fire should be built in a way that it will not be too cold, but will be cold enough to keep the food from burning.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n\nThe fire should be built in a way that it will not be too cool, but will be cool enough to keep the food from burning.\n\nThe fire should be built in a way that it will not be too dry, but",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.91796875,
+     "distinct1": 0.0859375,
+     "distinct2": 0.13333333333333333,
+     "longest_run": 2,
+     "gen_sha": "3a88420a63089910",
+     "text": " there was a man who was a bit of a legend. He was a local hero. He was a good man, and he was a good father. He was a good husband. He was a good neighbor. He was a good friend. He was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.8828125,
+     "distinct1": 0.12890625,
+     "distinct2": 0.18823529411764706,
+     "longest_run": 2,
+     "gen_sha": "5a85d05db5676094",
+     "text": " you on behalf of the\n\nUnited States of America.\n\nI am writing to inform you that the United States Government has\n\ndetermined that the information you provided to us is not\n\nsufficient to justify the continued detention of the above-named\n\nindividual.\n\nI am writing to inform you that the United States Government has\n\ndetermined that the information you provided to us is not\n\nsufficient to justify the continued detention of the above-named\n\nindividual.\n\nI am writing to inform you that the United States Government has\n\ndetermined that the information you provided to us is not\n\nsufficient to justify the continued detention of the above-named\n\nindividual.\n\nI am writing to inform you that the United States Government has\n\ndetermined that the information you provided to us is not\n\nsufficient to justify the continued detention of the above-named\n\nindividual.\n\nI am writing to inform you that the United States Government has\n\ndetermined that the information you provided to us is not\n\nsufficient to justify the continued detention of the above-named\n\nindividual.\n\nI am writing to inform you that the United States Government has\n\ndetermined that the information you provided to us is not\n\nsufficient",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.890625,
+     "distinct1": 0.109375,
+     "distinct2": 0.1411764705882353,
+     "longest_run": 2,
+     "gen_sha": "f1e328d89be5c518",
+     "text": " going to be a little bit warmer than yesterday, so we\u2019re going to have a little bit more sun. We\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.83984375,
+     "distinct1": 0.1640625,
+     "distinct2": 0.2549019607843137,
+     "longest_run": 2,
+     "gen_sha": "0d99b5c3823bc459",
+     "text": " a man in a white coat standing in the hallway.\n\n\"I'm Dr. Kramer,\" he said. \"I'm here to help you.\"\n\n\"I don't need help,\" she said. \"I just want to go home.\"\n\n\"I understand,\" he said. \"But I need to ask you a few questions.\"\n\n\"I don't want to talk to you,\" she said.\n\n\"I'm not here to hurt you,\" he said. \"I'm here to help you.\"\n\n\"I don't want to talk to you,\" she said.\n\n\"I'm not here to hurt you,\" he said. \"I'm here to help you.\"\n\n\"I don't want to talk to you,\" she said.\n\n\"I'm not here to hurt you,\" he said. \"I'm here to help you.\"\n\n\"I don't want to talk to you,\" she said.\n\n\"I'm not here to hurt you,\" he said. \"I'm here to help you.\"\n\n\"I don't want to talk to you,\" she said.\n\n\"I'm not here to hurt you,\" he said. \"I'm here to help you",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.84765625,
+     "distinct1": 0.15625,
+     "distinct2": 0.1803921568627451,
+     "longest_run": 2,
+     "gen_sha": "30c7a7f18c818faf",
+     "text": " from a friend who said, \"If you're not going to do it, don't talk about it.\"\n\nI've been in the business for over twenty years and I've never had a problem with that.\n\nI've also been in the business for over twenty years and I've never had a problem with that.\n\nI've also been in the business for over twenty years and I've never had a problem with that.\n\nI've also been in the business for over twenty years and I've never had a problem with that.\n\nI've also been in the business for over twenty years and I've never had a problem with that.\n\nI've also been in the business for over twenty years and I've never had a problem with that.\n\nI've also been in the business for over twenty years and I've never had a problem with that.\n\nI've also been in the business for over twenty years and I've never had a problem with that.\n\nI've also been in the business for over twenty years and I've never had a problem with that.\n\nI've also been in the business for over twenty years and I've never had a problem with that.\n\nI've also",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.74609375,
+     "distinct1": 0.26171875,
+     "distinct2": 0.4392156862745098,
+     "longest_run": 2,
+     "gen_sha": "081d556235e88108",
+     "text": " there was a king who had a beautiful daughter. He loved her very much and he wanted to marry her. But the king had a problem. He had no money. He had no way to pay for the wedding.\n\nThe king called his friends together and asked them to help him. They all agreed to help. They decided to go to the city of the gods and ask for their help.\n\nThe king and his friends went to the city of the gods. They asked for their help. The gods were very angry. They said, \"We don't want to help you. We don't want to help you at all. We don't want to help you because you are a bad king. You are a bad king because you have no money. You are a bad king because you have no way to pay for the wedding. You are a bad king because you have no way to pay for the wedding. You are a bad king because you have no way to pay for the wedding. You are a bad king because you have no way to pay for the wedding. You are a bad king because you have no way to pay for the wedding. You are a bad king because you have no way to pay for the wedding. You are a bad king",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.828125,
+     "distinct1": 0.171875,
+     "distinct2": 0.3058823529411765,
+     "longest_run": 2,
+     "gen_sha": "f7941d5d83a2baf2",
+     "text": " the jury was to consider the evidence of the\n\ndefendant\u2019s prior conviction only if it found that the defendant had been convicted of\n\nthe prior offense. The jury was not to consider the evidence of the prior conviction\n\nunless it found that the defendant had been convicted of the prior offense. The jury\n\nfound that the defendant had been convicted of the prior offense. The jury was\n\ninstructed that it could consider the evidence of the prior conviction only if it found\n\nthat the defendant had been convicted of the prior offense. The jury found that the\n\ndefendant had been convicted of the prior offense. The jury was instructed that it\n\ncould consider the evidence of the prior conviction only if it found that the defendant\n\nhad been convicted of the prior offense. The jury found that the defendant had been\n\nconvicted of the prior offense. The jury was instructed that it could consider the\n\nevidence of the prior conviction only if it found that the defendant had been convicted\n\nof the prior offense. The jury found that the defendant had been convicted of the prior\n\noffense. The jury was instructed that it could consider the evidence of the prior\n\nconviction only if it found that the defendant had been convicted of the",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.6796875,
+     "distinct1": 0.3203125,
+     "distinct2": 0.5254901960784314,
+     "longest_run": 2,
+     "gen_sha": "a700490ac2a3f890",
+     "text": " The U.S. Department of Justice has filed a lawsuit against the city of San Francisco, claiming that the city\u2019s ban on plastic bags is unconstitutional.\n\nThe lawsuit was filed in the U.S. District Court for the Northern District of California, and it claims that the ban violates the First Amendment rights of the city\u2019s residents.\n\n\u201cThe City\u2019s ban on single-use plastic bags is a reasonable time, place, and manner restriction that is narrowly tailored to serve a significant government interest,\u201d the lawsuit reads. \u201cThe City\u2019s ban on plastic bags is not an outright ban on plastic bags, but rather a ban on the sale of plastic bags at retail establishments.\u201d\n\nThe lawsuit also claims that the ban is not a violation of the First Amendment because it does not prohibit the sale of other items that are not plastic.\n\n\u201cThe City\u2019s ban on plastic bags is not a ban on the sale of other items that are not plastic, but rather a ban on the sale of plastic bags at retail establishments,\u201d the lawsuit reads. \u201cThe City\u2019s ban on plastic bags is not a ban on the sale of other items that are not plastic, but rather a ban on the sale of plastic bags at retail establishments.\u201d",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.94921875,
+     "distinct1": 0.06640625,
+     "distinct2": 0.07450980392156863,
+     "longest_run": 1,
+     "gen_sha": "750293473d06e3f2",
+     "text": " the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.90234375,
+     "distinct1": 0.09765625,
+     "distinct2": 0.1568627450980392,
+     "longest_run": 2,
+     "gen_sha": "45ea807b5de52544",
+     "text": "\n\n1 cup of water\n\n1/2 cup of sugar\n\n1/2 cup of brown sugar\n\n1/2 cup of molasses\n\n1/2 cup of butter\n\n1/2 cup of flour\n\n1/2 cup of baking powder\n\n1/2 cup of baking soda\n\n1/2 cup of salt\n\n1/2 cup of cinnamon\n\n1/2 cup of cloves\n\n1/2 cup of ginger\n\n1/2 cup of nutmeg\n\n1/2 cup of allspice\n\n1/2 cup of cloves\n\n1/2 cup of ginger\n\n1/2 cup of nutmeg\n\n1/2 cup of allspice\n\n1/2 cup of cloves\n\n1/2 cup of cinnamon\n\n1/2 cup of ginger\n\n1/2 cup of nutmeg\n\n1/2 cup of allspice\n\n1/2 cup of cloves\n\n1/2 cup of cinnamon\n\n1/2 cup of ginger\n\n1/2 cup of nutmeg\n\n1/2 cup of allspice\n\n1/2 cup of cloves\n\n1/2 cup of cinnamon\n\n",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.57421875,
+     "distinct1": 0.43359375,
+     "distinct2": 0.7176470588235294,
+     "longest_run": 2,
+     "gen_sha": "63ee7fccf35caac4",
+     "text": " finally found a way to make the world\u2019s most popular drug, heroin, more effective.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe technique, which is being developed by a team at the University of Pennsylvania, could be used to make heroin more effective by making it more toxic to the body.\n\n\u201cWe\u2019re trying to make heroin more toxic to the body,\u201d said Dr. David Liu, a professor of medicine at Penn and one of the researchers behind the new technique.\n\n\u201cWe\u2019re trying to make heroin more toxic to the body.\u201d\n\nThe new technique is based on a discovery made by Dr. Liu\u2019s team in 2015.\n\nThey discovered that the body\u2019s immune system can be tricked into attacking the body\u2019s own cells.\n\nThe immune system is a complex network of cells that protects the body from foreign invaders.\n\nIt is made up of white blood cells, which are responsible for fighting off infections, and other immune cells, which are responsible for fighting off cancer.\n\nThe immune system also contains a number of different types of",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.93359375,
+     "distinct1": 0.0703125,
+     "distinct2": 0.08235294117647059,
+     "longest_run": 1,
+     "gen_sha": "afdc086d47c2237c",
+     "text": " a good day. I got to see my friend, and we had a nice chat. I also got to see my friend's friend, and we had a nice chat. I also got to see my friend's friend's friend, and we had a nice chat. I also got to see my friend's friend's friend's friend, and we had a nice chat. I also got to see my friend's friend's friend's friend's friend, and we had a nice chat. I also got to see my friend's friend's friend's friend's friend's friend, and we had a nice chat. I also got to see my friend's friend's friend's friend's friend's friend, and we had a nice chat. I also got to see my friend's friend's friend's friend's friend's friend's friend, and we had a nice chat. I also got to see my friend's friend's friend's friend's friend's friend's friend, and we had a nice chat. I also got to see my friend's friend's friend's friend's friend's friend's friend's friend, and we had a nice chat. I also got to see my friend's friend's friend's friend's friend's friend's friend's friend, and we had",
+     "quality": 3.0
+    }
+   ]
+  },
+  {
+   "label": "fix@1.02",
+   "op": "fix",
+   "theta": 1.2109375,
+   "pair_idx": 0,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.85546875,
+     "distinct1": 0.15234375,
+     "distinct2": 0.21176470588235294,
+     "longest_run": 1,
+     "gen_sha": "c3e79400eeebb43d",
+     "text": " with the founding of the city of Rome in 753 BC. The city was founded by the Etruscans, a people who had migrated from the Italian peninsula to the south of Italy. The Etruscans were a warrior people who built a city on the banks of the Tiber River. The Etruscans were a warrior people who built a city on the banks of the Tiber River. The Etruscans were a warrior people who built a city on the banks of the Tiber River. The Etruscans were a warrior people who built a city on the banks of the Tiber River. The Etruscans were a warrior people who built a city on the banks of the Tiber River. The Etruscans were a warrior people who built a city on the banks of the Tiber River. The Etruscans were a warrior people who built a city on the banks of the Tiber River. The Etruscans were a warrior people who built a city on the banks of the Tiber River. The Etruscans were a warrior people who built a city on the banks of the Tiber River. The Etruscans were a warrior people who built a city on the banks of the T",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.7890625,
+     "distinct1": 0.21875,
+     "distinct2": 0.37254901960784315,
+     "longest_run": 2,
+     "gen_sha": "56c7a09771e03f4d",
+     "text": "\n\n1. The smell of fresh-baked bread.\n\n2. The sound of the rain on the roof.\n\n3. The sight of the sunrise.\n\n4. The taste of a good cup of coffee.\n\n5. The sound of the wind in the trees.\n\n6. The sight of the moon.\n\n7. The smell of a freshly cut rose.\n\n8. The sound of the ocean.\n\n9. The sight of the stars.\n\n10. The taste of a good steak.\n\n11. The sound of the ocean.\n\n12. The sight of the sunrise.\n\n13. The smell of fresh-baked bread.\n\n14. The sound of the rain on the roof.\n\n15. The sight of the moon.\n\n16. The taste of a good cup of coffee.\n\n17. The sound of the wind in the trees.\n\n18. The sight of the stars.\n\n19. The smell of a freshly cut rose.\n\n20. The sound of the ocean.\n\n21. The sight of the moon.\n\n22. The taste of a good steak.\n\n23.",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.83203125,
+     "distinct1": 0.171875,
+     "distinct2": 0.25882352941176473,
+     "longest_run": 1,
+     "gen_sha": "98cf01c3066c8121",
+     "text": " I get up and make a cup of coffee. Then I take a shower and dress in my favorite outfit. I love to wear a skirt and a top that are both comfortable and flattering. I also love to wear heels. I have a pair of black pumps that I wear all the time. I love to wear a scarf around my neck and a pair of earrings. I also love to wear a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to wear a pair of earrings and a necklace. I love to",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.88671875,
+     "distinct1": 0.1171875,
+     "distinct2": 0.17647058823529413,
+     "longest_run": 2,
+     "gen_sha": "20426c7d757baf9b",
+     "text": " to have a good fire.\n\nThe fire should be large enough to cook the food, but not so large that it will burn down the house.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n\nThe fire should be built in a way that it will not be too hot, but will be hot enough to cook the food.\n",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.91796875,
+     "distinct1": 0.0859375,
+     "distinct2": 0.13333333333333333,
+     "longest_run": 2,
+     "gen_sha": "3a88420a63089910",
+     "text": " there was a man who was a bit of a legend. He was a local hero. He was a good man, and he was a good father. He was a good husband. He was a good neighbor. He was a good friend. He was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n\nHe was a good man.\n",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.85546875,
+     "distinct1": 0.15625,
+     "distinct2": 0.24705882352941178,
+     "longest_run": 2,
+     "gen_sha": "71a80cb1d280a2f5",
+     "text": " you on behalf of the\n\nUnited States of America.\n\nI am writing to inform you that the United States Government has\n\ndetermined that the information you provided to us is not\n\nsufficient to justify the continued detention of the above-named\n\nindividual.\n\nThe United States Government has determined that the information\n\nyou provided to us is not sufficient to justify the continued\n\ndetention of the above-named individual.\n\nThe United States Government has determined that the information\n\nyou provided to us is not sufficient to justify the continued\n\ndetention of the above-named individual.\n\nThe United States Government has determined that the information\n\nyou provided to us is not sufficient to justify the continued\n\ndetention of the above-named individual.\n\nThe United States Government has determined that the information\n\nyou provided to us is not sufficient to justify the continued\n\ndetention of the above-named individual.\n\nThe United States Government has determined that the information\n\nyou provided to us is not sufficient to justify the continued\n\ndetention of the above-named individual.\n\nThe United States Government has determined that the information\n\nyou provided to us is not sufficient to justify the continued\n\n",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.890625,
+     "distinct1": 0.109375,
+     "distinct2": 0.1411764705882353,
+     "longest_run": 2,
+     "gen_sha": "f1e328d89be5c518",
+     "text": " going to be a little bit warmer than yesterday, so we\u2019re going to have a little bit more sun. We\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re going to have a little bit more of a chance for some of the flowers to bloom.\n\nWe\u2019re",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.8359375,
+     "distinct1": 0.16796875,
+     "distinct2": 0.23921568627450981,
+     "longest_run": 2,
+     "gen_sha": "9a89db2c57870962",
+     "text": " a man in a white coat standing in the hallway.\n\n\"I'm Dr. Kramer,\" he said. \"I'm here to help you.\"\n\n\"I don't need help,\" she said. \"I'm fine.\"\n\n\"I'm sorry, but I have to insist.\"\n\n\"I don't want to see you.\"\n\n\"Please, let me come in.\"\n\n\"No.\"\n\n\"I'm sorry, but I have to insist.\"\n\n\"I don't want to see you.\"\n\n\"I'm sorry, but I have to insist.\"\n\n\"I don't want to see you.\"\n\n\"I'm sorry, but I have to insist.\"\n\n\"I don't want to see you.\"\n\n\"I'm sorry, but I have to insist.\"\n\n\"I don't want to see you.\"\n\n\"I'm sorry, but I have to insist.\"\n\n\"I don't want to see you.\"\n\n\"I'm sorry, but I have to insist.\"\n\n\"I don't want to see you.\"\n\n\"I'm sorry, but I have to insist.\"\n\n\"I don't want to see you.\"",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.83984375,
+     "distinct1": 0.1640625,
+     "distinct2": 0.20784313725490197,
+     "longest_run": 2,
+     "gen_sha": "76d9b51aafa30d2e",
+     "text": " from a friend who said, \"If you're not going to do it, don't talk about it.\"\n\nI've been in the business for over twenty years, and I've never had a problem with that. I've never had a problem with people saying, \"I'm not going to do it.\" I've never had a problem with people saying, \"I'm not going to talk about it.\"\n\nI've never had a problem with people saying, \"I'm not going to do it.\"\n\nI've never had a problem with people saying, \"I'm not going to talk about it.\"\n\nI've never had a problem with people saying, \"I'm not going to do it.\"\n\nI've never had a problem with people saying, \"I'm not going to talk about it.\"\n\nI've never had a problem with people saying, \"I'm not going to do it.\"\n\nI've never had a problem with people saying, \"I'm not going to talk about it.\"\n\nI've never had a problem with people saying, \"I'm not going to do it.\"\n\nI've never had a problem with people saying, \"I'm not going to talk about it.\"",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.76953125,
+     "distinct1": 0.23828125,
+     "distinct2": 0.3803921568627451,
+     "longest_run": 2,
+     "gen_sha": "531a0cd7318d3bbf",
+     "text": " there was a king who had a beautiful daughter. He loved her very much, and he wanted to marry her. But the king had a problem. He had no money. He had no way to pay for the wedding.\n\nThe king called his friends together and asked them to help him. He said, \"I have a beautiful daughter. I love her very much. But I have no money. I have no way to pay for the wedding. Please help me.\"\n\nHis friends were very sad. They said, \"We can't help you. We can't help you. We can't help you.\"\n\nBut the king was not discouraged. He said, \"I have a beautiful daughter. I love her very much. But I have no money. I have no way to pay for the wedding. Please help me.\"\n\nHis friends were still sad. They said, \"We can't help you. We can't help you. We can't help you.\"\n\nBut the king was not discouraged. He said, \"I have a beautiful daughter. I love her very much. But I have no money. I have no way to pay for the wedding. Please help me.\"\n\nHis friends were still sad. They said",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.828125,
+     "distinct1": 0.171875,
+     "distinct2": 0.3058823529411765,
+     "longest_run": 2,
+     "gen_sha": "f7941d5d83a2baf2",
+     "text": " the jury was to consider the evidence of the\n\ndefendant\u2019s prior conviction only if it found that the defendant had been convicted of\n\nthe prior offense. The jury was not to consider the evidence of the prior conviction\n\nunless it found that the defendant had been convicted of the prior offense. The jury\n\nfound that the defendant had been convicted of the prior offense. The jury was\n\ninstructed that it could consider the evidence of the prior conviction only if it found\n\nthat the defendant had been convicted of the prior offense. The jury found that the\n\ndefendant had been convicted of the prior offense. The jury was instructed that it\n\ncould consider the evidence of the prior conviction only if it found that the defendant\n\nhad been convicted of the prior offense. The jury found that the defendant had been\n\nconvicted of the prior offense. The jury was instructed that it could consider the\n\nevidence of the prior conviction only if it found that the defendant had been convicted\n\nof the prior offense. The jury found that the defendant had been convicted of the prior\n\noffense. The jury was instructed that it could consider the evidence of the prior\n\nconviction only if it found that the defendant had been convicted of the",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.74609375,
+     "distinct1": 0.25390625,
+     "distinct2": 0.396078431372549,
+     "longest_run": 2,
+     "gen_sha": "0cb3e47704a004da",
+     "text": " The U.S. Department of Justice has filed a lawsuit against the city of San Francisco, claiming that the city\u2019s ban on plastic bags is unconstitutional.\n\nThe lawsuit was filed in the U.S. District Court for the Northern District of California, and it claims that the ban violates the First Amendment rights of the city\u2019s residents.\n\nThe lawsuit was filed by the U.S. Attorney\u2019s Office for the Northern District of California, and it was filed on behalf of the U.S. Department of Justice.\n\nThe lawsuit claims that the ban on plastic bags is unconstitutional because it \u201cimposes an undue burden on the free exercise of religion.\u201d\n\nThe lawsuit also claims that the ban is unconstitutional because it \u201cimposes an undue burden on the free speech rights of the plaintiffs and others similarly situated.\u201d\n\nThe lawsuit claims that the ban on plastic bags is unconstitutional because it \u201cimposes an undue burden on the free exercise of religion.\u201d\n\nThe lawsuit also claims that the ban is unconstitutional because it \u201cimposes an undue burden on the free speech rights of the plaintiffs and others similarly situated.\u201d\n\nThe lawsuit claims that the ban on plastic bags is unconstitutional because it \u201cimposes an undue burden on the free exercise of",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.94921875,
+     "distinct1": 0.06640625,
+     "distinct2": 0.07450980392156863,
+     "longest_run": 1,
+     "gen_sha": "750293473d06e3f2",
+     "text": " the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to be a good employee. I have always believed that the best way to get a job is to",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.84375,
+     "distinct1": 0.15625,
+     "distinct2": 0.24313725490196078,
+     "longest_run": 2,
+     "gen_sha": "e4dce70251bb388b",
+     "text": "\n\n1 cup of water\n\n1/2 cup of sugar\n\n1/2 cup of brown sugar\n\n1/2 cup of molasses\n\n1/2 cup of butter\n\n1/2 cup of flour\n\n1/2 cup of baking powder\n\n1/2 cup of cornstarch\n\n1/2 cup of salt\n\n1/2 cup of vanilla\n\n1/2 cup of eggs\n\n1/2 cup of milk\n\n1/2 cup of oil\n\n1/2 cup of cocoa\n\n1/2 cup of chocolate chips\n\n1/2 cup of chopped nuts\n\n1/2 cup of chopped pecans\n\n1/2 cup of chopped walnuts\n\n1/2 cup of chopped almonds\n\n1/2 cup of chopped pecans\n\n1/2 cup of chopped cashews\n\n1/2 cup of chopped pistachios\n\n1/2 cup of chopped walnuts\n\n1/2 cup of chopped almonds\n\n1/2 cup of chopped pecans\n\n1/2 cup of chopped cashews\n\n1/2 cup of chopped pistachios\n\n1/2 cup of chopped wal",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.62109375,
+     "distinct1": 0.39453125,
+     "distinct2": 0.6078431372549019,
+     "longest_run": 2,
+     "gen_sha": "cd691bb42fb44e49",
+     "text": " finally found a way to make the world\u2019s most popular drug, heroin, more effective.\n\nThe new method, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\nThe technique, which is being developed by a team of scientists at the University of Pennsylvania, could be used to make heroin more effective and less addictive.\n\n\u201cWe\u2019re trying to make heroin more effective, but we\u2019re also trying to make it less addictive,\u201d said Dr. David Liu, a professor of medicine at Penn Medicine and one of the researchers behind the new technique.\n\n\u201cWe\u2019re trying to make heroin less addictive, but we\u2019re also trying to make it more effective.\u201d\n\nHeroin is a powerful drug that can be fatal if taken in large doses. It is also highly addictive, with users often needing to take the drug for years to get high.\n\nThe new technique, which is being tested in the United States, involves using a gene-editing tool called CRISPR to make the body\u2019s own immune system attack the drug.\n\n\u201cWe\u2019re trying to make heroin more effective, but we\u2019re",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.93359375,
+     "distinct1": 0.0703125,
+     "distinct2": 0.08235294117647059,
+     "longest_run": 1,
+     "gen_sha": "07b91fba98e93faf",
+     "text": " a good day. I got to see my friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice chat. I also got to see my new friend, and we had a nice",
+     "quality": 3.0
+    }
+   ]
+  },
+  {
+   "label": "raw@1.05",
+   "op": "raw",
+   "theta": 1.05,
+   "pair_idx": 1,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.55859375,
+     "distinct1": 0.45703125,
+     "distinct2": 0.7411764705882353,
+     "longest_run": 2,
+     "gen_sha": "d9161d186cb1c0ef",
+     "text": " with the founding of Rome in 753 BC. The city was founded by the Etruscans, a people who had migrated from central Italy to the area around the Tiber River. The Etruscans were a warrior race and their culture was based on the worship of the Etruscan goddess, Vesta. The Etruscans were conquered by the Romans in 273 BC.\n\nThe Romans were a warrior race and they were known for their military prowess. They were also known for their love of art and architecture. The Romans built many beautiful buildings throughout the empire. The most famous of these buildings are the Colosseum, the Pantheon, and the Roman Forum.\n\nThe Colosseum was built in 80 AD and it is considered one of the Seven Wonders of the World. It was built to be a place where gladiators could fight to the death. The Colosseum was built in the shape of a circle and it was surrounded by a large wall. The Colosseum was built to hold up to 50,000 spectators.\n\nThe Pantheon was built in Rome in AD 79. It was a temple dedicated to the Roman god, Jupiter. The Pantheon was built in the shape of",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.796875,
+     "distinct1": 0.2109375,
+     "distinct2": 0.36470588235294116,
+     "longest_run": 2,
+     "gen_sha": "76183027544e4631",
+     "text": "\n\n1. The smell of fresh-baked bread.\n\n2. The sound of the rain on the roof.\n\n3. The sight of the sunrise.\n\n4. The taste of coffee.\n\n5. The feel of the wind in my hair.\n\n6. The sound of the ocean.\n\n7. The sight of the moon.\n\n8. The smell of the ocean.\n\n9. The taste of chocolate.\n\n10. The sound of the ocean.\n\n11. The sight of the stars.\n\n12. The smell of the ocean.\n\n13. The taste of chocolate.\n\n14. The sound of the ocean.\n\n15. The sight of the stars.\n\n16. The smell of the ocean.\n\n17. The taste of chocolate.\n\n18. The sound of the ocean.\n\n19. The sight of the stars.\n\n20. The smell of the ocean.\n\n21. The taste of chocolate.\n\n22. The sound of the ocean.\n\n23. The sight of the stars.\n\n24. The smell of the ocean.\n\n25. The taste of chocolate.\n\n",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.55078125,
+     "distinct1": 0.45703125,
+     "distinct2": 0.6901960784313725,
+     "longest_run": 2,
+     "gen_sha": "db7de69983b05aa0",
+     "text": " I get up and make a cup of coffee. Then I take a shower and dress in my favorite outfit. I love to wear a skirt or a dress with a blouse. I like to wear a pair of black shoes and a necklace. I always have a book with me. I read for about an hour before I go to work.\n\nI usually work from 8:00 a.m. until 5:00 p.m. I am a part-time employee at the hospital. I work in the emergency room. I am a nurse's aide. I help patients who are in the emergency room. I also help patients who are in the hospital. I do not work on weekends.\n\nI am a single mother. My husband is a truck driver. He works all over the country. He has been gone for about two years now. He is coming back home soon.\n\nI am a Christian. I attend church every Sunday. I love to sing. I love to play the piano. I love to play the guitar. I love to play the drums. I love to play the flute. I love to play the trumpet. I love to play the saxophone. I love to play the trombone. I love to",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.875,
+     "distinct1": 0.12890625,
+     "distinct2": 0.16862745098039217,
+     "longest_run": 2,
+     "gen_sha": "d18ec22dabd64a8e",
+     "text": " to have a good fire.\n\nThe fire should be large enough to cook the food, but not so large that it will burn down the house. The fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that it can be easily moved around.\n\nThe fire should be built in a way that",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.55078125,
+     "distinct1": 0.4609375,
+     "distinct2": 0.7411764705882353,
+     "longest_run": 2,
+     "gen_sha": "fb471b2013bd6688",
+     "text": " there was a man who had a reputation for being a bit of a ladies' man. He was a good-looking guy, but he was also a bit of a ladies' man. He was always flirting with the girls in the bar, and he'd always get a little too friendly with them.\n\nOne night, he was sitting at the bar with his buddies when a pretty girl walked in. She was wearing a short skirt and a low-cut top, and she was carrying a bottle of beer. The guys were all looking at her, and they were all trying to figure out what she was doing there.\n\nShe walked over to the bar and sat down next to him. She started talking to him, and he was really flirting with her. She was really cute, and she was really sexy. She was wearing a tight-fitting dress that showed off her nice tits, and she was drinking a beer.\n\nThe guys were all watching her, and they were all trying to figure out what she was doing there. They were all wondering if she was going to be a hooker or something.\n\nFinally, one of the guys said, \"Hey, you know what? I think she's going to",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.80078125,
+     "distinct1": 0.2109375,
+     "distinct2": 0.3254901960784314,
+     "longest_run": 2,
+     "gen_sha": "22597b5a4869c73c",
+     "text": " you on behalf of the\n\nUnited States of America.\n\nI am writing to inform you that the United States Government has\n\ndetermined that the information contained in your application for a\n\nvisa is not reliable and that you are not eligible for a visa.\n\nThe United States Government has determined that you are not a\n\nqualified alien because you have not been physically present in the\n\nUnited States for the required period of time.\n\nThe United States Government has determined that you are not a\n\nqualified alien because you have not established that you will be\n\nphysically present in the United States for the required period of\n\ntime.\n\nThe United States Government has determined that you are not a\n\nqualified alien because you have not established that you will be\n\nphysically present in the United States for the required period of\n\ntime.\n\nThe United States Government has determined that you are not a\n\nqualified alien because you have not established that you will be\n\nphysically present in the United States for the required period of\n\ntime.\n\nThe United States Government has determined that you are not a\n\nqualified alien because you have not established that you will be\n\nphysically present in",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.48828125,
+     "distinct1": 0.51953125,
+     "distinct2": 0.7372549019607844,
+     "longest_run": 2,
+     "gen_sha": "d75ed90710bda4cd",
+     "text": " going to be a little bit warmer than yesterday, so we\u2019re expecting to have a good turnout. We\u2019ll see how it goes.\u201d\n\nThe event will be held at the University of Wisconsin-Madison\u2019s Memorial Union Ballroom, located on the UW-Madison campus. The event will begin at 6 p.m. and will last until 8 p.m.\n\nThe event is free and open to the public.\n\nFor more information about the event, contact the UW-Madison Office of Public Affairs at (608) 262-4242 or email publicaffairs@wisc.edu.<|endoftext|>Q:\n\nHow to get the value of a variable in a function?\n\nI'm trying to get the value of a variable in a function. I've tried using the global keyword but it doesn't work.\nfunction test() {\n    var x = \"test\";\n    alert(x);\n}\n\nA:\n\nYou can use the window object to access the global scope.\nwindow.x = \"test\";\n\nA:\n\nYou can use the window object to access the global scope.\nwindow.x = \"test\";\n\n<|endoftext|>Q:\n\n",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.73046875,
+     "distinct1": 0.26953125,
+     "distinct2": 0.4235294117647059,
+     "longest_run": 2,
+     "gen_sha": "1fe559373069b22e",
+     "text": " a man in a white coat standing there.\n\n\"I'm Dr. Kramer,\" he said, \"and I'm here to help you.\"\n\n\"Help me?\" she repeated.\n\n\"Yes, ma'am. You're in a lot of pain.\"\n\n\"I don't think so,\" she said. \"I'm fine.\"\n\n\"You're not fine,\" he said. \"You're in a lot of pain.\"\n\n\"I don't feel any pain,\" she said.\n\n\"That's because you're not taking your medication,\" he said. \"You need to take your medication.\"\n\n\"I don't want to take my medication,\" she said.\n\n\"You have to take your medication,\" he said. \"It's very important.\"\n\n\"I don't want to take it,\" she said.\n\n\"You have to take it,\" he said. \"You can't live like this.\"\n\n\"I don't want to live like this,\" she said.\n\n\"You have to take your medication,\" he said. \"You have to take it.\"\n\n\"I don't want to take it,\" she said.\n\n\"You have to take it",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.71484375,
+     "distinct1": 0.2890625,
+     "distinct2": 0.36470588235294116,
+     "longest_run": 2,
+     "gen_sha": "54d61d8cd0b4d3b9",
+     "text": " from a friend who said, \"If you're not going to do it, don't talk about it.\"\n\nI've been in the business for over twenty years and I've never had a problem with that.\n\n## **CHAPTER 2**\n\n## **THE BIRTH OF THE BOSS**\n\n_I have always been a very good listener._\n\n\u2014JOHN F. KENNEDY\n\n_I am a man of action. I like to get things done._\n\n\u2014JOHN F. KENNEDY\n\n_I am a man of action. I like to get things done._\n\n\u2014JOHN F. KENNEDY\n\n_I am a man of action. I like to get things done._\n\n\u2014JOHN F. KENNEDY\n\n_I am a man of action. I like to get things done._\n\n\u2014JOHN F. KENNEDY\n\n_I am a man of action. I like to get things done._\n\n\u2014JOHN F. KENNEDY\n\n_I am a man of action. I like to get things done._\n\n\u2014JOHN F. KENNEDY\n",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.79296875,
+     "distinct1": 0.2109375,
+     "distinct2": 0.35294117647058826,
+     "longest_run": 2,
+     "gen_sha": "928e7275b1aa86af",
+     "text": " there was a king who had a beautiful daughter. He loved her very much and he wanted to marry her. But the king's father said that he would not allow him to marry his daughter because she was a princess. The king was very sad and he decided to go to another country to find a princess.\n\nHe went to a kingdom where there was a beautiful princess. She was very beautiful and she was very kind. She was very happy to see the king and she was very happy to see his daughter. She was very happy to see the king and she was very happy to see his daughter.\n\nThe king and the princess were very happy to see each other. They were very happy to see each other. They were very happy to see each other. They were very happy to see each other.\n\nThe king and the princess were very happy to see each other. They were very happy to see each other. They were very happy to see each other. They were very happy to see each other.\n\nThe king and the princess were very happy to see each other. They were very happy to see each other. They were very happy to see each other. They were very happy to see each other.\n\nThe king and the princess were",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.59765625,
+     "distinct1": 0.41015625,
+     "distinct2": 0.6274509803921569,
+     "longest_run": 2,
+     "gen_sha": "54f95cb2dfb81fe3",
+     "text": " the jury was to consider the evidence of the\n\ndefendant\u2019s prior conviction only if it found that he had been convicted of a crime\n\ninvolving moral turpitude. The jury was not to consider the prior conviction unless it\n\nfound that the defendant had been convicted of a crime involving moral turpitude.\n\nThe jury found that the defendant had been convicted of a crime involving moral\n\nturpitude, and the trial court instructed the jury that it could consider the prior\n\nconviction only if it found that the defendant had been convicted of a crime involving\n\nmoral turpitude.\n\n      The defendant argues that the trial court erred in instructing the jury that it\n\ncould consider the prior conviction only if it found that the defendant had been\n\nconvicted of a crime involving moral turpitude. He contends that the instruction\n\nviolated his due process rights because it allowed the jury to convict him of a crime\n\nthat did not involve moral turpitude. We disagree.\n\n      \u201cA trial court has broad discretion in formulating its jury instructions.\u201d State\n\nv. Haney, 986 S.W.2d 118, 122 (Tenn. 1999). \u201cWhen reviewing jury instructions,",
+     "quality": 5.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.59765625,
+     "distinct1": 0.40234375,
+     "distinct2": 0.6,
+     "longest_run": 2,
+     "gen_sha": "e809ce0e4e5ae3c1",
+     "text": " The U.S. Department of Justice has filed a lawsuit against the city of San Francisco, claiming that the city\u2019s ban on plastic bags is unconstitutional.\n\nThe suit was filed in federal court in San Francisco, and it claims that the ban violates the First Amendment rights of businesses and consumers.\n\n\u201cThe City\u2019s ban on single-use plastic bags is an unconstitutional restriction on speech,\u201d said U.S. Attorney Melinda Haag in a statement. \u201cThe City\u2019s ban on plastic bags is not narrowly tailored to serve any compelling government interest, and it does not leave open ample alternative channels for communication.\u201d\n\nThe lawsuit comes after the city of San Francisco passed a ban on plastic bags in 2012. The ban was challenged by the American Civil Liberties Union (ACLU) and other groups, but the courts ruled that the ban was constitutional.\n\nThe lawsuit claims that the ban is unconstitutional because it is not narrowly tailored to serve any compelling government interest. It also claims that the ban leaves open ample alternative channels for communication.\n\n\u201cThe City\u2019s ban on plastic bags is not narrowly tailored to serve any compelling government interest, and it does not leave open ample alternative channels for communication,\u201d said U.S. Attorney Melinda",
+     "quality": 5.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.62890625,
+     "distinct1": 0.38671875,
+     "distinct2": 0.6470588235294118,
+     "longest_run": 2,
+     "gen_sha": "8328a796341c0bcc",
+     "text": " the best way to get a job is to be a good employee. I have worked for many different companies and have learned that it is not just about what you know, but also about how you present yourself.\n\nI have been working in the financial industry for over 10 years now. I have worked for a large bank, a small bank, a brokerage firm, and a hedge fund. I have worked in a variety of positions from sales to trading to compliance. I have worked in a variety of industries including banking, insurance, and finance. I have worked in a variety of countries including the United States, Canada, and the United Kingdom. I have worked in a variety of roles including sales, compliance, and trading. I have worked in a variety of departments including risk management, treasury, and compliance. I have worked in a variety of locations including New York, London, and Hong Kong.\n\nI have always had a passion for learning and I am always looking to expand my knowledge. I have always been interested in the financial industry and have always wanted to learn more about it. I have always been interested in the stock market and have always wanted to learn more about it. I have always been interested in the world of finance and have always wanted to",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.9375,
+     "distinct1": 0.0625,
+     "distinct2": 0.09803921568627451,
+     "longest_run": 2,
+     "gen_sha": "6ca19dec2dac3657",
+     "text": "\n\n1 cup of water\n\n1/2 cup of sugar\n\n1/4 cup of corn starch\n\n1/4 cup of baking soda\n\n1/4 cup of salt\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of vinegar",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.63671875,
+     "distinct1": 0.37109375,
+     "distinct2": 0.5372549019607843,
+     "longest_run": 2,
+     "gen_sha": "03c5dcd64075cfd9",
+     "text": " finally found a way to make the world\u2019s most popular drug, heroin, more effective.\n\nThe new method is called \u201cmicrodosing\u201d and it involves taking tiny amounts of the drug over time.\n\n\u201cIt\u2019s like taking a pill every day,\u201d said Dr. Michael Mithoefer, a professor of psychiatry at the University of Miami Miller School of Medicine. \u201cYou take a little bit every day, and you build up your tolerance.\u201d\n\nMithoefer said microdosing is a safe way to get high without the risk of overdose.\n\n\u201cIt\u2019s not like smoking cigarettes or drinking alcohol,\u201d he said. \u201cIt\u2019s not addictive. It\u2019s not physically addictive. It\u2019s not psychologically addictive. It\u2019s not socially addictive. It\u2019s not even chemically addictive.\u201d\n\nMithoefer said microdosing is a way to get high without the risk of overdose.\n\n\u201cIt\u2019s not like smoking cigarettes or drinking alcohol,\u201d he said. \u201cIt\u2019s not addictive. It\u2019s not physically addictive. It\u2019s not psychologically addictive. It\u2019s not socially addictive. It\u2019s not even chemically addictive.\u201d\n\nMith",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.69921875,
+     "distinct1": 0.30859375,
+     "distinct2": 0.49411764705882355,
+     "longest_run": 2,
+     "gen_sha": "590a70ba3ae645c4",
+     "text": " a good day. I got to see my friend, and we had a nice chat. I also got to see my new friend, and she is very nice. She is a girl from the same school as me, and we are going to be friends. I am so happy that I have met her.\n\nI am going to go to the library now, and I will be back soon.\n\nLove,\n\nMia\n\n# Chapter 4\n\n\"Mia, you're late.\"\n\n\"Sorry, I was just reading my book.\"\n\n\"You should be in bed by now.\"\n\n\"I know, but I couldn't sleep.\"\n\n\"Why not?\"\n\n\"I don't know. I just couldn't sleep.\"\n\n\"Well, you should be in bed by now.\"\n\n\"I know, but I couldn't sleep.\"\n\n\"Well, you should be in bed by now.\"\n\n\"I know, but I couldn't sleep.\"\n\n\"Well, you should be in bed by now.\"\n\n\"I know, but I couldn't sleep.\"\n\n\"Well, you should be in bed by now.\"\n\n\"I know, but I couldn",
+     "quality": 2.0
+    }
+   ]
+  },
+  {
+   "label": "fix@1.05",
+   "op": "fix",
+   "theta": 1.703125,
+   "pair_idx": 1,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.5390625,
+     "distinct1": 0.47265625,
+     "distinct2": 0.7607843137254902,
+     "longest_run": 2,
+     "gen_sha": "d78787a05ee6be30",
+     "text": " with the founding of Rome in 753 BC. The city was founded by the Etruscans, a people who had migrated from central Italy to the area around the Tiber River. The Etruscans were an agricultural people who lived in small villages and cultivated their own food. They were not farmers, but they did have a large number of slaves who worked on their farms.\n\nThe Etruscans were conquered by the Romans in the 6th century BC. The Romans brought with them a new way of life that was based on agriculture and trade. The Romans also brought with them a new way of building cities. The Romans built their cities on hillsides and used the natural features of the land to create walls and other structures. The Romans also developed a system of roads that connected the cities together. The Romans also developed a system of government that was based on the rule of law. The Romans also developed a system of taxation that was based on the value of the goods that were produced in the city.\n\nThe Romans expanded their empire throughout the Mediterranean region. The Romans conquered many different countries and established colonies in many different places. The Romans also fought wars against other nations. The Romans defeated the Greeks in the Battle of Actium in 31 BC.",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.7578125,
+     "distinct1": 0.25,
+     "distinct2": 0.4392156862745098,
+     "longest_run": 2,
+     "gen_sha": "6b951988a4b7b47f",
+     "text": "\n\n1. The smell of fresh-baked bread.\n\n2. The sound of the rain on the roof.\n\n3. The sight of the sunrise.\n\n4. The taste of coffee.\n\n5. The feel of the wind in my hair.\n\n6. The sound of the ocean.\n\n7. The sight of the moon.\n\n8. The smell of flowers.\n\n9. The taste of chocolate.\n\n10. The feeling of being alive.\n\n11. The sound of the birds.\n\n12. The sight of the stars.\n\n13. The taste of ice cream.\n\n14. The feeling of being loved.\n\n15. The sound of the wind in the trees.\n\n16. The sight of the clouds.\n\n17. The taste of chocolate.\n\n18. The feeling of being alive.\n\n19. The sound of the ocean.\n\n20. The sight of the sunrise.\n\n21. The smell of fresh-baked bread.\n\n22. The taste of coffee.\n\n23. The feeling of being alive.\n\n24. The sound of the ocean.\n\n25.",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.78515625,
+     "distinct1": 0.21875,
+     "distinct2": 0.3568627450980392,
+     "longest_run": 1,
+     "gen_sha": "e41ff180334c9b1f",
+     "text": " I get up and make a cup of coffee. Then I take a shower and dress in my favorite outfit. I love to wear jeans and a t-shirt. I have a few pairs of jeans that I like to wear. I also have a few t-shirts that I like to wear. I usually wear a pair of black pants with a white shirt. I also have a pair of black pants that I wear when I go out for dinner. I have a pair of black pants that I wear when I go to the gym. I also have a pair of black pants that I wear when I go to the beach. I also have a pair of black pants that I wear when I go to the mall. I also have a pair of black pants that I wear when I go to the movies. I also have a pair of black pants that I wear when I go to the park. I also have a pair of black pants that I wear when I go to the grocery store. I also have a pair of black pants that I wear when I go to the post office. I also have a pair of black pants that I wear when I go to the bank. I also have a pair of black pants that I wear when I go to the library. I also",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.8671875,
+     "distinct1": 0.14453125,
+     "distinct2": 0.22745098039215686,
+     "longest_run": 2,
+     "gen_sha": "b4a758b0278e38f2",
+     "text": " to have a good fire.\n\nA good fire is the foundation of all cooking. It's the source of heat, and it's the source of flavor. A good fire is the key to making food taste good.\n\nIf you don't have a good fire, you can't make good food. If you don't have a good fire, you can't cook.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou can't cook without a good fire.\n\nYou",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.63671875,
+     "distinct1": 0.375,
+     "distinct2": 0.5764705882352941,
+     "longest_run": 2,
+     "gen_sha": "5afd35da968c23c0",
+     "text": " there was a man who had a reputation for being a bit of a ladies' man. He was a good-looking guy, but he was also a bit of a flirt. He'd always been that way, and it wasn't until I was in my twenties that I realized how much I'd been affected by it.\n\nI remember one night when I was about fifteen, I was sitting on the front porch with my friends, and we were talking about boys. We were all pretty young, and we were all pretty na\u00efve. One of my friends said, \"You know, I think I'm going to get a boyfriend.\"\n\n\"Why?\" I asked.\n\n\"Because I want to have a boyfriend,\" she said.\n\n\"Well, you can't,\" I said. \"You're too young.\"\n\n\"But I want to,\" she said.\n\n\"Well, you can't,\" I said. \"You're too young.\"\n\n\"But I want to,\" she said.\n\n\"Well, you can't,\" I said. \"You're too young.\"\n\n\"But I want to,\" she said.\n\n\"Well, you can't,\" I said. \"You're too young",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.45703125,
+     "distinct1": 0.5546875,
+     "distinct2": 0.8431372549019608,
+     "longest_run": 1,
+     "gen_sha": "97c8ccbb0469e459",
+     "text": " you on behalf of the\nI.R.S. and the Department of Justice. We are investigating a possible\nviolation of the Foreign Corrupt Practices Act (FCPA) by your company,\nand we would like to discuss this matter with you. If you have any\nquestions, please contact me at (202) 622-5200. Thank you for your\ncooperation.\nSincerely,\n/s/\nJohn P. Carlin\nAssistant U.S. Attorney\n(202) 622-5200\ncc:\nMr. John C. Burek\nSenior Counsel\nThe Boeing Company\nP.O. Box 9000\nSeattle, WA 98108\nDear Mr. Carlin:\nThank you for your letter dated May 15, 2001. We appreciate your\ninterest in our company and its operations.\nWe are pleased to provide you with the following information.\nBoeing has been a party to FCPA investigations since 1991. In that\ntime, we have cooperated fully with the I.R.S. and the Department of\nJustice. We have also provided information to the I.R.S. and the\nDepartment of Justice regarding other matters.\nIn",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.75,
+     "distinct1": 0.25390625,
+     "distinct2": 0.3803921568627451,
+     "longest_run": 2,
+     "gen_sha": "ab440f0514bf016d",
+     "text": " going to be a little bit warmer than yesterday, so we\u2019re expecting to have a good turnout. We\u2019re expecting about 100 people to show up.\n\nWe\u2019re also expecting to have a lot of people who are interested in the event, and they\u2019re going to be able to come out and see what\u2019s going on.\n\nI think it\u2019s going to be a great day. I think it\u2019s going to be a great time.\n\nQ: What do you think about the future of the city?\n\nA: I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to continue to grow. I think that the city is going to",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.8125,
+     "distinct1": 0.1875,
+     "distinct2": 0.2901960784313726,
+     "longest_run": 2,
+     "gen_sha": "346d3f8114975fc6",
+     "text": " a man in a white coat standing there.\n\n\"I'm Dr. Kramer,\" he said. \"I'm here to help you.\"\n\n\"Help me?\" she asked. \"What do you mean?\"\n\n\"You're going to be fine,\" he said. \"You're going to be just fine.\"\n\n\"But I don't feel fine,\" she said. \"I feel like I'm going to die.\"\n\n\"No, you're not going to die,\" he said. \"You're going to be fine.\"\n\n\"But I don't feel fine,\" she said.\n\n\"You're going to be fine,\" he said. \"You're going to be just fine.\"\n\n\"But I don't feel fine,\" she said.\n\n\"You're going to be fine,\" he said. \"You're going to be just fine.\"\n\n\"But I don't feel fine,\" she said.\n\n\"You're going to be fine,\" he said. \"You're going to be just fine.\"\n\n\"But I don't feel fine,\" she said.\n\n\"You're going to be fine,\" he said. \"You're going to be just fine.\"\n\n\"",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.46484375,
+     "distinct1": 0.54296875,
+     "distinct2": 0.8431372549019608,
+     "longest_run": 2,
+     "gen_sha": "f6a550830f1237f6",
+     "text": " from a friend who said, \"If you're not going to do it, don't talk about it.\"\n\nI've been in the business for over twenty years and I've never had a problem with that.\n\n## **CHAPTER 2**\n\n## **THE BIRTH OF THE BUSINESS**\n\n_It's not what you know, it's who you know._\n\n\u2014JOHN D. ROCKEFELLER\n\nIn the early 1980s, I was working as a salesman for a small company in New York City. I was making $1,000 a week, which was pretty good money at the time. I was living in a one-bedroom apartment in Brooklyn, and I was spending most of my time on the road. I was traveling all over the country, selling products.\n\nOne day, I got a call from a guy named Bob Kahn. He was a real estate developer in New York City. He told me he was looking for a partner to start a new company. He said he had a lot of money and wanted to invest in a company that would be successful. He said he had a lot of ideas and he wanted to share them with me.\n\nBob Kahn was",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.62890625,
+     "distinct1": 0.38671875,
+     "distinct2": 0.7333333333333333,
+     "longest_run": 2,
+     "gen_sha": "15b7031e3e01e2cf",
+     "text": " there was a king who had a beautiful daughter. He loved her very much and he wanted to marry her. But the king's father said that he would not allow him to marry his daughter because she was so beautiful. The king was very sad and he decided to go to another country to find a wife for himself.\n\nWhen he arrived in the other country, he met a beautiful princess. She was also very beautiful and she was very kind. She was very happy to meet the king and she asked him to marry her. The king agreed and they were married.\n\nThe king and the princess lived happily together for many years. Then one day, the king went to the garden to see his daughter. He saw that she was very sad and he asked her why she was sad. She told him that she was unhappy because she could not have children.\n\nThe king was very sad and he did not know what to do. He thought about it for a long time and then he decided to ask the princess to help him. He told her that he needed her help to make his daughter pregnant.\n\nThe princess agreed to help him. She told him that she would give him a magic potion that would make his daughter pregnant. The king was very",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.83984375,
+     "distinct1": 0.1640625,
+     "distinct2": 0.2823529411764706,
+     "longest_run": 2,
+     "gen_sha": "44a504e3ba9d82ba",
+     "text": " the jury was to consider the evidence of the\n\ndefendant\u2019s prior conviction only if it found that the defendant had been convicted of\n\nthe prior offense. The jury was not to consider the evidence of the prior conviction\n\nunless it found that the defendant had been convicted of the prior offense.\n\n       The jury found that the defendant had been convicted of the prior offense.\n\nThe trial court instructed the jury that it could consider the evidence of the prior\n\nconviction only if it found that the defendant had been convicted of the prior offense.\n\nThe jury found that the defendant had been convicted of the prior offense. The jury\n\nfound that the defendant had committed the prior offense. The jury found that the\n\ndefendant had committed the prior offense. The jury found that the defendant had\n\ncommitted the prior offense. The jury found that the defendant had committed the\n\nprior offense. The jury found that the defendant had committed the prior offense.\n\nThe jury found that the defendant had committed the prior offense. The jury found\n\nthat the defendant had committed the prior offense. The jury found that the\n\ndefendant had committed the prior offense. The jury found that the defendant had\n\ncommitted the prior offense. The jury",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.53125,
+     "distinct1": 0.46875,
+     "distinct2": 0.7490196078431373,
+     "longest_run": 2,
+     "gen_sha": "6f242f0c0dd43fb6",
+     "text": " The U.S. Department of Justice has filed a lawsuit against the city of San Francisco, claiming that the city\u2019s ban on plastic bags is unconstitutional.\n\nThe suit was filed in federal court in San Francisco, and it claims that the ban violates the First Amendment rights of businesses and consumers.\n\n\u201cThe City\u2019s ban on single-use plastic bags is an unconstitutional restriction on speech,\u201d said U.S. Attorney Melinda Haag in a statement. \u201cThe City\u2019s ban on plastic bags is not narrowly tailored to serve a compelling government interest, and it does not leave open ample alternative channels for communication.\u201d\n\nThe lawsuit comes after the city passed a ban on plastic bags in 2012, but the ban was struck down by a judge in 2014. The ban was then appealed to the 9th Circuit Court of Appeals, which upheld the ban in 2016.\n\nThe ban was originally passed in response to a study that found that more than 100 million plastic bags were used in San Francisco every year. The city also claimed that the ban would reduce litter and help the environment.\n\nBut the ban has been challenged in court, and the city has now filed a lawsuit against the city.\n\n\u201cThe City\u2019s ban on plastic bags",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.7109375,
+     "distinct1": 0.29296875,
+     "distinct2": 0.45098039215686275,
+     "longest_run": 1,
+     "gen_sha": "2f371f63d7b58bc3",
+     "text": " the best way to get a job is to be honest and hardworking. I am not afraid to ask for help, and I will do whatever it takes to get the job done. I am very detail oriented and organized. I am also very responsible and dependable. I am a team player and I enjoy working with people. I am very easy to get along with and I am very friendly. I am looking for a position that will allow me to grow and develop as a person. I am looking for a position that will allow me to learn new things and grow. I am looking for a position that will allow me to make a difference in the lives of others. I am looking for a position that will allow me to use my skills and abilities to make a difference in the lives of others. I am looking for a position that will allow me to work with people from all walks of life. I am looking for a position that will allow me to work with people who are different from me. I am looking for a position that will allow me to work with people who are different from me. I am looking for a position that will allow me to work with people who are different from me. I am looking for a position that will allow me to work with people who",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.8046875,
+     "distinct1": 0.1953125,
+     "distinct2": 0.3176470588235294,
+     "longest_run": 2,
+     "gen_sha": "3782d332505e92fa",
+     "text": "\n\n1 cup of water\n\n1/2 cup of sugar\n\n1/2 cup of brown sugar\n\n1/2 cup of molasses\n\n1/2 cup of butter\n\n1/2 cup of flour\n\n1/2 cup of baking powder\n\n1/2 cup of cornstarch\n\n1/2 cup of salt\n\n1/2 cup of vanilla\n\n1/2 cup of eggs\n\n1/2 cup of milk\n\n1/2 cup of oil\n\n1/2 cup of cocoa\n\n1/2 cup of chocolate chips\n\n1/2 cup of chopped nuts\n\n1/2 cup of raisins\n\n1/2 cup of pecans\n\n1/2 cup of walnuts\n\n1/2 cup of almonds\n\n1/2 cup of coconut\n\n1/2 cup of pineapple\n\n1/2 cup of banana\n\n1/2 cup of orange\n\n1/2 cup of lemon\n\n1/2 cup of lime\n\n1/2 cup of grapefruit\n\n1/2 cup of orange juice\n\n1/2 cup of apple juice\n\n1/2 cup of cranberry\n",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.50390625,
+     "distinct1": 0.5078125,
+     "distinct2": 0.803921568627451,
+     "longest_run": 2,
+     "gen_sha": "318a8c9a885cb12f",
+     "text": " finally found a way to make the world\u2019s most popular drug, heroin, more effective.\n\nThe new method is called \u201cmicrodosing\u201d and it involves taking tiny amounts of the drug over a period of time.\n\n\u201cIt\u2019s like taking a pill every day,\u201d said Dr. Robert L. DuPont, who led the research. \u201cYou take one pill in the morning, one pill at night, and you don\u2019t feel anything.\u201d\n\nThe study was published in the journal Nature.\n\nDuPont, a professor of psychiatry and behavioral sciences at Duke University, said he has been studying microdosing for about a decade.\n\n\u201cI\u2019ve been doing this for a long time,\u201d he said. \u201cI\u2019ve been trying to figure out how to make it work.\u201d\n\nHe said he had tried other methods, including using a nasal spray, but they didn\u2019t work.\n\n\u201cI thought that if I could get it to work with a pill, it would be easier to do,\u201d he said.\n\nDuPont said he started experimenting with microdosing after reading about it in a magazine article.\n\n\u201cI thought it was interesting,\u201d he said. \u201cI",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.80078125,
+     "distinct1": 0.19921875,
+     "distinct2": 0.2980392156862745,
+     "longest_run": 2,
+     "gen_sha": "189e28d999880103",
+     "text": " a good day. I got to see my friend again. She is so beautiful and sweet. I love her. I hope she will be my friend forever.\n\nI am going to the library tomorrow to get some books for my class. I am going to read them and then I am going to write about them. I am going to write about what I like and what I don't like. I am going to write about what I think is important. I am going to write about what I want to learn. I am going to write about what I want to do. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what I want to know. I am going to write about what",
+     "quality": 4.0
+    }
+   ]
+  },
+  {
+   "label": "raw@1.1",
+   "op": "raw",
+   "theta": 1.1,
+   "pair_idx": 2,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.5859375,
+     "distinct1": 0.43359375,
+     "distinct2": 0.6509803921568628,
+     "longest_run": 2,
+     "gen_sha": "3910ba2b665bcde6",
+     "text": " with a series of invasions from the north, and ended with the fall of Rome itself. The Romans were not a unified people; they were divided into many different tribes, each with its own language, religion, and culture.\n\nThe Romans conquered most of Europe in the first century AD, but their empire was eventually destroyed by the Germanic tribes known as the Goths. In 476 AD, the Western Roman Empire fell to the Ostrogoths, who established the Eastern Roman Empire. This lasted until 711 AD when the Byzantine Empire was founded.\n\nIn the Middle Ages, the Roman Empire was divided into several kingdoms: the Kingdom of Italy, the Kingdom of France, the Kingdom of England, the Kingdom of Spain, the Kingdom of Sicily, the Kingdom of Aragon, the Kingdom of Naples, the Kingdom of Jerusalem, the Kingdom of Hungary, the Kingdom of Bohemia, the Kingdom of Croatia, the Kingdom of Dalmatia, the Kingdom of Serbia, the Kingdom of Bulgaria, the Kingdom of Romania, the Kingdom of Croatia-Slavonia, the Kingdom of Hungary, the Kingdom of Poland, the Kingdom of Bohemia, the Kingdom of Hungary, the Kingdom of Croatia, the Kingdom of Bosnia, the Kingdom of Hungary,",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.59765625,
+     "distinct1": 0.41015625,
+     "distinct2": 0.6666666666666666,
+     "longest_run": 2,
+     "gen_sha": "6ad903cdb7d08e63",
+     "text": "\n\n1. The smell of fresh-baked bread in the morning.\n2. The sound of rain on the roof.\n3. The taste of coffee with cream and sugar.\n4. The sight of a rainbow.\n5. The feeling of being loved by someone who loves you back.\n6. The way your hair smells when it's wet.\n7. The way your skin feels after a shower.\n8. The way your eyes sparkle when you smile.\n9. The way your voice sounds when you're happy.\n10. The way your body looks when you're wearing something new.\n11. The way your heart beats when you're afraid.\n12. The way your hands feel when they touch your face.\n13. The way your lips feel when they touch your mouth.\n14. The way your feet feel when they touch the ground.\n15. The way your mind works when you're thinking about something.\n16. The way your stomach feels when you're hungry.\n17. The way your ears feel when you hear something beautiful.\n18. The way your nose feels when you smell something wonderful.\n19. The way your fingers feel when they touch something soft.\n20",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.421875,
+     "distinct1": 0.58984375,
+     "distinct2": 0.8588235294117647,
+     "longest_run": 2,
+     "gen_sha": "dbd4aba76f4af211",
+     "text": " I get up and make a cup of coffee. Then I take my dog for a walk around the block. After that, I go to work.\n\nI\u2019m not sure what it is about this job that makes me feel so good. Maybe it\u2019s because I have a lot of freedom. I can come in whenever I want. I don\u2019t have to be at work until 9:00 p.m., which means I can leave earlier than most people. I also get to choose when I work. I can work from home or on the road. I can work with clients who are local or international. And I can work with any kind of client\u2014from small businesses to Fortune 500 companies.\n\nI love working with people. I like helping them solve problems. I enjoy seeing their faces light up when they realize how much money they saved by using our services. I love hearing their stories. I love making them laugh. I love being able to help them do something they never thought possible.\n\nI\u2019ve been doing this for almost 20 years now. It\u2019s been an amazing journey. I\u2019ve learned a lot along the way. I\u2019ve made some mistakes too. But I\u2019ve also had some great successes.",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.6328125,
+     "distinct1": 0.375,
+     "distinct2": 0.5882352941176471,
+     "longest_run": 2,
+     "gen_sha": "b56ec786477fd78a",
+     "text": " to have a good fire.\n\nA good fire will keep you warm and cook your food quickly. A bad fire will make you cold and slow down the cooking process.\n\nIf you are going to be camping, you should always have a fire. If you don't have one, you can use a camp stove or a portable propane stove.\n\nYou can also use a campfire for cooking if you have a gas grill. You just need to add some wood chips to the fire.\n\nWhen you are cooking on a campfire, you should never put anything in it that could burn. This includes paper, plastic, aluminum foil, and metal.\n\nYou should also never leave any kind of liquid near the fire. This includes water, alcohol, gasoline, kerosene, and lighter fluid.\n\nYou should also never leave any kind of food near the fire. This includes meat, fish, vegetables, fruits, and nuts.\n\nYou should also never leave any kind of food near the fire. This includes meat, fish, vegetables, fruits, and nuts.\n\nYou should also never leave any kind of food near the fire. This includes meat, fish, vegetables, fruits, and nuts.\n\nYou should also",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.4375,
+     "distinct1": 0.57421875,
+     "distinct2": 0.8588235294117647,
+     "longest_run": 2,
+     "gen_sha": "e0f53f6e2703a6fc",
+     "text": " there was a man who had been in the military. He was a veteran of World War II and Korea. He was a very nice man, but he was also a bit of a recluse. He didn't go to church or anything like that. But he did have a lot of friends. And one day, when we were all sitting around the table having lunch, he said, \"I've got something to tell you.\"\n\n\"What is it?\" I asked him.\n\nHe looked at me and said, \"You know how your mother died?\"\n\n\"Yes,\" I answered.\n\n\"Well, she's not dead,\" he said. \"She's alive.\"\n\nAnd then he told us about her. She'd been in a car accident. She'd been driving home from work, and she'd hit a tree. She'd broken her neck. She was paralyzed from the waist down.\n\nMy father was devastated by this news. He couldn't believe that his wife was still alive. He thought she would be dead for sure. He was so angry with God. He felt that if he could just get her back, everything would be okay.\n\nBut my mother wasn't going anywhere. She was in a",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.3984375,
+     "distinct1": 0.609375,
+     "distinct2": 0.8862745098039215,
+     "longest_run": 2,
+     "gen_sha": "6bc83b1b046b565b",
+     "text": " you on behalf of the\n\nUnited States Department of Justice. We are investigating a matter that has come to our attention involving your company and its employees. The investigation is ongoing and we will be contacting you in the near future. If you have any questions or concerns about this matter, please contact us at (202) 514-2000. Thank you for your cooperation.<|endoftext|>Q:\n\nHow to get the value from a textbox using javascript?\n\nI want to get the value from a text box using javascript.\n<input type=\"text\" id=\"txt_name\" name=\"txt_name\">\n\nA:\n\nYou can use document.getElementById(\"txt_name\").value;\n\n<|endoftext|>The present invention relates generally to the field of computer systems, and more particularly to a method and apparatus for providing a graphical user interface for a computer system.\nComputer systems typically include a display device such as a cathode ray tube (CRT), liquid crystal display (LCD), light emitting diode (LED) display, or other suitable display device. A typical computer system includes a central processing unit (CPU), memory, input/output devices, and a display device. The CPU executes instructions stored in memory and controls the operation of the computer system. The",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.3984375,
+     "distinct1": 0.609375,
+     "distinct2": 0.8823529411764706,
+     "longest_run": 2,
+     "gen_sha": "86f14399e941ae53",
+     "text": " going to be a little bit warmer than yesterday, so we\u2019re expecting some more sunshine. We\u2019ll have clouds and maybe a few showers later in the day, but it should be mostly sunny.\u201d\n\n\u201cWe\u2019ve got a lot of rain coming down from the mountains,\u201d said Weather Service meteorologist Mike Langley. \u201cIt\u2019s not as heavy as yesterday, but it\u2019s still pretty wet out there.\u201d\n\nLangley said the rain will continue through the afternoon and evening hours.\n\n\u201cThere\u2019s a chance for thunderstorms tonight,\u201d he said. \u201cBut they won\u2019t be very strong.\u201d\n\nThe National Weather Service has issued a flood warning for the area until 10 p.m.\n\n\u201cThis is a very dangerous situation,\u201d said Langley. \u201cIf you live in this area, please stay off the roads. If you do get on the road, drive slowly and carefully.\u201d<|endoftext|>Q:\n\nHow to use a variable inside a function?\n\nI'm trying to make a function that takes a string and returns an array with all the words in that string. I've tried using a variable inside the function, but it doesn't work. Here's my code:\nfunction",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.5234375,
+     "distinct1": 0.48046875,
+     "distinct2": 0.7450980392156863,
+     "longest_run": 2,
+     "gen_sha": "0aabe1cf6097305b",
+     "text": " a man in a white coat standing there.\n\n\"I'm Dr. Kramer,\" he said, \"and I'd like to talk with you.\"\n\n\"About what?\" she asked.\n\n\"Your son's condition.\"\n\n\"He's not my son,\" she said.\n\n\"No, but he is your husband's child.\"\n\n\"What are you talking about? He's not my husband's child!\"\n\n\"Yes, he is. You're his mother.\"\n\n\"You can't be serious! My husband isn't married to me!\"\n\n\"That's true. But he was married to another woman before you met him. And that other woman gave birth to your son.\"\n\n\"How do you know this?\"\n\n\"Because I am the one who performed the operation on your son.\"\n\n\"What?\"\n\n\"I removed the fetus from your womb.\"\n\n\"But how did you find out about it?\"\n\n\"The hospital called me.\"\n\n\"Why didn't you tell me?\"\n\n\"I wanted to keep it a secret until after the baby was born.\"\n\n\"And now you want to tell me?\"\n\n\"I don't have",
+     "quality": 5.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.390625,
+     "distinct1": 0.6171875,
+     "distinct2": 0.8901960784313725,
+     "longest_run": 2,
+     "gen_sha": "8b0006ea93b6d0cc",
+     "text": " from a friend who said, \"If you're not going to do it right, don't do it at all.\"\n\nI've been doing this for over twenty years now. It's the only thing I know how to do. And I'm still learning.\n\n## **CHAPTER 2**\n\n## **THE FIRST YEAR**\n\n_It is better to be a beginner than an old master._\n\n\u2014 _Lao Tzu_\n\n### **A NEW START**\n\nWhen I first started my business, I had no idea what I was getting into. I didn't have any experience in the industry and I certainly didn't have any money. I was just a kid with a dream.\n\nMy parents were very supportive of me starting my own business. They knew that I wanted to make a difference in people's lives by helping them find their inner peace. My mom even helped me get started on my website. She told me about the importance of having a website and how important it would be to help people find their way back to themselves.\n\nI remember when I first got my website up and running. I was so excited! I couldn't wait to share my message with everyone. I thought that if I could",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.58203125,
+     "distinct1": 0.43359375,
+     "distinct2": 0.7372549019607844,
+     "longest_run": 2,
+     "gen_sha": "fe78712dd863529c",
+     "text": " there was a king who had a beautiful daughter. He loved her very much and he wanted to marry her off to the most handsome prince in his kingdom. But the princess didn't want to be married to anyone else. She said that she would only marry the man who could make her laugh.\n\nThe king was so happy when he heard this that he decided to send for the most famous comedian in all of the land. The king told him that if he could make the princess laugh, then he would give him anything he wanted.\n\nThe comedian went to the palace and asked the princess to come out on the balcony with him. When she did, he started to tell jokes about her. Then he began to laugh at himself. At first, the princess thought it was funny, but after a while, she got angry and stormed off.\n\nWhen the king found out what happened, he was furious. He sent for the comedian again and told him that if he couldn't make the princess laugh, then he would have to marry another woman.\n\nThe comedian went back to the palace and asked the princess to come out on the balcony with him. When she did, he started to tell jokes about her. Then he began to laugh at himself.",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.48046875,
+     "distinct1": 0.51953125,
+     "distinct2": 0.803921568627451,
+     "longest_run": 2,
+     "gen_sha": "b29115f988b098d9",
+     "text": " the jury was to consider only the evidence that\n\nwas presented at trial. The court\u2019s instruction on the law of conspiracy, however,\n\ndid not limit the jury\u2019s consideration of the evidence to the facts presented at trial.\n\nInstead, it instructed the jury that \u201cthe law presumes that a person intends the\n\nnatural and probable consequences of his acts.\u201d\n\n      In addition, the district court did not abuse its discretion in denying\n\nGonzalez-Lopez\u2019s motion for a new trial based on newly discovered evidence.\n\n\u201cA motion for a new trial based on newly discovered evidence is committed to the\n\nsound discretion of the trial judge, and we will reverse only if there has been an\n\nabuse of discretion.\u201d United States v. Williams, 940 F.2d 176, 181 (11th Cir. 1991).\n\nTo obtain a new trial based on newly discovered evidence, Gonzalez-Lopez must\n\nshow that the evidence could not have been discovered before or during trial by the\n\nexercise of due diligence; that the evidence is material and not merely cumulative,\n\ncorroborative, collateral, or impeaching; and that the evidence would likely produce\n\nan acquittal",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.39453125,
+     "distinct1": 0.60546875,
+     "distinct2": 0.8392156862745098,
+     "longest_run": 2,
+     "gen_sha": "c74c9be84f32c20b",
+     "text": " The U.S. Department of Justice has filed a lawsuit against the city of San Francisco, claiming that the city\u2019s ban on plastic bags is unconstitutional.\n\nThe suit was filed in federal court by the DOJ\u2019s Environmental Protection Agency (EPA) and the U.S. Attorney for the Northern District of California. It alleges that San Francisco\u2019s ordinance violates the U.S. Constitution\u2019s Commerce Clause, which gives Congress the power to regulate commerce among the states.\n\n\u201cThis case is about whether cities can impose bans on single-use plastics,\u201d said EPA Administrator Gina McCarthy. \u201cWe are confident that the courts will uphold the authority of local governments to protect their residents from harmful pollution.\u201d\n\nSan Francisco\u2019s ordinance, passed in 2016, prohibits retailers from selling or giving away single-use plastic bags at retail stores. The city also requires all businesses to charge customers 5 cents per bag when they purchase paper bags.\n\nThe lawsuit claims that San Francisco\u2019s ordinance is preempted by state law, which allows cities to enact ordinances that are stricter than those set forth by the state.\n\n\u201cThe City of San Francisco\u2019s ordinance is not only an effective way to reduce littering, but it also",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.44921875,
+     "distinct1": 0.55859375,
+     "distinct2": 0.8352941176470589,
+     "longest_run": 2,
+     "gen_sha": "59099990f40ba9ea",
+     "text": " the best way to get a job is to be honest and hardworking. I am not afraid of hard work, but I do believe in doing things the right way.\n\nWhat are your hobbies?\n\nI love to read, watch movies, listen to music, and spend time with my family.\n\nHow would you describe yourself?\n\nI am a very easy going person who likes to laugh and joke around. I like to go out for dinner or drinks with friends and enjoy life.<|endoftext|>Q:\n\nHow to use a variable from one function as an argument in another function?\n\nI'm trying to make a program that will take a number (from 1-10) and then print it out on the screen. The problem is that I want to use the number as an argument in another function. Here's what I've got so far:\ndef main():\n    print(\"Welcome to the calculator!\")\n    number = int(input(\"Please enter a number between 1 and 10: \"))\n    print(number)\n    if number == 1:\n        print(\"1\")\n    elif number == 2:\n        print(\"2\")\n    elif number == 3:\n        print(\"3",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.82421875,
+     "distinct1": 0.17578125,
+     "distinct2": 0.28627450980392155,
+     "longest_run": 2,
+     "gen_sha": "0dfccf6cb4f49ad7",
+     "text": "\n\n1 cup of water\n\n2 cups of sugar\n\n1/4 cup of corn syrup\n\n1 teaspoon of vanilla extract\n\n1 teaspoon of salt\n\n1 teaspoon of baking soda\n\n1 teaspoon of cream of tartar\n\n1 teaspoon of baking powder\n\n1 teaspoon of cinnamon\n\n1 teaspoon of nutmeg\n\n1 teaspoon of cloves\n\n1 teaspoon of allspice\n\n1 teaspoon of ginger\n\n1 teaspoon of ground cloves\n\n1 teaspoon of ground cardamom\n\n1 teaspoon of ground coriander\n\n1 teaspoon of ground cumin\n\n1 teaspoon of ground mace\n\n1 teaspoon of ground nutmeg\n\n1 teaspoon of ground cloves\n\n1 teaspoon of ground ginger\n\n1 teaspoon of ground cinnamon\n\n1 teaspoon of ground black pepper\n\n1 teaspoon of ground white pepper\n\n1 teaspoon of ground red pepper\n\n1 teaspoon of ground white pepper\n\n1 teaspoon of ground black pepper\n\n1 teaspoon of ground white pepper\n\n1 teaspoon of ground black pepper\n\n1 teaspoon of ground white pepper\n\n1 teaspoon of ground black pepper\n\n1 teaspoon of ground white pepper\n\n1 teaspoon of ground black pepper\n\n1 teaspoon of ground white pepper",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.37890625,
+     "distinct1": 0.62890625,
+     "distinct2": 0.8941176470588236,
+     "longest_run": 2,
+     "gen_sha": "8d1b4c0d6e112fc5",
+     "text": " finally found a way to make the world\u2019s most popular drug, heroin, more effective.\n\nThe new method is called \u201cmicrodosing\u201d and it involves taking tiny amounts of drugs over time. The idea is that by doing so, users will experience a higher level of euphoria than they would if they took the full dose at once.\n\n\u201cIt\u2019s like having a little bit of cocaine every day,\u201d said Dr. Robert L. DuPont, who led the study published in the journal Nature.\n\nDuPont, a professor of psychiatry at Harvard Medical School, has been studying microdosing for about two decades. He said he first tried it with marijuana but quickly realized that it was not as effective as he had hoped.\n\n\u201cI thought I could get high faster, but I didn\u2019t,\u201d he said.\n\nHe then turned his attention to heroin, which he said is far more addictive than marijuana.\n\n\u201cHeroin is a very powerful drug,\u201d he said. \u201cYou can overdose on it.\u201d\n\nBut when he started using microdoses of heroin, he noticed something strange: Users reported feeling less anxious and depressed after taking the drug.\n\n\u201cThey were able to",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.65625,
+     "distinct1": 0.34765625,
+     "distinct2": 0.5058823529411764,
+     "longest_run": 2,
+     "gen_sha": "515304bb41989bb2",
+     "text": " a good day. I got to see my friend again and we had a nice chat. He told me about his life in the army and how he is doing now. We talked about our lives and what we are going to do after we finish school. It was really nice to talk with him.\n\nI am so happy that I have met him. I hope we will meet again soon.\n\nToday was a very good day. I went to the park with my friends. We played football and basketball. I also went to the library to read some books. I like reading books because it makes me feel better when I am sad or angry. I think that reading helps you to forget your problems.\n\nToday was a very good day. I went to the park with my friends. We played football and basketball. I also went to the library to read some books. I like reading books because it makes me feel better when I am sad or angry. I think that reading helps you to forget your problems.\n\nToday was a very good day. I went to the park with my friends. We played football and basketball. I also went to the library to read some books. I like reading books because it makes me feel better when I am sad or",
+     "quality": 3.0
+    }
+   ]
+  },
+  {
+   "label": "fix@1.1",
+   "op": "fix",
+   "theta": 2.51171875,
+   "pair_idx": 2,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.47265625,
+     "distinct1": 0.55078125,
+     "distinct2": 0.8274509803921568,
+     "longest_run": 2,
+     "gen_sha": "98200bd4f0f974ed",
+     "text": " with the founding of Rome in 753 BC. The city was founded by the Etruscans, a people who had migrated from central Italy to the area around the Tiber River. The Etruscans were an agricultural people and their main occupation was farming. They lived in small villages and built simple huts made of wattle and daub.\n\nThe Etruscans were conquered by the Romans in 273 BC. The Romans brought with them many new ideas and technologies that they used to build large cities such as Rome. The Romans also brought with them Greek culture and language. The Romans adopted Greek culture and language and created a new empire called the Roman Empire.\n\nThe Roman Empire grew to be one of the largest empires in history. It stretched from Britain to North Africa and from Spain to India. The Roman Empire reached its peak during the reign of Emperor Augustus (63 BC \u2013 14 AD). During his reign, the Roman Empire became more powerful than any other empire in history.\n\nThe Roman Empire fell apart after the death of Emperor Augustus. The last emperor of the Roman Empire was Emperor Theodosius I (395\u2013450 AD). He was succeeded by his son, Emperor Valentinian II (455\u2013476 AD). After the death",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.66796875,
+     "distinct1": 0.3359375,
+     "distinct2": 0.611764705882353,
+     "longest_run": 2,
+     "gen_sha": "a59e7125c7f9f642",
+     "text": "\n\n1. The smell of fresh-baked bread in the morning.\n\n2. A good cup of coffee.\n\n3. My husband.\n\n4. My children.\n\n5. My friends.\n\n6. My family.\n\n7. My faith.\n\n8. My church.\n\n9. My home.\n\n10. My garden.\n\n11. My pets.\n\n12. My life.\n\n13. My future.\n\n14. My dreams.\n\n15. My heart.\n\n16. My soul.\n\n17. My body.\n\n18. My mind.\n\n19. My spirit.\n\n20. My God.\n\n21. My Jesus.\n\n22. My Savior.\n\n23. My peace.\n\n24. My hope.\n\n25. My love.\n\n26. My joy.\n\n27. My laughter.\n\n28. My tears.\n\n29. My prayers.\n\n30. My thoughts.\n\n31. My words.\n\n32. My actions.\n\n33. My deeds.\n\n34. My works.\n\n35. My",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.44921875,
+     "distinct1": 0.5625,
+     "distinct2": 0.8666666666666667,
+     "longest_run": 2,
+     "gen_sha": "9f2fd30c8af155e7",
+     "text": " I get up and make a cup of coffee. Then I take my dog for a walk. After that, I go to the gym and do some cardio. When I'm done with that, I have a quick breakfast (usually oatmeal) and then I head to work.\n\nI love my job. I've been working at this company for almost two years now. It's a great place to work. The people are very friendly and helpful. They're always willing to help you out if you need it. And they pay well.\n\nThe only thing I don't like about my job is that I have to work on Saturdays. But I can't complain because I know that I'll be able to spend time with my family on Sundays.\n\nWhat would you say is your favorite part of your day?\n\nI love going to the gym. I also love taking my dog for a walk. That's one of the things I enjoy most about my life.\n\nWhat was your first job?\n\nI worked as a cashier in a grocery store. I loved that job because I got to meet so many different people. I met all kinds of people there. Some were nice, some were rude, and some were",
+     "quality": 5.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.62109375,
+     "distinct1": 0.38671875,
+     "distinct2": 0.6509803921568628,
+     "longest_run": 2,
+     "gen_sha": "cfb67b556829bfbb",
+     "text": " to have a good fire.\n\nA good fire will keep you warm and cook your food. A bad fire will burn your food and make you sick.\n\nIf you want to learn how to cook, then you must learn how to build a good fire.\n\nYou can use any kind of wood for a fire. You can use dry wood or wet wood.\n\nDry wood is the best because it burns longer than wet wood.\n\nWhen you are building a fire, you should always start with dry wood.\n\nThen you add wet wood until the fire is burning well.\n\nAfter that, you add more dry wood until the fire is burning well.\n\nThis is called \"building a fire\".\n\nOnce you have built a fire, you need to put some kindling on top of the fire.\n\nKindling is small pieces of wood that you place on top of the fire.\n\nIt helps to keep the fire burning.\n\nNext, you need to light the fire.\n\nTo light the fire, you need to throw some kindling on top of the fire.\n\nThen you need to hold the flint in your hand.\n\nFlint is a rock that has sharp edges",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.4453125,
+     "distinct1": 0.56640625,
+     "distinct2": 0.8862745098039215,
+     "longest_run": 2,
+     "gen_sha": "ab600effbc96bdfa",
+     "text": " there was a man who had been in the military. He was a veteran of World War II and Korea. He was a very nice man, but he was also a bit of a recluse. He didn't go to church or anything like that. He just lived in his house and worked on his farm.\n\nOne day, my mother asked him if he would come with us to the store. She said she wanted to buy some groceries for dinner. He agreed, and we all went together. When we got to the store, he bought a few things and then left. My mother told me later that he had gone into the bathroom and locked the door.\n\nWhen we got home, my mother called the police. They came and broke down the door. The policeman found the man sitting on the toilet. He was dead. There was no sign of a struggle. It looked like he had died from natural causes.\n\nMy mother never talked about it again. But when I was older, I started asking questions. I wondered why he had done it. Why did he kill himself? What had happened to him?\n\nI finally learned the answer to those questions when I was in high school. A friend of mine told me that he had",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.5546875,
+     "distinct1": 0.45703125,
+     "distinct2": 0.7176470588235294,
+     "longest_run": 2,
+     "gen_sha": "431f8e0587b4f226",
+     "text": " you on behalf of the\nI.R.S. and the Department of Justice. We are investigating a possible\nviolation of the Foreign Corrupt Practices Act (FCPA) by your company,\nand we would like to discuss this matter with you. If you have any\nquestions or concerns, please contact us at 1-800-366-4484. Thank you for\nyour cooperation.\nSincerely,\n[signature]\nAttachment:<|endoftext|>Q:\n\nHow to get all values from an array in PHP?\n\nI have an array that looks like this:\nArray\n(\n    [0] => Array\n        (\n            [id] => 1\n            [name] => John\n            [age] => 25\n        )\n\n    [1] => Array\n        (\n            [id] => 2\n            [name] => Mary\n            [age] => 30\n        )\n\n    [2] => Array\n        (\n            [id] => 3\n            [name] => Peter\n            [age] => 35\n        )\n\n)\n\nI want to get all the values from the array so that I can use them in my query. How do I",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.421875,
+     "distinct1": 0.578125,
+     "distinct2": 0.8235294117647058,
+     "longest_run": 2,
+     "gen_sha": "7f7d51000ee593ac",
+     "text": " going to be a little bit warmer than yesterday, so we\u2019re expecting some more sunshine. We\u2019ll have clouds and maybe a few showers later in the day, but it should be mostly sunny.\u201d\n\n\u201cWe\u2019re looking at temperatures in the mid-60s for the afternoon,\u201d said Weather Service meteorologist John Anderson. \u201cIt will be breezy, with winds out of the north-northeast around 10 to 15 miles per hour.\u201d\n\nAnderson said that while there are no major storms expected this weekend, he expects rain on Sunday morning.\n\n\u201cSunday looks like it will be dry, but then we could see some showers late in the day,\u201d he said.\n\nOn Monday, highs will be in the upper 60s, with lows in the upper 40s.\n\n\u201cMonday looks like it will be partly cloudy, with a chance of showers or thunderstorms,\u201d Anderson said. \u201cThere\u2019s a chance of snow Tuesday night into Wednesday morning.\u201d\n\nTemperatures will be in the lower 50s through Thursday, with highs in the upper 40s.<|endoftext|>Q:\n\nHow to get all values from an array?\n\nI have an array which contains two elements (name and",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.50390625,
+     "distinct1": 0.50390625,
+     "distinct2": 0.7647058823529411,
+     "longest_run": 2,
+     "gen_sha": "735738d96090674d",
+     "text": " a man in a white coat standing there.\n\n\"I'm Dr. Kramer,\" he said. \"You're Mrs. Bauer?\"\n\n\"Yes.\"\n\n\"Come with me, please.\"\n\nHe led her down a long hallway to a small room at the end. He sat her down on a chair and then left the room. She heard him open a drawer and take out a syringe.\n\n\"What's that for?\" she asked.\n\n\"It's just routine,\" he said. \"We'll give you something to relax you.\"\n\n\"But I don't want to relax.\"\n\n\"That's all right. You won't feel anything.\"\n\nThe doctor returned with a glass of water and a cup of pills. He handed them to her.\n\n\"Take these,\" he said. \"They'll help you sleep.\"\n\n\"Why are you doing this?\"\n\n\"Because we have to do it. It's part of the procedure.\"\n\n\"What procedure?\"\n\n\"Your husband is going to be operated on.\"\n\n\"My husband? What happened to him?\"\n\n\"He was shot.\"\n\n\"Shot?\"\n\n\"Yes. We had",
+     "quality": 5.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.37890625,
+     "distinct1": 0.62890625,
+     "distinct2": 0.9176470588235294,
+     "longest_run": 2,
+     "gen_sha": "1154571d0eb7ce9c",
+     "text": " from a friend who said, \"If you're not going to do it right, don't do it at all.\"\n\nI've been doing this for over twenty years now. It's the only thing I know how to do. And I'm still learning.\n\n## **CHAPTER 2**\n\n## **THE FIRST YEAR**\n\n_It's hard to believe that in just one year, we will have completed our first full year of running._\n\n\u2014JOHN BURROUGHS\n\nIn January of 1997, I started my first marathon. The race was the New York City Marathon, and I ran it with my wife, Mary. We were both new to marathons, and we had no idea what to expect. But we knew we wanted to run together, so we decided to sign up for the same race.\n\nWe didn't know anything about the course or the weather. We'd never run a marathon before. We thought we'd be fine. We figured we'd get through the race and then go home and rest.\n\nBut when we got to the starting line, we found out that there was a problem. The start was delayed by two hours because of rain. So we waited until the",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.53125,
+     "distinct1": 0.4765625,
+     "distinct2": 0.7686274509803922,
+     "longest_run": 2,
+     "gen_sha": "e83cf8e270c06c43",
+     "text": " there was a king who had a beautiful daughter. He loved her very much and he wanted to marry her. But the girl's father said no.\n\n\"Why?\" asked the king.\n\n\"Because,\" said the father, \"I have another daughter.\"\n\n\"But I love my daughter,\" said the king.\n\n\"Then you must marry me,\" said the father.\n\n\"No!\" said the king. \"I will not marry you.\"\n\n\"You must,\" said the father. \"Otherwise, I will kill you.\"\n\nThe king thought about it for a while. Then he said, \"All right. I will marry you.\"\n\nSo the two of them got married. And they lived happily ever after.\n\n# The King and the Queen\n\nA king and queen were having a party. They invited all their friends.\n\nWhen the guests arrived, the king gave each one a glass of wine. Then he told them to dance.\n\nAfter the first dance, the king noticed that his wife was dancing with someone else. So he called out to her, \"What are you doing?\"\n\nShe replied, \"I'm dancing with your friend.\"\n\n\"That's not true",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.3828125,
+     "distinct1": 0.62109375,
+     "distinct2": 0.8862745098039215,
+     "longest_run": 2,
+     "gen_sha": "7004bdd77301d061",
+     "text": " the jury was to consider only the evidence that\n\nwas presented at trial. The court\u2019s instruction on the law of conspiracy, however,\n\ndid not limit the jury\u2019s consideration of the evidence to the facts presented at trial.\n\nInstead, the court instructed the jury that it could consider \u201cany other acts or\n\nstatements made by the defendant\u201d in determining whether he had conspired with\n\nthe other defendants.\n\n      In addition, the district court did not abuse its discretion in denying\n\nGonzalez\u2019s motion for a new trial based on newly discovered evidence. Gonzalez\n\nargues that the government failed to disclose information about his prior criminal\n\nhistory and drug use before trial. But the record shows that the government\n\nprovided this information to defense counsel during discovery. And even if the\n\ngovernment had not disclosed this information, Gonzalez has not shown that the\n\ninformation would have changed the outcome of the trial. See United States v.\n\nBaker, 432 F.3d 1189, 1223 (11th Cir. 2005).\n\n\n\n\n                                            2\n\f               Case: 15-14082     Date Filed: 06/01/2016    Page: 3 of 4\n\n\n      We A",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.4375,
+     "distinct1": 0.5625,
+     "distinct2": 0.8431372549019608,
+     "longest_run": 2,
+     "gen_sha": "444a46c75269ac7a",
+     "text": " The U.S. Department of Justice has filed a lawsuit against the city of San Francisco, claiming that the city\u2019s ban on plastic bags is unconstitutional.\n\nThe suit was filed in federal court in San Francisco and alleges that the ban violates the First Amendment rights of businesses to free speech and association. It also claims that the ban violates the Commerce Clause of the Constitution.\n\n\u201cThis lawsuit is about protecting our right to choose how we live,\u201d said Attorney General Eric Holder. \u201cWe are committed to ensuring that every American has access to affordable, convenient, and responsible ways to shop.\u201d\n\nThe suit comes after the City Council voted last month to ban single-use plastic bags from stores and restaurants. The ban will go into effect July 1.\n\nIn addition to the lawsuit, the city is also asking the court to issue an injunction barring the city from enforcing the ban.\n\nSan Francisco Mayor Ed Lee issued a statement saying he supports the ban.\n\n\u201cI am pleased that the courts have agreed with my decision to ban single-use plastic bags from all retail establishments in San Francisco,\u201d said Lee. \u201cAs I have said before, banning plastic bags is not only good for the environment, but it is good for business. We need",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.3984375,
+     "distinct1": 0.609375,
+     "distinct2": 0.8980392156862745,
+     "longest_run": 2,
+     "gen_sha": "2d81dfa5d0ae1c8a",
+     "text": " the best way to get a job is to be honest and hardworking. I am not afraid to ask for help, but I do not like to take advantage of people. I believe in being fair and giving my best effort.\n\nWhat are your hobbies?\n\nI love to read, watch movies, and play video games. I also enjoy spending time with my family and friends.\n\nWhat would you say to someone who is considering applying to your program?\n\nIf you are interested in working at our company, please send me an email or call me at (919) 834-7000.<|endoftext|>Q:\n\nHow to use \"this\" keyword in javascript function\n\nI'm trying to understand how to use this keyword in javascript functions. \nFor example, if I have a function called foo() which takes one parameter, how can I access it from another function?\nfunction foo(param){\n    //do something\n}\n\nfunction bar(){\n    var param = 'foo';\n    console.log(param); //undefined\n}\n\nA:\n\nYou can't. The this keyword is bound to the current object. If you want to pass the value of foo to bar,",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.88671875,
+     "distinct1": 0.11328125,
+     "distinct2": 0.19215686274509805,
+     "longest_run": 2,
+     "gen_sha": "8ba7c94b22a480e9",
+     "text": "\n\n1 cup of water\n\n1/2 cup of sugar\n\n1/4 cup of corn starch\n\n1/4 cup of baking soda\n\n1/4 cup of salt\n\n1/4 cup of vinegar\n\n1/4 cup of oil\n\n1/4 cup of lemon juice\n\n1/4 cup of vanilla extract\n\n1/4 cup of cinnamon\n\n1/4 cup of nutmeg\n\n1/4 cup of cloves\n\n1/4 cup of ginger\n\n1/4 cup of allspice\n\n1/4 cup of ground cloves\n\n1/4 cup of ground ginger\n\n1/4 cup of ground nutmeg\n\n1/4 cup of ground cinnamon\n\n1/4 cup of ground cloves\n\n1/4 cup of ground ginger\n\n1/4 cup of ground nutmeg\n\n1/4 cup of ground cinnamon\n\n1/4 cup of ground cloves\n\n1/4 cup of ground ginger\n\n1/4 cup of ground nutmeg\n\n1/4 cup of ground cinnamon\n\n1/4 cup of ground cloves\n\n1/4 cup of ground ginger\n\n1/4 cup of ground nutmeg",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.41796875,
+     "distinct1": 0.59375,
+     "distinct2": 0.8980392156862745,
+     "longest_run": 2,
+     "gen_sha": "e23b73108396c15f",
+     "text": " finally found a way to make the world\u2019s most popular drug \u2014 heroin \u2014 more effective.\n\nThe breakthrough is based on a new understanding of how the brain processes pain. It could lead to better treatments for chronic pain and addiction, as well as help people who are addicted to opioids like heroin or morphine.\n\n\u201cWe know that there are receptors in the brain that respond to opioids,\u201d said Dr. David J. Kupfer, director of the National Institute on Drug Abuse (NIDA), part of the National Institutes of Health. \u201cBut we don\u2019t know what they do.\u201d\n\nKupfer was one of the researchers who discovered the opioid receptors in the 1990s. He has been studying them ever since.\n\nIn the past, scientists thought that when an opioid binds to its receptor, it blocks the transmission of pain signals from the spinal cord to the brain. But now, Kupfer says, he believes that this is not the case.\n\n\u201cWhat we think is happening is that the opioid actually changes the way the brain responds to pain,\u201d he said.\n\nThis means that if you take an opioid, your brain will be less sensitive to pain. This may explain why some people can take opioids without feeling any pain",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.5703125,
+     "distinct1": 0.43359375,
+     "distinct2": 0.7647058823529411,
+     "longest_run": 2,
+     "gen_sha": "b999c4f822e0ac54",
+     "text": " a good day. I got to see my friend again and we had a nice chat. He told me about his life in the army and how he is doing now. He also told me that he has been married for two years and they have a baby boy. He said that he loves his wife very much and she loves him too. He also told me that he wants to get married soon so that he can start a family with her.\n\nI am happy that I met him because I know that he will be a good friend to me. I hope that we can become friends as well. I want to tell him that I like him and that I think he is a good person. I would like to ask him if he likes me or not. I don't know why but I feel that he doesn't like me. I wish that he would like me and that we could become friends.\n\nToday was a good day. I went to school and did my homework. I didn't do it very well because I was tired. I felt sad because I missed my friend. I miss him so much. I hope that he comes back soon. I hope that he will come back to our house. I hope that he will come back to my house.",
+     "quality": 4.0
+    }
+   ]
+  }
+ ],
+ "controls": {
+  "noop_raw1_eq_fix1": true
+ },
+ "quality_unit": "prompt",
+ "quality_detail": {
+  "judge": "Qwen/Qwen2.5-7B-Instruct",
+  "scale": [
+   1,
+   5
+  ],
+  "blind": true,
+  "randomized_order": true,
+  "seed": 1234,
+  "n_unparseable": 0,
+  "rubric": "You are grading the fluency and coherence of a text continuation produced by a language model.\nRate ONLY the continuation, on this scale:\n5 = fluent, grammatical, on-topic and internally consistent throughout\n4 = mostly fluent and coherent, minor lapses\n3 = understandable but noticeably disfluent, repetitive, or drifting\n2 = largely incoherent, heavy repetition or broken syntax\n1 = degenerate: near-total repetition, gibberish, or no meaningful content\n\nPrompt:\n{prompt}\n\nContinuation:\n{text}\n\nAnswer with a single integer from 1 to 5 and nothing else."
+ },
+ "quality_measure": "judge",
+ "quality_fallback_reason": [
+  "mauve: ModuleNotFoundError: No module named 'mauve'"
+ ],
+ "elapsed_s": 584.3126518726349
+}

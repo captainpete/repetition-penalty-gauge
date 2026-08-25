@@ -1,0 +1,24 @@
+{
+  "model": "Qwen/Qwen2.5-7B",
+  "revision": "d149729398750b98c0af14eb82c78cfe92750796",
+  "thetas": [
+    1.15,
+    1.3
+  ],
+  "c_natural": -23.1875,
+  "zero_point": {
+    "frac_seen_logit_positive": 0.9607811316672076,
+    "mean_top1_logit": 22.9302978515625,
+    "median_top1_logit": 23.1875
+  },
+  "flip_rate": {
+    "theta1.15_natural(-median)": 0.7213541666666666,
+    "theta1.15_half_natural": 0.5716145833333334,
+    "theta1.15_synth_5": 0.49609375,
+    "theta1.15_synth_-5": 0.546875,
+    "theta1.3_natural(-median)": 0.78515625,
+    "theta1.3_half_natural": 0.7161458333333334,
+    "theta1.3_synth_5": 0.19270833333333334,
+    "theta1.3_synth_-5": 0.4869791666666667
+  }
+}

@@ -1,0 +1,1893 @@
+{
+ "experiment": "MATCHED",
+ "request": "MATCHED",
+ "n_raws": 14,
+ "raws": [
+  "results/matched_strength/raw_Qwen2.5-7B_gauge.json",
+  "results/matched_strength/raw_Qwen2.5-7B_open.json",
+  "results/matched_strength/raw_Qwen2.5-7B_pairs.json",
+  "results/matched_strength/raw_Qwen2.5-Coder-7B_gauge.json",
+  "results/matched_strength/raw_Qwen2.5-Coder-7B_humaneval.json",
+  "results/matched_strength/raw_Qwen2.5-Coder-7B_humaneval_scored.json",
+  "results/matched_strength/raw_Qwen2.5-Coder-7B_json.json",
+  "results/matched_strength/raw_Qwen2.5-Coder-7B_pairs.json",
+  "results/matched_strength/raw_gpt2_gauge.json",
+  "results/matched_strength/raw_gpt2_open.json",
+  "results/matched_strength/raw_gpt2_pairs.json",
+  "results/matched_strength/raw_pythia-2.8b_gauge.json",
+  "results/matched_strength/raw_pythia-2.8b_open.json",
+  "results/matched_strength/raw_pythia-2.8b_pairs.json"
+ ],
+ "boot": 10000,
+ "seed": 0,
+ "rep_rate_tol": 0.01,
+ "frozen_rule": "> **Premise/validity (per pair):** the pair must actually be matched \u2014 |rep_rate(raw) \u2212 rep_rate(fix)| within\n> the FIXCAL tolerance (0.01). A pair failing this is reported `MISMATCHED` and EXCLUDED from the quality\n> verdict (it is a calibration failure, never evidence about the fix). If no pair survives on a model \u2192\n> INVALID for that model.\n> **Gauge gate (c):** flip-rate under fix must be 0 (exact) at every surviving pair, and flip-rate under raw\n> > 0. Failure here is a **hard REFUTED** regardless of quality metrics \u2014 gauge-invariance is the fix's\n> entire reason to exist.\n> **CORE (quality at equal suppression), per model, gated on CONTRASTS with bootstrap CIs (unit =\n> prompt/problem/schema):**\n> **DOMINANT** iff at every surviving pair the fix is \u2265 raw on the structured metrics (JSON validity, pass@1)\n> with the paired CI excluding 0 on at least one, AND not significantly worse on any open-ended metric.\n> **TIES** iff all paired CIs include 0 (no reliable difference either way) \u2014 the honest \"gauge invariance at\n> no measurable cost\" outcome, which is still a viable recommendation.\n> **LOSES** iff the fix is significantly worse (paired CI excluding 0 in raw's favour) on any metric at any\n> surviving pair \u2014 downstream_proposals pause on that basis, and the losing metric/pair is named.\n> Report per pair and per metric; never conjoin metrics into one number. The deployed anchor (\u03b8_raw=1.10) is\n> reported separately and called out, since it carries the downstream proposal decision.",
+ "models": {
+  "Qwen2.5-7B": {
+   "model": "Qwen2.5-7B",
+   "stages_present": [
+    "gauge",
+    "open",
+    "pairs"
+   ],
+   "stages_missing": [
+    "json",
+    "humaneval_scored"
+   ],
+   "pairs": [
+    {
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "frozen_theta_fix_2dp": 1.28,
+     "fixcal_target_rep_rate": 0.5615234375,
+     "fixcal_achieved_rep_rate": 0.559326171875,
+     "fixcal_delta": -0.002197265625,
+     "is_deployed_anchor": false
+    },
+    {
+     "theta_raw": 1.05,
+     "theta_fix": 1.84375,
+     "frozen_theta_fix_2dp": 1.84,
+     "fixcal_target_rep_rate": 0.53076171875,
+     "fixcal_achieved_rep_rate": 0.538330078125,
+     "fixcal_delta": 0.007568359375,
+     "is_deployed_anchor": false
+    },
+    {
+     "theta_raw": 1.1,
+     "theta_fix": 5.5,
+     "frozen_theta_fix_2dp": 5.5,
+     "fixcal_target_rep_rate": 0.402099609375,
+     "fixcal_achieved_rep_rate": 0.401611328125,
+     "fixcal_delta": -0.00048828125,
+     "is_deployed_anchor": true
+    }
+   ],
+   "pairs_meta": {
+    "pairs_json": "/work/code/fix_calibration_summary.json",
+    "pairs_json_sha256": "930039cc6b90c4714d80fe85bd8805326eb26820a317e691c203482fb6fba500",
+    "fixcal_model": "Qwen/Qwen2.5-7B",
+    "fixcal_revision": "d149729398750b98c0af14eb82c78cfe92750796",
+    "fixcal_dtype": "bfloat16",
+    "fixcal_max_new": 256,
+    "fixcal_n_prompts": 16,
+    "allowlist": [
+     1.02,
+     1.05,
+     1.1
+    ],
+    "levels_used": [
+     1.02,
+     1.05,
+     1.1
+    ],
+    "deployed_anchor_available": true
+   },
+   "model_id": "Qwen/Qwen2.5-7B",
+   "revision": "d149729398750b98c0af14eb82c78cfe92750796",
+   "dtype": "bfloat16",
+   "controls": {
+    "pairs.noop_raw1_eq_fix1": true,
+    "open.noop_raw1_eq_fix1": true,
+    "gauge.noop_flip_raw": 0.0,
+    "gauge.noop_flip_fix": 0.0,
+    "gauge.noop_gate_exact_zero": true,
+    "gauge.instrumented_eq_loopcheck": true
+   },
+   "controls_pass": true,
+   "controls_failed": [],
+   "premise": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "rep_rate_raw": 0.5615234375,
+     "rep_rate_fix": 0.559326171875,
+     "abs_delta": 0.002197265625,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.5615234375,
+     "fixcal_raw_drift": 0.0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.84375,
+     "is_deployed_anchor": false,
+     "rep_rate_raw": 0.53076171875,
+     "rep_rate_fix": 0.538330078125,
+     "abs_delta": 0.007568359375,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.53076171875,
+     "fixcal_raw_drift": 0.0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 5.5,
+     "is_deployed_anchor": true,
+     "rep_rate_raw": 0.402099609375,
+     "rep_rate_fix": 0.401611328125,
+     "abs_delta": 0.00048828125,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.402099609375,
+     "fixcal_raw_drift": 0.0
+    }
+   ],
+   "premise_available": true,
+   "surviving_pairs": [
+    0,
+    1,
+    2
+   ],
+   "determinism_cross_check": {
+    "n_mismatched_generations": 0,
+    "examples": [],
+    "pairs_max_new": 256,
+    "open_max_new": 256,
+    "note": "greedy decoding is deterministic, so >0 mismatches means the two stages did not run the same configuration (check max_new/limit/dtype) or a harness artifact"
+   },
+   "gauge": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "flip_raw": 0.64306640625,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.84375,
+     "is_deployed_anchor": false,
+     "flip_raw": 0.7138671875,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 5.5,
+     "is_deployed_anchor": true,
+     "flip_raw": 0.87353515625,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    }
+   ],
+   "gauge_available": true,
+   "gauge_gate": "PASS",
+   "gauge_gate_failures": [],
+   "quality_measure": "judge",
+   "quality_unit": "prompt",
+   "quality_detail": {
+    "judge": "Qwen/Qwen2.5-7B-Instruct",
+    "scale": [
+     1,
+     5
+    ],
+    "blind": true,
+    "randomized_order": true,
+    "seed": 1234,
+    "n_unparseable": 0
+   },
+   "quality_fallback_reason": [
+    "mauve: ModuleNotFoundError: No module named 'mauve'"
+   ],
+   "contrasts": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "metric": "distinct1",
+     "class": "open_ended",
+     "mean_raw": 0.449462890625,
+     "mean_fix": 0.451171875,
+     "n": 16,
+     "diff": 0.001708984375,
+     "ci": [
+      -0.026123046875,
+      0.027587890625
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "metric": "distinct2",
+     "class": "open_ended",
+     "mean_raw": 0.7308823529411764,
+     "mean_fix": 0.7375,
+     "n": 16,
+     "diff": 0.00661764705882353,
+     "ci": [
+      -0.0409313725490196,
+      0.04852941176470588
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "metric": "rep_rate",
+     "class": "reported_only",
+     "mean_raw": 0.5615234375,
+     "mean_fix": 0.559326171875,
+     "n": 16,
+     "diff": -0.002197265625,
+     "ci": [
+      -0.02783203125,
+      0.025390625
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "metric": "longest_run",
+     "class": "reported_only",
+     "mean_raw": 1.375,
+     "mean_fix": 1.25,
+     "n": 16,
+     "diff": -0.125,
+     "ci": [
+      -0.3125,
+      0.0
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "metric": "quality",
+     "class": "open_ended",
+     "mean_raw": 4.125,
+     "mean_fix": 3.875,
+     "n": 16,
+     "diff": -0.25,
+     "ci": [
+      -0.625,
+      0.125
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "measure": "judge"
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.84375,
+     "is_deployed_anchor": false,
+     "metric": "distinct1",
+     "class": "open_ended",
+     "mean_raw": 0.479248046875,
+     "mean_fix": 0.473876953125,
+     "n": 16,
+     "diff": -0.00537109375,
+     "ci": [
+      -0.05078125,
+      0.04541015625
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.84375,
+     "is_deployed_anchor": false,
+     "metric": "distinct2",
+     "class": "open_ended",
+     "mean_raw": 0.7519607843137255,
+     "mean_fix": 0.7634803921568628,
+     "n": 16,
+     "diff": 0.011519607843137256,
+     "ci": [
+      -0.06544117647058822,
+      0.1017156862745098
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.84375,
+     "is_deployed_anchor": false,
+     "metric": "rep_rate",
+     "class": "reported_only",
+     "mean_raw": 0.53076171875,
+     "mean_fix": 0.538330078125,
+     "n": 16,
+     "diff": 0.007568359375,
+     "ci": [
+      -0.04248046875,
+      0.05224609375
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.84375,
+     "is_deployed_anchor": false,
+     "metric": "longest_run",
+     "class": "reported_only",
+     "mean_raw": 1.1875,
+     "mean_fix": 1.25,
+     "n": 16,
+     "diff": 0.0625,
+     "ci": [
+      0.0,
+      0.1875
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.84375,
+     "is_deployed_anchor": false,
+     "metric": "quality",
+     "class": "open_ended",
+     "mean_raw": 4.0625,
+     "mean_fix": 4.0,
+     "n": 16,
+     "diff": -0.0625,
+     "ci": [
+      -0.4375,
+      0.3125
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "measure": "judge"
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 5.5,
+     "is_deployed_anchor": true,
+     "metric": "distinct1",
+     "class": "open_ended",
+     "mean_raw": 0.606689453125,
+     "mean_fix": 0.60791015625,
+     "n": 16,
+     "diff": 0.001220703125,
+     "ci": [
+      -0.04296875,
+      0.04052734375
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 5.5,
+     "is_deployed_anchor": true,
+     "metric": "distinct2",
+     "class": "open_ended",
+     "mean_raw": 0.8605392156862747,
+     "mean_fix": 0.8732843137254902,
+     "n": 16,
+     "diff": 0.01274509803921569,
+     "ci": [
+      -0.02377450980392154,
+      0.05024509803921569
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 5.5,
+     "is_deployed_anchor": true,
+     "metric": "rep_rate",
+     "class": "reported_only",
+     "mean_raw": 0.402099609375,
+     "mean_fix": 0.401611328125,
+     "n": 16,
+     "diff": -0.00048828125,
+     "ci": [
+      -0.03955078125,
+      0.04296875
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 5.5,
+     "is_deployed_anchor": true,
+     "metric": "longest_run",
+     "class": "reported_only",
+     "mean_raw": 1.3125,
+     "mean_fix": 1.1875,
+     "n": 16,
+     "diff": -0.125,
+     "ci": [
+      -0.3125,
+      0.0
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 5.5,
+     "is_deployed_anchor": true,
+     "metric": "quality",
+     "class": "open_ended",
+     "mean_raw": 4.1875,
+     "mean_fix": 4.1875,
+     "n": 16,
+     "diff": 0.0,
+     "ci": [
+      -0.3125,
+      0.375
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "measure": "judge"
+    }
+   ],
+   "baseline_theta1": {
+    "open_theta1": {
+     "rep_rate": 0.613525390625,
+     "distinct1": 0.39697265625,
+     "distinct2": 0.6541666666666667,
+     "quality": 4.0
+    }
+   },
+   "verdict": "TIES",
+   "verdict_reason": "every paired CI includes 0 -- gauge invariance at no measurable cost (still a viable recommendation)",
+   "deployed_anchor": {
+    "available": true,
+    "premise": [
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 5.5,
+      "is_deployed_anchor": true,
+      "rep_rate_raw": 0.402099609375,
+      "rep_rate_fix": 0.401611328125,
+      "abs_delta": 0.00048828125,
+      "tolerance": 0.01,
+      "status": "MATCHED",
+      "fixcal_target_rep_rate": 0.402099609375,
+      "fixcal_raw_drift": 0.0
+     }
+    ],
+    "gauge": [
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 5.5,
+      "is_deployed_anchor": true,
+      "flip_raw": 0.87353515625,
+      "flip_fix": 0.0,
+      "fix_exact_zero": true,
+      "raw_positive": true,
+      "failure_mode": null,
+      "status": "PASS"
+     }
+    ],
+    "contrasts": [
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 5.5,
+      "is_deployed_anchor": true,
+      "metric": "distinct1",
+      "class": "open_ended",
+      "mean_raw": 0.606689453125,
+      "mean_fix": 0.60791015625,
+      "n": 16,
+      "diff": 0.001220703125,
+      "ci": [
+       -0.04296875,
+       0.04052734375
+      ],
+      "excludes0": false,
+      "sign": 0,
+      "saturated": false,
+      "surviving": true,
+      "n_dropped": 0
+     },
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 5.5,
+      "is_deployed_anchor": true,
+      "metric": "distinct2",
+      "class": "open_ended",
+      "mean_raw": 0.8605392156862747,
+      "mean_fix": 0.8732843137254902,
+      "n": 16,
+      "diff": 0.01274509803921569,
+      "ci": [
+       -0.02377450980392154,
+       0.05024509803921569
+      ],
+      "excludes0": false,
+      "sign": 0,
+      "saturated": false,
+      "surviving": true,
+      "n_dropped": 0
+     },
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 5.5,
+      "is_deployed_anchor": true,
+      "metric": "quality",
+      "class": "open_ended",
+      "mean_raw": 4.1875,
+      "mean_fix": 4.1875,
+      "n": 16,
+      "diff": 0.0,
+      "ci": [
+       -0.3125,
+       0.375
+      ],
+      "excludes0": false,
+      "sign": 0,
+      "saturated": false,
+      "surviving": true,
+      "n_dropped": 0,
+      "measure": "judge"
+     }
+    ]
+   }
+  },
+  "Qwen2.5-Coder-7B": {
+   "model": "Qwen2.5-Coder-7B",
+   "stages_present": [
+    "gauge",
+    "humaneval",
+    "humaneval_scored",
+    "json",
+    "pairs"
+   ],
+   "stages_missing": [
+    "open"
+   ],
+   "pairs": [
+    {
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "frozen_theta_fix_2dp": 1.28,
+     "fixcal_target_rep_rate": 0.628173828125,
+     "fixcal_achieved_rep_rate": 0.629638671875,
+     "fixcal_delta": 0.00146484375,
+     "is_deployed_anchor": false
+    },
+    {
+     "theta_raw": 1.05,
+     "theta_fix": 3.25,
+     "frozen_theta_fix_2dp": 3.25,
+     "fixcal_target_rep_rate": 0.516845703125,
+     "fixcal_achieved_rep_rate": 0.510009765625,
+     "fixcal_delta": -0.0068359375,
+     "is_deployed_anchor": false
+    },
+    {
+     "theta_raw": 1.1,
+     "theta_fix": 6.625,
+     "frozen_theta_fix_2dp": 6.63,
+     "fixcal_target_rep_rate": 0.37451171875,
+     "fixcal_achieved_rep_rate": 0.377685546875,
+     "fixcal_delta": 0.003173828125,
+     "is_deployed_anchor": true
+    }
+   ],
+   "pairs_meta": {
+    "pairs_json": "/work/code/fix_calibration_summary.json",
+    "pairs_json_sha256": "930039cc6b90c4714d80fe85bd8805326eb26820a317e691c203482fb6fba500",
+    "fixcal_model": "Qwen/Qwen2.5-Coder-7B",
+    "fixcal_revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+    "fixcal_dtype": "bfloat16",
+    "fixcal_max_new": 256,
+    "fixcal_n_prompts": 16,
+    "allowlist": [
+     1.02,
+     1.05,
+     1.1
+    ],
+    "levels_used": [
+     1.02,
+     1.05,
+     1.1
+    ],
+    "deployed_anchor_available": true
+   },
+   "model_id": "Qwen/Qwen2.5-Coder-7B",
+   "revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+   "dtype": "bfloat16",
+   "controls": {
+    "pairs.noop_raw1_eq_fix1": true,
+    "json.noop_raw1_eq_fix1": true,
+    "gauge.noop_flip_raw": 0.0,
+    "gauge.noop_flip_fix": 0.0,
+    "gauge.noop_gate_exact_zero": true,
+    "gauge.instrumented_eq_loopcheck": true
+   },
+   "controls_pass": true,
+   "controls_failed": [],
+   "premise": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "rep_rate_raw": 0.628173828125,
+     "rep_rate_fix": 0.629638671875,
+     "abs_delta": 0.00146484375,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.628173828125,
+     "fixcal_raw_drift": 0.0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 3.25,
+     "is_deployed_anchor": false,
+     "rep_rate_raw": 0.516845703125,
+     "rep_rate_fix": 0.510009765625,
+     "abs_delta": 0.0068359375,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.516845703125,
+     "fixcal_raw_drift": 0.0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 6.625,
+     "is_deployed_anchor": true,
+     "rep_rate_raw": 0.37451171875,
+     "rep_rate_fix": 0.377685546875,
+     "abs_delta": 0.003173828125,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.37451171875,
+     "fixcal_raw_drift": 0.0
+    }
+   ],
+   "premise_available": true,
+   "surviving_pairs": [
+    0,
+    1,
+    2
+   ],
+   "gauge": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "flip_raw": 0.677978515625,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 3.25,
+     "is_deployed_anchor": false,
+     "flip_raw": 0.833984375,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 6.625,
+     "is_deployed_anchor": true,
+     "flip_raw": 0.9052734375,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    }
+   ],
+   "gauge_available": true,
+   "gauge_gate": "PASS",
+   "gauge_gate_failures": [],
+   "exec_sandbox": {
+    "per_sample_subprocess": true,
+    "cwd": "fresh tempfile.mkdtemp() (removed after)",
+    "timeout_s": 10.0,
+    "kill": "SIGKILL to the whole process group",
+    "rlimit_as_mb": 2048,
+    "rlimit_nproc": 64,
+    "rlimit_fsize_mb": 8,
+    "rlimit_core": 0,
+    "python_flags": [
+     "-I",
+     "-S"
+    ],
+    "env": "scrubbed (no proxy/HF/PYTHONPATH)",
+    "stdin": "DEVNULL",
+    "stdout_stderr": "files inside the tempdir"
+   },
+   "contrasts": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "metric": "json_valid",
+     "class": "structured",
+     "mean_raw": 1.0,
+     "mean_fix": 1.0,
+     "n": 48,
+     "diff": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": true,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 3.25,
+     "is_deployed_anchor": false,
+     "metric": "json_valid",
+     "class": "structured",
+     "mean_raw": 1.0,
+     "mean_fix": 1.0,
+     "n": 48,
+     "diff": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": true,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 6.625,
+     "is_deployed_anchor": true,
+     "metric": "json_valid",
+     "class": "structured",
+     "mean_raw": 1.0,
+     "mean_fix": 1.0,
+     "n": 48,
+     "diff": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": true,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.28125,
+     "is_deployed_anchor": false,
+     "metric": "humaneval_pass1",
+     "class": "structured",
+     "mean_raw": 0.6036585365853658,
+     "mean_fix": 0.5975609756097561,
+     "n": 164,
+     "diff": -0.006097560975609756,
+     "ci": [
+      -0.042682926829268296,
+      0.03048780487804878
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "n_timeout_raw": 0,
+     "n_timeout_fix": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 3.25,
+     "is_deployed_anchor": false,
+     "metric": "humaneval_pass1",
+     "class": "structured",
+     "mean_raw": 0.5670731707317073,
+     "mean_fix": 0.5426829268292683,
+     "n": 164,
+     "diff": -0.024390243902439025,
+     "ci": [
+      -0.06097560975609756,
+      0.012195121951219513
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "n_timeout_raw": 0,
+     "n_timeout_fix": 1
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 6.625,
+     "is_deployed_anchor": true,
+     "metric": "humaneval_pass1",
+     "class": "structured",
+     "mean_raw": 0.4695121951219512,
+     "mean_fix": 0.5304878048780488,
+     "n": 164,
+     "diff": 0.06097560975609756,
+     "ci": [
+      0.012195121951219513,
+      0.11585365853658537
+     ],
+     "excludes0": true,
+     "sign": 1,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "n_timeout_raw": 1,
+     "n_timeout_fix": 0
+    }
+   ],
+   "baseline_theta1": {
+    "json_theta1_valid": 1.0,
+    "humaneval_theta1_pass1": 0.5914634146341463
+   },
+   "verdict": "FAVOURS_FIX",
+   "verdict_reason": "not LOSES and not TIES, but the DOMINANT conditions are unmet (no structured arm, or structured CIs include 0). Fix significantly better on: humaneval_pass1@theta_raw=1.1",
+   "deployed_anchor": {
+    "available": true,
+    "premise": [
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 6.625,
+      "is_deployed_anchor": true,
+      "rep_rate_raw": 0.37451171875,
+      "rep_rate_fix": 0.377685546875,
+      "abs_delta": 0.003173828125,
+      "tolerance": 0.01,
+      "status": "MATCHED",
+      "fixcal_target_rep_rate": 0.37451171875,
+      "fixcal_raw_drift": 0.0
+     }
+    ],
+    "gauge": [
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 6.625,
+      "is_deployed_anchor": true,
+      "flip_raw": 0.9052734375,
+      "flip_fix": 0.0,
+      "fix_exact_zero": true,
+      "raw_positive": true,
+      "failure_mode": null,
+      "status": "PASS"
+     }
+    ],
+    "contrasts": [
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 6.625,
+      "is_deployed_anchor": true,
+      "metric": "json_valid",
+      "class": "structured",
+      "mean_raw": 1.0,
+      "mean_fix": 1.0,
+      "n": 48,
+      "diff": 0.0,
+      "ci": [
+       0.0,
+       0.0
+      ],
+      "excludes0": false,
+      "sign": 0,
+      "saturated": true,
+      "surviving": true,
+      "n_dropped": 0
+     },
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 6.625,
+      "is_deployed_anchor": true,
+      "metric": "humaneval_pass1",
+      "class": "structured",
+      "mean_raw": 0.4695121951219512,
+      "mean_fix": 0.5304878048780488,
+      "n": 164,
+      "diff": 0.06097560975609756,
+      "ci": [
+       0.012195121951219513,
+       0.11585365853658537
+      ],
+      "excludes0": true,
+      "sign": 1,
+      "saturated": false,
+      "surviving": true,
+      "n_dropped": 0,
+      "n_timeout_raw": 1,
+      "n_timeout_fix": 0
+     }
+    ]
+   }
+  },
+  "gpt2": {
+   "model": "gpt2",
+   "stages_present": [
+    "gauge",
+    "open",
+    "pairs"
+   ],
+   "stages_missing": [
+    "json",
+    "humaneval_scored"
+   ],
+   "pairs": [
+    {
+     "theta_raw": 1.02,
+     "theta_fix": 2.86328125,
+     "frozen_theta_fix_2dp": 2.86,
+     "fixcal_target_rep_rate": 0.383056640625,
+     "fixcal_achieved_rep_rate": 0.383056640625,
+     "fixcal_delta": 0.0,
+     "is_deployed_anchor": false
+    }
+   ],
+   "pairs_meta": {
+    "pairs_json": "/work/code/fix_calibration_summary.json",
+    "pairs_json_sha256": "930039cc6b90c4714d80fe85bd8805326eb26820a317e691c203482fb6fba500",
+    "fixcal_model": "gpt2",
+    "fixcal_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+    "fixcal_dtype": "float32",
+    "fixcal_max_new": 256,
+    "fixcal_n_prompts": 16,
+    "allowlist": [
+     1.02
+    ],
+    "levels_used": [
+     1.02
+    ],
+    "deployed_anchor_available": false
+   },
+   "model_id": "gpt2",
+   "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+   "dtype": "float32",
+   "controls": {
+    "pairs.noop_raw1_eq_fix1": true,
+    "open.noop_raw1_eq_fix1": true,
+    "gauge.noop_flip_raw": 0.0,
+    "gauge.noop_flip_fix": 0.0,
+    "gauge.noop_gate_exact_zero": true,
+    "gauge.instrumented_eq_loopcheck": true
+   },
+   "controls_pass": true,
+   "controls_failed": [],
+   "premise": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 2.86328125,
+     "is_deployed_anchor": false,
+     "rep_rate_raw": 0.383056640625,
+     "rep_rate_fix": 0.383056640625,
+     "abs_delta": 0.0,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.383056640625,
+     "fixcal_raw_drift": 0.0
+    }
+   ],
+   "premise_available": true,
+   "surviving_pairs": [
+    0
+   ],
+   "determinism_cross_check": {
+    "n_mismatched_generations": 0,
+    "examples": [],
+    "pairs_max_new": 256,
+    "open_max_new": 256,
+    "note": "greedy decoding is deterministic, so >0 mismatches means the two stages did not run the same configuration (check max_new/limit/dtype) or a harness artifact"
+   },
+   "gauge": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 2.86328125,
+     "is_deployed_anchor": false,
+     "flip_raw": 0.70703125,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    }
+   ],
+   "gauge_available": true,
+   "gauge_gate": "PASS",
+   "gauge_gate_failures": [],
+   "quality_measure": "judge",
+   "quality_unit": "prompt",
+   "quality_detail": {
+    "judge": "Qwen/Qwen2.5-7B-Instruct",
+    "scale": [
+     1,
+     5
+    ],
+    "blind": true,
+    "randomized_order": true,
+    "seed": 1234,
+    "n_unparseable": 0
+   },
+   "quality_fallback_reason": [
+    "mauve: ModuleNotFoundError: No module named 'mauve'"
+   ],
+   "contrasts": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 2.86328125,
+     "is_deployed_anchor": false,
+     "metric": "distinct1",
+     "class": "open_ended",
+     "mean_raw": 0.623779296875,
+     "mean_fix": 0.62353515625,
+     "n": 16,
+     "diff": -0.000244140625,
+     "ci": [
+      -0.01806640625,
+      0.018310546875
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 2.86328125,
+     "is_deployed_anchor": false,
+     "metric": "distinct2",
+     "class": "open_ended",
+     "mean_raw": 0.870343137254902,
+     "mean_fix": 0.8718137254901963,
+     "n": 16,
+     "diff": 0.0014705882352941055,
+     "ci": [
+      -0.024264705882352952,
+      0.0264705882352941
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 2.86328125,
+     "is_deployed_anchor": false,
+     "metric": "rep_rate",
+     "class": "reported_only",
+     "mean_raw": 0.383056640625,
+     "mean_fix": 0.383056640625,
+     "n": 16,
+     "diff": 0.0,
+     "ci": [
+      -0.0185546875,
+      0.017822265625
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 2.86328125,
+     "is_deployed_anchor": false,
+     "metric": "longest_run",
+     "class": "reported_only",
+     "mean_raw": 2.0,
+     "mean_fix": 2.0,
+     "n": 16,
+     "diff": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 2.86328125,
+     "is_deployed_anchor": false,
+     "metric": "quality",
+     "class": "open_ended",
+     "mean_raw": 2.8125,
+     "mean_fix": 2.9375,
+     "n": 16,
+     "diff": 0.125,
+     "ci": [
+      -0.25,
+      0.5
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "measure": "judge"
+    }
+   ],
+   "baseline_theta1": {
+    "open_theta1": {
+     "rep_rate": 0.9384765625,
+     "distinct1": 0.068359375,
+     "distinct2": 0.08651960784313724,
+     "quality": 1.625
+    }
+   },
+   "verdict": "TIES",
+   "verdict_reason": "every paired CI includes 0 -- gauge invariance at no measurable cost (still a viable recommendation)",
+   "deployed_anchor": {
+    "available": false,
+    "premise": [],
+    "gauge": [],
+    "contrasts": []
+   }
+  },
+  "pythia-2.8b": {
+   "model": "pythia-2.8b",
+   "stages_present": [
+    "gauge",
+    "open",
+    "pairs"
+   ],
+   "stages_missing": [
+    "json",
+    "humaneval_scored"
+   ],
+   "pairs": [
+    {
+     "theta_raw": 1.02,
+     "theta_fix": 1.2109375,
+     "frozen_theta_fix_2dp": 1.21,
+     "fixcal_target_rep_rate": 0.831298828125,
+     "fixcal_achieved_rep_rate": 0.837158203125,
+     "fixcal_delta": 0.005859375,
+     "is_deployed_anchor": false
+    },
+    {
+     "theta_raw": 1.05,
+     "theta_fix": 1.703125,
+     "frozen_theta_fix_2dp": 1.7,
+     "fixcal_target_rep_rate": 0.684814453125,
+     "fixcal_achieved_rep_rate": 0.6806640625,
+     "fixcal_delta": -0.004150390625,
+     "is_deployed_anchor": false
+    },
+    {
+     "theta_raw": 1.1,
+     "theta_fix": 2.51171875,
+     "frozen_theta_fix_2dp": 2.51,
+     "fixcal_target_rep_rate": 0.509521484375,
+     "fixcal_achieved_rep_rate": 0.5087890625,
+     "fixcal_delta": -0.000732421875,
+     "is_deployed_anchor": true
+    }
+   ],
+   "pairs_meta": {
+    "pairs_json": "/work/code/fix_calibration_summary.json",
+    "pairs_json_sha256": "930039cc6b90c4714d80fe85bd8805326eb26820a317e691c203482fb6fba500",
+    "fixcal_model": "EleutherAI/pythia-2.8b",
+    "fixcal_revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+    "fixcal_dtype": "float32",
+    "fixcal_max_new": 256,
+    "fixcal_n_prompts": 16,
+    "allowlist": [
+     1.02,
+     1.05,
+     1.1,
+     1.15
+    ],
+    "levels_used": [
+     1.02,
+     1.05,
+     1.1
+    ],
+    "deployed_anchor_available": true
+   },
+   "model_id": "EleutherAI/pythia-2.8b",
+   "revision": "2a259cdd96a4beb1cdf467512e3904197345f6a9",
+   "dtype": "float32",
+   "controls": {
+    "pairs.noop_raw1_eq_fix1": true,
+    "open.noop_raw1_eq_fix1": true,
+    "gauge.noop_flip_raw": 0.0,
+    "gauge.noop_flip_fix": 0.0,
+    "gauge.noop_gate_exact_zero": true,
+    "gauge.instrumented_eq_loopcheck": true
+   },
+   "controls_pass": true,
+   "controls_failed": [],
+   "premise": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.2109375,
+     "is_deployed_anchor": false,
+     "rep_rate_raw": 0.831298828125,
+     "rep_rate_fix": 0.837158203125,
+     "abs_delta": 0.005859375,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.831298828125,
+     "fixcal_raw_drift": 0.0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.703125,
+     "is_deployed_anchor": false,
+     "rep_rate_raw": 0.684814453125,
+     "rep_rate_fix": 0.6806640625,
+     "abs_delta": 0.004150390625,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.684814453125,
+     "fixcal_raw_drift": 0.0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 2.51171875,
+     "is_deployed_anchor": true,
+     "rep_rate_raw": 0.509521484375,
+     "rep_rate_fix": 0.5087890625,
+     "abs_delta": 0.000732421875,
+     "tolerance": 0.01,
+     "status": "MATCHED",
+     "fixcal_target_rep_rate": 0.509521484375,
+     "fixcal_raw_drift": 0.0
+    }
+   ],
+   "premise_available": true,
+   "surviving_pairs": [
+    0,
+    1,
+    2
+   ],
+   "determinism_cross_check": {
+    "n_mismatched_generations": 0,
+    "examples": [],
+    "pairs_max_new": 256,
+    "open_max_new": 256,
+    "note": "greedy decoding is deterministic, so >0 mismatches means the two stages did not run the same configuration (check max_new/limit/dtype) or a harness artifact"
+   },
+   "gauge": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.2109375,
+     "is_deployed_anchor": false,
+     "flip_raw": 0.64453125,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.703125,
+     "is_deployed_anchor": false,
+     "flip_raw": 0.878173828125,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 2.51171875,
+     "is_deployed_anchor": true,
+     "flip_raw": 0.93359375,
+     "flip_fix": 0.0,
+     "fix_exact_zero": true,
+     "raw_positive": true,
+     "failure_mode": null,
+     "status": "PASS"
+    }
+   ],
+   "gauge_available": true,
+   "gauge_gate": "PASS",
+   "gauge_gate_failures": [],
+   "quality_measure": "judge",
+   "quality_unit": "prompt",
+   "quality_detail": {
+    "judge": "Qwen/Qwen2.5-7B-Instruct",
+    "scale": [
+     1,
+     5
+    ],
+    "blind": true,
+    "randomized_order": true,
+    "seed": 1234,
+    "n_unparseable": 0
+   },
+   "quality_fallback_reason": [
+    "mauve: ModuleNotFoundError: No module named 'mauve'"
+   ],
+   "contrasts": [
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.2109375,
+     "is_deployed_anchor": false,
+     "metric": "distinct1",
+     "class": "open_ended",
+     "mean_raw": 0.173828125,
+     "mean_fix": 0.16845703125,
+     "n": 16,
+     "diff": -0.00537109375,
+     "ci": [
+      -0.0244140625,
+      0.013916015625
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.2109375,
+     "is_deployed_anchor": false,
+     "metric": "distinct2",
+     "class": "open_ended",
+     "mean_raw": 0.2727941176470588,
+     "mean_fix": 0.25490196078431376,
+     "n": 16,
+     "diff": -0.017892156862745097,
+     "ci": [
+      -0.05416666666666667,
+      0.018627450980392167
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.2109375,
+     "is_deployed_anchor": false,
+     "metric": "rep_rate",
+     "class": "reported_only",
+     "mean_raw": 0.831298828125,
+     "mean_fix": 0.837158203125,
+     "n": 16,
+     "diff": 0.005859375,
+     "ci": [
+      -0.013427734375,
+      0.025146484375
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.2109375,
+     "is_deployed_anchor": false,
+     "metric": "longest_run",
+     "class": "reported_only",
+     "mean_raw": 1.75,
+     "mean_fix": 1.75,
+     "n": 16,
+     "diff": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 0,
+     "theta_raw": 1.02,
+     "theta_fix": 1.2109375,
+     "is_deployed_anchor": false,
+     "metric": "quality",
+     "class": "open_ended",
+     "mean_raw": 2.75,
+     "mean_fix": 2.5625,
+     "n": 16,
+     "diff": -0.1875,
+     "ci": [
+      -0.5,
+      0.125
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "measure": "judge"
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.703125,
+     "is_deployed_anchor": false,
+     "metric": "distinct1",
+     "class": "open_ended",
+     "mean_raw": 0.322265625,
+     "mean_fix": 0.325927734375,
+     "n": 16,
+     "diff": 0.003662109375,
+     "ci": [
+      -0.08251953125,
+      0.08837890625
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.703125,
+     "is_deployed_anchor": false,
+     "metric": "distinct2",
+     "class": "open_ended",
+     "mean_raw": 0.49460784313725487,
+     "mean_fix": 0.5220588235294118,
+     "n": 16,
+     "diff": 0.027450980392156845,
+     "ci": [
+      -0.11029411764705885,
+      0.16617647058823526
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.703125,
+     "is_deployed_anchor": false,
+     "metric": "rep_rate",
+     "class": "reported_only",
+     "mean_raw": 0.684814453125,
+     "mean_fix": 0.6806640625,
+     "n": 16,
+     "diff": -0.004150390625,
+     "ci": [
+      -0.087158203125,
+      0.080322265625
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.703125,
+     "is_deployed_anchor": false,
+     "metric": "longest_run",
+     "class": "reported_only",
+     "mean_raw": 2.0,
+     "mean_fix": 1.8125,
+     "n": 16,
+     "diff": -0.1875,
+     "ci": [
+      -0.375,
+      0.0
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 1,
+     "theta_raw": 1.05,
+     "theta_fix": 1.703125,
+     "is_deployed_anchor": false,
+     "metric": "quality",
+     "class": "open_ended",
+     "mean_raw": 3.375,
+     "mean_fix": 3.375,
+     "n": 16,
+     "diff": 0.0,
+     "ci": [
+      -0.5625,
+      0.5625
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "measure": "judge"
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 2.51171875,
+     "is_deployed_anchor": true,
+     "metric": "distinct1",
+     "class": "open_ended",
+     "mean_raw": 0.498046875,
+     "mean_fix": 0.498779296875,
+     "n": 16,
+     "diff": 0.000732421875,
+     "ci": [
+      -0.0322265625,
+      0.033447265625
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 2.51171875,
+     "is_deployed_anchor": true,
+     "metric": "distinct2",
+     "class": "open_ended",
+     "mean_raw": 0.7455882352941178,
+     "mean_fix": 0.7698529411764705,
+     "n": 16,
+     "diff": 0.024264705882352938,
+     "ci": [
+      -0.021078431372549028,
+      0.07279411764705879
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 2.51171875,
+     "is_deployed_anchor": true,
+     "metric": "rep_rate",
+     "class": "reported_only",
+     "mean_raw": 0.509521484375,
+     "mean_fix": 0.5087890625,
+     "n": 16,
+     "diff": -0.000732421875,
+     "ci": [
+      -0.032958984375,
+      0.032470703125
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 2.51171875,
+     "is_deployed_anchor": true,
+     "metric": "longest_run",
+     "class": "reported_only",
+     "mean_raw": 2.0,
+     "mean_fix": 2.0,
+     "n": 16,
+     "diff": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0
+    },
+    {
+     "pair_idx": 2,
+     "theta_raw": 1.1,
+     "theta_fix": 2.51171875,
+     "is_deployed_anchor": true,
+     "metric": "quality",
+     "class": "open_ended",
+     "mean_raw": 3.375,
+     "mean_fix": 3.5625,
+     "n": 16,
+     "diff": 0.1875,
+     "ci": [
+      0.0,
+      0.375
+     ],
+     "excludes0": false,
+     "sign": 0,
+     "saturated": false,
+     "surviving": true,
+     "n_dropped": 0,
+     "measure": "judge"
+    }
+   ],
+   "baseline_theta1": {
+    "open_theta1": {
+     "rep_rate": 0.86083984375,
+     "distinct1": 0.145751953125,
+     "distinct2": 0.2191176470588235,
+     "quality": 2.4375
+    }
+   },
+   "verdict": "TIES",
+   "verdict_reason": "every paired CI includes 0 -- gauge invariance at no measurable cost (still a viable recommendation)",
+   "deployed_anchor": {
+    "available": true,
+    "premise": [
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 2.51171875,
+      "is_deployed_anchor": true,
+      "rep_rate_raw": 0.509521484375,
+      "rep_rate_fix": 0.5087890625,
+      "abs_delta": 0.000732421875,
+      "tolerance": 0.01,
+      "status": "MATCHED",
+      "fixcal_target_rep_rate": 0.509521484375,
+      "fixcal_raw_drift": 0.0
+     }
+    ],
+    "gauge": [
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 2.51171875,
+      "is_deployed_anchor": true,
+      "flip_raw": 0.93359375,
+      "flip_fix": 0.0,
+      "fix_exact_zero": true,
+      "raw_positive": true,
+      "failure_mode": null,
+      "status": "PASS"
+     }
+    ],
+    "contrasts": [
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 2.51171875,
+      "is_deployed_anchor": true,
+      "metric": "distinct1",
+      "class": "open_ended",
+      "mean_raw": 0.498046875,
+      "mean_fix": 0.498779296875,
+      "n": 16,
+      "diff": 0.000732421875,
+      "ci": [
+       -0.0322265625,
+       0.033447265625
+      ],
+      "excludes0": false,
+      "sign": 0,
+      "saturated": false,
+      "surviving": true,
+      "n_dropped": 0
+     },
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 2.51171875,
+      "is_deployed_anchor": true,
+      "metric": "distinct2",
+      "class": "open_ended",
+      "mean_raw": 0.7455882352941178,
+      "mean_fix": 0.7698529411764705,
+      "n": 16,
+      "diff": 0.024264705882352938,
+      "ci": [
+       -0.021078431372549028,
+       0.07279411764705879
+      ],
+      "excludes0": false,
+      "sign": 0,
+      "saturated": false,
+      "surviving": true,
+      "n_dropped": 0
+     },
+     {
+      "pair_idx": 2,
+      "theta_raw": 1.1,
+      "theta_fix": 2.51171875,
+      "is_deployed_anchor": true,
+      "metric": "quality",
+      "class": "open_ended",
+      "mean_raw": 3.375,
+      "mean_fix": 3.5625,
+      "n": 16,
+      "diff": 0.1875,
+      "ci": [
+       0.0,
+       0.375
+      ],
+      "excludes0": false,
+      "sign": 0,
+      "saturated": false,
+      "surviving": true,
+      "n_dropped": 0,
+      "measure": "judge"
+     }
+    ]
+   }
+  }
+ },
+ "verdicts": {
+  "Qwen2.5-7B": "TIES",
+  "Qwen2.5-Coder-7B": "FAVOURS_FIX",
+  "gpt2": "TIES",
+  "pythia-2.8b": "TIES"
+ }
+}

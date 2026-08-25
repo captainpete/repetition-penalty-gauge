@@ -1,0 +1,2449 @@
+{
+ "experiment": "MATCHED",
+ "request": "MATCHED",
+ "stage": "json",
+ "model": "Qwen/Qwen2.5-Coder-7B",
+ "model_slug": "Qwen2.5-Coder-7B",
+ "revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+ "device": "cuda",
+ "dtype": "bfloat16",
+ "max_new": 256,
+ "seed": 1234,
+ "limit": 0,
+ "pairs": [
+  {
+   "theta_raw": 1.02,
+   "theta_fix": 1.28125,
+   "frozen_theta_fix_2dp": 1.28,
+   "fixcal_target_rep_rate": 0.628173828125,
+   "fixcal_achieved_rep_rate": 0.629638671875,
+   "fixcal_delta": 0.00146484375,
+   "is_deployed_anchor": false
+  },
+  {
+   "theta_raw": 1.05,
+   "theta_fix": 3.25,
+   "frozen_theta_fix_2dp": 3.25,
+   "fixcal_target_rep_rate": 0.516845703125,
+   "fixcal_achieved_rep_rate": 0.510009765625,
+   "fixcal_delta": -0.0068359375,
+   "is_deployed_anchor": false
+  },
+  {
+   "theta_raw": 1.1,
+   "theta_fix": 6.625,
+   "frozen_theta_fix_2dp": 6.63,
+   "fixcal_target_rep_rate": 0.37451171875,
+   "fixcal_achieved_rep_rate": 0.377685546875,
+   "fixcal_delta": 0.003173828125,
+   "is_deployed_anchor": true
+  }
+ ],
+ "pairs_meta": {
+  "pairs_json": "/work/code/fix_calibration_summary.json",
+  "pairs_json_sha256": "930039cc6b90c4714d80fe85bd8805326eb26820a317e691c203482fb6fba500",
+  "fixcal_model": "Qwen/Qwen2.5-Coder-7B",
+  "fixcal_revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+  "fixcal_dtype": "bfloat16",
+  "fixcal_max_new": 256,
+  "fixcal_n_prompts": 16,
+  "allowlist": [
+   1.02,
+   1.05,
+   1.1
+  ],
+  "levels_used": [
+   1.02,
+   1.05,
+   1.1
+  ],
+  "deployed_anchor_available": true
+ },
+ "rep_rate_tol": 0.01,
+ "deployed_anchor": 1.1,
+ "started": "2026-08-18T02:25:39",
+ "n_json": 48,
+ "json_reps": 8,
+ "conditions": [
+  {
+   "label": "baseline_raw",
+   "op": "raw",
+   "theta": 1.0,
+   "pair_idx": null,
+   "per_item": [
+    {
+     "item_idx": 0,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 1,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 2,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 3,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 4,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 5,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 6,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 7,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 8,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 9,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 10,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 11,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 12,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 13,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 14,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 15,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 16,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 17,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 18,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 19,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 20,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 21,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 22,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 23,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 24,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 25,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 26,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 27,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 28,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 29,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 30,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 31,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 32,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 33,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 34,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 35,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 36,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 37,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 38,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 39,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 40,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 41,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 42,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 43,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 44,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 45,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 46,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 47,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    }
+   ],
+   "json_valid_rate": 1.0
+  },
+  {
+   "label": "baseline_fix",
+   "op": "fix",
+   "theta": 1.0,
+   "pair_idx": null,
+   "per_item": [
+    {
+     "item_idx": 0,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 1,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 2,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 3,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 4,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 5,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 6,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 7,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 8,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 9,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 10,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 11,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 12,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 13,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 14,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 15,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 16,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 17,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 18,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 19,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 20,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 21,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 22,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 23,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 24,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 25,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 26,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 27,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 28,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 29,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 30,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 31,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 32,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 33,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 34,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 35,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 36,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 37,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 38,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 39,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 40,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 41,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 42,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 43,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 44,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 45,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 46,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 47,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    }
+   ],
+   "json_valid_rate": 1.0
+  },
+  {
+   "label": "raw@1.02",
+   "op": "raw",
+   "theta": 1.02,
+   "pair_idx": 0,
+   "per_item": [
+    {
+     "item_idx": 0,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 1,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 2,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 3,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 4,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 5,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 6,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 7,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 8,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 9,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 10,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 11,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 12,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 13,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 14,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 15,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 16,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 17,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 18,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 19,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 20,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 21,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 22,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 23,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 24,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 25,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 26,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 27,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 28,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 29,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 30,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 31,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 32,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 33,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 34,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 35,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 36,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 37,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 38,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 39,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 40,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 41,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 42,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 43,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 44,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 45,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 46,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 47,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    }
+   ],
+   "json_valid_rate": 1.0
+  },
+  {
+   "label": "fix@1.02",
+   "op": "fix",
+   "theta": 1.28125,
+   "pair_idx": 0,
+   "per_item": [
+    {
+     "item_idx": 0,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 1,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 2,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 3,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 4,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 5,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 6,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 7,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 8,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 9,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 10,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 11,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 12,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 13,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 14,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 15,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 16,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 17,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 18,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 19,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 20,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 21,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 22,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 23,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 24,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 25,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 26,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 27,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 28,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 29,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 30,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 31,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 32,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 33,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 34,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 35,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 36,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 37,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 38,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 39,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 40,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 41,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 42,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 43,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 44,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 45,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 46,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 47,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    }
+   ],
+   "json_valid_rate": 1.0
+  },
+  {
+   "label": "raw@1.05",
+   "op": "raw",
+   "theta": 1.05,
+   "pair_idx": 1,
+   "per_item": [
+    {
+     "item_idx": 0,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 1,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 2,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 3,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 4,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 5,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 6,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 7,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 8,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 9,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 10,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 11,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 12,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 13,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 14,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 15,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 16,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 17,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 18,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 19,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 20,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 21,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 22,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 23,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 24,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 25,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 26,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 27,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 28,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 29,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 30,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 31,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 32,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-15\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 33,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-15\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 34,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-15\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 35,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-15\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 36,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-15\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 37,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-15\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 38,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-15\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 39,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-15\",\n  \"attendees\": 100,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 40,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 41,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 42,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 43,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 44,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 45,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 46,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 47,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    }
+   ],
+   "json_valid_rate": 1.0
+  },
+  {
+   "label": "fix@1.05",
+   "op": "fix",
+   "theta": 3.25,
+   "pair_idx": 1,
+   "per_item": [
+    {
+     "item_idx": 0,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 1,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 2,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 3,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 4,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 5,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 6,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 7,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 8,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 9,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 10,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 11,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 12,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 13,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 14,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 15,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 16,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 17,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 18,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 19,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 20,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 21,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 22,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 23,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 24,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 25,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 26,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 27,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 28,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 29,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 30,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 31,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 32,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 33,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 34,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 35,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 36,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 37,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 38,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 39,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2022-01-01\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 40,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 41,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 42,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 43,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 44,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 45,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 46,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 47,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    }
+   ],
+   "json_valid_rate": 1.0
+  },
+  {
+   "label": "raw@1.1",
+   "op": "raw",
+   "theta": 1.1,
+   "pair_idx": 2,
+   "per_item": [
+    {
+     "item_idx": 0,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 1,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 2,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 3,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 4,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 5,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 6,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 7,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 8,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 9,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 10,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 11,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 12,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 13,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 14,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 15,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 16,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}"
+    },
+    {
+     "item_idx": 17,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}"
+    },
+    {
+     "item_idx": 18,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}"
+    },
+    {
+     "item_idx": 19,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}"
+    },
+    {
+     "item_idx": 20,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}"
+    },
+    {
+     "item_idx": 21,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}"
+    },
+    {
+     "item_idx": 22,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}"
+    },
+    {
+     "item_idx": 23,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\"]\n}"
+    },
+    {
+     "item_idx": 24,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 25,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 26,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 27,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 28,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 29,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 30,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 31,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 32,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30T14:00:00Z\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 33,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30T14:00:00Z\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 34,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30T14:00:00Z\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 35,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30T14:00:00Z\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 36,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30T14:00:00Z\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 37,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30T14:00:00Z\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 38,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30T14:00:00Z\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 39,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30T14:00:00Z\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 40,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 41,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 42,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 43,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 44,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 45,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 46,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 47,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2019,\n  \"electric\": true\n}"
+    }
+   ],
+   "json_valid_rate": 1.0
+  },
+  {
+   "label": "fix@1.1",
+   "op": "fix",
+   "theta": 6.625,
+   "pair_idx": 2,
+   "per_item": [
+    {
+     "item_idx": 0,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 1,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 2,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 3,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 4,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 5,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 6,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 7,
+     "schema_idx": 0,
+     "valid": 1,
+     "text": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"email\": \"johndoe@example.com\"\n}"
+    },
+    {
+     "item_idx": 8,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 9,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 10,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 11,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 12,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 13,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 14,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 15,
+     "schema_idx": 1,
+     "valid": 1,
+     "text": "{\n  \"title\": \"Product Title\",\n  \"price\": 19.99,\n  \"in_stock\": true\n}"
+    },
+    {
+     "item_idx": 16,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 17,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 18,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 19,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 20,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 21,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 22,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 23,
+     "schema_idx": 2,
+     "valid": 1,
+     "text": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"year\": 1925,\n  \"tags\": [\"classic\", \"romance\", \"literature\"]\n}"
+    },
+    {
+     "item_idx": 24,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 25,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 26,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 27,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 28,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 29,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 30,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 31,
+     "schema_idx": 3,
+     "valid": 1,
+     "text": "{\n  \"name\": \"New York\",\n  \"population\": 8398748,\n  \"country\": \"United States\",\n  \"capital\": false\n}"
+    },
+    {
+     "item_idx": 32,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 33,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 34,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 35,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 36,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 37,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 38,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 39,
+     "schema_idx": 4,
+     "valid": 1,
+     "text": "{\n  \"name\": \"Conference\",\n  \"date\": \"2021-09-30\",\n  \"attendees\": 50,\n  \"virtual\": true\n}"
+    },
+    {
+     "item_idx": 40,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 41,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 42,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 43,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 44,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 45,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 46,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    },
+    {
+     "item_idx": 47,
+     "schema_idx": 5,
+     "valid": 1,
+     "text": "{\n  \"make\": \"Tesla\",\n  \"model\": \"Model S\",\n  \"year\": 2021,\n  \"electric\": true\n}"
+    }
+   ],
+   "json_valid_rate": 1.0
+  }
+ ],
+ "controls": {
+  "noop_raw1_eq_fix1": true
+ },
+ "elapsed_s": 64.21233081817627
+}

@@ -1,0 +1,931 @@
+{
+ "experiment": "MATCHED",
+ "request": "MATCHED",
+ "stage": "gauge",
+ "model": "Qwen/Qwen2.5-Coder-7B",
+ "model_slug": "Qwen2.5-Coder-7B",
+ "revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+ "device": "cuda",
+ "dtype": "bfloat16",
+ "max_new": 256,
+ "seed": 1234,
+ "limit": 0,
+ "pairs": [
+  {
+   "theta_raw": 1.02,
+   "theta_fix": 1.28125,
+   "frozen_theta_fix_2dp": 1.28,
+   "fixcal_target_rep_rate": 0.628173828125,
+   "fixcal_achieved_rep_rate": 0.629638671875,
+   "fixcal_delta": 0.00146484375,
+   "is_deployed_anchor": false
+  },
+  {
+   "theta_raw": 1.05,
+   "theta_fix": 3.25,
+   "frozen_theta_fix_2dp": 3.25,
+   "fixcal_target_rep_rate": 0.516845703125,
+   "fixcal_achieved_rep_rate": 0.510009765625,
+   "fixcal_delta": -0.0068359375,
+   "is_deployed_anchor": false
+  },
+  {
+   "theta_raw": 1.1,
+   "theta_fix": 6.625,
+   "frozen_theta_fix_2dp": 6.63,
+   "fixcal_target_rep_rate": 0.37451171875,
+   "fixcal_achieved_rep_rate": 0.377685546875,
+   "fixcal_delta": 0.003173828125,
+   "is_deployed_anchor": true
+  }
+ ],
+ "pairs_meta": {
+  "pairs_json": "/work/code/fix_calibration_summary.json",
+  "pairs_json_sha256": "930039cc6b90c4714d80fe85bd8805326eb26820a317e691c203482fb6fba500",
+  "fixcal_model": "Qwen/Qwen2.5-Coder-7B",
+  "fixcal_revision": "0396a76181e127dfc13e5c5ec48a8cee09938b02",
+  "fixcal_dtype": "bfloat16",
+  "fixcal_max_new": 256,
+  "fixcal_n_prompts": 16,
+  "allowlist": [
+   1.02,
+   1.05,
+   1.1
+  ],
+  "levels_used": [
+   1.02,
+   1.05,
+   1.1
+  ],
+  "deployed_anchor_available": true
+ },
+ "rep_rate_tol": 0.01,
+ "deployed_anchor": 1.1,
+ "started": "2026-08-18T01:56:59",
+ "n_prompts": 16,
+ "cs": [
+  -5.0,
+  5.0
+ ],
+ "gauge": [
+  {
+   "kind": "noop_control",
+   "theta_raw": null,
+   "op": "raw",
+   "theta": 1.0,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  },
+  {
+   "kind": "noop_control",
+   "theta_raw": null,
+   "op": "fix",
+   "theta": 1.0,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.02,
+   "theta_fix": 1.28125,
+   "op": "raw",
+   "theta": 1.02,
+   "is_deployed_anchor": false,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 246,
+     "flip_rate": 0.9609375
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 86,
+     "flip_rate": 0.3359375
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 174,
+     "flip_rate": 0.6796875
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 226,
+     "flip_rate": 0.8828125
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 61,
+     "flip_rate": 0.23828125
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 254,
+     "flip_rate": 0.9921875
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 231,
+     "flip_rate": 0.90234375
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 236,
+     "flip_rate": 0.921875
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 227,
+     "flip_rate": 0.88671875
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 113,
+     "flip_rate": 0.44140625
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 52,
+     "flip_rate": 0.203125
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 222,
+     "flip_rate": 0.8671875
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 238,
+     "flip_rate": 0.9296875
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 183,
+     "flip_rate": 0.71484375
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 228,
+     "flip_rate": 0.890625
+    }
+   ],
+   "pooled_flip_rate": 0.677978515625
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.02,
+   "theta_fix": 1.28125,
+   "op": "fix",
+   "theta": 1.28125,
+   "is_deployed_anchor": false,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.05,
+   "theta_fix": 3.25,
+   "op": "raw",
+   "theta": 1.05,
+   "is_deployed_anchor": false,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 228,
+     "flip_rate": 0.890625
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 219,
+     "flip_rate": 0.85546875
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 241,
+     "flip_rate": 0.94140625
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 196,
+     "flip_rate": 0.765625
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 174,
+     "flip_rate": 0.6796875
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 251,
+     "flip_rate": 0.98046875
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 223,
+     "flip_rate": 0.87109375
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 228,
+     "flip_rate": 0.890625
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 227,
+     "flip_rate": 0.88671875
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 216,
+     "flip_rate": 0.84375
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 226,
+     "flip_rate": 0.8828125
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 203,
+     "flip_rate": 0.79296875
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 243,
+     "flip_rate": 0.94921875
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 238,
+     "flip_rate": 0.9296875
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 96,
+     "flip_rate": 0.375
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 207,
+     "flip_rate": 0.80859375
+    }
+   ],
+   "pooled_flip_rate": 0.833984375
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.05,
+   "theta_fix": 3.25,
+   "op": "fix",
+   "theta": 3.25,
+   "is_deployed_anchor": false,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.1,
+   "theta_fix": 6.625,
+   "op": "raw",
+   "theta": 1.1,
+   "is_deployed_anchor": true,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 252,
+     "flip_rate": 0.984375
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 238,
+     "flip_rate": 0.9296875
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 231,
+     "flip_rate": 0.90234375
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 243,
+     "flip_rate": 0.94921875
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 216,
+     "flip_rate": 0.84375
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 228,
+     "flip_rate": 0.890625
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 199,
+     "flip_rate": 0.77734375
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 239,
+     "flip_rate": 0.93359375
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 241,
+     "flip_rate": 0.94140625
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 235,
+     "flip_rate": 0.91796875
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 197,
+     "flip_rate": 0.76953125
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 235,
+     "flip_rate": 0.91796875
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 235,
+     "flip_rate": 0.91796875
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 238,
+     "flip_rate": 0.9296875
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 247,
+     "flip_rate": 0.96484375
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 234,
+     "flip_rate": 0.9140625
+    }
+   ],
+   "pooled_flip_rate": 0.9052734375
+  },
+  {
+   "kind": "pair",
+   "theta_raw": 1.1,
+   "theta_fix": 6.625,
+   "op": "fix",
+   "theta": 6.625,
+   "is_deployed_anchor": true,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 1,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 2,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 3,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 4,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 5,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 6,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 7,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 8,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 9,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 10,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 11,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 12,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 13,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 14,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    },
+    {
+     "prompt_idx": 15,
+     "n_tokens": 256,
+     "n_flips": 0,
+     "flip_rate": 0.0
+    }
+   ],
+   "pooled_flip_rate": 0.0
+  }
+ ],
+ "controls": {
+  "noop_flip_raw": 0.0,
+  "noop_flip_fix": 0.0,
+  "noop_gate_exact_zero": true,
+  "instrumented_eq_loopcheck": true
+ },
+ "elapsed_s": 1459.2991199493408
+}

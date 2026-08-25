@@ -109,3 +109,28 @@ driven by `code/smoke_*/run_bench_*.sh` / `run_a*_bench.sh`.
 cd paper && latexmk -pdf paper-note.tex     # the short note
 cd paper && latexmk -pdf paper.tex          # the extended version
 ```
+
+## Calibration map + matched-suppression comparison (Section 5 of the note)
+
+```bash
+# calibration map (GPU decode; one invocation per model, see run_fixcal.py docstring)
+python code/run_fixcal.py --model gpt2 --out results/fix_calibration/raw_gpt2.json
+python code/analyze_fixcal.py --raws 'results/fix_calibration/raw_*.json' --out-dir results/fix_calibration
+
+# matched-suppression head-to-head (GPU decode; stages per model, see run_matched.py docstring)
+python code/run_matched.py --model gpt2 --stage pairs --out results/matched_strength/raw_gpt2_pairs.json
+python code/analyze_matched.py --raws 'results/matched_strength/raw_*.json' --out-dir results/matched_strength
+
+# zero-point / reachability adjudication (no decode; assembles existing raws)
+python code/analyze_zpreach.py --zeropoint-dirs results/a1_zeropoint \
+  --fixcal-dir results/fix_calibration --out-dir results/zeropoint_reachability
+```
+
+# in-domain dose verification for the HumanEval pairs (CPU; tokenizer only)
+python code/check_matched_indomain.py   # -> reproduces results/matched_strength/INDOMAIN.txt
+
+The analyzers regenerate each directory's `summary.json` and `REPORT.md` from the committed
+raws (CPU-only). The judge arm of `run_matched.py` additionally needs a `judge_lib.py`
+(Qwen2.5-7B-Instruct pairwise judge, lazy-imported inside that stage only); the judge outputs
+it produced ship in `results/matched_strength/raw_*_open.json`. Frozen decision rules:
+`prereg/FIXCAL_PREREG.md`, `prereg/MATCHED_PREREG.md`, `prereg/ZPREACH_PREREG.md`.

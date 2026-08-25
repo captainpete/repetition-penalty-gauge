@@ -1,0 +1,739 @@
+{
+ "experiment": "MATCHED",
+ "request": "MATCHED",
+ "stage": "open",
+ "model": "gpt2",
+ "model_slug": "gpt2",
+ "revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+ "device": "cuda",
+ "dtype": "float32",
+ "max_new": 256,
+ "seed": 1234,
+ "limit": 0,
+ "pairs": [
+  {
+   "theta_raw": 1.02,
+   "theta_fix": 2.86328125,
+   "frozen_theta_fix_2dp": 2.86,
+   "fixcal_target_rep_rate": 0.383056640625,
+   "fixcal_achieved_rep_rate": 0.383056640625,
+   "fixcal_delta": 0.0,
+   "is_deployed_anchor": false
+  }
+ ],
+ "pairs_meta": {
+  "pairs_json": "/work/code/fix_calibration_summary.json",
+  "pairs_json_sha256": "930039cc6b90c4714d80fe85bd8805326eb26820a317e691c203482fb6fba500",
+  "fixcal_model": "gpt2",
+  "fixcal_revision": "607a30d783dfa663caf39e06633721c8d4cfcd7e",
+  "fixcal_dtype": "float32",
+  "fixcal_max_new": 256,
+  "fixcal_n_prompts": 16,
+  "allowlist": [
+   1.02
+  ],
+  "levels_used": [
+   1.02
+  ],
+  "deployed_anchor_available": false
+ },
+ "rep_rate_tol": 0.01,
+ "deployed_anchor": 1.1,
+ "started": "2026-08-18T02:01:23",
+ "n_prompts": 16,
+ "conditions": [
+  {
+   "label": "baseline_raw",
+   "op": "raw",
+   "theta": 1.0,
+   "pair_idx": null,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.91015625,
+     "distinct1": 0.1015625,
+     "distinct2": 0.14901960784313725,
+     "longest_run": 1,
+     "gen_sha": "b4f17cc78fbd938e",
+     "text": " in the fourth century B.C.E. with the arrival of the Emperor Constantine. The Emperor Constantine was the first Roman emperor to rule the empire. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.93359375,
+     "distinct1": 0.06640625,
+     "distinct2": 0.08627450980392157,
+     "longest_run": 2,
+     "gen_sha": "84754cd1fcd265d1",
+     "text": "\n\nI'm not sure if I'm going to be able to do this, but I'm going to be able to do it.\n\nI'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.96484375,
+     "distinct1": 0.0390625,
+     "distinct2": 0.043137254901960784,
+     "longest_run": 1,
+     "gen_sha": "70eb00e8b1075481",
+     "text": " I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.9296875,
+     "distinct1": 0.09765625,
+     "distinct2": 0.13333333333333333,
+     "longest_run": 2,
+     "gen_sha": "9f50fc5b06a337d2",
+     "text": " to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.96875,
+     "distinct1": 0.03515625,
+     "distinct2": 0.043137254901960784,
+     "longest_run": 1,
+     "gen_sha": "4dfe6305d816a072",
+     "text": " I was a little bit of a kid. I was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.98828125,
+     "distinct1": 0.02734375,
+     "distinct2": 0.03529411764705882,
+     "longest_run": 1,
+     "gen_sha": "3db24daeef0f9a68",
+     "text": " you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.9296875,
+     "distinct1": 0.07421875,
+     "distinct2": 0.09019607843137255,
+     "longest_run": 2,
+     "gen_sha": "38e89af0e484b63c",
+     "text": " very good, and we're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.9453125,
+     "distinct1": 0.05859375,
+     "distinct2": 0.0784313725490196,
+     "longest_run": 1,
+     "gen_sha": "90a99f5bea8390d5",
+     "text": " a man in a white shirt and a black hoodie. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hood",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.921875,
+     "distinct1": 0.0859375,
+     "distinct2": 0.10588235294117647,
+     "longest_run": 1,
+     "gen_sha": "927e66f1a8cc4ed4",
+     "text": " to go to the doctor and ask him if he was OK. He said, \"No, I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.96484375,
+     "distinct1": 0.04296875,
+     "distinct2": 0.043137254901960784,
+     "longest_run": 1,
+     "gen_sha": "9d73405467524842",
+     "text": " the world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.85546875,
+     "distinct1": 0.1484375,
+     "distinct2": 0.18823529411764706,
+     "longest_run": 2,
+     "gen_sha": "a82458caf8dfe180",
+     "text": " \"If you are not a member of the Church of Jesus Christ of Latter-day Saints, you are not allowed to participate in the Church of Jesus Christ of Latter-day Saints.\"\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.91796875,
+     "distinct1": 0.08203125,
+     "distinct2": 0.10196078431372549,
+     "longest_run": 2,
+     "gen_sha": "d43c685f07c40a6f",
+     "text": " The FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.9375,
+     "distinct1": 0.078125,
+     "distinct2": 0.09019607843137255,
+     "longest_run": 1,
+     "gen_sha": "3c780d5ea3a965e8",
+     "text": " the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.96875,
+     "distinct1": 0.03125,
+     "distinct2": 0.047058823529411764,
+     "longest_run": 2,
+     "gen_sha": "deabefd89150c1bf",
+     "text": "\n\n1 cup of water\n\n1 cup of sugar\n\n1 cup of butter\n\n1 cup of milk\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.9453125,
+     "distinct1": 0.0546875,
+     "distinct2": 0.07058823529411765,
+     "longest_run": 2,
+     "gen_sha": "9d853cdf52af8acc",
+     "text": " found that the brain is a complex system that is highly interconnected. The brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.93359375,
+     "distinct1": 0.0703125,
+     "distinct2": 0.0784313725490196,
+     "longest_run": 1,
+     "gen_sha": "4c311df06195371f",
+     "text": " a very difficult day for me. I had to go to the hospital, and I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my",
+     "quality": 2.0
+    }
+   ]
+  },
+  {
+   "label": "baseline_fix",
+   "op": "fix",
+   "theta": 1.0,
+   "pair_idx": null,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.91015625,
+     "distinct1": 0.1015625,
+     "distinct2": 0.14901960784313725,
+     "longest_run": 1,
+     "gen_sha": "b4f17cc78fbd938e",
+     "text": " in the fourth century B.C.E. with the arrival of the Emperor Constantine. The Emperor Constantine was the first Roman emperor to rule the empire. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He was the first Roman emperor to be crowned by the Roman people. He",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.93359375,
+     "distinct1": 0.06640625,
+     "distinct2": 0.08627450980392157,
+     "longest_run": 2,
+     "gen_sha": "84754cd1fcd265d1",
+     "text": "\n\nI'm not sure if I'm going to be able to do this, but I'm going to be able to do it.\n\nI'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm going to be able to do it. I'm not sure if I'm going to be able to do this, but I'm",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.96484375,
+     "distinct1": 0.0390625,
+     "distinct2": 0.043137254901960784,
+     "longest_run": 1,
+     "gen_sha": "70eb00e8b1075481",
+     "text": " I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a few minutes to read a book. Then I take a",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.9296875,
+     "distinct1": 0.09765625,
+     "distinct2": 0.13333333333333333,
+     "longest_run": 2,
+     "gen_sha": "9f50fc5b06a337d2",
+     "text": " to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to cook the vegetables in a way that is not too hot. This is because the vegetables are not cooked in a way that is too hot. The vegetables are cooked in a way that is not too hot.\n\nThe most important rule of cooking is to",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.96875,
+     "distinct1": 0.03515625,
+     "distinct2": 0.043137254901960784,
+     "longest_run": 1,
+     "gen_sha": "4dfe6305d816a072",
+     "text": " I was a little bit of a kid. I was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a kid who was a little bit of a",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.98828125,
+     "distinct1": 0.02734375,
+     "distinct2": 0.03529411764705882,
+     "longest_run": 1,
+     "gen_sha": "3db24daeef0f9a68",
+     "text": " you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you that I am writing to you to inform you",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.9296875,
+     "distinct1": 0.07421875,
+     "distinct2": 0.09019607843137255,
+     "longest_run": 2,
+     "gen_sha": "38e89af0e484b63c",
+     "text": " very good, and we're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to get some good weather tomorrow. We're going to be able to get some good weather tomorrow.\n\n\"We're going to be able to",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.9453125,
+     "distinct1": 0.05859375,
+     "distinct2": 0.0784313725490196,
+     "longest_run": 1,
+     "gen_sha": "90a99f5bea8390d5",
+     "text": " a man in a white shirt and a black hoodie. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hoodie and a black hoodie with a black belt. He was wearing a black hood",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.921875,
+     "distinct1": 0.0859375,
+     "distinct2": 0.10588235294117647,
+     "longest_run": 1,
+     "gen_sha": "927e66f1a8cc4ed4",
+     "text": " to go to the doctor and ask him if he was OK. He said, \"No, I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He said, \"I'm fine.\" I said, \"I'm fine.\" He",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.96484375,
+     "distinct1": 0.04296875,
+     "distinct2": 0.043137254901960784,
+     "longest_run": 1,
+     "gen_sha": "9d73405467524842",
+     "text": " the world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of peace and harmony. The world was a land of",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.85546875,
+     "distinct1": 0.1484375,
+     "distinct2": 0.18823529411764706,
+     "longest_run": 2,
+     "gen_sha": "a82458caf8dfe180",
+     "text": " \"If you are not a member of the Church of Jesus Christ of Latter-day Saints, you are not allowed to participate in the Church of Jesus Christ of Latter-day Saints.\"\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy of not allowing members to participate in the Church's official Church History program.\n\nThe LDS Church has been criticized for its policy",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.91796875,
+     "distinct1": 0.08203125,
+     "distinct2": 0.10196078431372549,
+     "longest_run": 2,
+     "gen_sha": "d43c685f07c40a6f",
+     "text": " The FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay man.\n\nThe FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was a gay",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.9375,
+     "distinct1": 0.078125,
+     "distinct2": 0.09019607843137255,
+     "longest_run": 1,
+     "gen_sha": "3c780d5ea3a965e8",
+     "text": " the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way to make a living is to work hard and to be a good person. I have always believed that the best way",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.96875,
+     "distinct1": 0.03125,
+     "distinct2": 0.047058823529411764,
+     "longest_run": 2,
+     "gen_sha": "deabefd89150c1bf",
+     "text": "\n\n1 cup of water\n\n1 cup of sugar\n\n1 cup of butter\n\n1 cup of milk\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup of butter\n\n1 cup",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.9453125,
+     "distinct1": 0.0546875,
+     "distinct2": 0.07058823529411765,
+     "longest_run": 2,
+     "gen_sha": "9d853cdf52af8acc",
+     "text": " found that the brain is a complex system that is highly interconnected. The brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly interconnected.\n\nThe brain is a complex system that is highly",
+     "quality": 1.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.93359375,
+     "distinct1": 0.0703125,
+     "distinct2": 0.0784313725490196,
+     "longest_run": 1,
+     "gen_sha": "4c311df06195371f",
+     "text": " a very difficult day for me. I had to go to the hospital, and I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my family. I had to go to the hospital with my",
+     "quality": 2.0
+    }
+   ]
+  },
+  {
+   "label": "raw@1.02",
+   "op": "raw",
+   "theta": 1.02,
+   "pair_idx": 0,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.4453125,
+     "distinct1": 0.5625,
+     "distinct2": 0.8431372549019608,
+     "longest_run": 2,
+     "gen_sha": "6df5b33a6c77347f",
+     "text": " in the fourth century B.C., when the Emperor Constantine, who had been a member of the Council of Chalcedon, was elected by the people to be emperor. The first emperor was named Augustus, and he became the second emperor after his father, Alexander, who died at Rome on May 4, 532 B.C.\n\nIn 604 B.C., the Romans conquered Egypt, which they called the \"Great City of the Gods,\" and established their capital there. In 703 B.C., the city was destroyed by the Persians, who were defeated by the Carthaginians. After this, the Romans took over the country from the Greeks, who ruled it for about three centuries. They then annexed parts of the land that had been taken over by the Greeks, including the Nile Valley, where they built temples and churches.\n\nAfter the conquest of Egypt, the Romans continued to rule the country until the end of the sixth century B.C., when they invaded the territory of the Assyrians, who occupied the area around the Euphrates River. During this time, the Romans gained control of much of the region, but also captured large portions of the surrounding desert. This included the Tigris River, which flows through the valley into",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.328125,
+     "distinct1": 0.68359375,
+     "distinct2": 0.9019607843137255,
+     "longest_run": 2,
+     "gen_sha": "840939d843ae5490",
+     "text": "\n\nI'm not sure if I'll ever be able to get this thing back, but it's worth mentioning that the original version was only available in Japan. It has been replaced by an updated version with more features and improvements. The new version also includes some bug fixes and performance enhancements.\n\nThe game is currently on sale for $3.99 USD (about $4.50 US).<|endoftext|>A man who allegedly shot his wife after she refused to leave her home because he thought they were \"too close\" had been arrested at a suburban Chicago apartment complex Monday morning, police said.\n\nPolice say the suspect, identified as 24-year-old Michael J. Smith, entered the residence around 9:30 a.m., fired shots into the air and then fled through the front door, according to Chicago Police Department spokesman Officer John M. O'Neill.\n\nSmith reportedly told officers he wanted to kill his wife, who was sleeping in the living room, when he heard gunshots, police said. He left the house about 10:45 a.m., police said.\n\nHe later returned to the residence and opened fire, killing his wife, police said.\n\nOfficers found Smith inside the apartment building where he was being held, police",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.33984375,
+     "distinct1": 0.671875,
+     "distinct2": 0.9019607843137255,
+     "longest_run": 2,
+     "gen_sha": "9b054243fd73641f",
+     "text": " I take a few minutes to read the news and then go back to sleep. Then I eat breakfast and lunch.\n\nI'm not sure if this is an effective way of getting my body ready for work or just a distraction from my daily life. But it's definitely something that can help me get through the day without having to worry about what other people think.<|endoftext|>The following article was originally published on The Conversation. Read the original article here.\n\nA new study suggests that women who have sex with men are more likely than their male counterparts to experience sexual dysfunction.\n\nResearchers at the University of California, San Francisco, found that those who had sex with men were less likely to report symptoms of depression, anxiety and substance abuse problems.\n\n\"We know that there are many factors that contribute to these differences in risk,\" said lead author Dr. Susanne K. Schulman, PhD, assistant professor of psychiatry and behavioral sciences at UCSF. \"But we also know that some of these factors may be associated with increased risk for mental health disorders.\"\n\nIn addition to being more likely to suffer from depression, stress and substance abuse problems, women who have sex with men are more likely to develop certain types of psychiatric conditions such as schizophrenia, bipolar",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.32421875,
+     "distinct1": 0.6796875,
+     "distinct2": 0.9411764705882353,
+     "longest_run": 2,
+     "gen_sha": "48f95d0e71eca22f",
+     "text": " to cook the vegetables in a way that will not be too hot. This means using a large pot or pan, and then adding some water as needed.\n\nIf you are making this recipe for your own family, I would suggest starting with a small batch of rice (or any other type of rice) and add it to the sauce before serving. It's also great to have a little extra flavor from the veggies when you're ready to serve.<|endoftext|>A new study has found that people who were diagnosed with schizophrenia at birth had higher rates of depression than those who didn't get the diagnosis.\n\nResearchers looked at data from more than 1,000 children born between 1946 and 1964. They compared their diagnoses with those of adults who received the diagnosis.\n\nThey found that about half of all children diagnosed with schizophrenia had high levels of depressive symptoms. The researchers said they believe that these kids may have been exposed to an early form of mental illness called \"schizophrenia.\"\n\n\"This suggests that there may be a link between childhood exposure to psychiatric disorders and later development of schizophrenia,\" said lead author Dr. David J. Karpeles, MD, professor of psychiatry at the University of California, San Francisco.\n\nKarpeles was one of",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.3828125,
+     "distinct1": 0.62890625,
+     "distinct2": 0.8862745098039215,
+     "longest_run": 2,
+     "gen_sha": "5526badfb5af8dc9",
+     "text": " there was a lot of people who were very religious. They would go to church and pray for their children. And they'd say, \"I'm going to give you my son.\"\n\n\"And then we had this big family that lived in the house,\" he says. \"We didn't have any kids. We just went out and got our own place. It was like living with your parents.\"\n\nThe first time I met him, he was at a local school. He was about 6 years old. His father was an engineer, and his mother was a nurse. The two of them worked together on the building's roof. When I asked if he knew anyone from the other side of the building, he said, \"No, no, no, no.\"\n\nHe told me that when he came home, he saw his dad standing outside the door. He looked down at his hands and said, \"Dad, what are you doing?\"\n\n\"It's not working,\" he said. \"You're trying to get it fixed.\"\n\nWhen I asked why he wanted to fix it, he said, \"Because I want to make sure that everybody has access to the same thing.\"\n\nMy mom is now married to a man named",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.40234375,
+     "distinct1": 0.609375,
+     "distinct2": 0.9254901960784314,
+     "longest_run": 2,
+     "gen_sha": "82379c0500a9131c",
+     "text": " you as a citizen of the United States.\n\nI have been in this country for many years and have never had any experience with the law or government of any other country. My father was born in New York City, where he grew up. He is an American citizen, but his parents were not citizens. His mother was born in Pennsylvania, where she worked at a railroad company. She died when she was about ten years old. Her husband was born in Ohio, where he became a farmer. They lived together until they married in 1864. The family moved to California in 1870. In that year, their children were born. Their first child was named John. After that, they moved to Los Angeles, where they settled for several years. During those years, they continued to live in California. When they left, they went back to New York City. It was there that they met their future wife, Mary.\n\nIn 1877, after having spent some time in California, they decided to move to San Francisco. There, they found themselves living in a small town called \"The Jungle.\" This place was very beautiful. We visited it once a week. Our house was built on a hill overlooking the bay. On one side of the house, we saw",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.375,
+     "distinct1": 0.625,
+     "distinct2": 0.8431372549019608,
+     "longest_run": 2,
+     "gen_sha": "512e32bb085372a5",
+     "text": " very good, and we're going to be able to get some rain in the next couple of days,\" said John H. Smith, a spokesman for the National Weather Service.\n\nAdvertisement Continue reading the main story\n\n\"We are expecting about 10 inches of rain this morning, which will make it difficult for us to keep up with the storm.\"<|endoftext|>A new study from the University of California, San Diego shows that people who have been diagnosed with schizophrenia or bipolar disorder may experience more symptoms of depression than those without the condition.\n\nResearchers found that people who had been diagnosed with schizophrenia or bipolar disorder were less likely to report feeling depressed when they reported experiencing feelings of sadness, anger, anxiety or other negative emotions.\n\nIn addition, people who had been diagnosed with bipolar disorder experienced fewer depressive episodes compared to those without the condition.\n\n\"This finding suggests that there may be an underlying cause for these differences,\" said Dr. David J. Karpeles, professor of psychiatry and behavioral sciences at the University of California, San Diego. \"It's possible that individuals with schizophrenia or bipolar disorder might not feel as well-adjusted as others because they don't show any signs of being depressed.\"\n\nKarpeles' team analyzed data from 1,",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.328125,
+     "distinct1": 0.6796875,
+     "distinct2": 0.9450980392156862,
+     "longest_run": 2,
+     "gen_sha": "e24a5afb14c220e1",
+     "text": " a man in a white shirt, with a black hoodie. He was wearing a red T-shirt and jeans.\n\n\"I said, 'What are you doing?' \" he said. \"He looked at me like I was crazy.\"\n\nThe man told police that he had been drinking when he heard gunshots. The man then ran to his car and called 911.\n\nPolice say they found two people inside the vehicle. One of them was shot in the head.\n\nA second person who was not injured is being treated at a hospital.\n\nAnyone with information about the shooting is asked to call Crime Stoppers at 1-800-222-TIPS (8477).<|endoftext|>This article is from the archive of our partner .\n\nIn an interview with NPR's Rachel Maddow on Monday, President Obama defended his decision to fire former FBI Director James Comey after it emerged that he'd lied under oath about his conversations with Trump during the 2016 campaign.\n\nObama also criticized the president's handling of the Russia investigation, saying that while there were no indications that Trump had any knowledge of Russian meddling in the election, he did have some evidence that suggested he might have done so.\n\nMaddow: So what do you think?",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.30859375,
+     "distinct1": 0.69140625,
+     "distinct2": 0.9568627450980393,
+     "longest_run": 2,
+     "gen_sha": "7336ee7bd4d34a41",
+     "text": " to go for a walk. It's not that you're going to get lost in the woods, but it's just that there are so many places where you can find something and then be able to do some of the things you want to do.\"\n\n\"I'm sure if you were to take your own life or have someone else die at home, you'd probably feel better about yourself,\" he added. \"But when you think about what happened to your family, how much time they spent with you, how much money they made, how much money they gave you, all those things, it makes you sad.\"<|endoftext|>A new study from the University of California, San Diego (UCSD) has found that people who smoke marijuana regularly experience more anxiety than those who don't. The findings come as researchers continue to investigate whether smoking marijuana is associated with increased risk of depression, suicide, and other mental health problems.\n\nResearchers conducted a meta-analysis of data on 1,848 participants between 1999 and 2010. They looked at the relationship between smoking marijuana and depressive symptoms, including suicidal ideation, self-harm, and substance use disorders. Participants also reported their daily dose of marijuana, which ranged from 0.5 to 2.0 grams per day.",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.38671875,
+     "distinct1": 0.625,
+     "distinct2": 0.9490196078431372,
+     "longest_run": 2,
+     "gen_sha": "2081c07f27a63a40",
+     "text": " the world was filled with people who were not of any kind.\n\nThe first thing that came to mind was the fact that there were no gods or goddesses living on this planet. The only one who could be considered as such was the god of death. He had been born into a family of men and women who lived in a place called the \"death city\" where they died for their sins. They would die at the hands of those who did not repent. This is what happened when the gods began to rule over the earth. It was because of this that the humans became so powerful that they started to become known as the \"Death City\".\n\nThis was also why the human race was able to survive without being killed by the Gods. In order to live peacefully, the humans needed to have some sort of power. If they didn't have it, then they wouldn't be able to fight back. However, if they did have it, then they would eventually lose their lives. So, after all, how many times has the Earth lost its inhabitants? How many times have we lost our children? And yet, even though the humans are still alive, they still don't know about the existence of the Death City. Even if they knew about it,",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.37109375,
+     "distinct1": 0.6328125,
+     "distinct2": 0.8431372549019608,
+     "longest_run": 2,
+     "gen_sha": "7fac8d77a8b1a326",
+     "text": " \"If you are not a member of the Church, please do not attend this meeting.\"\n\n\"I am sorry,\" she said. \"It is my duty to tell you that I have no intention of attending any other meetings in the Church.\"<|endoftext|>A new study from the University of California, San Diego (UCSD) and the National Institutes of Health (NIH), published today in the journal Nature Neuroscience, suggests that the brain's ability to process information about what we see may be impaired by the presence or absence of an external stimulus.\n\nIn a paper titled \"Neuroimaging of the Brain: A New Approach to Understanding Human Cognition,\" researchers at UCSD and the NIH analyzed data collected during scanning of the brains of more than 1,000 people with attention deficit hyperactivity disorder (ADHD). The findings suggest that the brain's ability to process information about what we see may be impaired by the presence or absence of an external stimulus.\n\n\"We found that when we look at images of objects, our brains can't distinguish between them,\" says lead author Dr. David J. Karpinski, PhD, director of the UCSD Center for Neuroimaging and Director of the Department of Psychiatry and Behavioral Sciences at UCSD. \"",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.28125,
+     "distinct1": 0.7265625,
+     "distinct2": 0.9333333333333333,
+     "longest_run": 2,
+     "gen_sha": "972344a317e84b21",
+     "text": " The FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was not an American citizen.\n\nThe FBI said it had no information about the man who killed 49 people and injured more than 100 others on Sunday night.\n\n\"We are working with law enforcement to determine if there is any connection between this individual and this attack,\" Acting Director James Comey told reporters after a briefing. \"I don't know what he did or why he did it.\"\n\nFBI officials have been trying for months to figure out how the gunman got into the club, which is located just outside of downtown Orlando.\n\nA local resident told CNN affiliate WJLA that she heard gunshots around 2:30 p.m., when she saw someone running from the building. She then ran back inside to find her husband dead.\n\nShe called 911, but didn't hear anything until 3:15 p.m.\n\nAuthorities say the shooter entered the club through a window and fired shots at police officers before fleeing. He fled on foot, according to authorities.\n\nPolice were able to track him down by using surveillance video captured by a bystander.\n\nHe's being held without bond at the Orlando County Jail.<|endoftext|>This article is",
+     "quality": 5.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.328125,
+     "distinct1": 0.67578125,
+     "distinct2": 0.9607843137254902,
+     "longest_run": 2,
+     "gen_sha": "c326e3034d096b75",
+     "text": " the best way to make a living is to work hard and be successful. I believe in this, but it's not easy.\n\n\"It's very difficult for me to get into my 20s because of all the things I've been through. It's really tough. But if you're lucky enough to live your life like that, then you'll never go back.\"<|endoftext|>The first time I saw the new \"Star Wars: The Force Awakens\" trailer was on May 24, 2015. That day, I had already seen the film at home, so I knew what I wanted to see. And when I got there, I immediately thought, \"Wow, this is going to be awesome!\"\n\nBut as soon as I opened the box, I realized that the movie wasn't about Rey or Kylo Ren. Instead, it was about Luke Skywalker, who has become a Jedi Master and now lives in an alternate reality where he can only fight his own battles. This is one of the most important moments in the entire saga, and it's something I'm sure will resonate with fans everywhere.\n\nAdvertisement\n\nSo here's how it works: In order to play the role of Luke Skywalker, we need to take him out of the Star Destroyer and bring",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.8515625,
+     "distinct1": 0.1484375,
+     "distinct2": 0.23137254901960785,
+     "longest_run": 2,
+     "gen_sha": "9110e1173be61af2",
+     "text": "\n\n1 cup of water\n\n2 cups of sugar\n\n1/4 cup of flour\n\n1 teaspoon baking powder\n\n1/4 teaspoon salt\n\n1/4 teaspoon pepper\n\n1/4 teaspoon ground cinnamon\n\n1/4 teaspoon ground cloves\n\n1/4 teaspoon ground nutmeg\n\n1/4 teaspoon ground ginger\n\n1/4 teaspoon ground cloves\n\n1/4 teaspoon ground cumin\n\n1/4 teaspoon ground turmeric\n\n1/4 teaspoon ground coriander\n\n1/4 teaspoon ground oregano\n\n1/4 teaspoon ground paprika\n\n1/4 teaspoon ground black pepper\n\n1/4 teaspoon ground cayenne pepper\n\n1/4 teaspoon ground cayenne pepper\n\n1/4 teaspoon ground cayenne pepper\n\n1/4 teaspoon ground cayenne pepper\n\n1/4 teaspoon ground cayenne pepper\n\n1/4 teaspoon ground cayenne pepper\n\n1/8 teaspoon ground cayenne pepper\n\n1/8 teaspoon ground cayenne pepper\n\n1/8 teaspoon ground cayenne pepper\n\n1/8 teaspoon ground cayenne pepper\n\n1/8 teaspoon ground cay",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.34375,
+     "distinct1": 0.6640625,
+     "distinct2": 0.9058823529411765,
+     "longest_run": 2,
+     "gen_sha": "493944df5837cdce",
+     "text": " found that the brain is a complex system that has evolved to cope with changing circumstances.\n\nThe new study shows that the brain's ability to adapt to changes in environment can be affected by environmental factors such as climate change, stress and other factors.\n\n\"We know that our brains are very sensitive to environmental influences,\" said Dr. David H. Karpinski, an assistant professor at the University of California, San Diego. \"But we also know that they're not always able to respond to these things.\"\n\nIn this case, the researchers used a computer model to simulate how the brain works. They then compared the results to those of previous studies on humans.\n\nThey found that when people were exposed to different environments, their brains responded differently to different types of stimuli. The differences between the two groups were similar, but there was no difference in response time for each type of stimulus.\n\nDr. Karpinski says the findings suggest that the brain may be more sensitive to environmental cues than previously thought.\n\n\"It seems like it might be possible to make some kind of connection between what happens in your brain and what you experience in your body,\" he said.<|endoftext|>A man who allegedly shot his girlfriend after she refused to leave her home early",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.33203125,
+     "distinct1": 0.67578125,
+     "distinct2": 0.9568627450980393,
+     "longest_run": 2,
+     "gen_sha": "8219e512a905c207",
+     "text": " a very difficult day for me. I had to go back to work and get my passport in order to leave the country.\n\nI have been living here since January 2015. My family is from India and we are all Indian citizens. We live in a small town called Kolkata. The only thing that makes us different is our language. It's not English but it's also not Hindi. So I am trying to understand what is going on with my life.\n\nMy parents were born in India and they came to India when I was about 12 years old. They lived in a village near Delhi where there was no electricity. When I was 10 years old, my father died of cancer. He left behind his wife and two children. His mother went to college and he got married at 16. She worked as a maid and then she moved to Mumbai. After her husband passed away, she started working as a waitress. Then she became an accountant. Now she works as a cleaner. Her job is to clean up the house. But now she has to pay taxes because she cannot afford to buy food or clothes. And so she goes to school every day.\n\nWhen I first arrived in India, I did not know how to speak English. In fact",
+     "quality": 4.0
+    }
+   ]
+  },
+  {
+   "label": "fix@1.02",
+   "op": "fix",
+   "theta": 2.86328125,
+   "pair_idx": 0,
+   "per_prompt": [
+    {
+     "prompt_idx": 0,
+     "rep_rate": 0.3828125,
+     "distinct1": 0.625,
+     "distinct2": 0.9098039215686274,
+     "longest_run": 2,
+     "gen_sha": "5fbb8c8c9407d5ed",
+     "text": " in the fourth century B.C.E., when a group of monks from the city of Rome founded a monastery called St. Peter's Basilica, which was dedicated to the saint. The church was built on top of a hill and surrounded by mountains.\n\nIn the early part of the fifth century B.C., Pope Gregory IX decreed that the Church should be established as a monastic order with an emphasis on the teaching of the Holy Spirit. In this way, the Church became more like a religious institution than a political one.\n\nPope John Paul II also instituted a new form of government: the Council of Trent. This council set up a system of governance for the Church, including the appointment of bishops and other officials. It was intended to provide greater control over the Church's finances and administration.\n\nDuring the reign of Pope Benedict XVI, the Vatican expanded its authority through the Pontifical Council for Religious Affairs (CCRIA), which included the papacy. During the pontificate of Pope Benedict XVI, the CCRIA had been criticized for not being able to address issues such as abortion and contraception.\n\nAfter the death of Pope Francis in January 2015, the pope announced that he would step down from his post as head of the",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 1,
+     "rep_rate": 0.3359375,
+     "distinct1": 0.67578125,
+     "distinct2": 0.9490196078431372,
+     "longest_run": 2,
+     "gen_sha": "08255ab0b7d206e2",
+     "text": "\n\nI'm not sure if I'll ever be able to get this thing back, but it's worth mentioning that the original version of this book was published in paperback. It's also available on Amazon for $9.99.\n\nThe first chapter of \"A Tale of Two Cities\" is actually pretty good. The story takes place in an alternate future where there are two cities and one city is called \"City A\". City A is located in the middle of nowhere, and City B is just outside of town. This makes sense because both cities have different cultures and religions. In fact, you can see how much more interesting these cultures and religions are when you look at the map below.\n\nThis is what happens when you go to City A. You find yourself in a world where people live in harmony with each other, and they all share their own culture. There are no laws or customs, only common sense. And while some may think that this is a bad thing, most people don't realize that even though we're living in a society where everyone has different beliefs, our differences are still very important.\n\nIn addition to being great fun, this book is also really well written. If you've read any of the previous books, you know",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 2,
+     "rep_rate": 0.296875,
+     "distinct1": 0.71875,
+     "distinct2": 0.9137254901960784,
+     "longest_run": 2,
+     "gen_sha": "629a3bdbbea5913b",
+     "text": " I take a few minutes to read the news and then go to bed. Then I wake up at 6:30 in the morning with my head down on my pillow.\n\nI'm not sure if this is an intentional or unintentional way of waking up. It's just that I don't know what to do about it. If you're feeling sleepy, try going to sleep early. You can also use your phone to call for help.\n\nIf you have any questions about how to get started, feel free to ask me here.<|endoftext|>The UESPWiki \u2013 Your source for The Elder Scrolls since 1995\n\nThis article is about the character. For the quest \"A New Beginning\", see A New Beginning (Quest).\n\n\"You are no longer welcome.\" \u2014Sith[src]\n\nSith was a member of the Imperial Guard who served as their commander during the Second War. She was one of the first members of the Imperial Guard to be killed by the Dark Brotherhood after they were captured by the Redguard. Her death left her with only two companions\u2014the other being Sirena.[1]\n\nBiography [ edit ]\n\nEarly life [ edit ]\n\nSith was born in Daedric ruins near the",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 3,
+     "rep_rate": 0.33984375,
+     "distinct1": 0.6640625,
+     "distinct2": 0.9019607843137255,
+     "longest_run": 2,
+     "gen_sha": "d2c5bd7205838a0c",
+     "text": " to cook the vegetables in a way that will not be too hot. This means using a large pot or pan, and then adding some water as needed.\n\nIf you are making this recipe for your own family, I would suggest starting with one small batch of rice (or any other type of rice) and add it to the mix. The more rice you have, the better the flavor. If you don't have enough rice, use less.\n\nI like to make my own sauce by mixing up all the ingredients together. You can also use whatever you want, but if you're going to do this, try to keep things simple.\n\nThis post may contain links to Amazon or other partners; your purchases via these links can benefit Serious Eats. Read more about our affiliate linking policy.<|endoftext|>A new study from the University of California at Berkeley shows that people who were born into poverty tend to live longer than those who grew up in high-income families.\n\nResearchers found that when they were younger, people who were born into poverty lived longer than those who grew up in low-income families. But when they were older, their lives changed dramatically.\n\n\"We know that children raised in poor households had shorter life spans,\" said lead author",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 4,
+     "rep_rate": 0.359375,
+     "distinct1": 0.65234375,
+     "distinct2": 0.9098039215686274,
+     "longest_run": 2,
+     "gen_sha": "1e97f4626c05c753",
+     "text": " there was a lot of people who were very religious. They would go to church and pray for their children. And they'd say, \"I'm going to give you my son.\"\n\n\"And then we'd have this big family gathering in the backyard,\" he said. \"And it's like, 'Oh, God, that's so cool.'\"\n\nHe says his father had been raised by an evangelical Christian mother. He says he has no idea what happened to him when he was born.\n\n\"My dad is not really into religion,\" he said. \"He just doesn't believe in anything. So he didn't know how to be a Christian. But he did get baptized at age 12. That's when he started getting involved with Christianity.\"\n\nThe pastor told me that after being baptized, he began to feel more comfortable about his faith.\n\n\"It became clear that if you're going to do something good, you need to do it well,\" he said. \"So I started doing things better than I ever thought possible. It wasn't until I got married that I realized that I needed to take care of myself.\"\n\nAfter graduating from high school, he moved to New York City. His wife, Mary, worked as",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 5,
+     "rep_rate": 0.4296875,
+     "distinct1": 0.58203125,
+     "distinct2": 0.8666666666666667,
+     "longest_run": 2,
+     "gen_sha": "0e41ee44ca90214f",
+     "text": " you as a citizen of the United States.\n\nI have been in this country for many years and have never had any experience of being treated like an enemy or subject of war. I was born in New York City on May 1, 1842, and came to America from England about two years later. I arrived at my native land when I was twelve years old. I went to school with my father's family there, and then moved to Chicago where I studied law and became a lawyer. In that time I worked for several corporations, including one which is now owned by the American Express Company. My first job was as a clerk in the Department of Justice. After that I served as a judge in the U.S. District Court for the Eastern District of Illinois. During those years I also worked for the Federal Bureau of Investigation.\n\nIn addition to my work as a clerk, I received numerous awards such as the Distinguished Service Medal, the Presidential Medal of Freedom, the National Defense Service Medal, the Congressional Gold Medal, the Military Commendation Medal, the Bronze Star, the Purple Heart, the Silver Star, the Bronze Star, the White House Honorary Citation, the First Lady's Award, the President's Medal, the Secretary of State's Medal",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 6,
+     "rep_rate": 0.34375,
+     "distinct1": 0.65625,
+     "distinct2": 0.9098039215686274,
+     "longest_run": 2,
+     "gen_sha": "b780c047de297817",
+     "text": " very good, and we're going to be able to get some rain in the next couple of days,\" said John H. Smith, a spokesman for the National Weather Service.\n\nAdvertisement Continue reading the main story\n\n\"We are expecting about 10 inches of rain this morning.\"\n\nNewsletter Sign Up Continue reading the main story Please verify you're not a robot by clicking the box. Invalid email address. Please re-enter. You must select a newsletter to subscribe to. Sign Up You will receive emails containing news content , updates and promotions from The New York Times. You may opt-out at any time. You agree to receive occasional updates and special offers for The New York Times's products and services. Thank you for subscribing. An error has occurred. Please try again later. View all New York Times newsletters.\n\nIn addition to the heavy rains, there were also reports of flash flooding on the East Coast, with several major storms expected over the next few days.\n\nA storm surge was reported near San Francisco Bay, which had been hit by Hurricane Harvey, but it was not clear how much damage was done.\n\nAt least one person was killed and more than 100 others were injured when a car plowed into a crowd of people outside a",
+     "quality": 2.0
+    },
+    {
+     "prompt_idx": 7,
+     "rep_rate": 0.3515625,
+     "distinct1": 0.66015625,
+     "distinct2": 0.9019607843137255,
+     "longest_run": 2,
+     "gen_sha": "c316a97c3e6b0e9b",
+     "text": " a man in a white shirt, with a black hoodie. He was wearing a red T-shirt and jeans.\n\n\"I said, 'What are you doing?' \" he said. \"He said, 'You're not going to tell me what I'm doing.' \"\n\nThe man told police that he had been drinking at the bar when he heard gunshots. The man then ran out of the bar and into the street.\n\nPolice say they found two men who were shot dead by another man. They believe the shooter may have been armed with a handgun.\n\nA witness told police that she saw the gunman walk up to the bar and shoot one of the victims. She said she didn't see him again until after the shooting.\n\nAnyone with information about the shooting is asked to call Crime Stoppers at 1-800-222-TIPS (8477).<|endoftext|>This article is from the archive of our partner .\n\nIn an interview with NPR's Rachel Maddow on Tuesday, President Obama defended his decision to pull out of the Paris climate agreement, saying it would be good for business.\n\n\"We've got to make sure that we don't do anything that will hurt people,\" Obama said. \"And if we",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 8,
+     "rep_rate": 0.31640625,
+     "distinct1": 0.6875,
+     "distinct2": 0.9647058823529412,
+     "longest_run": 2,
+     "gen_sha": "60fd08bce4ff8595",
+     "text": " to go for a walk. It's not that I'm going to be able to do it all, but if you're willing to take the time to get yourself out of your comfort zone and into something more meaningful, then this is what you should do.\n\nI've been doing this for years now, and I have no idea how long it will last. But I know that when I finally find my way back home, I'll be ready to start working on my life again.<|endoftext|>A new study from the University of California, San Diego (UCSD) has found that people who are obese or overweight tend to experience higher rates of heart disease than those who are not.\n\nResearchers at UCSD analyzed data from 1,000 U.S. adults between the ages of 18 and 64 in order to determine whether obesity affects cardiovascular risk factors such as blood pressure, cholesterol, triglycerides, and HDL-cholesterol.\n\n\"Obesity is associated with increased risk of stroke, diabetes, hypertension, and other cardiovascular events,\" said lead author Dr. David J. Karpinski, M.D., professor of medicine and director of the Center for Health Policy Research at UCSD. \"This finding suggests that there may be an association between obesity and",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 9,
+     "rep_rate": 0.41015625,
+     "distinct1": 0.59765625,
+     "distinct2": 0.9019607843137255,
+     "longest_run": 2,
+     "gen_sha": "d5d05ab97e4dd54f",
+     "text": " the world was filled with people who were not of any kind.\n\nThe first thing that came to mind was the fact that there were no gods or goddesses living on this planet. The only one who could be considered as such was the god of death and rebirth. He was known as the \"god of life\" because he had been reborn into existence by the power of his own body. This is why it was so difficult for him to live without being killed.\n\nHowever, when he saw the sun rising from the sky, he felt like he was about to die. His heart stopped beating at the sight of the sun shining brightly over the horizon.\n\nHe looked up at the heavens and saw that they were full of stars. They were all glowing red and white. It was very strange how many stars appeared before him.\n\nHis eyes widened slightly as he thought about what he had seen. There were countless stars floating around within the sky. However, none of them seemed to have ever existed before.\n\nIt was just that these stars were different from each other. In addition, their brightness was different from each other. Even though they were similar in appearance, they were completely different from each other.\n\nThis was also why he couldn",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 10,
+     "rep_rate": 0.39453125,
+     "distinct1": 0.609375,
+     "distinct2": 0.8823529411764706,
+     "longest_run": 2,
+     "gen_sha": "c5ca756b327c4c85",
+     "text": " \"If you are not a member of the Church, please do not attend this meeting.\"\n\n\"I am sorry,\" she said. \"I have been told that I cannot be present at this meeting because I am an atheist and therefore can't participate in it.\"\n\nShe added: \"I will continue to speak out against these actions as long as they continue.\"\n\nA spokesman for the church said he was unaware of any such action by Ms Leung or her family.\n\nMs Leung's father, who is also a pastor, has called on people to boycott the meeting.\n\nHe said: \"We want to know what happened to our daughter when she was young. We hope that we can find answers from her parents about why she did not attend the meeting.\"\n\nMr Lee said his son had never attended the meeting but would like to see more information about its purpose.\n\n\"It is important that all members of the Church understand that there is no place for atheists in the Church,\" he said.\n\n\"This is not just about religion - it is about human rights and freedom of conscience.\"<|endoftext|>In my last post I talked about how much better your computer is than your phone. Now let's talk about how much better",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 11,
+     "rep_rate": 0.3203125,
+     "distinct1": 0.68359375,
+     "distinct2": 0.9098039215686274,
+     "longest_run": 2,
+     "gen_sha": "818e41db2c8e1aa5",
+     "text": " The FBI has confirmed that the suspect in the shooting at a gay nightclub in Orlando, Florida, was not an American citizen.\n\nThe FBI said it had no information about the man who killed 49 people and injured more than 100 others on Sunday night.\n\n\"We are working with law enforcement to determine if there is any connection between this individual and this attack,\" Acting FBI Director Andrew McCabe told reporters after the announcement.\n\nFBI officials have been briefed on the investigation into the incident by two of their top investigators, according to CNN.\n\nA source close to the investigation told CNN that the FBI's \"investigation team will continue to work closely with local law enforcement as they investigate this matter.\"\n\nCNN reported that the gunman opened fire from a hotel room near the Pulse nightclub before fleeing when he was shot dead by police.\n\nAuthorities say the shooter then fled through a back door while officers searched for him.\n\nPolice were able to track down the suspect via cellphone video but did not find him.\n\nInvestigators believe the attacker may have been inspired by ISIS or other extremist groups.\n\nIn a statement released late Monday, President Donald Trump called the attack \"horrific\" and vowed to bring \"radical Islamic terrorism to our country.\"\n",
+     "quality": 5.0
+    },
+    {
+     "prompt_idx": 12,
+     "rep_rate": 0.375,
+     "distinct1": 0.62890625,
+     "distinct2": 0.8588235294117647,
+     "longest_run": 2,
+     "gen_sha": "6cdc060b0c6c3c9f",
+     "text": " the best way to make a living is to work hard and be successful. I believe that if you are going to do this, you need to get your life together.\"\n\nThe former president said he was \"very proud\" of his wife's accomplishments in her first year as president.\n\n\"She has been very supportive,\" Trump said. \"She's been very kind and generous with people. She's been very nice to me. And she's been very helpful when I needed it most. But we're going to keep working on our relationship because we want to build a better America for all Americans.\"\n\nTrump also praised Clinton's performance during her time as secretary of state.\n\n\"Hillary Clinton did an amazing job at getting us through tough times,\" Trump said. \"And now she's doing something even more important than winning: helping millions of people out of poverty by giving them jobs and making sure they can afford to buy their own health insurance.\"\n\nClinton had previously criticized Trump for saying he would not accept Syrian refugees.\n\n\"He doesn't understand what my country is about,\" Clinton said. \"He thinks there's no place for Muslims in this country. He thinks there's no place for women in this country. He thinks there's",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 13,
+     "rep_rate": 0.7890625,
+     "distinct1": 0.2109375,
+     "distinct2": 0.3215686274509804,
+     "longest_run": 2,
+     "gen_sha": "64eff6a9a1be76bd",
+     "text": "\n\n1 cup of water\n\n1/2 cup of sugar\n\n1 teaspoon salt\n\n1 tablespoon olive oil\n\n1/4 teaspoon cinnamon\n\n1/4 teaspoon nutmeg\n\n1/4 teaspoon ground cloves\n\n1/4 teaspoon ground ginger\n\n1/4 teaspoon ground cloves (optional)\n\n1/4 teaspoon ground cumin\n\n1/4 teaspoon ground turmeric\n\n1/4 teaspoon ground coriander\n\n1/4 teaspoon ground pepper\n\n1/4 teaspoon ground black pepper\n\n1/4 teaspoon ground oregano\n\n1/4 teaspoon ground paprika\n\n1/4 teaspoon ground chili powder\n\n1/4 teaspoon ground cayenne pepper\n\n1/4 teaspoon ground garlic powder\n\n1/4 teaspoon ground cayenne pepper\n\n1/4 teaspoon ground onion powder\n\n1/4 teaspoon ground chives\n\n1/4 teaspoon ground cilantro\n\n1/4 teaspoon ground cilantro leaves\n\n1/4 teaspoon ground jalape\u00f1o peppers\n\n1/4 teaspoon ground cilantro leaves\n\n1/4 teaspoon ground red pepper flakes\n\n1/4 teaspoon ground cumin\n\n1/4 teaspoon ground",
+     "quality": 3.0
+    },
+    {
+     "prompt_idx": 14,
+     "rep_rate": 0.39453125,
+     "distinct1": 0.61328125,
+     "distinct2": 0.9019607843137255,
+     "longest_run": 2,
+     "gen_sha": "65d1f0c95bad03da",
+     "text": " found that the brain is a complex system. It's not just about how we think and act; it's also about how we communicate with each other.\n\nThe most important part of our brains is called the hippocampus, which contains neurons that control memory and attention. The hippocampus is where you learn to remember things in your head. When you're older, this area becomes more active, so you can focus on what you're doing better. But when you're younger, it gets less active. And then there's the amygdala, which is responsible for emotional regulation.\n\nSo if you've got a lot of these areas involved in learning and processing information, they become more active. So people who are at risk for Alzheimer's tend to be those who are at risk for depression or anxiety. They may be at risk for some type of mental illness.\n\nAnd I think one of the things that has been really interesting about neuroscience is that it's very difficult to predict exactly what will happen to certain parts of the brain. We know that aging doesn't necessarily lead to dementia, but it does mean that different parts of the brain might be affected.\n\nI'm going to talk about something else that's happening right now: People are getting older. In fact,",
+     "quality": 4.0
+    },
+    {
+     "prompt_idx": 15,
+     "rep_rate": 0.2890625,
+     "distinct1": 0.7109375,
+     "distinct2": 0.9450980392156862,
+     "longest_run": 2,
+     "gen_sha": "53cbde751e082a08",
+     "text": " a very difficult day for me. I had to go back to work and get my passport in order to leave the country.\n\nI have been living in Germany for over two years now. I am not sure if I will be able to return to it soon but I hope that I will find something to do with this situation.\n\nMy wife is also pregnant. We are both working hard to make ends meet. My husband has already started his new job as a teacher at our school. He is doing well and we are looking forward to seeing him again soon.\n\nWe are all so happy about what happened yesterday. It's really sad because we were just trying to help each other out. But there is no way we can ever stop talking about how much we love you.\n\nThank you for your time.<|endoftext|>The UESPWiki \u2013 Your source for The Elder Scrolls since 1995\n\nThis article is about the character. For the quest \"A New Beginning\", see A New Beginning (Quest).\n\n\"You're going to need some more money.\" \u2014Sidney[1]\n\nSidney is a merchant who lives in the city of Vvardenfell. She is one of the few merchants who does not sell her",
+     "quality": 2.0
+    }
+   ]
+  }
+ ],
+ "controls": {
+  "noop_raw1_eq_fix1": true
+ },
+ "quality_unit": "prompt",
+ "quality_detail": {
+  "judge": "Qwen/Qwen2.5-7B-Instruct",
+  "scale": [
+   1,
+   5
+  ],
+  "blind": true,
+  "randomized_order": true,
+  "seed": 1234,
+  "n_unparseable": 0,
+  "rubric": "You are grading the fluency and coherence of a text continuation produced by a language model.\nRate ONLY the continuation, on this scale:\n5 = fluent, grammatical, on-topic and internally consistent throughout\n4 = mostly fluent and coherent, minor lapses\n3 = understandable but noticeably disfluent, repetitive, or drifting\n2 = largely incoherent, heavy repetition or broken syntax\n1 = degenerate: near-total repetition, gibberish, or no meaningful content\n\nPrompt:\n{prompt}\n\nContinuation:\n{text}\n\nAnswer with a single integer from 1 to 5 and nothing else."
+ },
+ "quality_measure": "judge",
+ "quality_fallback_reason": [
+  "mauve: ModuleNotFoundError: No module named 'mauve'"
+ ],
+ "elapsed_s": 159.16845107078552
+}
